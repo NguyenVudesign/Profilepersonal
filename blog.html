@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Kỹ Thuật — Nguyễn Nguyên Vũ | nguyenvu.click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            ctp: {
+              crust: '#181926',
+              mantle: '#1e2030',
+              base: '#24273a',
+              surface0: '#363a4f',
+              surface1: '#494d64',
+              text: '#cad3f5',
+              subtext: '#a5adcb',
+              blue: '#8aadf4',
+              sapphire: '#7dc4e4',
+              teal: '#8bd5ca',
+              green: '#a6da95',
+              yellow: '#eed49f',
+              peach: '#f5a97f',
+              red: '#ed8796',
+              mauve: '#c6a0f6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #181926; color: #cad3f5; overflow-x: hidden; }
+    .bg-mesh {
+      background-image: 
+        radial-gradient(at 20% 10%, rgba(198, 160, 246, 0.11) 0px, transparent 45%),
+        radial-gradient(at 80% 30%, rgba(138, 173, 244, 0.10) 0px, transparent 45%);
+    }
+    .bento-card {
+      background: linear-gradient(180deg, rgba(36, 39, 58, 0.78) 0%, rgba(30, 32, 48, 0.88) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(202, 211, 245, 0.08);
+      transition: all 0.25s ease;
+    }
+    .bento-card:hover { border-color: rgba(198, 160, 246, 0.35); }
+  </style>
+</head>
+<body class="selection:bg-ctp-mauve/30 selection:text-ctp-mauve">
+
+  <div class="fixed inset-0 bg-mesh pointer-events-none z-0"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-4 z-50 px-4">
+    <div class="max-w-6xl mx-auto h-14 px-5 rounded-2xl bg-ctp-mantle/80 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-ctp-mauve to-ctp-blue p-[1px]">
+          <div class="w-full h-full bg-ctp-crust rounded-[7px] flex items-center justify-center font-mono font-bold text-xs text-ctp-mauve">
+            NV
+          </div>
+        </div>
+        <span class="font-display font-bold text-base tracking-tight text-ctp-text">
+          nguyenvu<span class="text-ctp-mauve">.click</span><span class="text-ctp-subtext font-mono text-xs">/blog</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1 text-xs font-medium">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-lg text-ctp-subtext hover:text-ctp-text hover:bg-white/5 transition">Trang chủ</a>
+        <a href="blog.html" class="px-3.5 py-1.5 rounded-lg bg-white/10 text-ctp-text font-semibold">Blog kỹ thuật</a>
+        <a href="toolkit.html" class="px-3.5 py-1.5 rounded-lg text-ctp-subtext hover:text-ctp-text hover:bg-white/5 transition">NetTools & Sơ đồ</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <button onclick="openEditor()" class="px-3 py-1.5 rounded-lg bg-ctp-mauve/20 hover:bg-ctp-mauve text-ctp-mauve hover:text-ctp-crust font-mono font-semibold text-xs transition flex items-center gap-1.5">
+          <i data-lucide="pen-line" class="w-3.5 h-3.5"></i> Viết bài
+        </button>
+        <button onclick="downloadSelf('blog.html')" class="px-3 py-1.5 rounded-lg bg-ctp-surface0/70 hover:bg-ctp-surface0 text-ctp-text font-mono text-xs flex items-center gap-1.5 border border-white/10 transition">
+          <i data-lucide="download" class="w-3.5 h-3.5 text-ctp-mauve"></i>
+          <span class="hidden sm:inline">blog.html</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 pt-10 pb-24 space-y-10">
+
+    <!-- Header & Search Filter -->
+    <section class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-ctp-mauve">Engineering Notes & Runbooks</span>
+          <h1 class="font-display text-3xl sm:text-4xl font-bold mt-1">Ghi Chép Kỹ Thuật Thực Chiến</h1>
+        </div>
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 text-ctp-subtext absolute left-3.5 top-3"></i>
+          <input id="searchBox" oninput="renderBlog()" type="text" placeholder="Tìm bài viết: Proxmox, FortiGate, MikroTik..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-ctp-crust border border-white/10 text-xs font-mono focus:outline-none focus:border-ctp-mauve" />
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-2 font-mono text-xs">
+        <button onclick="filterCat('ALL')" data-cat="ALL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-mauve text-ctp-crust font-bold">Tất cả (6)</button>
+        <button onclick="filterCat('NETWORK')" data-cat="NETWORK" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text">Mạng & Tường lửa</button>
+        <button onclick="filterCat('VIRTUALIZATION')" data-cat="VIRTUALIZATION" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text">Proxmox & Server</button>
+        <button onclick="filterCat('HARDWARE')" data-cat="HARDWARE" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text">Phần cứng & ELV</button>
+      </div>
+    </section>
+
+    <!-- Split Layout: Left Article List + Right Full Reader -->
+    <section class="grid lg:grid-cols-12 gap-8 items-start">
+      <div id="articleList" class="lg:col-span-5 space-y-4"></div>
+
+      <div class="lg:col-span-7 bento-card rounded-3xl p-6 sm:p-9 sticky top-24">
+        <div id="articleContent"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Write New Post -->
+  <div id="editorModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bento-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-4 border border-ctp-mauve/40">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <h3 class="font-display font-bold text-lg text-ctp-mauve">Soạn Bài Viết Kỹ Thuật Mới</h3>
+        <button onclick="closeEditor()" class="text-xs font-mono text-ctp-subtext hover:text-ctp-red">[Đóng]</button>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-3 text-xs font-mono">
+        <input id="postTitle" type="text" placeholder="Tiêu đề bài viết..." class="p-3 rounded-xl bg-ctp-crust border border-white/10 focus:outline-none focus:border-ctp-mauve" />
+        <select id="postCat" class="p-3 rounded-xl bg-ctp-crust border border-white/10 focus:outline-none focus:border-ctp-mauve">
+          <option value="NETWORK">NETWORK</option>
+          <option value="VIRTUALIZATION">VIRTUALIZATION</option>
+          <option value="HARDWARE">HARDWARE</option>
+        </select>
+      </div>
+      <textarea id="postBody" rows="4" placeholder="Mô tả chi tiết giải pháp kỹ thuật..." class="w-full p-3 rounded-xl bg-ctp-crust border border-white/10 text-xs font-sans focus:outline-none focus:border-ctp-mauve"></textarea>
+      <textarea id="postCli" rows="5" placeholder="Đoạn mã cấu hình CLI (FortiOS, RouterOS, Bash...)" class="w-full p-3 rounded-xl bg-ctp-crust border border-white/10 text-xs font-mono text-ctp-teal focus:outline-none focus:border-ctp-mauve"></textarea>
+      <div class="flex justify-end gap-2 pt-2">
+        <button onclick="exportMd()" class="px-4 py-2 rounded-xl bg-ctp-surface0 text-xs font-mono hover:bg-ctp-teal hover:text-ctp-crust font-semibold transition">Xuất file .MD</button>
+        <button onclick="publishPost()" class="px-4 py-2 rounded-xl bg-ctp-mauve text-ctp-crust text-xs font-mono font-bold">Lưu bài viết</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const initialArticles = [
+      {
+        id: 'proxmox-qdevice-zfs',
+        cat: 'VIRTUALIZATION',
+        date: '21/10/2026',
+        readTime: '8 phút đọc',
+        title: 'Triển Khai Cụm Proxmox VE Đa Node Với QDevice Quorum, ZFS Pool & Cáp Quang 10G',
+        excerpt: 'Kinh nghiệm thiết lập cụm máy chủ ảo hóa độ sẵn sàng cao kết nối liên phòng máy qua đường truyền quang 10G SFP+ và thiết lập QDevice chống Split-Brain.',
+        body: `Khi triển khai cụm Proxmox VE trên hệ thống máy chủ nhiều Node (như dòng Supermicro 3U MicroCloud), việc đảm bảo tính toàn vẹn của Quorum là yếu tố tiên quyết. Sử dụng QDevice giúp cụm duy trì số phiếu bầu lẻ ổn định.\n\nSong song đó, tách riêng mạng Corosync khỏi mạng truyền dữ liệu ZFS Replication / Backup trên đường quang 10G SFP+ giúp độ trễ cụm luôn dưới 0.5ms.`,
+        cli: `# Kiểm tra trạng thái Quorum và các Node trong cụm
+pvecm status
+
+# Cài đặt gói corosync-qdevice trên các Node Proxmox
+apt update && apt install corosync-qdevice -y
+pvecm qdevice setup 10.10.99.250
+
+# Kiểm tra dung lượng và trạng thái ZFS Storage Pool
+zpool status -v`
+      },
+      {
+        id: 'mikrotik-winbox-security',
+        cat: 'NETWORK',
+        date: '22/10/2026',
+        readTime: '6 phút đọc',
+        title: 'Bảo Mật MikroTik RouterOS: Đổi Port Winbox & Chống Quét Cổng Nội Bộ (Port Scan)',
+        excerpt: 'Cấu hình ẩn dịch vụ quản trị Winbox, giới hạn IP truy cập theo VLAN quản trị và tự động chặn các IP thực hiện hành vi Nmap Port Scanning.',
+        body: `Trong vận hành mạng thực tế, việc giữ nguyên cổng mặc định 8291 cho Winbox dễ khiến thiết bị định tuyến trở thành mục tiêu dò quét. Đổi cổng dịch vụ kết hợp giới hạn dải IP Management và bật bộ lọc PSD (Port Scan Detection) trên Firewall Filter giúp bảo vệ toàn diện RouterOS.`,
+        cli: `/ip service
+set telnet disabled=yes
+set ftp disabled=yes
+set www disabled=yes
+set winbox port=58291 address=10.10.99.0/24
+
+/ip firewall filter
+add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list \\
+    address-list=PORT_SCANNERS address-list-timeout=7d comment="Block Port Scan"
+add chain=input src-address-list=PORT_SCANNERS action=drop`
+      },
+      {
+        id: 'core-nbs5500-fortigate',
+        cat: 'NETWORK',
+        date: '11/09/2026',
+        readTime: '10 phút đọc',
+        title: 'Quy Hoạch Hạ Tầng 39 Thiết Bị Mạng: Core Switch NBS5500, 34 AP & Tường Lửa FortiGate',
+        excerpt: 'Thiết kế phân vùng VLAN, cấu hình LACP Trunking giữa Core Switch NBS5500 với FortiGate và tối ưu phủ sóng cho 34 Access Point RAP2260.',
+        body: `Đối với mạng doanh nghiệp quy mô lớn sử dụng đồng bộ hệ sinh thái chuyển mạch NBS5500, NBS3200 và 34 điểm truy cập không dây RAP2260, việc gom lưu lượng qua cổng Aggregate LACP lên tường lửa FortiGate giúp kiểm soát chặt chẽ chính sách bảo mật giữa các VLAN Nhân sự, Khách và Server.`,
+        cli: `config system interface
+    edit "VLAN20_STAFF_WIFI"
+        set vdom "root"
+        set ip 10.10.20.1 255.255.255.0
+        set allowaccess ping
+        set interface "LACP_CORE"
+        set vlanid 20
+    next
+end`
+      },
+      {
+        id: 'riverbed-pfsense-serial',
+        cat: 'HARDWARE',
+        date: '25/07/2026',
+        readTime: '7 phút đọc',
+        title: 'Hoán Cải Thiết Bị Riverbed SteelHead CX-570 Thành Router pfSense Qua Cổng Serial Console',
+        excerpt: 'Quy trình nâng cấp RAM, thay pin CMOS CR2032 và nạp hệ điều hành pfSense qua cáp USB-to-RJ45 Console (9600 8N1) trên MobaXterm.',
+        body: `Các thiết bị phần cứng mạng chuyên dụng như Riverbed SteelHead CX-570 sở hữu bo mạch bền bỉ và các cổng mạng Intel Gigabit chất lượng cao. Sau khi thay pin CMOS, nâng cấp RAM và kết nối cáp Serial Console ở tốc độ 9600 baud, thiết bị hoạt động hoàn hảo trong vai trò tường lửa pfSense.`,
+        cli: `# Thông số kết nối Serial Console trên MobaXterm / PuTTY
+Serial Line: COM3 (USB-to-RJ45 Adapter)
+Speed (Baud): 9600
+Data bits: 8 | Stop bits: 1 | Parity: None | Flow control: None
+
+# Kiểm tra nhận diện card mạng Intel trên pfSense
+dmesg | grep -i igb`
+      },
+      {
+        id: '1panel-ubuntu-esxi',
+        cat: 'VIRTUALIZATION',
+        date: '15/09/2026',
+        readTime: '6 phút đọc',
+        title: 'Quản Trị Ứng Dụng Web Self-Hosted & Python Bot Với 1Panel Docker Trên Máy Ảo Ubuntu',
+        excerpt: 'Triển khai nhanh các dịch vụ Web, cơ sở dữ liệu SQLite và Bot tự động tra cứu phạt nguội bên trong Ubuntu VM chạy trên ESXi / Proxmox.',
+        body: `Thay vì cài đặt rời rạc từng dịch vụ trên máy chủ vật lý, việc đóng gói toàn bộ ứng dụng Web cá nhân và Bot Python thông báo phạt nguội vào các Container quản lý bởi 1Panel trên Ubuntu VM giúp việc sao lưu (Snapshot) và khôi phục diễn ra chỉ trong vài phút.`,
+        cli: `# Kiểm tra danh sách Container đang hoạt động trên 1Panel
+docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+# Xem log hoạt động của Python Traffic Bot
+docker logs -f --tail 50 traffic-fine-bot`
+      },
+      {
+        id: 'ekahau-elv-audit',
+        cat: 'HARDWARE',
+        date: '26/09/2026',
+        readTime: '7 phút đọc',
+        title: 'Kinh Nghiệm Khảo Sát Sóng Wi-Fi Bằng Ekahau AI Pro & Bóc Tách Khối Lượng Điện Nhẹ (ELV)',
+        excerpt: 'Phương pháp đọc bản vẽ mặt bằng Block A/B, định vị Access Point trên Ekahau AI Pro và kiểm toán số lượng Camera, Loa âm thanh thông báo, nút mạng RJ45.',
+        body: `Khi kiểm toán thiết kế điện nhẹ (ELV) cho các tòa nhà hoặc bệnh viện, việc kết hợp bản vẽ kiến trúc với mô phỏng suy hao tín hiệu trên Ekahau AI Pro giúp xác định chính xác vị trí lắp đặt Access Point, hạn chế điểm mù sóng 5GHz và tính toán chính xác số lượng cổng Switch PoE cũng như chiều dài cáp mạng.`,
+        cli: `# Tiêu chuẩn thiết kế vùng phủ sóng Wi-Fi Doanh nghiệp trên Ekahau
+Primary Signal Strength (5GHz): >= -65 dBm
+Secondary Signal Strength:      >= -70 dBm
+Signal-to-Noise Ratio (SNR):    >= 25 dB
+Channel Width (High-Density):   20 MHz / 40 MHz`
+      }
+    ];
+
+    let articles = JSON.parse(localStorage.getItem('nguyenvu_blog_clean')) || initialArticles;
+    let currentFilter = 'ALL';
+    let currentArticleId = articles[0].id;
+
+    function filterCat(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.className = btn.dataset.cat === cat
+          ? 'cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-mauve text-ctp-crust font-bold'
+          : 'cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text';
+      });
+      renderBlog();
+    }
+
+    function renderBlog() {
+      const q = document.getElementById('searchBox').value.toLowerCase();
+      const filtered = articles.filter(a =>
+        (currentFilter === 'ALL' || a.cat === currentFilter) &&
+        (a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.cli.toLowerCase().includes(q))
+      );
+
+      document.getElementById('articleList').innerHTML = filtered.map(a => `
+        <article onclick="openArticle('${a.id}')" class="bento-card rounded-2xl p-5 cursor-pointer ${a.id === currentArticleId ? 'border-ctp-mauve ring-1 ring-ctp-mauve/40' : ''}">
+          <div class="flex items-center justify-between text-[11px] font-mono text-ctp-subtext mb-2">
+            <span class="px-2 py-0.5 rounded bg-ctp-mauve/15 text-ctp-mauve font-semibold">${a.cat}</span>
+            <span>${a.date} • ${a.readTime}</span>
+          </div>
+          <h3 class="font-display font-bold text-base text-ctp-text mb-1.5 leading-snug">${a.title}</h3>
+          <p class="text-xs text-ctp-subtext line-clamp-2">${a.excerpt}</p>
+        </article>
+      `).join('');
+
+      const active = articles.find(a => a.id === currentArticleId) || filtered[0];
+      if (active) renderArticleDetail(active);
+    }
+
+    function openArticle(id) {
+      currentArticleId = id;
+      renderBlog();
+    }
+
+    function renderArticleDetail(a) {
+      document.getElementById('articleContent').innerHTML = `
+        <div class="space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono border-b border-white/10 pb-4">
+            <span class="px-2.5 py-1 rounded-lg bg-ctp-mauve/15 text-ctp-mauve font-bold">${a.cat}</span>
+            <span class="text-ctp-subtext">Nguyễn Nguyên Vũ • ${a.date} • ${a.readTime}</span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold leading-tight">${a.title}</h2>
+          <div class="text-sm sm:text-base text-ctp-subtext leading-relaxed space-y-4 whitespace-pre-line">${a.body}</div>
+          <div class="rounded-2xl bg-ctp-crust border border-white/10 overflow-hidden">
+            <div class="px-4 py-2.5 bg-ctp-mantle border-b border-white/10 flex items-center justify-between font-mono text-xs">
+              <span class="text-ctp-blue flex items-center gap-1.5">Terminal / CLI Snippet</span>
+              <button onclick="navigator.clipboard.writeText(\`${a.cli.replace(/`/g, '\\`')}\`); this.textContent='Đã sao chép!'" class="px-2.5 py-1 rounded bg-ctp-surface0 text-ctp-green hover:opacity-90">Copy Code</button>
+            </div>
+            <pre class="p-5 font-mono text-xs text-ctp-teal overflow-x-auto leading-relaxed">${a.cli}</pre>
+          </div>
+        </div>
+      `;
+    }
+
+    function openEditor() {
+      const m = document.getElementById('editorModal');
+      m.classList.remove('hidden'); m.classList.add('flex');
+    }
+    function closeEditor() {
+      const m = document.getElementById('editorModal');
+      m.classList.add('hidden'); m.classList.remove('flex');
+    }
+
+    function publishPost() {
+      const title = document.getElementById('postTitle').value.trim();
+      const cat = document.getElementById('postCat').value;
+      const body = document.getElementById('postBody').value.trim();
+      const cli = document.getElementById('postCli').value.trim();
+      if (!title || !body) return;
+      const item = {
+        id: 'post-' + Date.now(),
+        cat,
+        date: new Date().toLocaleDateString('vi-VN'),
+        readTime: '5 phút đọc',
+        title,
+        excerpt: body.slice(0, 110) + '...',
+        body,
+        cli: cli || '# No CLI snippet'
+      };
+      articles.unshift(item);
+      localStorage.setItem('nguyenvu_blog_clean', JSON.stringify(articles));
+      currentArticleId = item.id;
+      closeEditor();
+      renderBlog();
+    }
+
+    function exportMd() {
+      const title = document.getElementById('postTitle').value.trim() || 'bai-viet-moi';
+      const body = document.getElementById('postBody').value.trim();
+      const cli = document.getElementById('postCli').value.trim();
+      const md = `# ${title}\n\n${body}\n\n\`\`\`bash\n${cli}\n\`\`\`\n`;
+      const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${title.toLowerCase().replace(/\s+/g, '-')}.md`;
+      a.click();
+    }
+
+    function downloadSelf(filename) {
+      const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+    }
+
+    renderBlog();
+  </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetTools & Sơ Đồ Kiến Trúc — Nguyễn Nguyên Vũ | nguyenvu.click</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            ctp: {
+              crust: '#181926',
+              mantle: '#1e2030',
+              base: '#24273a',
+              surface0: '#363a4f',
+              surface1: '#494d64',
+              text: '#cad3f5',
+              subtext: '#a5adcb',
+              blue: '#8aadf4',
+              sapphire: '#7dc4e4',
+              teal: '#8bd5ca',
+              green: '#a6da95',
+              yellow: '#eed49f',
+              peach: '#f5a97f',
+              red: '#ed8796',
+              mauve: '#c6a0f6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #181926; color: #cad3f5; overflow-x: hidden; }
+    .bg-mesh {
+      background-image: 
+        radial-gradient(at 15% 20%, rgba(139, 213, 202, 0.11) 0px, transparent 45%),
+        radial-gradient(at 85% 75%, rgba(138, 173, 244, 0.10) 0px, transparent 45%);
+    }
+    .bento-card {
+      background: linear-gradient(180deg, rgba(36, 39, 58, 0.78) 0%, rgba(30, 32, 48, 0.88) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(202, 211, 245, 0.08);
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -40; }
+    }
+    .packet-line {
+      stroke-dasharray: 6 6;
+      animation: dashFlow 1.2s linear infinite;
+    }
+  </style>
+</head>
+<body class="selection:bg-ctp-teal/30 selection:text-ctp-teal">
+
+  <div class="fixed inset-0 bg-mesh pointer-events-none z-0"></div>
+
+  <!-- Navbar -->
+  <header class="sticky top-4 z-50 px-4">
+    <div class="max-w-6xl mx-auto h-14 px-5 rounded-2xl bg-ctp-mantle/80 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-ctp-teal to-ctp-blue p-[1px]">
+          <div class="w-full h-full bg-ctp-crust rounded-[7px] flex items-center justify-center font-mono font-bold text-xs text-ctp-teal">
+            NV
+          </div>
+        </div>
+        <span class="font-display font-bold text-base tracking-tight text-ctp-text">
+          nguyenvu<span class="text-ctp-teal">.click</span><span class="text-ctp-subtext font-mono text-xs">/toolkit</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1 text-xs font-medium">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-lg text-ctp-subtext hover:text-ctp-text hover:bg-white/5 transition">Trang chủ</a>
+        <a href="blog.html" class="px-3.5 py-1.5 rounded-lg text-ctp-subtext hover:text-ctp-text hover:bg-white/5 transition">Blog kỹ thuật</a>
+        <a href="toolkit.html" class="px-3.5 py-1.5 rounded-lg bg-white/10 text-ctp-text font-semibold">NetTools & Sơ đồ</a>
+      </nav>
+
+      <button onclick="downloadSelf('toolkit.html')" class="px-3 py-1.5 rounded-lg bg-ctp-surface0/70 hover:bg-ctp-surface0 text-ctp-text font-mono text-xs flex items-center gap-1.5 border border-white/10 transition">
+        <i data-lucide="download" class="w-3.5 h-3.5 text-ctp-teal"></i>
+        <span class="hidden sm:inline">toolkit.html</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 pt-10 pb-24 space-y-12">
+
+    <!-- INTERACTIVE 10G NETWORK ARCHITECTURE DIAGRAM -->
+    <section class="bento-card rounded-3xl p-6 sm:p-8 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-ctp-teal">Interactive Network Topology</span>
+          <h1 class="font-display text-2xl sm:text-3xl font-bold mt-1">Sơ Đồ Kiến Trúc Hạ Tầng Mạng & Ảo Hóa 10G</h1>
+        </div>
+        <span class="text-xs font-mono text-ctp-subtext">Nhấp vào từng nút thiết bị để xem cấu hình</span>
+      </div>
+
+      <div class="rounded-2xl bg-ctp-crust border border-white/10 p-4 overflow-x-auto">
+        <svg viewBox="0 0 900 280" class="w-full min-w-[680px] h-auto">
+          <!-- Animated 10G Optical Links -->
+          <line x1="150" y1="140" x2="310" y2="140" stroke="#8aadf4" stroke-width="2.5" class="packet-line"/>
+          <line x1="430" y1="140" x2="580" y2="80" stroke="#8bd5ca" stroke-width="2.5" class="packet-line"/>
+          <line x1="430" y1="140" x2="580" y2="200" stroke="#c6a0f6" stroke-width="2.5" class="packet-line"/>
+          <line x1="700" y1="80" x2="810" y2="80" stroke="#a6da95" stroke-width="2" class="packet-line"/>
+          <line x1="700" y1="200" x2="810" y2="200" stroke="#f5a97f" stroke-width="2" class="packet-line"/>
+
+          <!-- Node 1: Perimeter Firewall -->
+          <g onclick="showNodeInfo('firewall')" class="cursor-pointer">
+            <rect x="30" y="100" width="130" height="80" rx="14" fill="#1e2030" stroke="#8aadf4" stroke-width="2"/>
+            <text x="95" y="135" text-anchor="middle" fill="#cad3f5" font-family="Space Grotesk" font-weight="bold" font-size="13">FortiGate /</text>
+            <text x="95" y="153" text-anchor="middle" fill="#8aadf4" font-family="JetBrains Mono" font-size="11">MikroTik Edge</text>
+          </g>
+
+          <!-- Node 2: Core Switch -->
+          <g onclick="showNodeInfo('coreswitch')" class="cursor-pointer">
+            <rect x="300" y="100" width="140" height="80" rx="14" fill="#1e2030" stroke="#8bd5ca" stroke-width="2"/>
+            <text x="370" y="135" text-anchor="middle" fill="#cad3f5" font-family="Space Grotesk" font-weight="bold" font-size="13">Core Switch</text>
+            <text x="370" y="153" text-anchor="middle" fill="#8bd5ca" font-family="JetBrains Mono" font-size="11">NBS5500 10G</text>
+          </g>
+
+          <!-- Node 3: Proxmox Cluster -->
+          <g onclick="showNodeInfo('proxmox')" class="cursor-pointer">
+            <rect x="570" y="40" width="140" height="80" rx="14" fill="#1e2030" stroke="#a6da95" stroke-width="2"/>
+            <text x="640" y="75" text-anchor="middle" fill="#cad3f5" font-family="Space Grotesk" font-weight="bold" font-size="13">Proxmox VE</text>
+            <text x="640" y="93" text-anchor="middle" fill="#a6da95" font-family="JetBrains Mono" font-size="11">8-Node + ZFS</text>
+          </g>
+
+          <!-- Node 4: Distribution & Wi-Fi/ELV -->
+          <g onclick="showNodeInfo('access')" class="cursor-pointer">
+            <rect x="570" y="160" width="140" height="80" rx="14" fill="#1e2030" stroke="#c6a0f6" stroke-width="2"/>
+            <text x="640" y="195" text-anchor="middle" fill="#cad3f5" font-family="Space Grotesk" font-weight="bold" font-size="13">NBS3200 PoE</text>
+            <text x="640" y="213" text-anchor="middle" fill="#c6a0f6" font-family="JetBrains Mono" font-size="11">34x AP &amp; ELV</text>
+          </g>
+
+          <!-- Sub-node 5: 1Panel Ubuntu -->
+          <g onclick="showNodeInfo('1panel')" class="cursor-pointer">
+            <rect x="780" y="50" width="100" height="60" rx="10" fill="#24273a" stroke="#a6da95" stroke-width="1.5"/>
+            <text x="830" y="78" text-anchor="middle" fill="#cad3f5" font-family="JetBrains Mono" font-weight="bold" font-size="11">1Panel VM</text>
+            <text x="830" y="94" text-anchor="middle" fill="#a6da95" font-family="JetBrains Mono" font-size="10">Docker/Bot</text>
+          </g>
+
+          <!-- Sub-node 6: CCTV & PA -->
+          <g onclick="showNodeInfo('elv')" class="cursor-pointer">
+            <rect x="780" y="170" width="100" height="60" rx="10" fill="#24273a" stroke="#f5a97f" stroke-width="1.5"/>
+            <text x="830" y="198" text-anchor="middle" fill="#cad3f5" font-family="JetBrains Mono" font-weight="bold" font-size="11">CCTV &amp; PA</text>
+            <text x="830" y="214" text-anchor="middle" fill="#f5a97f" font-family="JetBrains Mono" font-size="10">Block A/B</text>
+          </g>
+        </svg>
+      </div>
+
+      <div id="nodeDetailBox" class="p-4 rounded-2xl bg-ctp-crust/80 border border-white/10 font-mono text-xs text-ctp-subtext">
+        <strong class="text-ctp-teal">● Proxmox VE Multi-Node Cluster:</strong> Supermicro 3U 8-Node (SYS-5039MS-H8TRF), QDevice Quorum, ZFS Storage Pool, kết nối cáp quang 10G SFP+ liên phòng máy.
+      </div>
+    </section>
+
+    <!-- NETENG DAILY TOOLS: SUBNET CALCULATOR & CLI GENERATOR -->
+    <section class="grid lg:grid-cols-2 gap-8">
+      <!-- Tool 1: IPv4 Subnet / VLSM Calculator -->
+      <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div>
+          <span class="font-mono text-xs uppercase text-ctp-blue">Network Calculator</span>
+          <h2 class="font-display text-2xl font-bold mt-1">Máy Tính Chia Subnet IPv4 / VLSM</h2>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 font-mono text-xs">
+          <div class="col-span-2">
+            <label class="text-ctp-subtext block mb-1.5">Địa chỉ IP</label>
+            <input id="ipInput" type="text" value="10.10.20.0" oninput="updateSubnet()" class="w-full p-3 rounded-xl bg-ctp-crust border border-white/10 focus:outline-none focus:border-ctp-blue" />
+          </div>
+          <div>
+            <label class="text-ctp-subtext block mb-1.5">CIDR Prefix</label>
+            <select id="cidrInput" onchange="updateSubnet()" class="w-full p-3 rounded-xl bg-ctp-crust border border-white/10 focus:outline-none focus:border-ctp-blue">
+              <option value="21">/21 (2046 IP)</option>
+              <option value="22">/22 (1022 IP)</option>
+              <option value="23">/23 (510 IP)</option>
+              <option value="24" selected>/24 (254 IP)</option>
+              <option value="25">/25 (126 IP)</option>
+              <option value="26">/26 (62 IP)</option>
+              <option value="27">/27 (30 IP)</option>
+              <option value="28">/28 (14 IP)</option>
+              <option value="29">/29 (6 IP)</option>
+              <option value="30">/30 (2 P2P)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="subnetOutput" class="rounded-2xl bg-ctp-crust p-5 border border-white/10 font-mono text-xs space-y-2.5"></div>
+      </div>
+
+      <!-- Tool 2: Quick CLI Template Generator -->
+      <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="font-mono text-xs uppercase text-ctp-teal">Config Generator</span>
+            <h2 class="font-display text-2xl font-bold mt-1">Tạo Nhanh Script Cấu Hình CLI</h2>
+          </div>
+          <button onclick="copyCliTemplate()" id="copyBtn" class="px-3.5 py-1.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs">
+            Copy CLI
+          </button>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-3 font-mono text-xs">
+          <select id="tplType" onchange="buildCli()" class="p-3 rounded-xl bg-ctp-crust border border-white/10">
+            <option value="mkt">MikroTik Hardening</option>
+            <option value="fgt">FortiGate VLAN Interface</option>
+            <option value="sw">Ruijie/Cisco VLAN Trunk</option>
+          </select>
+          <input id="tplVlan" type="text" value="99" oninput="buildCli()" placeholder="VLAN ID" class="p-3 rounded-xl bg-ctp-crust border border-white/10" />
+          <input id="tplNet" type="text" value="10.10.99.0/24" oninput="buildCli()" placeholder="Subnet/IP" class="p-3 rounded-xl bg-ctp-crust border border-white/10" />
+        </div>
+
+        <pre id="cliBox" class="rounded-2xl bg-ctp-crust p-5 border border-white/10 font-mono text-xs text-ctp-green overflow-x-auto h-48 leading-relaxed"></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+
+    const nodeDescriptions = {
+      firewall: '● Tường lửa & Định tuyến biên (FortiGate / MikroTik / pfSense CX-570): Quản lý chính sách bảo mật liên vùng, chống quét cổng (PSD), VPN và cân bằng tải WAN.',
+      coreswitch: '● Core Switch NBS5500: Chuyển mạch lõi tốc độ 10G SFP+, gom liên kết LACP và định tuyến các phân vùng VLAN nội bộ.',
+      proxmox: '● Cụm ảo hóa Proxmox VE & ESXi: Vận hành trên phần cứng Supermicro 3U 8-Node (SYS-5039MS-H8TRF), QDevice Quorum, ZFS Storage Pool và quang 10G.',
+      access: '● Switch phân phối NBS3200 & 34 Access Point RAP2260: Cấp nguồn PoE+ và phủ sóng Wi-Fi mật độ cao được quy hoạch bằng Ekahau AI Pro.',
+      '1panel': '● Máy ảo Ubuntu chạy 1Panel Docker: Quản lý tập trung web nguyenvu.click và Bot Python + SQLite tra cứu phạt nguội tự động.',
+      elv: '● Hệ thống Điện nhẹ (ELV): Camera giám sát CCTV, âm thanh thông báo công cộng (PA Audio) và hệ thống cáp cấu trúc RJ45 Cat6/Cat6A.'
+    };
+
+    function showNodeInfo(key) {
+      document.getElementById('nodeDetailBox').innerHTML = `<span class="text-ctp-text">${nodeDescriptions[key]}</span>`;
+    }
+
+    function updateSubnet() {
+      const ip = document.getElementById('ipInput').value.trim();
+      const cidr = parseInt(document.getElementById('cidrInput').value, 10);
+      const octets = ip.split('.').map(Number);
+      if (octets.length !== 4 || octets.some(o => isNaN(o) || o < 0 || o > 255)) {
+        document.getElementById('subnetOutput').innerHTML = `<span class="text-ctp-red">Địa chỉ IPv4 chưa đúng định dạng!</span>`;
+        return;
+      }
+      const ipInt = ((octets[0] << 24) | (octets[1] << 16) | (octets[2] << 8) | octets[3]) >>> 0;
+      const mask = (0xffffffff << (32 - cidr)) >>> 0;
+      const wildcard = (~mask) >>> 0;
+      const net = (ipInt & mask) >>> 0;
+      const bcast = (net | wildcard) >>> 0;
+      const first = (net + 1) >>> 0;
+      const last = (bcast - 1) >>> 0;
+      const usable = Math.max(0, Math.pow(2, 32 - cidr) - 2);
+      const fmt = n => [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join('.');
+
+      document.getElementById('subnetOutput').innerHTML = `
+        <div class="grid sm:grid-cols-2 gap-2.5">
+          <div><span class="text-ctp-subtext">Network:</span> <strong class="text-ctp-blue">${fmt(net)}/${cidr}</strong></div>
+          <div><span class="text-ctp-subtext">Subnet Mask:</span> <strong class="text-ctp-teal">${fmt(mask)}</strong></div>
+          <div><span class="text-ctp-subtext">Wildcard:</span> <strong class="text-ctp-peach">${fmt(wildcard)}</strong></div>
+          <div><span class="text-ctp-subtext">Broadcast:</span> <strong class="text-ctp-mauve">${fmt(bcast)}</strong></div>
+          <div><span class="text-ctp-subtext">Host Range:</span> <strong class="text-ctp-green">${fmt(first)} → ${fmt(last)}</strong></div>
+          <div><span class="text-ctp-subtext">Usable Hosts:</span> <strong class="text-ctp-yellow">${usable.toLocaleString()} IP</strong></div>
+        </div>
+      `;
+    }
+    updateSubnet();
+
+    function buildCli() {
+      const type = document.getElementById('tplType').value;
+      const vlan = document.getElementById('tplVlan').value.trim() || '99';
+      const net = document.getElementById('tplNet').value.trim() || '10.10.99.0/24';
+      let script = '';
+
+      if (type === 'mkt') {
+        script = `# MikroTik RouterOS — Remap Winbox & Chống Port Scan (VLAN ${vlan})
+/ip service
+set telnet,ftp,www,api disabled=yes
+set winbox port=58291 address=${net}
+
+/ip firewall filter
+add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list \\
+    address-list=PORT_SCANNERS address-list-timeout=7d
+add chain=input src-address-list=PORT_SCANNERS action=drop`;
+      } else if (type === 'fgt') {
+        script = `# FortiGate CLI — Khởi tạo VLAN ${vlan} trên cổng LACP
+config system interface
+    edit "VLAN_${vlan}"
+        set vdom "root"
+        set ip ${net}
+        set allowaccess ping https ssh
+        set interface "LACP_CORE_10G"
+        set vlanid ${vlan}
+    next
+end`;
+      } else {
+        script = `! Cấu hình VLAN ${vlan} & Trunk 10G trên Core Switch
+vlan ${vlan}
+ name VLAN_SEGMENT_${vlan}
+!
+interface AggregatePort 1
+ switchport mode trunk
+ switchport trunk allowed vlan add ${vlan}`;
+      }
+      document.getElementById('cliBox').textContent = script;
+    }
+    buildCli();
+
+    function copyCliTemplate() {
+      navigator.clipboard.writeText(document.getElementById('cliBox').textContent);
+      const b = document.getElementById('copyBtn');
+      b.textContent = 'Đã Copy!';
+      setTimeout(() => b.textContent = 'Copy CLI', 1500);
+    }
+
+    function downloadSelf(filename) {
+      const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+    }
+  </script>
+</body>
+</html>
