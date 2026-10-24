@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Kỹ Thuật — Nguyễn Nguyên Vũ | nguyenvu.click</title>
+  <title>Engineering Blog &amp; Runbooks — Nguyễn Nguyên Vũ | nguyenvu.click</title>
+  <link id="dynamicFavicon" rel="icon" type="image/jpeg" href="./avatar.jpg" />
+  <link rel="apple-touch-icon" href="./avatar.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,276 +23,1241 @@
           },
           colors: {
             ctp: {
-              crust: '#181926',
-              mantle: '#1e2030',
-              base: '#24273a',
-              surface0: '#363a4f',
-              surface1: '#494d64',
-              text: '#cad3f5',
-              subtext: '#a5adcb',
-              blue: '#8aadf4',
-              sapphire: '#7dc4e4',
-              teal: '#8bd5ca',
-              green: '#a6da95',
-              yellow: '#eed49f',
-              peach: '#f5a97f',
-              red: '#ed8796',
-              mauve: '#c6a0f6',
+              crust: '#011124',
+              mantle: '#04203e',
+              base: '#07315c',
+              surface0: '#0e4782',
+              surface1: '#1860a8',
+              text: '#f4fbff',
+              subtext: '#bae6fd',
+              blue: '#38bdf8',
+              sapphire: '#00f2fe',
+              teal: '#2dd4bf',
+              green: '#4ade80',
+              yellow: '#fde047',
+              peach: '#fb923c',
+              red: '#f87171',
+              mauve: '#c084fc',
             }
           }
         }
       }
-    }
+    };
   </script>
   <style>
-    body { background-color: #181926; color: #cad3f5; overflow-x: hidden; }
-    .bg-mesh {
-      background-image: 
-        radial-gradient(at 20% 10%, rgba(198, 160, 246, 0.11) 0px, transparent 45%),
-        radial-gradient(at 80% 30%, rgba(138, 173, 244, 0.10) 0px, transparent 45%);
+    body {
+      background-color: #011124;
+      color: #f4fbff;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease;
     }
+
+    /* Theme 1: Royal Tropical Marine & Deep Sapphire Ocean */
+    .ocean-backdrop {
+      background:
+        radial-gradient(1500px ellipse at 50% -12%, rgba(0, 242, 254, 0.60), transparent 64%),
+        radial-gradient(950px circle at 88% 18%, rgba(56, 189, 248, 0.42), transparent 55%),
+        radial-gradient(1000px circle at 12% 62%, rgba(2, 132, 199, 0.38), transparent 62%),
+        radial-gradient(850px circle at 50% 95%, rgba(45, 212, 191, 0.24), transparent 60%),
+        linear-gradient(180deg, #0077c2 0%, #004f8a 34%, #022c56 72%, #011226 100%);
+      transition: all 0.6s ease;
+    }
+
+    /* Theme 2: Catppuccin Macchiato NOC Mode */
+    body.theme-noc { background-color: #181926; }
+    body.theme-noc .ocean-backdrop {
+      background:
+        radial-gradient(900px circle at 15% 15%, rgba(138, 173, 244, 0.18), transparent 50%),
+        radial-gradient(900px circle at 85% 25%, rgba(198, 160, 246, 0.15), transparent 50%),
+        linear-gradient(180deg, #1e2030 0%, #181926 60%, #11121d 100%);
+    }
+    body.theme-noc .bento-card {
+      background: linear-gradient(165deg, rgba(36, 39, 58, 0.84) 0%, rgba(24, 25, 38, 0.94) 100%);
+      border-color: rgba(138, 173, 244, 0.25);
+    }
+
+    /* Diamond-Edge Marine Crystal Glassmorphism */
     .bento-card {
-      background: linear-gradient(180deg, rgba(36, 39, 58, 0.78) 0%, rgba(30, 32, 48, 0.88) 100%);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(202, 211, 245, 0.08);
-      transition: all 0.25s ease;
+      position: relative;
+      background: linear-gradient(165deg, rgba(7, 50, 94, 0.70) 0%, rgba(3, 24, 48, 0.88) 100%);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1px solid rgba(125, 211, 252, 0.30);
+      box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.30),
+        inset 0 0 28px rgba(0, 242, 254, 0.05),
+        0 22px 48px -15px rgba(1, 10, 24, 0.85);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .bento-card:hover { border-color: rgba(198, 160, 246, 0.35); }
+    .bento-card:hover {
+      border-color: rgba(0, 242, 254, 0.68);
+    }
+
+    /* Upgraded Top TabBar / Navbar Avatar Ring */
+    .nav-avatar-ring {
+      position: relative;
+      padding: 2px;
+      border-radius: 9999px;
+      background: conic-gradient(from 0deg, #00f2fe, #2dd4bf, #fde047, #38bdf8, #00f2fe);
+      box-shadow: 0 0 18px rgba(0, 242, 254, 0.45);
+      transition: transform 0.3s ease;
+    }
+    .nav-avatar-ring:hover { transform: scale(1.08); }
+
+    .nav-tab-pill {
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-tab-pill:hover {
+      background: rgba(56, 189, 248, 0.18);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .nav-tab-active {
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.28) 0%, rgba(45, 212, 191, 0.22) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.55);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.22);
+    }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(1, 17, 36, 0.6); }
+    ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.4); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(0, 242, 254, 0.75); }
+
+    .diff-del { background: rgba(248, 113, 113, 0.18); border-left: 3px solid #f87171; color: #fecaca; }
+    .diff-add { background: rgba(74, 222, 128, 0.18); border-left: 3px solid #4ade80; color: #bbf7d0; }
+
+    .avatar-hd {
+      filter: brightness(1.24) contrast(1.12) saturate(1.08);
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      .bento-card { background: #ffffff !important; border: 1px solid #cccccc !important; box-shadow: none !important; color: #000000 !important; }
+    }
   </style>
 </head>
-<body class="selection:bg-ctp-mauve/30 selection:text-ctp-mauve">
+<body class="selection:bg-ctp-sapphire/30 selection:text-white">
 
-  <div class="fixed inset-0 bg-mesh pointer-events-none z-0"></div>
+  <!-- Vibrant Marine Ocean Backdrop & Interactive Canvas -->
+  <div class="fixed inset-0 ocean-backdrop pointer-events-none z-0"></div>
+  <canvas id="oceanCanvas" class="fixed inset-0 z-0 cursor-pointer no-print" title="Nhấp vào đại dương để thả mồi phát sáng gọi đàn cá"></canvas>
 
-  <!-- Navbar -->
-  <header class="sticky top-4 z-50 px-4">
-    <div class="max-w-6xl mx-auto h-14 px-5 rounded-2xl bg-ctp-mantle/80 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-ctp-mauve to-ctp-blue p-[1px]">
-          <div class="w-full h-full bg-ctp-crust rounded-[7px] flex items-center justify-center font-mono font-bold text-xs text-ctp-mauve">
-            NV
-          </div>
-        </div>
-        <span class="font-display font-bold text-base tracking-tight text-ctp-text">
-          nguyenvu<span class="text-ctp-mauve">.click</span><span class="text-ctp-subtext font-mono text-xs">/blog</span>
+  <!-- Top Knowledge Base Status Ribbon -->
+  <div class="relative z-40 bg-ctp-crust/85 backdrop-blur-md border-b border-ctp-blue/30 text-[11px] font-mono py-1.5 px-4 no-print">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+        <span class="flex items-center gap-1.5 text-ctp-teal font-semibold">
+          <span class="w-2 h-2 rounded-full bg-ctp-teal animate-ping"></span>
+          RUNBOOK-STUDIO // NGUYENVU.CLICK/BLOG
         </span>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-1 text-xs font-medium">
-        <a href="index.html" class="px-3.5 py-1.5 rounded-lg text-ctp-subtext hover:text-ctp-text hover:bg-white/5 transition">Trang chủ</a>
-        <a href="blog.html" class="px-3.5 py-1.5 rounded-lg bg-white/10 text-ctp-text font-semibold">Blog kỹ thuật</a>
-        <a href="toolkit.html" class="px-3.5 py-1.5 rounded-lg text-ctp-subtext hover:text-ctp-text hover:bg-white/5 transition">NetTools & Sơ đồ</a>
-      </nav>
-
+        <span class="hidden sm:inline text-ctp-subtext">Library: <strong id="topTotalCount" class="text-ctp-sapphire">12 Chuyên đề thực chiến</strong></span>
+        <span class="hidden lg:inline text-ctp-subtext">Core 10: <strong class="text-ctp-yellow">Fortinet • MikroTik • Cisco • Meraki • Grandstream • UniFi • Aruba • DrayTek • Omada • HPE</strong></span>
+      </div>
       <div class="flex items-center gap-2">
-        <button onclick="openEditor()" class="px-3 py-1.5 rounded-lg bg-ctp-mauve/20 hover:bg-ctp-mauve text-ctp-mauve hover:text-ctp-crust font-mono font-semibold text-xs transition flex items-center gap-1.5">
-          <i data-lucide="pen-line" class="w-3.5 h-3.5"></i> Viết bài
+        <button onclick="spawnFoodBurst()" class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-ctp-teal/25 hover:bg-ctp-teal/40 text-ctp-teal border border-ctp-teal/45 transition">
+          <i data-lucide="fish" class="w-3.5 h-3.5"></i>
+          <span>Thả mồi gọi cá</span>
         </button>
-        <button onclick="downloadSelf('blog.html')" class="px-3 py-1.5 rounded-lg bg-ctp-surface0/70 hover:bg-ctp-surface0 text-ctp-text font-mono text-xs flex items-center gap-1.5 border border-white/10 transition">
-          <i data-lucide="download" class="w-3.5 h-3.5 text-ctp-mauve"></i>
-          <span class="hidden sm:inline">blog.html</span>
+        <button onclick="switchVisualMode()" class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-ctp-blue/25 hover:bg-ctp-blue/40 text-white border border-ctp-blue/40 transition">
+          <i data-lucide="palette" class="w-3.5 h-3.5 text-ctp-sapphire"></i>
+          <span id="themeModeText">Ocean Blue</span>
         </button>
+        <span id="liveTime" class="text-white font-semibold">GMT+7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================== -->
+  <!-- UPGRADED FLOATING GLASS TABBAR / NAVBAR WITH ./AVATAR.JPG PROFILE BADGE  -->
+  <!-- ======================================================================== -->
+  <header class="sticky top-3 z-50 px-3 sm:px-4 mt-2 no-print">
+    <div class="max-w-7xl mx-auto rounded-2xl bg-ctp-mantle/85 backdrop-blur-2xl border border-ctp-sapphire/40 shadow-[0_20px_50px_rgba(0,0,0,0.75),0_0_30px_rgba(0,242,254,0.15)] overflow-hidden">
+      <div class="h-16 px-4 sm:px-5 flex items-center justify-between gap-3">
+
+        <!-- Left Brand Identity with Circular HD ./avatar.jpg -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0">
+          <div class="nav-avatar-ring">
+            <img
+              src="./avatar.jpg"
+              alt="Nguyễn Nguyên Vũ"
+              class="w-10 h-10 rounded-full object-cover object-[center_15%] avatar-hd"
+            />
+            <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-ctp-green border-2 border-ctp-crust animate-pulse"></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-display font-bold text-base tracking-tight text-white group-hover:text-ctp-sapphire transition">
+                Nguyễn Nguyên Vũ
+              </span>
+              <span class="hidden sm:inline-block px-1.5 py-0.5 rounded-md bg-ctp-teal/20 border border-ctp-teal/40 font-mono text-[10px] text-ctp-teal font-bold">
+                RUNBOOKS
+              </span>
+            </div>
+            <div class="font-mono text-[11px] text-ctp-subtext flex items-center gap-1">
+              <span class="text-ctp-sapphire font-semibold">nguyenvu.click</span>
+              <span>/blog</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Center Segmented Glass Tab Bar -->
+        <nav class="hidden lg:flex items-center gap-1 p-1 rounded-xl bg-ctp-crust/75 border border-ctp-blue/25 text-xs font-medium">
+          <a href="index.html" class="nav-tab-pill px-3.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
+            <i data-lucide="compass" class="w-3.5 h-3.5 text-ctp-sapphire"></i> Trang chủ
+          </a>
+          <a href="blog.html" class="nav-tab-pill nav-tab-active px-3.5 py-1.5 rounded-lg font-semibold flex items-center gap-1.5">
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-ctp-teal"></i> Blog &amp; Runbooks
+            <span id="navTotalBadge" class="px-1.5 py-0.2 rounded bg-ctp-teal/25 text-ctp-yellow font-mono text-[10px]">12</span>
+          </a>
+          <a href="#config-diff-section" class="nav-tab-pill px-3 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
+            <i data-lucide="git-compare" class="w-3.5 h-3.5 text-ctp-yellow"></i> Config Diff &amp; Wireshark
+          </a>
+          <a href="#cheat-sheets" class="nav-tab-pill px-3 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
+            <i data-lucide="terminal" class="w-3.5 h-3.5 text-ctp-green"></i> CLI Cheat Sheets
+          </a>
+          <a href="toolkit.html" class="nav-tab-pill px-3.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
+            <i data-lucide="wrench" class="w-3.5 h-3.5 text-ctp-peach"></i> NetTools (12)
+          </a>
+        </nav>
+
+        <!-- Right Quick Action Buttons -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="toggleZenMode()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-ctp-crust/85 border border-ctp-blue/35 text-xs font-mono text-ctp-subtext hover:text-white transition" title="Mở rộng khung đọc toàn màn hình">
+            <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-ctp-teal"></i>
+            <span id="zenBtnText">Zen Mode</span>
+          </button>
+          <button onclick="openEditor()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire via-ctp-blue to-ctp-teal text-ctp-crust font-mono font-bold text-xs transition flex items-center gap-1.5 shadow-lg shadow-ctp-sapphire/25">
+            <i data-lucide="pen-line" class="w-3.5 h-3.5"></i>
+            <span>+ Viết Runbook</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Glowing Scroll Progress Bar inside Navbar -->
+      <div class="w-full h-[2px] bg-ctp-crust/60">
+        <div id="readProgress" class="h-full bg-gradient-to-r from-ctp-sapphire via-ctp-teal to-ctp-yellow w-0 transition-all duration-150"></div>
       </div>
     </div>
   </header>
 
-  <main class="relative z-10 max-w-6xl mx-auto px-4 pt-10 pb-24 space-y-10">
+  <main class="relative z-10 max-w-7xl mx-auto px-4 pt-8 pb-28 space-y-12 pointer-events-auto">
 
-    <!-- Header & Search Filter -->
-    <section class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-ctp-mauve">Engineering Notes & Runbooks</span>
-          <h1 class="font-display text-3xl sm:text-4xl font-bold mt-1">Ghi Chép Kỹ Thuật Thực Chiến</h1>
+    <!-- HERO BANNER & AUTHOR CREDENTIALS -->
+    <section class="bento-card rounded-3xl p-6 sm:p-8 no-print">
+      <div class="grid lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-8 space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ctp-teal/20 border border-ctp-teal/45 text-ctp-teal text-xs font-mono">
+            <i data-lucide="book-open-check" class="w-3.5 h-3.5"></i>
+            <span>Production Engineering Documentation &amp; CLI Runbooks</span>
+          </div>
+          <h1 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+            Thư Viện Runbook Hạ Tầng Mạng, Máy Chủ Ảo Hóa &amp; Tổng Đài IP
+          </h1>
+          <p class="text-sm sm:text-base text-ctp-subtext leading-relaxed">
+            Tổng hợp kịch bản cấu hình chuẩn Production, bảng quy hoạch VLAN/IP, sơ đồ kiến trúc và kinh nghiệm xử lý sự cố thực chiến trên 10 hãng chủ lực: <strong class="text-white">Fortinet FortiGate, MikroTik, Cisco, Cisco Meraki, Grandstream, Ubiquiti UniFi, Aruba, DrayTek, TP-Link Omada, HPE &amp; Proxmox VE 10G ZFS</strong>.
+          </p>
         </div>
-        <div class="relative w-full md:w-80">
-          <i data-lucide="search" class="w-4 h-4 text-ctp-subtext absolute left-3.5 top-3"></i>
-          <input id="searchBox" oninput="renderBlog()" type="text" placeholder="Tìm bài viết: Proxmox, FortiGate, MikroTik..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-ctp-crust border border-white/10 text-xs font-mono focus:outline-none focus:border-ctp-mauve" />
+
+        <!-- Author Mini Profile Card linked to ./avatar.jpg -->
+        <div class="lg:col-span-4 rounded-2xl bg-ctp-crust/85 border border-ctp-blue/35 p-4 flex items-center gap-4">
+          <img src="./avatar.jpg" alt="Nguyễn Nguyên Vũ" class="w-16 h-16 rounded-2xl object-cover object-[center_15%] border-2 border-ctp-sapphire avatar-hd shrink-0" />
+          <div class="space-y-1 font-mono text-xs overflow-hidden">
+            <div class="text-ctp-yellow font-bold text-[10px]">★ AUTHOR &amp; ARCHITECT</div>
+            <div class="font-display font-bold text-base text-white truncate">Nguyễn Nguyên Vũ</div>
+            <div class="text-ctp-sapphire text-[11px] truncate">System &amp; Network Engineer</div>
+            <div class="flex items-center gap-2 pt-1">
+              <button onclick="exportAllPostsJson()" class="px-2 py-0.5 rounded bg-ctp-surface0/80 hover:bg-ctp-teal hover:text-ctp-crust text-[10px] transition">Backup .JSON</button>
+              <button onclick="window.print()" class="px-2 py-0.5 rounded bg-ctp-surface0/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-[10px] transition">In PDF</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="flex flex-wrap gap-2 font-mono text-xs">
-        <button onclick="filterCat('ALL')" data-cat="ALL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-mauve text-ctp-crust font-bold">Tất cả (6)</button>
-        <button onclick="filterCat('NETWORK')" data-cat="NETWORK" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text">Mạng & Tường lửa</button>
-        <button onclick="filterCat('VIRTUALIZATION')" data-cat="VIRTUALIZATION" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text">Proxmox & Server</button>
-        <button onclick="filterCat('HARDWARE')" data-cat="HARDWARE" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text">Phần cứng & ELV</button>
+      <!-- Search, Category Pills & Filter Controls -->
+      <div class="mt-6 pt-6 border-t border-ctp-blue/25 space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+            <button onclick="filterCat('ALL')" data-cat="ALL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold">Tất cả (12)</button>
+            <button onclick="filterCat('FIREWALL_WAN')" data-cat="FIREWALL_WAN" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">🛡️ FortiGate, MikroTik &amp; DrayTek</button>
+            <button onclick="filterCat('SWITCH_WIFI')" data-cat="SWITCH_WIFI" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">📡 Cisco, Meraki, Aruba, UniFi &amp; Omada</button>
+            <button onclick="filterCat('VOIP_ELV')" data-cat="VOIP_ELV" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">📞 Grandstream VoIP &amp; ELV</button>
+            <button onclick="filterCat('SERVER_VIRTUAL')" data-cat="SERVER_VIRTUAL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">🖥️ HPE, Proxmox 10G &amp; Docker</button>
+            <button onclick="filterCat('SAVED')" data-cat="SAVED" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-yellow hover:text-white border border-ctp-yellow/35">★ Đã lưu (<span id="savedCountBadge">0</span>)</button>
+          </div>
+
+          <div class="relative w-full md:w-80 shrink-0">
+            <i data-lucide="search" class="w-4 h-4 text-ctp-subtext absolute left-3.5 top-2.5"></i>
+            <input id="searchBox" oninput="renderBlog()" type="text" placeholder="Tìm VLAN, LACP, Winbox, UCM6300, ZFS..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-ctp-crust/95 border border-ctp-blue/35 text-xs font-mono text-white focus:outline-none focus:border-ctp-sapphire" />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Split Layout: Left Article List + Right Full Reader -->
-    <section class="grid lg:grid-cols-12 gap-8 items-start">
-      <div id="articleList" class="lg:col-span-5 space-y-4"></div>
+    <!-- MAIN WORKSPACE: LEFT RUNBOOK LIST + RIGHT DEEP-DIVE TECHNICAL READER -->
+    <section id="readerGrid" class="grid lg:grid-cols-12 gap-8 items-start">
 
-      <div class="lg:col-span-7 bento-card rounded-3xl p-6 sm:p-9 sticky top-24">
-        <div id="articleContent"></div>
+      <!-- Left Column: Runbook Cards List (4 cols) -->
+      <div id="articleListContainer" class="lg:col-span-4 space-y-3.5 max-h-[1300px] overflow-y-auto pr-1 no-print">
+        <div id="articleList" class="space-y-3.5"></div>
+      </div>
+
+      <!-- Right Column: Full Technical Runbook Reader (8 cols) -->
+      <div id="articleReaderContainer" class="lg:col-span-8 space-y-6">
+        <div class="bento-card rounded-3xl p-6 sm:p-9 space-y-6 border border-ctp-sapphire/45 shadow-2xl">
+
+          <!-- Reader Top Toolbar (Section Jump, Font Size, Clap, Print) -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-ctp-blue/25 font-mono text-xs no-print">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <a href="#sec-topo" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-subtext transition">1. Sơ đồ</a>
+              <a href="#sec-specs" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-subtext transition">2. Thông số</a>
+              <a href="#sec-body" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-subtext transition">3. Quy trình</a>
+              <a href="#sec-cli" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-teal transition">4. Mã CLI</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button onclick="adjustFontSize(-1)" class="px-2.5 py-1 rounded-lg bg-ctp-crust border border-ctp-blue/30 text-ctp-subtext hover:text-white" title="Giảm cỡ chữ">A-</button>
+              <button onclick="adjustFontSize(1)" class="px-2.5 py-1 rounded-lg bg-ctp-crust border border-ctp-blue/30 text-ctp-subtext hover:text-white" title="Tăng cỡ chữ">A+</button>
+              <button onclick="clapCurrentPost()" class="px-3 py-1 rounded-lg bg-ctp-teal/20 border border-ctp-teal/50 text-ctp-yellow font-bold hover:bg-ctp-teal hover:text-ctp-crust transition">
+                👏 <span id="clapCountText">28</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Article Content Populated by JS -->
+          <div id="articleContent"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- INTERACTIVE CONFIG DIFF VIEWER & WIRESHARK 802.1Q / SIP PACKET INSPECTOR -->
+    <section id="config-diff-section" class="grid lg:grid-cols-12 gap-6 no-print">
+
+      <!-- Left: Multi-Vendor Before / After Hardening Audit (6 cols) -->
+      <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-7 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="font-mono text-xs uppercase text-ctp-teal">Interactive Audit Diff</span>
+            <h2 class="font-display text-xl font-bold text-white mt-0.5">So Sánh Cấu Hình Trước &amp; Sau Khi Tối Ưu Bảo Mật</h2>
+          </div>
+          <div class="flex gap-1.5 font-mono text-[11px]">
+            <button onclick="switchDiffTab('mkt')" id="diffbtn-mkt" class="px-2.5 py-1 rounded-lg bg-ctp-sapphire text-ctp-crust font-bold">MikroTik</button>
+            <button onclick="switchDiffTab('fgt')" id="diffbtn-fgt" class="px-2.5 py-1 rounded-lg bg-ctp-crust text-ctp-subtext">FortiGate</button>
+            <button onclick="switchDiffTab('sw')" id="diffbtn-sw" class="px-2.5 py-1 rounded-lg bg-ctp-crust text-ctp-subtext">Cisco/Aruba</button>
+          </div>
+        </div>
+
+        <div id="diffViewerBox" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs space-y-1.5 overflow-x-auto leading-relaxed"></div>
+      </div>
+
+      <!-- Right: Live Wireshark Packet Dissector (6 cols) -->
+      <div class="lg:col-span-6 bento-card rounded-3xl p-6 sm:p-7 space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="font-mono text-xs uppercase text-ctp-sapphire">Wireshark Packet Dissector</span>
+            <h2 class="font-display text-xl font-bold text-white mt-0.5">Phân Tích Gói Tin Thực Tế (VLAN 802.1Q, SIP VoIP, Corosync)</h2>
+          </div>
+          <span class="px-2.5 py-1 rounded-lg bg-ctp-blue/20 text-ctp-sapphire font-mono text-[10px]">pcapng decode</span>
+        </div>
+
+        <div class="rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 overflow-hidden font-mono text-[11px]">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-ctp-mantle text-ctp-subtext border-b border-ctp-blue/25">
+              <tr>
+                <th class="p-2.5">No.</th><th class="p-2.5">Source</th><th class="p-2.5">Destination</th><th class="p-2.5">Proto</th><th class="p-2.5">Info (Nhấp để mổ xẻ gói tin)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-ctp-blue/15">
+              <tr onclick="inspectPacket(0)" class="hover:bg-ctp-blue/20 cursor-pointer text-ctp-yellow">
+                <td class="p-2.5">201</td><td class="p-2.5">10.10.50.101</td><td class="p-2.5">10.10.50.2</td><td class="p-2.5">SIP/SDP</td><td class="p-2.5">INVITE sip:102@ucm6302 (VLAN 50 CoS=5 DSCP=EF)</td>
+              </tr>
+              <tr onclick="inspectPacket(1)" class="hover:bg-ctp-blue/20 cursor-pointer text-ctp-teal">
+                <td class="p-2.5">202</td><td class="p-2.5">10.10.99.11</td><td class="p-2.5">10.10.99.12</td><td class="p-2.5">Corosync</td><td class="p-2.5">Proxmox VE KNET Ring 0 Heartbeat (10G SFP+)</td>
+              </tr>
+              <tr onclick="inspectPacket(2)" class="hover:bg-ctp-blue/20 cursor-pointer text-ctp-sapphire">
+                <td class="p-2.5">203</td><td class="p-2.5">fe80::fgt:100f</td><td class="p-2.5">ff02::1:ha</td><td class="p-2.5">FGCP</td><td class="p-2.5">FortiGate HA Cluster Session Sync seq=94120</td>
+              </tr>
+              <tr onclick="inspectPacket(3)" class="hover:bg-ctp-blue/20 cursor-pointer text-ctp-green">
+                <td class="p-2.5">204</td><td class="p-2.5">00:0b:82:xx:xx</td><td class="p-2.5">01:80:c2:00:00:0e</td><td class="p-2.5">LLDP-MED</td><td class="p-2.5">Grandstream GRP Phone Voice VLAN 50 Auto-Assign</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="packetDetail" class="p-3.5 bg-ctp-mantle/90 border-t border-ctp-blue/25 text-ctp-subtext leading-relaxed">
+            ▸ Frame 201: 842 bytes on wire, Interface: Gi1/0/12 (Cisco/Aruba PoE+ Switch)<br/>
+            ▸ IEEE 802.1Q Virtual LAN, PRI: 5 (Voice), DEI: 0, ID: 50 (VOICE_GRANDSTREAM)<br/>
+            ▸ Differentiated Services Field: 0xb8 (DSCP: EF PHB, ECN: Not-ECT)<br/>
+            ▸ Session Initiation Protocol (INVITE) • Codec: G.711 PCMU (8000 Hz)
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- QUICK CLI CHEAT SHEETS FOR YOUR 10 CORE BRANDS (CLEAN NON-INLINE HANDLER) -->
+    <section id="cheat-sheets" class="bento-card rounded-3xl p-6 sm:p-8 space-y-5 no-print">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-ctp-yellow">★ Rapid Troubleshooting Reference</span>
+          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Bảng Tra Cứu Nhanh Lệnh Chẩn Đoán (10 Hãng Chủ Lực)</h2>
+        </div>
+        <span class="text-xs font-mono text-ctp-subtext">Nhấp vào từng ô lệnh để sao chép nhanh vào MobaXterm</span>
+      </div>
+
+      <div id="cheatSheetGrid" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 font-mono text-xs">
+        <!-- Populated cleanly via JS to prevent any HTML attribute syntax issues -->
       </div>
     </section>
 
   </main>
 
-  <!-- Modal Write New Post -->
-  <div id="editorModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bento-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-4 border border-ctp-mauve/40">
-      <div class="flex items-center justify-between border-b border-white/10 pb-3">
-        <h3 class="font-display font-bold text-lg text-ctp-mauve">Soạn Bài Viết Kỹ Thuật Mới</h3>
-        <button onclick="closeEditor()" class="text-xs font-mono text-ctp-subtext hover:text-ctp-red">[Đóng]</button>
+  <!-- FLOATING BOTTOM QUICK-ACTION DOCK -->
+  <div class="fixed bottom-4 inset-x-0 z-40 flex justify-center px-4 pointer-events-none no-print">
+    <div class="pointer-events-auto px-3 py-2 rounded-2xl bg-ctp-crust/85 backdrop-blur-2xl border border-ctp-sapphire/40 shadow-[0_15px_40px_rgba(0,0,0,0.85)] flex items-center gap-1.5 sm:gap-2 font-mono text-xs">
+      <a href="index.html" class="p-1.5 rounded-xl hover:bg-white/10 text-ctp-sapphire transition flex items-center gap-1.5" title="Về Trang chủ">
+        <img src="./avatar.jpg" alt="NV" class="w-5 h-5 rounded-full object-cover border border-ctp-sapphire" />
+        <span class="hidden sm:inline text-white font-semibold">Home</span>
+      </a>
+      <span class="h-4 w-[1px] bg-white/15"></span>
+      <button onclick="openEditor()" class="px-2.5 py-1.5 rounded-xl bg-ctp-teal/20 hover:bg-ctp-teal hover:text-ctp-crust text-ctp-yellow font-bold transition">
+        + Viết bài
+      </button>
+      <button onclick="toggleZenMode()" class="px-2.5 py-1.5 rounded-xl hover:bg-white/10 text-ctp-subtext hover:text-white transition">
+        Zen Mode
+      </button>
+      <a href="toolkit.html" class="px-2.5 py-1.5 rounded-xl hover:bg-white/10 text-ctp-subtext hover:text-white transition">
+        NetTools (12)
+      </a>
+      <span class="h-4 w-[1px] bg-white/15"></span>
+      <button onclick="spawnFoodBurst()" class="p-2 rounded-xl bg-ctp-blue/20 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-sapphire transition" title="Thả mồi gọi đàn cá">
+        <i data-lucide="fish" class="w-4 h-4"></i>
+      </button>
+      <button onclick="window.print()" class="p-2 rounded-xl bg-ctp-surface0/70 hover:bg-ctp-peach hover:text-ctp-crust text-ctp-peach transition" title="In Runbook PDF">
+        <i data-lucide="printer" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Write New Runbook Post -->
+  <div id="editorModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 no-print">
+    <div class="bento-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-4 border border-ctp-sapphire/50 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-ctp-blue/25 pb-3">
+        <h3 class="font-display font-bold text-lg text-ctp-sapphire">+ Soạn Runbook / Bài Viết Kỹ Thuật Mới</h3>
+        <button onclick="closeEditor()" class="text-xs font-mono text-ctp-subtext hover:text-ctp-red">[Đóng ESC]</button>
       </div>
       <div class="grid sm:grid-cols-2 gap-3 text-xs font-mono">
-        <input id="postTitle" type="text" placeholder="Tiêu đề bài viết..." class="p-3 rounded-xl bg-ctp-crust border border-white/10 focus:outline-none focus:border-ctp-mauve" />
-        <select id="postCat" class="p-3 rounded-xl bg-ctp-crust border border-white/10 focus:outline-none focus:border-ctp-mauve">
-          <option value="NETWORK">NETWORK</option>
-          <option value="VIRTUALIZATION">VIRTUALIZATION</option>
-          <option value="HARDWARE">HARDWARE</option>
+        <input id="postTitle" type="text" placeholder="Tiêu đề bài viết kỹ thuật..." class="p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white focus:outline-none focus:border-ctp-sapphire" />
+        <select id="postCat" class="p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white focus:outline-none focus:border-ctp-sapphire">
+          <option value="FIREWALL_WAN">🛡️ FortiGate, MikroTik &amp; DrayTek</option>
+          <option value="SWITCH_WIFI">📡 Cisco, Meraki, Aruba, UniFi &amp; Omada</option>
+          <option value="VOIP_ELV">📞 Grandstream VoIP &amp; ELV</option>
+          <option value="SERVER_VIRTUAL">🖥️ HPE, Proxmox 10G &amp; Docker</option>
         </select>
       </div>
-      <textarea id="postBody" rows="4" placeholder="Mô tả chi tiết giải pháp kỹ thuật..." class="w-full p-3 rounded-xl bg-ctp-crust border border-white/10 text-xs font-sans focus:outline-none focus:border-ctp-mauve"></textarea>
-      <textarea id="postCli" rows="5" placeholder="Đoạn mã cấu hình CLI (FortiOS, RouterOS, Bash...)" class="w-full p-3 rounded-xl bg-ctp-crust border border-white/10 text-xs font-mono text-ctp-teal focus:outline-none focus:border-ctp-mauve"></textarea>
+      <input id="postVendor" type="text" placeholder="Thiết bị áp dụng (VD: FortiGate 100F, Aruba 6300M, UCM6302)..." class="w-full p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-xs font-mono text-white focus:outline-none focus:border-ctp-sapphire" />
+      <textarea id="postBody" rows="4" placeholder="Nội dung phân tích kiến trúc &amp; các bước triển khai..." class="w-full p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-xs text-white font-sans focus:outline-none focus:border-ctp-sapphire"></textarea>
+      <textarea id="postCli" rows="5" placeholder="Đoạn mã cấu hình CLI chuẩn Production..." class="w-full p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-xs font-mono text-ctp-teal focus:outline-none focus:border-ctp-sapphire"></textarea>
       <div class="flex justify-end gap-2 pt-2">
-        <button onclick="exportMd()" class="px-4 py-2 rounded-xl bg-ctp-surface0 text-xs font-mono hover:bg-ctp-teal hover:text-ctp-crust font-semibold transition">Xuất file .MD</button>
-        <button onclick="publishPost()" class="px-4 py-2 rounded-xl bg-ctp-mauve text-ctp-crust text-xs font-mono font-bold">Lưu bài viết</button>
+        <button onclick="exportCurrentEditorMd()" class="px-4 py-2 rounded-xl bg-ctp-surface0 text-xs font-mono hover:bg-ctp-teal hover:text-ctp-crust font-semibold transition">Xuất file .MD</button>
+        <button onclick="publishPost()" class="px-5 py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire to-ctp-teal text-ctp-crust text-xs font-mono font-bold">Lưu &amp; Đăng Bài</button>
       </div>
     </div>
   </div>
 
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-20 right-5 z-50 px-4 py-2.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs shadow-2xl hidden items-center gap-2 no-print">
+    <span>✓ Đã sao chép vào Clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-ctp-blue/25 bg-ctp-crust/85 backdrop-blur-md py-12 no-print">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ctp-subtext">
+      <div class="flex items-center gap-3">
+        <img src="./avatar.jpg" alt="NV" class="w-7 h-7 rounded-full object-cover border border-ctp-sapphire" />
+        <span>© 2026 <strong class="text-white">Nguyễn Nguyên Vũ</strong> — <span class="text-ctp-sapphire">nguyenvu.click/blog</span></span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="index.html" class="hover:text-white">Trang chủ</a>
+        <a href="blog.html" class="hover:text-white">Blog kỹ thuật (12)</a>
+        <a href="toolkit.html" class="hover:text-white">NetTools (12)</a>
+        <a href="mailto:nguyenvuhs9@gmail.com" class="text-ctp-teal hover:underline">nguyenvuhs9@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
     lucide.createIcons();
 
+    // 1. Dynamic Circular Avatar Favicon Generator for Browser Tab Bar
+    function generateCircularAvatarFavicon() {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.src = './avatar.jpg';
+      img.onload = function() {
+        try {
+          const favCanvas = document.createElement('canvas');
+          favCanvas.width = 64;
+          favCanvas.height = 64;
+          const fctx = favCanvas.getContext('2d');
+
+          fctx.beginPath();
+          fctx.arc(32, 32, 31, 0, Math.PI * 2);
+          fctx.fillStyle = '#00f2fe';
+          fctx.fill();
+
+          fctx.save();
+          fctx.beginPath();
+          fctx.arc(32, 32, 27, 0, Math.PI * 2);
+          fctx.clip();
+          fctx.filter = 'brightness(1.22) contrast(1.12)';
+          const minDim = Math.min(img.width, img.height);
+          const sx = (img.width - minDim) / 2;
+          const sy = (img.height - minDim) * 0.15;
+          fctx.drawImage(img, sx, sy, minDim, minDim, 4, 4, 56, 56);
+          fctx.restore();
+
+          fctx.beginPath();
+          fctx.arc(50, 50, 8, 0, Math.PI * 2);
+          fctx.fillStyle = '#011124';
+          fctx.fill();
+          fctx.beginPath();
+          fctx.arc(50, 50, 5.5, 0, Math.PI * 2);
+          fctx.fillStyle = '#4ade80';
+          fctx.fill();
+
+          const link = document.getElementById('dynamicFavicon');
+          if (link) link.href = favCanvas.toDataURL('image/png');
+        } catch (e) {}
+      };
+    }
+    generateCircularAvatarFavicon();
+
+    setInterval(() => {
+      const el = document.getElementById('liveTime');
+      if (el) el.textContent = new Date().toLocaleTimeString('vi-VN', { hour12: false }) + ' GMT+7';
+    }, 1000);
+
+    function showToast(msg = '✓ Đã sao chép vào Clipboard!') {
+      const t = document.getElementById('toastNotification');
+      t.innerHTML = '<span>' + msg + '</span>';
+      t.classList.remove('hidden');
+      t.classList.add('flex');
+      setTimeout(() => { t.classList.add('hidden'); t.classList.remove('flex'); }, 2200);
+    }
+
+    // 2. Clean Cheat Sheet Data & Renderer (Zero Inline Escaping Issues)
+    const cheatSheets = [
+      { brand: '1. Fortinet FortiGate', title: 'Debug Packet Flow Trace', short: 'diag debug flow trace start', cmd: 'diagnose debug flow filter addr 10.10.20.50\ndiagnose debug flow trace start 100\ndiagnose debug enable', highlight: false },
+      { brand: '2. MikroTik RouterOS', title: 'Live Packet Sniffer CLI', short: '/tool sniffer quick ip-address=', cmd: '/tool sniffer quick interface=all ip-address=10.10.20.50', highlight: false },
+      { brand: '3. Cisco Catalyst', title: 'Check Err-Disabled & LACP', short: 'show interfaces status err-disabled', cmd: 'show interfaces status err-disabled\nshow spanning-tree blockedports\nshow etherchannel summary', highlight: false },
+      { brand: '4. Aruba Networking', title: 'LLDP Neighbor & LACP Check', short: 'show lldp info remote-device', cmd: 'show lacp interfaces\nshow lldp info remote-device\nshow logging -r', highlight: false },
+      { brand: '5. DrayTek Vigor', title: 'Multi-WAN & IPsec Status', short: 'wan status && vpn status', cmd: 'wan status\nvpn status\nip route status', highlight: false },
+      { brand: '6. Grandstream UCM', title: 'Check SIP Trunk & Phones', short: 'pjsip show registrations', cmd: 'pjsip show registrations\npjsip show endpoints\nsip set debug on', highlight: true },
+      { brand: '7. Ubiquiti UniFi', title: 'SSH Adopt & Status Info', short: 'mca-cli-op info / set-inform', cmd: 'mca-cli-op info\nset-inform http://10.10.99.10:8080/inform', highlight: true },
+      { brand: '8. TP-Link Omada', title: 'PoE Budget & VLAN Binding', short: 'show power inline', cmd: 'show interface switchport\nshow power inline\nshow ip dhcp snooping binding', highlight: true },
+      { brand: '9. Cisco Meraki', title: 'Local Status & Cloud Check', short: 'http://setup.meraki.com', cmd: 'curl -L https://api.meraki.com/api/v1/organizations', highlight: true },
+      { brand: '10. HPE & Proxmox VE', title: 'Quorum & ZFS Health Check', short: 'pvecm status && zpool status', cmd: 'pvecm status\nzpool status -v\nqm list', highlight: true }
+    ];
+
+    function renderCheatSheets() {
+      const grid = document.getElementById('cheatSheetGrid');
+      grid.innerHTML = cheatSheets.map((item, idx) => {
+        const colorCls = item.highlight ? 'text-ctp-yellow' : 'text-ctp-sapphire';
+        return `
+          <div onclick="copyCheatSheet(${idx})" class="p-3.5 rounded-2xl bg-ctp-crust/90 border border-ctp-blue/25 hover:border-ctp-sapphire cursor-pointer space-y-1 transition">
+            <div class="${colorCls} font-bold">${item.brand}</div>
+            <div class="text-white text-[11px]">${item.title}</div>
+            <code class="text-[10px] text-ctp-teal block truncate">${item.short}</code>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function copyCheatSheet(idx) {
+      const item = cheatSheets[idx];
+      if (!item) return;
+      navigator.clipboard.writeText(item.cmd);
+      showToast('✓ Đã copy lệnh ' + item.brand + '!');
+    }
+    renderCheatSheets();
+
+    // Dual-Theme Switcher
+    let isNocTheme = false;
+    function switchVisualMode() {
+      isNocTheme = !isNocTheme;
+      document.body.classList.toggle('theme-noc', isNocTheme);
+      document.getElementById('themeModeText').textContent = isNocTheme ? 'Catppuccin NOC' : 'Ocean Blue';
+    }
+
+    // Zen Wide Reader Mode Toggle
+    let isZenMode = false;
+    function toggleZenMode() {
+      isZenMode = !isZenMode;
+      const listCol = document.getElementById('articleListContainer');
+      const readCol = document.getElementById('articleReaderContainer');
+      const btnText = document.getElementById('zenBtnText');
+      if (isZenMode) {
+        listCol.classList.add('hidden');
+        readCol.className = 'lg:col-span-12 space-y-6';
+        btnText.textContent = 'Thoát Zen';
+      } else {
+        listCol.classList.remove('hidden');
+        readCol.className = 'lg:col-span-8 space-y-6';
+        btnText.textContent = 'Zen Mode';
+      }
+    }
+
+    // Reader Font Size Adjuster & Clap Counter
+    let currentFontSize = 15;
+    function adjustFontSize(delta) {
+      currentFontSize = Math.min(20, Math.max(13, currentFontSize + delta));
+      const bodyEl = document.getElementById('sec-body-text');
+      if (bodyEl) bodyEl.style.fontSize = currentFontSize + 'px';
+    }
+
+    let clapsMap = JSON.parse(localStorage.getItem('nguyenvu_blog_claps')) || {};
+    function clapCurrentPost() {
+      clapsMap[currentArticleId] = (clapsMap[currentArticleId] || 28) + 1;
+      localStorage.setItem('nguyenvu_blog_claps', JSON.stringify(clapsMap));
+      document.getElementById('clapCountText').textContent = clapsMap[currentArticleId];
+      showToast('👏 Cảm ơn bạn đã vỗ tay cho Runbook này!');
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    // =========================================================================
+    // 12 COMPREHENSIVE ENGINEERING RUNBOOKS (WITH TOPOLOGY, TABLES & CLI)
+    // =========================================================================
     const initialArticles = [
       {
-        id: 'proxmox-qdevice-zfs',
-        cat: 'VIRTUALIZATION',
-        date: '21/10/2026',
-        readTime: '8 phút đọc',
-        title: 'Triển Khai Cụm Proxmox VE Đa Node Với QDevice Quorum, ZFS Pool & Cáp Quang 10G',
-        excerpt: 'Kinh nghiệm thiết lập cụm máy chủ ảo hóa độ sẵn sàng cao kết nối liên phòng máy qua đường truyền quang 10G SFP+ và thiết lập QDevice chống Split-Brain.',
-        body: `Khi triển khai cụm Proxmox VE trên hệ thống máy chủ nhiều Node (như dòng Supermicro 3U MicroCloud), việc đảm bảo tính toàn vẹn của Quorum là yếu tố tiên quyết. Sử dụng QDevice giúp cụm duy trì số phiếu bầu lẻ ổn định.\n\nSong song đó, tách riêng mạng Corosync khỏi mạng truyền dữ liệu ZFS Replication / Backup trên đường quang 10G SFP+ giúp độ trễ cụm luôn dưới 0.5ms.`,
-        cli: `# Kiểm tra trạng thái Quorum và các Node trong cụm
-pvecm status
+        id: 'fortigate-ha-sdwan-lacp',
+        cat: 'FIREWALL_WAN',
+        vendor: '★ Fortinet FortiGate (100F / 200F)',
+        level: 'Production Runbook',
+        date: '24/10/2026',
+        readTime: '12 phút đọc',
+        title: 'Thiết Kế Cụm Tường Lửa Fortinet FortiGate HA (Active-Passive), SD-WAN SLA & LACP 10G Xuống Core Switch',
+        excerpt: 'Runbook triển khai chuẩn doanh nghiệp: cấu hình FGCP Heartbeat dự phòng nóng, gom băng thông 10G 802.3ad LACP, phân vùng VLAN và định tuyến SD-WAN tự động chuyển mạch dưới 1 giây.',
+        topology: `
+  [ISP-1 Viettel FTTH]        [ISP-2 VNPT FTTH]
+           \\                    /
+        (SD-WAN Zone: virtual-wan-link)
+           +--------------------+
+           | FortiGate-100F #01 | <=== FGCP HA Heartbeat (port7, port8) ===> [FortiGate-100F #02]
+           +--------------------+
+                     ||
+        (LACP 20Gbps 802.3ad: x1 + x2)
+                     ||
+           +--------------------+
+           | Core Switch 10G    | ---> VLAN 10 (Server), VLAN 20 (Wi-Fi), VLAN 50 (VoIP), VLAN 99 (MGMT)
+           +--------------------+`,
+        specs: [
+          ['Cơ chế HA', 'Active-Passive (FGCP)', 'Group-ID: 10 • Override: Disable • Session Pickup: Enable'],
+          ['Uplink Trunk', '802.3ad LACP (x1 + x2)', '20Gbps Full-Duplex • Native VLAN 1 • Allowed: 10,20,30,50,99'],
+          ['SD-WAN SLA', 'Ping 1.1.1.1 & 8.8.8.8', 'Interval: 500ms • Failthreshold: 3 • Latency < 25ms, Jitter < 5ms']
+        ],
+        body: `1. Quy hoạch cụm HA Active-Passive (FGCP):
+Khi triển khai cặp tường lửa Fortinet FortiGate cho trụ sở chính hoặc bệnh viện, cần sử dụng tối thiểu 2 cổng vật lý độc lập (ví dụ port7 và port8) nối trực tiếp làm đường Heartbeat (HA Sync). Bật tính năng "set session-pickup enable" để toàn bộ bảng trạng thái kết nối TCP và phiên IPsec VPN được đồng bộ sang thiết bị Secondary theo thời gian thực, đảm bảo khi rút cáp nguồn thiết bị chính thì người dùng không bị rớt gói tin.
 
-# Cài đặt gói corosync-qdevice trên các Node Proxmox
-apt update && apt install corosync-qdevice -y
-pvecm qdevice setup 10.10.99.250
+2. Kết nối 10G SFP+ LACP xuống Core Switch:
+Thay vì sử dụng cổng đơn lẻ gây nghẽn cổ chai giữa các VLAN, khởi tạo giao diện Aggregate 802.3ad (gom cổng x1 và x2 10G SFP+) nối xuống Core Switch Cisco/Aruba. Toàn bộ Sub-interface VLAN (VLAN 10 Server, VLAN 20 Wi-Fi, VLAN 30 CCTV, VLAN 50 Grandstream VoIP, VLAN 99 Management) được gắn trên giao diện LACP này.
 
-# Kiểm tra dung lượng và trạng thái ZFS Storage Pool
-zpool status -v`
-      },
-      {
-        id: 'mikrotik-winbox-security',
-        cat: 'NETWORK',
-        date: '22/10/2026',
-        readTime: '6 phút đọc',
-        title: 'Bảo Mật MikroTik RouterOS: Đổi Port Winbox & Chống Quét Cổng Nội Bộ (Port Scan)',
-        excerpt: 'Cấu hình ẩn dịch vụ quản trị Winbox, giới hạn IP truy cập theo VLAN quản trị và tự động chặn các IP thực hiện hành vi Nmap Port Scanning.',
-        body: `Trong vận hành mạng thực tế, việc giữ nguyên cổng mặc định 8291 cho Winbox dễ khiến thiết bị định tuyến trở thành mục tiêu dò quét. Đổi cổng dịch vụ kết hợp giới hạn dải IP Management và bật bộ lọc PSD (Port Scan Detection) trên Firewall Filter giúp bảo vệ toàn diện RouterOS.`,
-        cli: `/ip service
-set telnet disabled=yes
-set ftp disabled=yes
-set www disabled=yes
-set winbox port=58291 address=10.10.99.0/24
+3. Tối ưu hóa SD-WAN Performance SLA:
+Gom các đường truyền WAN FTTH vào vùng SD-WAN Zone. Thiết lập luật SD-WAN ưu tiên đường truyền có Jitter thấp nhất cho lưu lượng thoại SIP (VLAN 50) và họp trực tuyến Zoom/Teams.`,
+        cli: `# 1. Cấu hình FortiGate High-Availability (Active-Passive)
+config system ha
+    set group-id 10
+    set group-name "FGT-CORE-HA"
+    set mode a-p
+    set password "ENC_HA_SECRET_KEY"
+    set hbdev "port7" 50 "port8" 100
+    set session-pickup enable
+    set session-pickup-connectionless enable
+    set override disable
+    set priority 200
+end
 
-/ip firewall filter
-add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list \\
-    address-list=PORT_SCANNERS address-list-timeout=7d comment="Block Port Scan"
-add chain=input src-address-list=PORT_SCANNERS action=drop`
-      },
-      {
-        id: 'core-nbs5500-fortigate',
-        cat: 'NETWORK',
-        date: '11/09/2026',
-        readTime: '10 phút đọc',
-        title: 'Quy Hoạch Hạ Tầng 39 Thiết Bị Mạng: Core Switch NBS5500, 34 AP & Tường Lửa FortiGate',
-        excerpt: 'Thiết kế phân vùng VLAN, cấu hình LACP Trunking giữa Core Switch NBS5500 với FortiGate và tối ưu phủ sóng cho 34 Access Point RAP2260.',
-        body: `Đối với mạng doanh nghiệp quy mô lớn sử dụng đồng bộ hệ sinh thái chuyển mạch NBS5500, NBS3200 và 34 điểm truy cập không dây RAP2260, việc gom lưu lượng qua cổng Aggregate LACP lên tường lửa FortiGate giúp kiểm soát chặt chẽ chính sách bảo mật giữa các VLAN Nhân sự, Khách và Server.`,
-        cli: `config system interface
-    edit "VLAN20_STAFF_WIFI"
+# 2. Khởi tạo cổng 10G LACP Trunk & Sub-interface VLAN
+config system interface
+    edit "LACP_CORE_10G"
+        set vdom "root"
+        set type aggregate
+        set member "x1" "x2"
+        set lacp-mode active
+        set lacp-speed fast
+    next
+    edit "VLAN20_CORP_WIFI"
         set vdom "root"
         set ip 10.10.20.1 255.255.255.0
         set allowaccess ping
-        set interface "LACP_CORE"
+        set interface "LACP_CORE_10G"
         set vlanid 20
     next
-end`
+    edit "VLAN50_VOICE_UCM"
+        set vdom "root"
+        set ip 10.10.50.1 255.255.255.0
+        set allowaccess ping
+        set interface "LACP_CORE_10G"
+        set vlanid 50
+    next
+end`,
+        verify: `FG-Core-HA # get system ha status
+HA Health Status: OK
+Model: FortiGate-100F | Mode: Active-Passive | Group: 10
+Primary   : FG100F-NODE01 (serial: FG100FTK2200XXXX) - Master
+Secondary : FG100F-NODE02 (serial: FG100FTK2200YYYY) - Slave (In-Sync)`
       },
       {
-        id: 'riverbed-pfsense-serial',
-        cat: 'HARDWARE',
+        id: 'mikrotik-hardening-pcc-routeros7',
+        cat: 'FIREWALL_WAN',
+        vendor: '★ MikroTik RouterOS v7 (CCR2004 / RB5009)',
+        level: 'Security & Routing Runbook',
+        date: '22/10/2026',
+        readTime: '10 phút đọc',
+        title: 'Bảo Mật Chuyên Sâu MikroTik RouterOS v7: Remap Cổng Winbox, Chống Quét Cổng PSD & Cân Bằng Tải PCC',
+        excerpt: 'Quy trình khóa chặt các dịch vụ quản trị trên MikroTik, phát hiện và khóa tự động IP dùng Nmap/Masscan quét mạng nội bộ, kết hợp cân bằng tải Dual-WAN PCC.',
+        topology: `
+  [WAN1: PPPoE Viettel]     [WAN2: PPPoE FPT]
+            \\                   /
+         +-------------------------+
+         | MikroTik CCR2004 / 5009 |
+         | - Winbox Port: 58291    |
+         | - Firewall PSD Active   |
+         +-------------------------+
+                     |
+        [VLAN 99 Management Only: 10.10.99.0/24]`,
+        specs: [
+          ['Cổng Winbox mới', 'TCP 58291 (Đã ẩn 8291)', 'Giới hạn ACL chỉ cho phép dải 10.10.99.0/24'],
+          ['Bộ lọc PSD', 'Weight Threshold = 21', 'Delay Threshold = 3s • Low Port Weight = 3 • Timeout = 14d'],
+          ['Cân bằng tải', 'PCC both-addresses-and-ports', 'Giữ nguyên phiên HTTPS Banking / Giao dịch']
+        ],
+        body: `1. Khóa chặt dịch vụ quản trị (Service Hardening):
+Trên MikroTik RouterOS, việc để cổng Winbox mặc định (8291), WWW (80) hoặc API (8728) mở trên tất cả các giao diện là rủi ro bảo mật lớn nhất. Cần tắt toàn bộ dịch vụ không dùng (telnet, ftp, www, api), đổi cổng Winbox sang cổng cao (ví dụ 58291) và chỉ cho phép kết nối từ dải mạng quản trị (Management VLAN 99).
+
+2. Phát hiện và chặn hành vi quét cổng (Port Scan Detection - PSD):
+Khi một máy tính trong mạng LAN hoặc IP ngoài WAN thực hiện quét cổng bằng Nmap/Masscan để tìm cổng Winbox mới, bộ lọc PSD của RouterOS sẽ cộng điểm trọng số (Weight). Ngay khi vượt ngưỡng 21 điểm trong 3 giây, IP nguồn sẽ bị đưa vào danh sách đen (Address-List: PORT_SCANNERS) và bị Drop toàn bộ lưu lượng trong 14 ngày.`,
+        cli: `# 1. Tắt các dịch vụ không an toàn & Đổi cổng Winbox sang 58291
+/ip service
+set telnet disabled=yes
+set ftp disabled=yes
+set www disabled=yes
+set api disabled=yes
+set api-ssl disabled=yes
+set ssh port=52222 address=10.10.99.0/24
+set winbox port=58291 address=10.10.99.0/24
+
+# 2. Cấu hình Firewall chống Port Scan (PSD) & Brute-Force
+/ip firewall filter
+add chain=input connection-state=established,related,untracked action=accept comment="Accept Established"
+add chain=input connection-state=invalid action=drop comment="Drop Invalid"
+add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list \\
+    address-list=PORT_SCANNERS address-list-timeout=14d comment="Detect Nmap Port Scan"
+add chain=input src-address-list=PORT_SCANNERS action=drop comment="Drop Port Scanners"
+
+# 3. Cân bằng tải 2 WAN PCC trên RouterOS v7
+/routing table
+add name=to_WAN1 fib
+add name=to_WAN2 fib
+
+/ip firewall mangle
+add chain=prerouting in-interface=vlan20-lan dst-address-type=!local \\
+    per-connection-classifier=both-addresses-and-ports:2/0 \\
+    action=mark-connection new-connection-mark=WAN1_conn passthrough=yes
+add chain=prerouting in-interface=vlan20-lan dst-address-type=!local \\
+    per-connection-classifier=both-addresses-and-ports:2/1 \\
+    action=mark-connection new-connection-mark=WAN2_conn passthrough=yes`,
+        verify: `[admin@CCR2004-Edge] > /ip firewall address-list print where list="PORT_SCANNERS"
+Columns: LIST, ADDRESS, CREATION-TIME, TIMEOUT
+# LIST           ADDRESS         CREATION-TIME        TIMEOUT
+0 PORT_SCANNERS  10.10.20.184    2026-10-22 14:12:09  13d23h58m`
+      },
+      {
+        id: 'cisco-aruba-switching-lacp-dai',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ Cisco Catalyst & ★ Aruba AOS-CX',
+        level: 'Campus Switching Runbook',
+        date: '21/10/2026',
+        readTime: '11 phút đọc',
+        title: 'Cấu Hình Chuyển Mạch Cisco Catalyst & Aruba AOS-CX: LACP Trunking, DHCP Snooping, DAI & Voice VLAN',
+        excerpt: 'Bộ lệnh chuẩn hóa cho cả hai hệ sinh thái Switch phổ biến nhất doanh nghiệp: gom cổng LACP 10G, chống cắm nhầm Router phát DHCP giả mạo và ưu tiên gói tin thoại.',
+        topology: `
+     [Core Switch Cisco 9300 / Aruba 6300M]
+               ||              ||
+     (LACP Po1 / lag1 - 10G SFP+ Trunk: VLAN 10,20,50,99)
+               ||              ||
+     [Access Switch Cisco 2960X / Aruba 6100 PoE+]
+        /              |               \\
+  [PC VLAN 20]   [IP Phone VLAN 50]   [DHCP Rogue Blocked]`,
+        specs: [
+          ['Giao thức Trunk', 'IEEE 802.3ad LACP Active', 'Cisco: channel-group 1 mode active | Aruba: lag 1'],
+          ['Bảo mật Lớp 2', 'DHCP Snooping + ARP Inspection', 'Chỉ Trust cổng Uplink nối lên Core Switch / Firewall'],
+          ['Chống Loop mạng', 'BPDU Guard + Root Guard', 'Tự động đưa cổng Access bị cắm vòng dây vào trạng thái Err-Disable']
+        ],
+        body: `1. Chống cắm nhầm thiết bị phát DHCP giả mạo (DHCP Snooping):
+Trong môi trường văn phòng hoặc tòa nhà lớn, người dùng vô tình cắm dây mạng vào cổng LAN của bộ phát Wi-Fi cá nhân sẽ làm phát tán IP sai (192.168.0.x/192.168.1.x) gây mất mạng toàn bộ tầng. Bật DHCP Snooping trên Cisco Catalyst và Aruba Switch giúp chặn hoàn toàn bản tin DHCP Offer từ các cổng Access (Untrusted) và chỉ cho phép nhận IP từ cổng Uplink (Trusted).
+
+2. Bảo vệ chống giả mạo ARP (Dynamic ARP Inspection - DAI):
+Dựa trên bảng cơ sở dữ liệu DHCP Snooping Binding, tính năng DAI kiểm tra mọi gói tin ARP đi qua Switch và loại bỏ ngay lập tức các gói tin ARP Spoofing / Man-in-the-Middle.`,
+        cli: `! =================================================================
+! PHẦN A: CẤU HÌNH TRÊN CISCO CATALYST (IOS / IOS-XE)
+! =================================================================
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,50
+no ip dhcp snooping information option
+ip arp inspection vlan 10,20,50
+
+errdisable recovery cause bpduguard
+errdisable recovery interval 300
+
+interface Port-channel1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,50,99
+ ip dhcp snooping trust
+ ip arp inspection trust
+
+interface range GigabitEthernet1/0/1 - 24
+ switchport mode access
+ switchport access vlan 20
+ switchport voice vlan 50
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+
+! =================================================================
+! PHẦN B: CẤU HÌNH TƯƠNG ĐƯƠNG TRÊN ARUBA AOS-CX (6100 / 6200 / 6300)
+! =================================================================
+dhcp-snooping
+dhcp-snooping vlan 10,20,50
+arp-inspection vlan 10,20,50
+
+interface lag 1
+ no shutdown
+ no routing
+ vlan trunk native 1
+ vlan trunk allowed 10,20,30,50,99
+ lacp mode active
+ dhcp-snooping trust
+ arp-inspection trust`,
+        verify: `Cisco-Switch# show ip dhcp snooping binding
+MacAddress          IpAddress        Lease(sec)  Type           VLAN  Interface
+------------------  ---------------  ----------  -------------  ----  --------------------
+00:0B:82:8A:11:22   10.10.50.101     86120       dhcp-snooping   50   GigabitEthernet1/0/5`
+      },
+      {
+        id: 'grandstream-ucm6300-voip-pbx',
+        cat: 'VOIP_ELV',
+        vendor: '★ Grandstream (UCM6300 / GRP / GWN)',
+        level: 'Enterprise VoIP Runbook',
+        date: '20/10/2026',
+        readTime: '11 phút đọc',
+        title: 'Triển Khai Tổng Đài IP Grandstream UCM6300 Series: Đấu Nối SIP Trunk, IVR, Zero-Config & Bảo Mật Thoại',
+        excerpt: 'Hướng dẫn toàn diện thiết lập tổng đài Grandstream UCM6301/6302/6304, phân bổ nhánh gọi vào/ra (Inbound/Outbound Routes), tự động đẩy cấu hình máy nhánh GRP/GXP và chống cước tặc.',
+        topology: `
+  [Nhà mạng Viettel/VNPT/FPT SIP Trunk]
+                   |
+         (VLAN 10 / WAN Voice IP)
+                   |
+      +--------------------------+
+      | Grandstream UCM6302 PBX  | ---> Quản lý từ xa GDMS Cloud / Wave App
+      +--------------------------+
+                   |
+      (Voice VLAN 50 - CoS 5 / DSCP EF 46)
+                   |
+   +---------------+---------------+
+   |                               |
+[150x Điện thoại IP GRP2602P]   [Loa thông báo SIP Paging]`,
+        specs: [
+          ['Cổng tín hiệu & thoại', 'UDP/TCP/TLS 5060 • RTP 10000-20000', 'Đánh dấu QoS DSCP EF (46) & 802.1p CoS = 5'],
+          ['Cấp phát tự động', 'Zero-Config + DHCP Option 66', 'Tự động nhận diện MAC OUI 00:0B:82 / C0:74:AD'],
+          ['Bảo mật tổng đài', 'Fail2ban + Outbound PIN + ACL', 'Chặn tuyệt đối Guest SIP Call & Giới hạn IP SIP Proxy']
+        ],
+        body: `1. Quy hoạch mạng Voice VLAN tách biệt và QoS:
+Lưu lượng thoại thời gian thực (RTP) rất nhạy cảm với độ trễ (>150ms) và biến thiên độ trễ (Jitter >30ms). Khi triển khai tổng đài Grandstream UCM6300 Series, toàn bộ điện thoại bàn IP (GRP2602P, GRP2612, GXP1625) cần được đặt vào Voice VLAN riêng (ví dụ VLAN 50). Nhờ giao thức LLDP-MED trên Switch PoE, điện thoại tự động gắn thẻ VLAN 50 với độ ưu tiên CoS = 5.
+
+2. Tự động cấp phát cấu hình hàng loạt (Zero-Config & DHCP Option 66):
+Bật tính năng Auto-Discover trên UCM6300 kết hợp khai báo DHCP Option 66 trỏ về địa chỉ IP của tổng đài. Khi cắm điện thoại vào mạng, tổng đài quét thấy địa chỉ MAC, gán số máy nhánh (Extension) và đẩy toàn bộ danh bạ xuống máy tự động.`,
+        cli: `# 1. Cấu hình PJSIP Transport & QoS trên Grandstream UCM6300 CLI
+[transport-udp-qos]
+type=transport
+protocol=udp
+bind=0.0.0.0:5060
+tos=ef
+cos=5
+
+# 2. Cấu hình mẫu Outbound Route Dial Pattern (Việt Nam)
+_0[35789]XXXXXXXX  -> Gọi di động 10 số (Viettel, Vina, Mobi...)
+_02XXXXXXXXX       -> Gọi cố định liên tỉnh
+_1[89]00XXXX       -> Tổng đài dịch vụ
+
+# 3. Kiểm tra trạng thái SIP Trunk & Máy nhánh qua SSH Asterisk CLI
+UCM6302*CLI> pjsip show registrations
+UCM6302*CLI> pjsip show endpoints`,
+        verify: `UCM6302*CLI> core show channels concise
+PJSIP/101-000001a2!from-internal!098xxxxxxx!1!Up!Dial!PJSIP/098xxxxxxx@Viettel_SIP_Trunk!34!alaw`
+      },
+      {
+        id: 'meraki-unifi-omada-cloud-wifi',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ Cisco Meraki • ★ UniFi • ★ TP-Link Omada',
+        level: 'Cloud SDN & Wireless Runbook',
+        date: '19/10/2026',
+        readTime: '10 phút đọc',
+        title: 'Triển Khai & Tối Ưu Hóa Mạng Cloud SDN Đa Nền Tảng: Cisco Meraki, Ubiquiti UniFi & TP-Link Omada',
+        excerpt: 'Chuẩn hóa quy hoạch kênh truyền 5GHz/6GHz, cấu hình VLAN Trunking cho Access Point, tối ưu Roaming 802.11k/v/r và xử lý lỗi mất kết nối Controller.',
+        topology: `
+   [Meraki Cloud / UniFi Controller / Omada OC300]
+                         |
+            (Management VLAN 99 - Native)
+                         |
+       [PoE+ Switch Trunk Port: Native 99, Tagged 20,30,40]
+          /              |                 \\
+  [Cisco Meraki MR]  [UniFi U6-Pro]   [Omada EAP660 HD]`,
+        specs: [
+          ['Quy hoạch kênh 2.4GHz', 'Kênh 1, 6, 11 • Độ rộng 20MHz', 'Công suất phát TX Power: Low / Medium (11-14 dBm)'],
+          ['Quy hoạch kênh 5GHz', 'Kênh 36-48, 149-161 • 40MHz', 'Công suất phát TX Power: Medium / High (17-20 dBm)'],
+          ['Chuyển vùng mượt', '802.11k (Neighbor) + 802.11v + 802.11r', 'Bật Minimum RSSI (-72 dBm) & Band Steering ưu tiên 5GHz']
+        ],
+        body: `1. Quy tắc cấu hình cổng Switch Trunk nối tới Access Point (Meraki, UniFi, Omada):
+Khi triển khai các dòng Access Point doanh nghiệp phát đồng thời nhiều SSID thuộc nhiều VLAN khác nhau, cổng Switch PoE+ nối với AP bắt buộc phải cấu hình ở chế độ Trunk:
+- Native VLAN (Untagged / PVID): Đặt là VLAN Quản trị (ví dụ VLAN 99) để AP nhận IP quản lý.
+- Allowed Tagged VLANs: Cho phép các VLAN người dùng (20, 40) đi qua có gắn thẻ 802.1Q.
+
+2. Tinh chỉnh công suất phát để chống hiện tượng "Sticky Client":
+Luôn đặt công suất băng tần 2.4GHz thấp hơn 5GHz từ 6 đến 7 dBm để thiết bị di động ưu tiên kết nối vào băng tần 5GHz tốc độ cao.`,
+        cli: `# 1. Lệnh SSH Adoption & Chẩn đoán trên Ubiquiti UniFi AP / Switch
+ssh ubnt@10.10.99.105
+mca-cli-op info
+mca-cli-op set-inform http://10.10.99.10:8080/inform
+
+# 2. Cấu hình cổng Switch TP-Link JetStream (Omada) nối xuống AP
+interface gigabitEthernet 1/0/1
+ description "UPLINK_TO_WIFI6_AP"
+ switchport general allowed vlan 99 untagged
+ switchport general allowed vlan 20,40 tagged
+ switchport pvid 99
+ power inline supply enable
+ spanning-tree portfast`,
+        verify: `UniFi-U6Pro-BZ.6.6.65# mca-cli-op info
+Model:       U6-Pro | IP Address: 10.10.99.105
+Status:      Connected (http://10.10.99.10:8080/inform)`
+      },
+      {
+        id: 'draytek-multiwan-ipsec-matrix',
+        cat: 'FIREWALL_WAN',
+        vendor: '★ DrayTek Vigor (2927 / 2962 / 3910)',
+        level: 'Multi-WAN & VPN Runbook',
+        date: '18/10/2026',
+        readTime: '9 phút đọc',
+        title: 'Cấu Hình DrayTek Vigor 2927 / 3910: Cân Bằng Tải Multi-WAN, IPsec VPN Site-to-Site & Dự Phòng HA',
+        excerpt: 'Kinh nghiệm vận hành dòng Router quốc dân tại các chi nhánh doanh nghiệp: cố định phiên HTTPS, nối VPN LAN-to-LAN tốc độ cao về trụ sở FortiGate/MikroTik.',
+        topology: `
+  [Trụ sở HQ: FortiGate 100F / Vigor 3910 (IP Tĩnh)]
+                         ||
+           (IPsec IKEv2 AES-256-GCM Tunnel)
+                         ||
+  [Chi nhánh: DrayTek Vigor 2927 (2x FTTH Dynamic IP)]`,
+        specs: [
+          ['Chế độ Load-Balance', 'According to Line Speed / IP-Based', 'Tránh đổi IP đột ngột khi giao dịch HTTPS / Banking'],
+          ['Cấu hình IPsec IKEv2', 'AES-256 + SHA256 + DH Group 14', 'Bật Dead Peer Detection (DPD) & Change Default Route'],
+          ['Dự phòng phần cứng', 'High-Availability (Hot-Standby)', 'Đồng bộ Virtual IP LAN Gateway giữa 2 thiết bị Vigor']
+        ],
+        body: `1. Xử lý triệt để lỗi rớt phiên khi cân bằng tải nhiều đường WAN:
+Chuyển sang chế độ "IP-Based" hoặc tạo Load-Balance Policy cố định cổng TCP 443 theo Destination IP để giữ nguyên phiên đăng nhập ngân hàng và cổng thanh toán.
+
+2. Kết nối IPsec VPN LAN-to-LAN bền bỉ giữa DrayTek Vigor và FortiGate / MikroTik:
+Sử dụng giao thức IKEv2 với bộ mã hóa AES-256, hàm băm SHA-256 và Diffie-Hellman Group 14 (2048-bit) ở cả Phase 1 và Phase 2 (PFS).`,
+        cli: `# Các lệnh kiểm tra và cấu hình nhanh qua Telnet/SSH trên DrayTek Vigor 3910 / 2927
+Vigor3910> wan status
+% WAN1=[PPPoE; Up; IP=115.78.xx.xx; GW=115.78.xx.1; DNS=203.113.131.1]
+% WAN2=[PPPoE; Up; IP=14.161.xx.xx; GW=14.161.xx.1; DNS=203.162.4.191]
+
+# Kiểm tra bảng trạng thái kết nối VPN LAN-to-LAN
+Vigor3910> vpn status
+Profile 1 [HQ_FORTIGATE_IKEV2]:
+  Status     : CONNECTED (Uptime: 42d 11:20:05)
+  Encryption : IKEv2 / ESP AES-256-SHA256 / PFS Group 14`,
+        verify: `Vigor3910> ping 10.10.10.11 -l 192.168.20.1
+Reply from 10.10.10.11: time=2.1ms TTL=63 (0% packet loss)`
+      },
+      {
+        id: 'hpe-supermicro-proxmox-10g-zfs',
+        cat: 'SERVER_VIRTUAL',
+        vendor: '★ HPE ProLiant • Supermicro • Proxmox VE',
+        level: 'Data Center & Virtualization Runbook',
+        date: '17/10/2026',
+        readTime: '12 phút đọc',
+        title: 'Triển Khai Cụm Máy Chủ HPE ProLiant & Supermicro 8-Node Chạy Proxmox VE, QDevice Quorum, ZFS & Cáp Quang 10G',
+        excerpt: 'Kiến trúc ảo hóa độ sẵn sàng cao (HA): quản trị phần cứng qua iLO/IPMI, tách mạng Corosync Ring, tối ưu bộ nhớ ZFS ARC và đấu nối quang 10G SFP+ liên phòng máy.',
+        topology: `
+  [Phòng Server A: HPE ProLiant / Supermicro Nodes]
+               ||                      ||
+   (Ring 0: 10G SFP+ Fiber)    (Ring 1: 1Gbe Backup Corosync)
+               ||                      ||
+  [Phòng Server B: Proxmox Nodes] + [QDevice Quorum Voter]`,
+        specs: [
+          ['Quản trị phần cứng', 'HPE iLO 5/6 & Supermicro IPMI', 'Tách riêng VLAN Out-of-Band Management (OOB)'],
+          ['Cụm Proxmox HA', 'Corosync v3 KNET + QDevice', 'Đảm bảo số phiếu bầu lẻ chống hiện tượng Split-Brain'],
+          ['Lưu trữ ZFS Pool', 'ZFS RAID10 (Striped Mirrors)', 'Bật nén LZ4, ashift=12 cho NVMe/SSD & giới hạn RAM ARC']
+        ],
+        body: `1. Chuẩn bị phần cứng HPE ProLiant & Supermicro 3U 8-Node (SYS-5039MS-H8TRF):
+Chuyển card điều khiển ổ cứng trên HPE/Supermicro sang chế độ HBA / IT Mode (Pass-through) để ZFS quản lý trực tiếp từng ổ đĩa vật lý, theo dõi thông số SMART và tự sửa lỗi bit-rot.
+
+2. Tách biệt mạng Corosync Clustering và mạng dữ liệu 10G SFP+:
+Luôn cấu hình 2 vòng Corosync (Ring 0 trên cổng 1G độc lập, Ring 1 dự phòng trên cổng 10G SFP+) để tránh mất Quorum khi sao lưu máy ảo dung lượng lớn.`,
+        cli: `# 1. Kiểm tra trạng thái Quorum và các Node trong cụm Proxmox VE
+pvecm status
+
+# 2. Cài đặt QDevice làm trọng tài phân xử (Quorum Arbiter)
+apt update && apt install corosync-qdevice -y
+pvecm qdevice setup 10.10.99.250
+
+# 3. Giới hạn bộ nhớ đệm ZFS ARC tối đa 32GB trên máy chủ 128GB RAM
+echo "options zfs zfs_arc_max=34359738368" > /etc/modprobe.d/zfs.conf
+update-initramfs -u -k all
+
+# 4. Tạo ZFS RAID10 Pool tối ưu hiệu năng IOPS cho máy ảo
+zpool create -f -o ashift=12 rpool-nvme mirror /dev/nvme0n1 /dev/nvme1n1 mirror /dev/nvme2n1 /dev/nvme3n1
+zfs set compression=lz4 rpool-nvme`,
+        verify: `root@pve-node01:~# zpool status rpool-nvme
+  pool: rpool-nvme | state: ONLINE | scan: scrub repaired 0B with 0 errors`
+      },
+      {
+        id: 'hospital-building-elv-cctv-pa',
+        cat: 'VOIP_ELV',
+        vendor: '★ Hạ tầng Điện nhẹ ELV (Bệnh viện & Tòa nhà)',
+        level: 'ELV & Infrastructure Design',
+        date: '15/10/2026',
+        readTime: '10 phút đọc',
+        title: 'Quy Hoạch Hạ Tầng Mạng Bảo Mật, Camera CCTV, Âm Thanh Công Cộng (PA) & Kiểm Toán Bản Vẽ ELV Bệnh Viện / Tòa Nhà',
+        excerpt: 'Phương pháp thiết kế tổng thể hạ tầng CNTT & Điện nhẹ cho bệnh viện và các khối nhà Block A/B: bóc tách khối lượng Camera, Loa PA, AP Wi-Fi, nút mạng RJ45 và phân vùng bảo mật.',
+        topology: `
+        [Phòng Máy Chủ Trung Tâm MDF - Tủ Rack Chính]
+            /                 |                  \\
+   (Cáp quang OM4 10G)  (Cáp âm thanh 100V)  (Cáp mạng Cat6A)
+          /                   |                    \\
+  [Tủ IDF Tầng Block A/B]  [Loa PA Đa Vùng]   [Camera AI & AP Wi-Fi]`,
+        specs: [
+          ['Mạng Y tế / HIS', 'VLAN 10 (Cô lập bảo mật)', 'Tường lửa kiểm soát chặt chẽ truy cập vào máy chủ HIS/PACS'],
+          ['Mạng Camera CCTV', 'VLAN 30 (IGMP Snooping)', 'Tính toán băng thông NVR H.265+ & dự phòng nguồn PoE+'],
+          ['Âm thanh PA Audio', 'Chia vùng theo tầng/khối nhà', 'Tích hợp tiếp điểm khô (Dry-Contact) ưu tiên phát tin báo cháy']
+        ],
+        body: `1. Phương pháp kiểm toán bản vẽ mặt bằng (ELV Layout Audit) cho Block A & Block B:
+Kiểm tra bán kính cáp đồng Cat6/Cat6A từ tủ IDF tầng tới điểm xa nhất (Camera, AP, ổ cắm tường RJ45) không vượt quá 90 mét và tính toán tổng công suất tiêu thụ PoE (Watt) để chọn Switch PoE+ có công suất dư tối thiểu 20%.`,
+        cli: `# Bảng quy hoạch VLAN chuẩn cho Dự án Bệnh viện / Tòa nhà Đa năng
+VLAN 10 : 10.10.10.0/24 -> Máy chủ HIS, PACS, Cơ sở dữ liệu (Server Farm)
+VLAN 20 : 10.10.20.0/23 -> Mạng máy tính & Wi-Fi Nhân viên Y tế
+VLAN 30 : 10.10.30.0/24 -> Hệ thống Camera giám sát CCTV & Đầu ghi NVR
+VLAN 40 : 10.10.40.0/24 -> Hệ thống Âm thanh IP PA & Kiểm soát ra vào
+VLAN 50 : 10.10.50.0/24 -> Tổng đài IP Grandstream UCM & Điện thoại các khoa
+VLAN 99 : 10.10.99.0/24 -> Quản trị thiết bị mạng (Switch, Firewall, Controller, UPS)`,
+        verify: `ELV Audit Summary [Block A & Block B]: 100% Cat6A & OTDR Fiber PASS`
+      },
+      {
+        id: 'ekahau-ai-pro-site-survey',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ Ekahau AI Pro (Meraki / UniFi / Omada / Aruba)',
+        level: 'RF Wireless Design Runbook',
+        date: '12/10/2026',
+        readTime: '8 phút đọc',
+        title: 'Thiết Kế Bản Đồ Nhiệt Wi-Fi (Heatmap) Bằng Ekahau AI Pro: Tối Ưu Hóa Độ Suy Hao Tường & Chống Nhiễu Đồng Kênh',
+        excerpt: 'Quy trình dựng tường vật liệu trên bản vẽ CAD trong Ekahau AI Pro, tùy chỉnh định dạng biểu tượng Access Point và kiểm tra vùng phủ sóng 5GHz chuẩn High-Density.',
+        topology: `
+  [Bản vẽ CAD .DWG/.PDF] ---> [Khai báo độ suy hao tường dB]
+                                         |
+                        [Đặt AP Meraki / UniFi / Omada / Aruba]
+                                         |
+                 [Xuất Heatmap: RSSI >= -65dBm & SNR >= 25dB]`,
+        specs: [
+          ['Suy hao vật liệu', 'Kính: 3dB • Thạch cao: 4dB', 'Tường gạch 10cm: 8dB • Tường bê tông/Thang máy: 15-25dB'],
+          ['Cường độ sóng chính', 'Primary RSSI >= -65 dBm', 'Cho thoại VoIP qua Wi-Fi & họp Video yêu cầu >= -62 dBm'],
+          ['Tỷ lệ Tín hiệu/Nhiễu', 'SNR >= 25 dB (5GHz)', 'Chồng lấn tế bào sóng (Roaming Cell Overlap): 15% - 20%']
+        ],
+        body: `1. Hiệu chuẩn tỷ lệ thước đo (Scale) và vẽ tường suy hao trong Ekahau AI Pro:
+Độ chính xác của bản đồ nhiệt mô phỏng phụ thuộc vào việc chọn đúng tỷ lệ mét trên bản vẽ và khai báo đúng độ suy hao của từng loại vách ngăn.`,
+        cli: `# Các thông số mục tiêu (Coverage Requirements) cấu hình trong Ekahau AI Pro
+Requirement Profile : Enterprise High-Density Voice & Data (5 GHz)
+Min Signal Strength : -65 dBm (Primary) / -70 dBm (Secondary Backup AP)
+Min SNR             : 25 dB | Min Data Rate: 24 Mbps`,
+        verify: `Ekahau Report Export: Pass Rate 99.4% across Floor 1 - Floor 8`
+      },
+      {
+        id: 'riverbed-cx570-pfsense-serial',
+        cat: 'FIREWALL_WAN',
+        vendor: 'pfSense / Riverbed SteelHead CX-570',
+        level: 'Hardware Refurbish Runbook',
         date: '25/07/2026',
-        readTime: '7 phút đọc',
-        title: 'Hoán Cải Thiết Bị Riverbed SteelHead CX-570 Thành Router pfSense Qua Cổng Serial Console',
-        excerpt: 'Quy trình nâng cấp RAM, thay pin CMOS CR2032 và nạp hệ điều hành pfSense qua cáp USB-to-RJ45 Console (9600 8N1) trên MobaXterm.',
-        body: `Các thiết bị phần cứng mạng chuyên dụng như Riverbed SteelHead CX-570 sở hữu bo mạch bền bỉ và các cổng mạng Intel Gigabit chất lượng cao. Sau khi thay pin CMOS, nâng cấp RAM và kết nối cáp Serial Console ở tốc độ 9600 baud, thiết bị hoạt động hoàn hảo trong vai trò tường lửa pfSense.`,
-        cli: `# Thông số kết nối Serial Console trên MobaXterm / PuTTY
-Serial Line: COM3 (USB-to-RJ45 Adapter)
-Speed (Baud): 9600
-Data bits: 8 | Stop bits: 1 | Parity: None | Flow control: None
+        readTime: '8 phút đọc',
+        title: 'Hoán Cải Thiết Bị Phần Cứng Riverbed SteelHead CX-570 Thành Router pfSense Qua Cổng Serial Console (9600 8N1)',
+        excerpt: 'Hướng dẫn chi tiết nâng cấp RAM, thay pin CMOS CR2032 và cài đặt pfSense CE bằng cáp USB-to-RJ45 Console trên MobaXterm.',
+        topology: `
+  [Laptop ASUS TUF F15 (MobaXterm v26.4)]
+                   |
+       (Cáp USB-to-RJ45 Serial COM3 - 9600 8N1)
+                   |
+  [Riverbed SteelHead CX-570 (Upgraded RAM + New CMOS)] ---> Boot USB pfSense Serial IMG`,
+        specs: [
+          ['Cấu hình Serial COM', 'Baud: 9600 • Data: 8 • Parity: N • Stop: 1', 'Tắt Flow Control (XON/XOFF = Off, RTS/CTS = Off)'],
+          ['Bộ cài đặt hệ điều hành', 'pfSense-CE-memstick-serial-amd64.img', 'Ghi ra USB bằng Rufus / BalenaEtcher'],
+          ['Card mạng tích hợp', 'Intel PRO/1000 Gigabit (igb0 - igb3)', 'Hỗ trợ tập lệnh mã hóa phần cứng AES-NI cho VPN']
+        ],
+        body: `1. Bảo dưỡng phần cứng, thay pin CMOS và nâng cấp RAM:
+Tháo nắp máy, vệ sinh bụi, thay viên pin cúc áo CR2032 3V mới để giữ cấu hình BIOS và nâng cấp thêm thanh RAM DDR3 trước khi nạp pfSense qua cổng Console RJ45.`,
+        cli: `# Thông số phiên Serial trên MobaXterm Professional v26.4
+Port        : COM3 (Prolific / FTDI USB-to-Serial Comm Port)
+Speed (bps) : 9600 | Data bits: 8 | Parity: None | Stop bits: 1
 
-# Kiểm tra nhận diện card mạng Intel trên pfSense
-dmesg | grep -i igb`
+# Kiểm tra nhiệt độ CPU & Trạng thái cổng mạng Intel trên pfSense Shell
+sysctl dev.cpu | grep temperature
+dmesg | grep -i igb`,
+        verify: `*** Welcome to pfSense 2.7.2-RELEASE (amd64) on riverbed-cx570 ***`
       },
       {
-        id: '1panel-ubuntu-esxi',
-        cat: 'VIRTUALIZATION',
+        id: '1panel-docker-ubuntu-python-bot',
+        cat: 'SERVER_VIRTUAL',
+        vendor: '1Panel Docker • Ubuntu VM • Python Bot',
+        level: 'DevOps & Self-Hosting Runbook',
         date: '15/09/2026',
-        readTime: '6 phút đọc',
-        title: 'Quản Trị Ứng Dụng Web Self-Hosted & Python Bot Với 1Panel Docker Trên Máy Ảo Ubuntu',
-        excerpt: 'Triển khai nhanh các dịch vụ Web, cơ sở dữ liệu SQLite và Bot tự động tra cứu phạt nguội bên trong Ubuntu VM chạy trên ESXi / Proxmox.',
-        body: `Thay vì cài đặt rời rạc từng dịch vụ trên máy chủ vật lý, việc đóng gói toàn bộ ứng dụng Web cá nhân và Bot Python thông báo phạt nguội vào các Container quản lý bởi 1Panel trên Ubuntu VM giúp việc sao lưu (Snapshot) và khôi phục diễn ra chỉ trong vài phút.`,
-        cli: `# Kiểm tra danh sách Container đang hoạt động trên 1Panel
-docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"
+        readTime: '7 phút đọc',
+        title: 'Quản Trị Web Self-Hosted (nguyenvu.click) & Bot Python Tra Cứu Phạt Nguội Với 1Panel Docker Trên Ubuntu VM',
+        excerpt: 'Kiến trúc đóng gói ứng dụng Web, cơ sở dữ liệu SQLite và dịch vụ chạy ngầm Python bên trong máy ảo Ubuntu trên nền tảng ESXi / Proxmox.',
+        topology: `
+  [Cloudflare Anycast DNS / Zero-Trust]
+                   |
+      [Ubuntu Server VM (ESXi / Proxmox)]
+                   |
+         +-------------------+
+         | 1Panel Management | ---> [OpenResty Web] + [Python SQLite Traffic Bot]
+         +-------------------+`,
+        specs: [
+          ['Nền tảng quản trị', '1Panel Docker Management', 'Giám sát tài nguyên, quản lý Container, SSL tự động'],
+          ['Cơ sở dữ liệu Bot', 'SQLite3 (Lightweight Embedded)', 'Lưu biển số đăng ký, lịch sử tra cứu và chống gửi trùng'],
+          ['Bảo mật truy cập', 'Cloudflare Tunnel / Reverse Proxy', 'Không cần mở trực tiếp cổng 80/443 trên tường lửa biên']
+        ],
+        body: `1. Chuẩn hóa môi trường Self-Hosting bằng 1Panel trên Ubuntu VM:
+Quản lý trực quan toàn bộ Docker Containers, chứng chỉ SSL tự động gia hạn cho tên miền nguyenvu.click và vận hành Bot Python tra cứu phạt nguội tự động.`,
+        cli: `# Kiểm tra trạng thái các Container đang chạy trên Ubuntu VM
+docker ps --format "table {{.ID}}\\t{{.Names}}\\t{{.Status}}\\t{{.Ports}}"
 
-# Xem log hoạt động của Python Traffic Bot
-docker logs -f --tail 50 traffic-fine-bot`
+# Xem log hoạt động trực tiếp của Python Traffic Fine Bot
+docker logs -f --tail 50 traffic-fine-bot`,
+        verify: `a81f29c01b2e   nguyenvu-web       Up 45 days   80/tcp, 443/tcp
+c49d10e83a11   traffic-fine-bot   Up 45 days   (Healthy)`
       },
       {
-        id: 'ekahau-elv-audit',
-        cat: 'HARDWARE',
-        date: '26/09/2026',
-        readTime: '7 phút đọc',
-        title: 'Kinh Nghiệm Khảo Sát Sóng Wi-Fi Bằng Ekahau AI Pro & Bóc Tách Khối Lượng Điện Nhẹ (ELV)',
-        excerpt: 'Phương pháp đọc bản vẽ mặt bằng Block A/B, định vị Access Point trên Ekahau AI Pro và kiểm toán số lượng Camera, Loa âm thanh thông báo, nút mạng RJ45.',
-        body: `Khi kiểm toán thiết kế điện nhẹ (ELV) cho các tòa nhà hoặc bệnh viện, việc kết hợp bản vẽ kiến trúc với mô phỏng suy hao tín hiệu trên Ekahau AI Pro giúp xác định chính xác vị trí lắp đặt Access Point, hạn chế điểm mù sóng 5GHz và tính toán chính xác số lượng cổng Switch PoE cũng như chiều dài cáp mạng.`,
-        cli: `# Tiêu chuẩn thiết kế vùng phủ sóng Wi-Fi Doanh nghiệp trên Ekahau
-Primary Signal Strength (5GHz): >= -65 dBm
-Secondary Signal Strength:      >= -70 dBm
-Signal-to-Noise Ratio (SNR):    >= 25 dB
-Channel Width (High-Density):   20 MHz / 40 MHz`
+        id: 'windows-server-ad-radius-8021x',
+        cat: 'SERVER_VIRTUAL',
+        vendor: '★ HPE Server • Windows Server AD & NPS RADIUS',
+        level: 'System Administration Runbook',
+        date: '08/10/2026',
+        readTime: '9 phút đọc',
+        title: 'Triển Khai Windows Server Active Directory, Group Policy (GPO) & Xác Thực Wi-Fi WPA2/WPA3-Enterprise (RADIUS 802.1X)',
+        excerpt: 'Tích hợp máy chủ Windows Server NPS (Network Policy Server) làm RADIUS Server xác thực tài khoản Domain cho Wi-Fi Cisco Meraki, UniFi, Aruba, Omada và VPN FortiGate.',
+        topology: `
+  [Laptop / Điện thoại Nhân viên]
+                 |
+      (WPA2/WPA3-Enterprise 802.1X)
+                 |
+  [AP Meraki / UniFi / Aruba / Omada] --- (RADIUS UDP 1812/1813) ---> [Windows Server AD + NPS]`,
+        specs: [
+          ['Giao thức xác thực', 'PEAP-MSCHAPv2 / EAP-TLS', 'Mỗi nhân viên đăng nhập Wi-Fi bằng chính tài khoản Active Directory'],
+          ['Cổng dịch vụ RADIUS', 'UDP 1812 (Auth) • UDP 1813 (Acct)', 'Khai báo Shared Secret giữa AP/Controller và Windows NPS'],
+          ['Dynamic VLAN Assign', 'RADIUS Attributes (Tunnel-Pvt-Group-ID)', 'Tự động đẩy nhân viên vào đúng VLAN phòng ban khi đăng nhập']
+        ],
+        body: `1. Loại bỏ rủi ro lộ mật khẩu Wi-Fi chung bằng xác thực 802.1X RADIUS:
+Kết hợp Windows Server Active Directory với dịch vụ NPS (Network Policy Server) cho phép xác thực từng người dùng và tự động ngắt quyền truy cập Wi-Fi lẫn VPN ngay khi khóa tài khoản AD.`,
+        cli: `# 1. Kiểm tra trạng thái dịch vụ Active Directory & NPS RADIUS bằng PowerShell
+Get-Service ADWS, DNS, DHCPServer, IAS | Select-Object Status, Name
+
+# 2. Thêm RADIUS Client qua PowerShell
+New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret "RADIUS_SECRET_2026"`,
+        verify: `Event ID 6272: Network Policy Server granted full access to user CORP\\nguyenvu (VLAN 20).`
       }
     ];
 
-    let articles = JSON.parse(localStorage.getItem('nguyenvu_blog_clean')) || initialArticles;
+    let articles = JSON.parse(localStorage.getItem('nguyenvu_blog_v9')) || initialArticles;
+    let savedIds = JSON.parse(localStorage.getItem('nguyenvu_saved_posts_v9')) || ['fortigate-ha-sdwan-lacp'];
     let currentFilter = 'ALL';
     let currentArticleId = articles[0].id;
+
+    function updateCounters() {
+      document.getElementById('savedCountBadge').textContent = savedIds.length;
+      document.getElementById('topTotalCount').textContent = articles.length + ' Chuyên đề thực chiến';
+      const navBadge = document.getElementById('navTotalBadge');
+      if (navBadge) navBadge.textContent = articles.length;
+    }
+
+    function toggleSavePost(id, ev) {
+      if (ev) ev.stopPropagation();
+      if (savedIds.includes(id)) savedIds = savedIds.filter(i => i !== id);
+      else savedIds.push(id);
+      localStorage.setItem('nguyenvu_saved_posts_v9', JSON.stringify(savedIds));
+      renderBlog();
+      showToast(savedIds.includes(id) ? '★ Đã lưu Runbook vào danh sách yêu thích!' : 'Đã bỏ lưu Runbook.');
+    }
 
     function filterCat(cat) {
       currentFilter = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
         btn.className = btn.dataset.cat === cat
-          ? 'cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-mauve text-ctp-crust font-bold'
-          : 'cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-ctp-text';
+          ? 'cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold'
+          : 'cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25';
       });
       renderBlog();
     }
 
-    function renderBlog() {
-      const q = document.getElementById('searchBox').value.toLowerCase();
-      const filtered = articles.filter(a =>
-        (currentFilter === 'ALL' || a.cat === currentFilter) &&
-        (a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.cli.toLowerCase().includes(q))
-      );
+    // Safe CLI Copy Function by Active Article ID (Eliminates VS Code HTML Parser Errors)
+    function copyActiveArticleCli() {
+      const a = articles.find(x => x.id === currentArticleId);
+      if (!a) return;
+      navigator.clipboard.writeText(a.cli);
+      showToast('✓ Đã sao chép toàn bộ kịch bản CLI vào Clipboard!');
+    }
 
-      document.getElementById('articleList').innerHTML = filtered.map(a => `
-        <article onclick="openArticle('${a.id}')" class="bento-card rounded-2xl p-5 cursor-pointer ${a.id === currentArticleId ? 'border-ctp-mauve ring-1 ring-ctp-mauve/40' : ''}">
-          <div class="flex items-center justify-between text-[11px] font-mono text-ctp-subtext mb-2">
-            <span class="px-2 py-0.5 rounded bg-ctp-mauve/15 text-ctp-mauve font-semibold">${a.cat}</span>
-            <span>${a.date} • ${a.readTime}</span>
+    function renderBlog() {
+      updateCounters();
+      const q = document.getElementById('searchBox').value.toLowerCase();
+      const filtered = articles.filter(a => {
+        const matchCat = currentFilter === 'ALL'
+          ? true
+          : currentFilter === 'SAVED'
+          ? savedIds.includes(a.id)
+          : a.cat === currentFilter;
+        const matchQ =
+          a.title.toLowerCase().includes(q) ||
+          a.excerpt.toLowerCase().includes(q) ||
+          a.vendor.toLowerCase().includes(q) ||
+          a.cli.toLowerCase().includes(q);
+        return matchCat && matchQ;
+      });
+
+      document.getElementById('articleList').innerHTML = filtered.map((a, idx) => {
+        const isSaved = savedIds.includes(a.id);
+        const isActive = a.id === currentArticleId;
+        return `
+        <article onclick="openArticle('${a.id}')" class="bento-card rounded-2xl p-5 cursor-pointer transition ${isActive ? 'border-ctp-sapphire ring-2 ring-ctp-sapphire/60 bg-ctp-base/90' : ''}">
+          <div class="flex items-center justify-between text-[11px] font-mono mb-2">
+            <span class="px-2.5 py-0.5 rounded-md bg-ctp-teal/20 text-ctp-yellow font-bold truncate max-w-[210px]">${escapeHtml(a.vendor)}</span>
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="text-ctp-subtext">${escapeHtml(a.readTime)}</span>
+              <button onclick="toggleSavePost('${a.id}', event)" class="text-sm ${isSaved ? 'text-ctp-yellow' : 'text-ctp-subtext hover:text-white'}" title="Lưu bài viết">★</button>
+            </div>
           </div>
-          <h3 class="font-display font-bold text-base text-ctp-text mb-1.5 leading-snug">${a.title}</h3>
-          <p class="text-xs text-ctp-subtext line-clamp-2">${a.excerpt}</p>
+          <h3 class="font-display font-bold text-base text-white mb-1.5 leading-snug">#${idx + 1}. ${escapeHtml(a.title)}</h3>
+          <p class="text-xs text-ctp-subtext line-clamp-2 leading-relaxed">${escapeHtml(a.excerpt)}</p>
         </article>
-      `).join('');
+      `}).join('');
 
       const active = articles.find(a => a.id === currentArticleId) || filtered[0];
-      if (active) renderArticleDetail(active);
+      if (active) {
+        currentArticleId = active.id;
+        renderArticleDetail(active);
+      }
     }
 
     function openArticle(id) {
@@ -298,80 +1265,460 @@ Channel Width (High-Density):   20 MHz / 40 MHz`
       renderBlog();
     }
 
+    function downloadSinglePostMd(id) {
+      const a = articles.find(x => x.id === id);
+      if (!a) return;
+      const md = `# ${a.title}\n- **Thiết bị:** ${a.vendor}\n- **Ngày:** ${a.date}\n- **Tác giả:** Nguyễn Nguyên Vũ (nguyenvu.click)\n\n## Tóm tắt\n${a.excerpt}\n\n## Sơ đồ Topology\n\`\`\`\n${a.topology || ''}\n\`\`\`\n\n## Nội dung chi tiết\n${a.body}\n\n## Kịch bản CLI\n\`\`\`bash\n${a.cli}\n\`\`\`\n`;
+      const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = a.id + '.md';
+      link.click();
+      showToast('✓ Đã tải xuống file Runbook .MD!');
+    }
+
+    function exportAllPostsJson() {
+      const blob = new Blob([JSON.stringify(articles, null, 2)], { type: 'application/json;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'nguyenvu-blog-runbooks-backup.json';
+      link.click();
+      showToast('✓ Đã xuất file Backup JSON toàn bộ Runbook!');
+    }
+
     function renderArticleDetail(a) {
+      const isSaved = savedIds.includes(a.id);
+      document.getElementById('clapCountText').textContent = clapsMap[a.id] || 28;
+
+      const specsHtml = (a.specs && a.specs.length > 0) ? `
+        <div id="sec-specs" class="space-y-2.5 scroll-mt-24">
+          <div class="text-xs font-mono text-ctp-sapphire font-bold uppercase tracking-wider">▸ Bảng Thông Số Kỹ Thuật &amp; Quy Hoạch Chuẩn</div>
+          <div class="rounded-2xl bg-ctp-crust/90 border border-ctp-blue/30 overflow-x-auto">
+            <table class="w-full text-left font-mono text-xs border-collapse">
+              <thead class="bg-ctp-mantle text-ctp-subtext border-b border-ctp-blue/25">
+                <tr>
+                  <th class="p-3">Hạng mục</th>
+                  <th class="p-3">Cấu hình khuyến nghị</th>
+                  <th class="p-3">Ghi chú vận hành</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-ctp-blue/15">
+                ${a.specs.map(row => `
+                  <tr>
+                    <td class="p-3 text-white font-semibold">${escapeHtml(row[0])}</td>
+                    <td class="p-3 text-ctp-teal font-bold">${escapeHtml(row[1])}</td>
+                    <td class="p-3 text-ctp-subtext">${escapeHtml(row[2])}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : '';
+
+      const topoHtml = a.topology ? `
+        <div id="sec-topo" class="space-y-2 scroll-mt-24">
+          <div class="text-xs font-mono text-ctp-teal font-bold uppercase tracking-wider">▸ Sơ Đồ Kiến Trúc Kết Nối (ASCII Topology Blueprint)</div>
+          <pre class="p-4 rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 font-mono text-xs text-ctp-sapphire overflow-x-auto leading-snug">${escapeHtml(a.topology.trim())}</pre>
+        </div>
+      ` : '';
+
+      const verifyHtml = a.verify ? `
+        <div class="space-y-2">
+          <div class="text-xs font-mono text-ctp-green font-bold uppercase tracking-wider">▸ Kết Quả Xác Minh Lệnh Thực Tế (Verification Output)</div>
+          <pre class="p-4 rounded-2xl bg-ctp-crust/95 border border-ctp-green/35 font-mono text-xs text-ctp-green overflow-x-auto leading-relaxed">${escapeHtml(a.verify)}</pre>
+        </div>
+      ` : '';
+
       document.getElementById('articleContent').innerHTML = `
-        <div class="space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono border-b border-white/10 pb-4">
-            <span class="px-2.5 py-1 rounded-lg bg-ctp-mauve/15 text-ctp-mauve font-bold">${a.cat}</span>
-            <span class="text-ctp-subtext">Nguyễn Nguyên Vũ • ${a.date} • ${a.readTime}</span>
-          </div>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold leading-tight">${a.title}</h2>
-          <div class="text-sm sm:text-base text-ctp-subtext leading-relaxed space-y-4 whitespace-pre-line">${a.body}</div>
-          <div class="rounded-2xl bg-ctp-crust border border-white/10 overflow-hidden">
-            <div class="px-4 py-2.5 bg-ctp-mantle border-b border-white/10 flex items-center justify-between font-mono text-xs">
-              <span class="text-ctp-blue flex items-center gap-1.5">Terminal / CLI Snippet</span>
-              <button onclick="navigator.clipboard.writeText(\`${a.cli.replace(/`/g, '\\`')}\`); this.textContent='Đã sao chép!'" class="px-2.5 py-1 rounded bg-ctp-surface0 text-ctp-green hover:opacity-90">Copy Code</button>
+        <div class="space-y-7">
+          <div class="flex flex-wrap items-center justify-between gap-3 text-xs font-mono border-b border-ctp-blue/25 pb-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-lg bg-ctp-teal/20 border border-ctp-teal/50 text-ctp-yellow font-bold">${escapeHtml(a.vendor)}</span>
+              <span class="px-2.5 py-1 rounded-lg bg-ctp-crust border border-ctp-blue/30 text-ctp-sapphire">${escapeHtml(a.level || 'Engineering Runbook')}</span>
             </div>
-            <pre class="p-5 font-mono text-xs text-ctp-teal overflow-x-auto leading-relaxed">${a.cli}</pre>
+            <div class="flex items-center gap-2 no-print">
+              <button onclick="downloadSinglePostMd('${a.id}')" class="px-3 py-1 rounded-lg bg-ctp-crust hover:bg-ctp-surface0 border border-ctp-blue/30 text-ctp-teal transition">
+                ⬇ Tải .MD
+              </button>
+              <button onclick="toggleSavePost('${a.id}')" class="px-3 py-1 rounded-lg bg-ctp-crust border border-ctp-blue/30 ${isSaved ? 'text-ctp-yellow font-bold' : 'text-ctp-subtext'}">
+                ${isSaved ? '★ Đã lưu' : '☆ Lưu Runbook'}
+              </button>
+            </div>
           </div>
+
+          <div class="space-y-3">
+            <h2 class="font-display text-2xl sm:text-3xl font-bold leading-tight text-white">${escapeHtml(a.title)}</h2>
+            <div class="text-xs font-mono text-ctp-subtext">
+              Tác giả: <strong class="text-white">Nguyễn Nguyên Vũ (nguyenvu.click)</strong> • Cập nhật: ${escapeHtml(a.date)} • Thời lượng: ${escapeHtml(a.readTime)}
+            </div>
+            <p class="p-4 rounded-2xl bg-ctp-mantle/70 border-l-4 border-l-ctp-sapphire text-sm text-ctp-subtext leading-relaxed">${escapeHtml(a.excerpt)}</p>
+          </div>
+
+          ${topoHtml}
+          ${specsHtml}
+
+          <div id="sec-body" class="space-y-2.5 scroll-mt-24">
+            <div class="text-xs font-mono text-ctp-yellow font-bold uppercase tracking-wider">▸ Phân Tích Kiến Trúc &amp; Quy Trình Triển Khai</div>
+            <div id="sec-body-text" style="font-size: ${currentFontSize}px" class="text-ctp-text leading-relaxed space-y-4 whitespace-pre-line">${escapeHtml(a.body)}</div>
+          </div>
+
+          <div id="sec-cli" class="space-y-2 scroll-mt-24">
+            <div class="rounded-2xl bg-ctp-crust border border-ctp-sapphire/40 overflow-hidden shadow-xl">
+              <div class="px-4 py-3 bg-ctp-mantle border-b border-ctp-blue/25 flex items-center justify-between font-mono text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-ctp-red"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-ctp-yellow"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-ctp-green"></span>
+                  <span class="ml-1 text-ctp-sapphire font-bold">MobaXterm CLI — Production Configuration Script</span>
+                </div>
+                <button onclick="copyActiveArticleCli()" class="px-3 py-1 rounded-lg bg-ctp-teal text-ctp-crust font-bold hover:opacity-90 transition no-print">
+                  Copy CLI Script
+                </button>
+              </div>
+              <pre class="p-5 font-mono text-xs text-ctp-teal overflow-x-auto leading-relaxed">${escapeHtml(a.cli)}</pre>
+            </div>
+          </div>
+
+          ${verifyHtml}
         </div>
       `;
     }
 
+    // Interactive Diff Viewer Tabs
+    const diffData = {
+      mkt: `
+<div class="text-ctp-subtext mb-1"># Bảo mật dịch vụ quản trị &amp; Chống quét cổng trên MikroTik RouterOS</div>
+<div class="diff-del px-2.5 py-1 rounded">- /ip service set winbox port=8291 address=0.0.0.0/0</div>
+<div class="diff-del px-2.5 py-1 rounded">- /ip service set www,ftp,telnet,api disabled=no</div>
+<div class="diff-add px-2.5 py-1 rounded">+ /ip service set www,ftp,telnet,api disabled=yes</div>
+<div class="diff-add px-2.5 py-1 rounded">+ /ip service set winbox port=58291 address=10.10.99.0/24</div>
+<div class="diff-add px-2.5 py-1 rounded">+ /ip firewall filter add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list address-list=PORT_SCANNERS</div>`,
+      fgt: `
+<div class="text-ctp-subtext mb-1"># Tối ưu hóa bảo mật giao diện &amp; HA trên Fortinet FortiGate</div>
+<div class="diff-del px-2.5 py-1 rounded">- set allowaccess ping https ssh http telnet</div>
+<div class="diff-del px-2.5 py-1 rounded">- set session-pickup disable</div>
+<div class="diff-add px-2.5 py-1 rounded">+ set allowaccess ping https ssh</div>
+<div class="diff-add px-2.5 py-1 rounded">+ set trusted-hosts 10.10.99.0 255.255.255.0</div>
+<div class="diff-add px-2.5 py-1 rounded">+ set session-pickup enable</div>`,
+      sw: `
+<div class="text-ctp-subtext mb-1"># Chống DHCP giả mạo &amp; Gán Voice VLAN tự động trên Cisco / Aruba Switch</div>
+<div class="diff-del px-2.5 py-1 rounded">- switchport mode access (No DHCP Snooping / No BPDU Guard)</div>
+<div class="diff-add px-2.5 py-1 rounded">+ ip dhcp snooping vlan 10,20,50</div>
+<div class="diff-add px-2.5 py-1 rounded">+ switchport voice vlan 50 | mls qos trust cos</div>
+<div class="diff-add px-2.5 py-1 rounded">+ spanning-tree portfast | spanning-tree bpduguard enable</div>`
+    };
+
+    function switchDiffTab(key) {
+      ['mkt', 'fgt', 'sw'].forEach(k => {
+        const b = document.getElementById('diffbtn-' + k);
+        b.className = k === key
+          ? 'px-2.5 py-1 rounded-lg bg-ctp-sapphire text-ctp-crust font-bold'
+          : 'px-2.5 py-1 rounded-lg bg-ctp-crust text-ctp-subtext hover:text-white';
+      });
+      document.getElementById('diffViewerBox').innerHTML = diffData[key];
+    }
+    switchDiffTab('mkt');
+
+    // Wireshark Packet Dissector Details
+    const packetDetails = [
+      '▸ Frame 201: 842 bytes on wire, Interface: Gi1/0/12 (Cisco/Aruba PoE+ Switch)<br/>▸ IEEE 802.1Q Virtual LAN, PRI: 5 (Voice), DEI: 0, ID: 50 (VOICE_GRANDSTREAM)<br/>▸ Differentiated Services Field: 0xb8 (DSCP: EF PHB, ECN: Not-ECT)<br/>▸ Session Initiation Protocol (INVITE) • Codec: G.711 PCMU (8000 Hz)',
+      '▸ Frame 202: 146 bytes on wire, Interface: sfp-sfpplus1 (10G Optical Interconnect)<br/>▸ IEEE 802.1Q Virtual LAN, PRI: 6, ID: 99 (PROXMOX_COROSYNC_RING0)<br/>▸ Kronosnet (KNET) Protocol • Node 1 -&gt; Node 2 Quorum Heartbeat (Latency: 0.16ms)',
+      '▸ Frame 203: 218 bytes on wire, Interface: port7 (FortiGate HA Heartbeat Link)<br/>▸ EtherType: 0x8890 (FortiGate Cluster Protocol - FGCP)<br/>▸ Cluster Group: 10 | State: MASTER | Session Table Sync: Active',
+      '▸ Frame 204: 312 bytes on wire, Link Layer Discovery Protocol (LLDP-MED)<br/>▸ Media Endpoint Discovery: Network Policy TLV -&gt; Application: Voice (VLAN 50, L2 Priority: 5, DSCP: 46)'
+    ];
+
+    function inspectPacket(idx) {
+      document.getElementById('packetDetail').innerHTML = packetDetails[idx];
+    }
+
+    // Modal Editor Functions
     function openEditor() {
       const m = document.getElementById('editorModal');
-      m.classList.remove('hidden'); m.classList.add('flex');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
     }
     function closeEditor() {
       const m = document.getElementById('editorModal');
-      m.classList.add('hidden'); m.classList.remove('flex');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
     }
 
     function publishPost() {
       const title = document.getElementById('postTitle').value.trim();
       const cat = document.getElementById('postCat').value;
+      const vendor = document.getElementById('postVendor').value.trim() || '★ Custom Engineering Runbook';
       const body = document.getElementById('postBody').value.trim();
       const cli = document.getElementById('postCli').value.trim();
       if (!title || !body) return;
       const item = {
-        id: 'post-' + Date.now(),
+        id: 'runbook-' + Date.now(),
         cat,
+        vendor,
+        level: 'Custom Runbook',
         date: new Date().toLocaleDateString('vi-VN'),
-        readTime: '5 phút đọc',
+        readTime: '7 phút đọc',
         title,
-        excerpt: body.slice(0, 110) + '...',
+        excerpt: body.slice(0, 130) + '...',
         body,
-        cli: cli || '# No CLI snippet'
+        cli: cli || '# Production CLI configuration'
       };
       articles.unshift(item);
-      localStorage.setItem('nguyenvu_blog_clean', JSON.stringify(articles));
+      localStorage.setItem('nguyenvu_blog_v9', JSON.stringify(articles));
       currentArticleId = item.id;
       closeEditor();
       renderBlog();
+      showToast('✓ Đã đăng bài viết Runbook mới thành công!');
     }
 
-    function exportMd() {
-      const title = document.getElementById('postTitle').value.trim() || 'bai-viet-moi';
+    function exportCurrentEditorMd() {
+      const title = document.getElementById('postTitle').value.trim() || 'runbook-moi';
       const body = document.getElementById('postBody').value.trim();
       const cli = document.getElementById('postCli').value.trim();
-      const md = `# ${title}\n\n${body}\n\n\`\`\`bash\n${cli}\n\`\`\`\n`;
+      const md = '# ' + title + '\n\n' + body + '\n\n```bash\n' + cli + '\n```\n';
       const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = `${title.toLowerCase().replace(/\s+/g, '-')}.md`;
+      a.download = title.toLowerCase().replace(/\s+/g, '-') + '.md';
       a.click();
     }
 
-    function downloadSelf(filename) {
-      const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = filename;
-      a.click();
-    }
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const pct = height > 0 ? (winScroll / height) * 100 : 0;
+      document.getElementById('readProgress').style.width = pct + '%';
+    });
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeEditor();
+    });
 
     renderBlog();
+
+    // ============================================================================
+    // VIBRANT MARINE ECOSYSTEM ENGINE + INTERACTIVE WATER RIPPLES
+    // ============================================================================
+    const canvas = document.getElementById('oceanCanvas');
+    const ctx = canvas.getContext('2d');
+    let w, h;
+    let mouse = { x: -1000, y: -1000 };
+    let fishes = [], dolphins = [], turtles = [], jellies = [], mantas = [], bubbles = [], foods = [], ripples = [], kelps = [], whaleShark = null;
+
+    function spawnFoodBurst(cx = w * 0.5, cy = h * 0.35) {
+      ripples.push({ x: cx, y: cy, r: 4, alpha: 0.75 });
+      for (let i = 0; i < 16; i++) {
+        foods.push({
+          x: cx + (Math.random() - 0.5) * 100,
+          y: cy + (Math.random() - 0.5) * 60,
+          vy: 0.35 + Math.random() * 0.45,
+          r: 2.5 + Math.random() * 2,
+          life: 440
+        });
+      }
+    }
+
+    window.addEventListener('click', e => {
+      if (e.target.tagName === 'CANVAS' || e.target.tagName === 'BODY') {
+        spawnFoodBurst(e.clientX, e.clientY);
+      }
+    });
+
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      if (Math.random() < 0.16) {
+        ripples.push({ x: mouse.x, y: mouse.y, r: 2, alpha: 0.32 });
+      }
+    });
+
+    function initOcean() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      const palette = ['#00f2fe', '#38bdf8', '#2dd4bf', '#fb923c', '#fde047', '#60a5fa'];
+
+      fishes = Array.from({ length: 52 }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (0.8 + Math.random() * 1.35) * (Math.random() < 0.5 ? 1 : -1),
+        vy: (Math.random() - 0.5) * 0.4,
+        size: 5 + Math.random() * 7.5,
+        color: palette[Math.floor(Math.random() * palette.length)],
+        stripe: Math.random() < 0.4,
+        phase: Math.random() * Math.PI * 2
+      }));
+
+      dolphins = Array.from({ length: 2 }, (_, i) => ({
+        x: i === 0 ? -100 : w + 100, y: h * (0.2 + i * 0.3),
+        vx: i === 0 ? 1.3 : -1.2, size: 28, phase: i * 1.5
+      }));
+
+      turtles = Array.from({ length: 2 }, (_, i) => ({
+        x: Math.random() * w, y: h * (0.25 + i * 0.35),
+        vx: (0.45 + Math.random() * 0.2) * (i % 2 === 0 ? 1 : -1),
+        size: 22, phase: Math.random() * Math.PI * 2
+      }));
+
+      mantas = Array.from({ length: 2 }, (_, i) => ({
+        x: Math.random() * w, y: h * (0.3 + i * 0.3),
+        vx: 0.55 * (i % 2 === 0 ? -1 : 1), size: 34, phase: i * 2
+      }));
+
+      jellies = Array.from({ length: 6 }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        vy: 0.28 + Math.random() * 0.35, vx: (Math.random() - 0.5) * 0.2,
+        size: 15 + Math.random() * 13, phase: Math.random() * Math.PI * 2,
+        hue: Math.random() < 0.55 ? 'rgba(0, 242, 254,' : 'rgba(192, 132, 252,'
+      }));
+
+      whaleShark = { x: -320, y: h * 0.5, vx: 0.26, phase: 0 };
+
+      kelps = Array.from({ length: Math.floor(w / 62) }, (_, i) => ({
+        x: i * 62 + 20, segments: 7, segLen: 17, phase: i,
+        color: i % 2 === 0 ? 'rgba(45, 212, 191, 0.24)' : 'rgba(56, 189, 248, 0.20)'
+      }));
+
+      bubbles = Array.from({ length: 45 }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        r: 1 + Math.random() * 3, vy: 0.35 + Math.random() * 0.7, wobble: Math.random() * 6
+      }));
+    }
+
+    function animateOcean(t) {
+      ctx.clearRect(0, 0, w, h);
+
+      for (let i = 0; i < 4; i++) {
+        const xPos = w * (0.15 + i * 0.22) + Math.sin(t * 0.0005 + i) * 45;
+        const grad = ctx.createLinearGradient(xPos, 0, xPos + 150, h * 0.8);
+        grad.addColorStop(0, 'rgba(186, 230, 253, 0.14)');
+        grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.moveTo(xPos - 65, 0); ctx.lineTo(xPos + 65, 0);
+        ctx.lineTo(xPos + 250, h * 0.8); ctx.lineTo(xPos - 15, h * 0.8);
+        ctx.closePath(); ctx.fill();
+      }
+
+      if (whaleShark) {
+        whaleShark.x += whaleShark.vx; whaleShark.phase += 0.025;
+        if (whaleShark.x > w + 380) whaleShark.x = -380;
+        ctx.save(); ctx.translate(whaleShark.x, whaleShark.y + Math.sin(whaleShark.phase * 0.5) * 12);
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.16)';
+        ctx.beginPath(); ctx.moveTo(130, 0); ctx.quadraticCurveTo(50, -38, -60, -12);
+        const tailY = Math.sin(whaleShark.phase) * 14;
+        ctx.quadraticCurveTo(-130, -4, -170, tailY);
+        ctx.lineTo(-195, tailY - 20); ctx.lineTo(-182, tailY); ctx.lineTo(-195, tailY + 20);
+        ctx.quadraticCurveTo(-125, 10, -50, 20); ctx.quadraticCurveTo(40, 32, 130, 0); ctx.fill();
+        ctx.restore();
+      }
+
+      ctx.lineCap = 'round'; ctx.lineWidth = 4;
+      kelps.forEach(k => {
+        ctx.strokeStyle = k.color; ctx.beginPath();
+        let cx = k.x, cy = h; ctx.moveTo(cx, cy);
+        for (let s = 1; s <= k.segments; s++) {
+          cx += Math.sin(t * 0.0018 + k.phase + s * 0.4) * 1.3; cy -= k.segLen; ctx.lineTo(cx, cy);
+        }
+        ctx.stroke();
+      });
+
+      for (let i = ripples.length - 1; i >= 0; i--) {
+        const rp = ripples[i]; rp.r += 1.4; rp.alpha -= 0.012;
+        if (rp.alpha <= 0) { ripples.splice(i, 1); continue; }
+        ctx.strokeStyle = 'rgba(0, 242, 254, ' + rp.alpha + ')'; ctx.lineWidth = 1.1;
+        ctx.beginPath(); ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2); ctx.stroke();
+      }
+
+      dolphins.forEach(d => {
+        d.x += d.vx; d.phase += 0.055; d.y += Math.sin(d.phase) * 0.65;
+        if (d.vx > 0 && d.x > w + 140) d.x = -140;
+        if (d.vx < 0 && d.x < -140) d.x = w + 140;
+        const dir = d.vx >= 0 ? 1 : -1, s = d.size;
+        ctx.save(); ctx.translate(d.x, d.y); ctx.scale(dir, 1);
+        ctx.fillStyle = 'rgba(125, 211, 252, 0.35)';
+        ctx.beginPath(); ctx.moveTo(s * 1.4, 2);
+        ctx.quadraticCurveTo(s * 0.4, -s * 0.65, -s * 0.2, -s * 0.3);
+        ctx.lineTo(-s * 0.35, -s * 0.72); ctx.lineTo(-s * 0.65, -s * 0.2);
+        ctx.lineTo(-s * 1.3, -s * 0.32); ctx.lineTo(-s * 1.1, 0); ctx.lineTo(-s * 1.3, s * 0.32);
+        ctx.quadraticCurveTo(-s * 0.3, s * 0.35, s * 1.4, 2); ctx.fill(); ctx.restore();
+      });
+
+      turtles.forEach(tu => {
+        tu.x += tu.vx; tu.phase += 0.05;
+        if (tu.vx > 0 && tu.x > w + 60) tu.x = -60;
+        if (tu.vx < 0 && tu.x < -60) tu.x = w + 60;
+        const dir = tu.vx >= 0 ? 1 : -1;
+        ctx.save(); ctx.translate(tu.x, tu.y); ctx.scale(dir, 1);
+        ctx.fillStyle = 'rgba(20, 184, 166, 0.52)';
+        ctx.beginPath(); ctx.ellipse(0, 0, tu.size * 0.68, tu.size * 0.5, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(tu.size * 0.8, 0, tu.size * 0.22, tu.size * 0.16, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+      });
+
+      mantas.forEach(m => {
+        m.x += m.vx; m.phase += 0.045;
+        if (m.vx > 0 && m.x > w + 100) m.x = -100;
+        if (m.vx < 0 && m.x < -100) m.x = w + 100;
+        const dir = m.vx >= 0 ? 1 : -1, wing = Math.sin(m.phase) * 14;
+        ctx.save(); ctx.translate(m.x, m.y); ctx.scale(dir, 1);
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.26)';
+        ctx.beginPath(); ctx.moveTo(m.size, 0);
+        ctx.quadraticCurveTo(m.size * 0.2, -m.size * 0.85 + wing, -m.size * 0.5, -m.size * 0.2);
+        ctx.lineTo(-m.size * 1.45, 0); ctx.lineTo(-m.size * 0.5, m.size * 0.2);
+        ctx.quadraticCurveTo(m.size * 0.2, m.size * 0.85 - wing, m.size, 0);
+        ctx.fill(); ctx.restore();
+      });
+
+      jellies.forEach(j => {
+        j.phase += 0.04; j.y -= j.vy;
+        if (j.y < -60) { j.y = h + 60; j.x = Math.random() * w; }
+        const c = 1 + Math.sin(j.phase) * 0.12;
+        ctx.save(); ctx.translate(j.x, j.y);
+        ctx.fillStyle = j.hue + ' 0.38)';
+        ctx.beginPath(); ctx.arc(0, 0, j.size * c, Math.PI, 0, false); ctx.fill();
+        ctx.restore();
+      });
+
+      fishes.forEach(f => {
+        f.phase += 0.14;
+        if (foods.length > 0) {
+          const target = foods[0], fx = target.x - f.x, fy = target.y - f.y, fd = Math.hypot(fx, fy);
+          if (fd < 260 && fd > 5) { f.vx += (fx / fd) * 0.06; f.vy += (fy / fd) * 0.06; }
+        }
+        f.x += f.vx; f.y += f.vy;
+        if (f.vx > 0 && f.x > w + 35) f.x = -35;
+        if (f.vx < 0 && f.x < -35) f.x = w + 35;
+        if (f.y < 30) f.vy = Math.abs(f.vy) * 0.5;
+        if (f.y > h - 30) f.vy = -Math.abs(f.vy) * 0.5;
+        const ang = Math.atan2(f.vy, f.vx), tail = Math.sin(f.phase) * (f.size * 0.4);
+        ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(ang);
+        ctx.fillStyle = f.color;
+        ctx.beginPath(); ctx.moveTo(f.size * 1.2, 0);
+        ctx.quadraticCurveTo(0, -f.size * 0.55, -f.size, 0);
+        ctx.quadraticCurveTo(0, f.size * 0.55, f.size * 1.2, 0); ctx.fill();
+        ctx.beginPath(); ctx.moveTo(-f.size * 0.85, 0);
+        ctx.lineTo(-f.size * 1.6, -f.size * 0.5 + tail * 0.4);
+        ctx.lineTo(-f.size * 1.6, f.size * 0.5 + tail * 0.4); ctx.closePath(); ctx.fill();
+        ctx.restore();
+      });
+
+      for (let i = foods.length - 1; i >= 0; i--) {
+        const fd = foods[i]; fd.y += fd.vy; fd.life--;
+        ctx.fillStyle = '#fde047'; ctx.beginPath(); ctx.arc(fd.x, fd.y, fd.r, 0, Math.PI * 2); ctx.fill();
+        if (fd.life <= 0 || fd.y > h) foods.splice(i, 1);
+      }
+      ctx.fillStyle = 'rgba(224, 242, 254, 0.34)';
+      bubbles.forEach(b => {
+        b.y -= b.vy; b.wobble += 0.04; b.x += Math.sin(b.wobble) * 0.3;
+        if (b.y < -10) b.y = h + 10;
+        ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill();
+      });
+
+      requestAnimationFrame(animateOcean);
+    }
+
+    window.addEventListener('resize', initOcean);
+    initOcean();
+    requestAnimationFrame(animateOcean);
   </script>
 </body>
 </html>
