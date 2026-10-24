@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering Blog &amp; Runbooks — Nguyễn Nguyên Vũ | nguyenvu.click</title>
+  <title>🟢 Engineering Blog &amp; 15 Runbooks — Nguyễn Nguyên Vũ | nguyenvu.click</title>
   <link id="dynamicFavicon" rel="icon" type="image/jpeg" href="./avatar.jpg" />
   <link rel="apple-touch-icon" href="./avatar.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,11 +23,11 @@
           },
           colors: {
             ctp: {
-              crust: '#011124',
-              mantle: '#04203e',
-              base: '#07315c',
-              surface0: '#0e4782',
-              surface1: '#1860a8',
+              crust: '#010d1c',
+              mantle: '#031b36',
+              base: '#062c54',
+              surface0: '#0c437a',
+              surface1: '#165ca3',
               text: '#f4fbff',
               subtext: '#bae6fd',
               blue: '#38bdf8',
@@ -46,20 +46,20 @@
   </script>
   <style>
     body {
-      background-color: #011124;
+      background-color: #010d1c;
       color: #f4fbff;
       overflow-x: hidden;
       transition: background-color 0.5s ease;
     }
 
-    /* Theme 1: Royal Tropical Marine & Deep Sapphire Ocean */
+    /* Theme 1: Hyper-Luminous Tropical Reef & Deep Sapphire Ocean */
     .ocean-backdrop {
       background:
-        radial-gradient(1500px ellipse at 50% -12%, rgba(0, 242, 254, 0.60), transparent 64%),
-        radial-gradient(950px circle at 88% 18%, rgba(56, 189, 248, 0.42), transparent 55%),
-        radial-gradient(1000px circle at 12% 62%, rgba(2, 132, 199, 0.38), transparent 62%),
-        radial-gradient(850px circle at 50% 95%, rgba(45, 212, 191, 0.24), transparent 60%),
-        linear-gradient(180deg, #0077c2 0%, #004f8a 34%, #022c56 72%, #011226 100%);
+        radial-gradient(1600px ellipse at 50% -15%, rgba(0, 242, 254, 0.65), transparent 62%),
+        radial-gradient(1000px circle at 88% 18%, rgba(56, 189, 248, 0.45), transparent 55%),
+        radial-gradient(1100px circle at 12% 58%, rgba(2, 132, 199, 0.42), transparent 62%),
+        radial-gradient(900px circle at 50% 96%, rgba(45, 212, 191, 0.28), transparent 60%),
+        linear-gradient(180deg, #007ecc 0%, #00518f 34%, #022a54 72%, #010f21 100%);
       transition: all 0.6s ease;
     }
 
@@ -76,21 +76,22 @@
       border-color: rgba(138, 173, 244, 0.25);
     }
 
-    /* Diamond-Edge Marine Crystal Glassmorphism */
+    /* Ultra-Crystal Prismatic Glassmorphism */
     .bento-card {
       position: relative;
-      background: linear-gradient(165deg, rgba(7, 50, 94, 0.70) 0%, rgba(3, 24, 48, 0.88) 100%);
-      backdrop-filter: blur(22px);
-      -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(125, 211, 252, 0.30);
+      background: linear-gradient(165deg, rgba(6, 48, 92, 0.72) 0%, rgba(2, 21, 44, 0.90) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(125, 211, 252, 0.32);
       box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.30),
-        inset 0 0 28px rgba(0, 242, 254, 0.05),
-        0 22px 48px -15px rgba(1, 10, 24, 0.85);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
+        inset 0 0 32px rgba(0, 242, 254, 0.06),
+        0 24px 52px -14px rgba(0, 8, 20, 0.88);
+      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
     }
     .bento-card:hover {
-      border-color: rgba(0, 242, 254, 0.68);
+      border-color: rgba(0, 242, 254, 0.78);
     }
 
     /* Upgraded Top TabBar / Navbar Avatar Ring */
@@ -99,25 +100,28 @@
       padding: 2px;
       border-radius: 9999px;
       background: conic-gradient(from 0deg, #00f2fe, #2dd4bf, #fde047, #38bdf8, #00f2fe);
-      box-shadow: 0 0 18px rgba(0, 242, 254, 0.45);
+      box-shadow: 0 0 18px rgba(0, 242, 254, 0.55);
       transition: transform 0.3s ease;
     }
     .nav-avatar-ring:hover { transform: scale(1.08); }
 
+    /* Compact Single-Line Enforced Pill Tab Bar Item */
     .nav-tab-pill {
       position: relative;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .nav-tab-pill:hover {
-      background: rgba(56, 189, 248, 0.18);
+      background: rgba(56, 189, 248, 0.20);
       color: #ffffff;
       transform: translateY(-1px);
     }
     .nav-tab-active {
-      background: linear-gradient(135deg, rgba(0, 242, 254, 0.28) 0%, rgba(45, 212, 191, 0.22) 100%);
-      border: 1px solid rgba(0, 242, 254, 0.55);
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.32) 0%, rgba(45, 212, 191, 0.25) 100%);
+      border: 1px solid rgba(0, 242, 254, 0.65);
       color: #ffffff;
-      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.22);
+      box-shadow: 0 4px 16px rgba(0, 242, 254, 0.26);
     }
 
     ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -151,10 +155,10 @@
       <div class="flex flex-wrap items-center gap-3 sm:gap-4">
         <span class="flex items-center gap-1.5 text-ctp-teal font-semibold">
           <span class="w-2 h-2 rounded-full bg-ctp-teal animate-ping"></span>
-          RUNBOOK-STUDIO // NGUYENVU.CLICK/BLOG
+          RUNBOOK-ENCYCLOPEDIA // NGUYENVU.CLICK/BLOG
         </span>
-        <span class="hidden sm:inline text-ctp-subtext">Library: <strong id="topTotalCount" class="text-ctp-sapphire">12 Chuyên đề thực chiến</strong></span>
-        <span class="hidden lg:inline text-ctp-subtext">Core 10: <strong class="text-ctp-yellow">Fortinet • MikroTik • Cisco • Meraki • Grandstream • UniFi • Aruba • DrayTek • Omada • HPE</strong></span>
+        <span class="hidden sm:inline text-ctp-subtext">Library: <strong id="topTotalCount" class="text-ctp-sapphire">15 Chuyên đề thực chiến</strong></span>
+        <span class="hidden lg:inline text-ctp-subtext">Zalo/Phone: <strong class="text-ctp-yellow">0329.553.597</strong></span>
       </div>
       <div class="flex items-center gap-2">
         <button onclick="spawnFoodBurst()" class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-ctp-teal/25 hover:bg-ctp-teal/40 text-ctp-teal border border-ctp-teal/45 transition">
@@ -171,80 +175,94 @@
   </div>
 
   <!-- ======================================================================== -->
-  <!-- UPGRADED FLOATING GLASS TABBAR / NAVBAR WITH ./AVATAR.JPG PROFILE BADGE  -->
+  <!-- ZERO-CLIPPING SINGLE-LINE GLASS NAVBAR (FITS ALL LAPTOP SCREENS 100%)    -->
   <!-- ======================================================================== -->
-  <header class="sticky top-3 z-50 px-3 sm:px-4 mt-2 no-print">
-    <div class="max-w-7xl mx-auto rounded-2xl bg-ctp-mantle/85 backdrop-blur-2xl border border-ctp-sapphire/40 shadow-[0_20px_50px_rgba(0,0,0,0.75),0_0_30px_rgba(0,242,254,0.15)] overflow-hidden">
-      <div class="h-16 px-4 sm:px-5 flex items-center justify-between gap-3">
+  <header class="sticky top-2.5 z-50 px-2 sm:px-4 mt-2 no-print">
+    <div class="max-w-7xl mx-auto rounded-2xl bg-ctp-mantle/90 backdrop-blur-2xl border border-ctp-sapphire/45 shadow-[0_20px_50px_rgba(0,0,0,0.82),0_0_32px_rgba(0,242,254,0.18)]">
+      <div class="min-h-[60px] py-2 px-3 sm:px-4 flex items-center justify-between gap-2">
 
         <!-- Left Brand Identity with Circular HD ./avatar.jpg -->
-        <a href="index.html" class="flex items-center gap-3 group shrink-0">
-          <div class="nav-avatar-ring">
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="nav-avatar-ring shrink-0">
             <img
               src="./avatar.jpg"
               alt="Nguyễn Nguyên Vũ"
-              class="w-10 h-10 rounded-full object-cover object-[center_15%] avatar-hd"
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover object-[center_15%] avatar-hd"
             />
-            <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-ctp-green border-2 border-ctp-crust animate-pulse"></span>
+            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-ctp-green border-2 border-ctp-crust animate-pulse"></span>
           </div>
-          <div>
+          <div class="whitespace-nowrap">
             <div class="flex items-center gap-1.5">
-              <span class="font-display font-bold text-base tracking-tight text-white group-hover:text-ctp-sapphire transition">
+              <span class="font-display font-bold text-sm sm:text-base tracking-tight text-white group-hover:text-ctp-sapphire transition">
                 Nguyễn Nguyên Vũ
               </span>
-              <span class="hidden sm:inline-block px-1.5 py-0.5 rounded-md bg-ctp-teal/20 border border-ctp-teal/40 font-mono text-[10px] text-ctp-teal font-bold">
+              <span class="px-1.5 py-0.5 rounded bg-ctp-teal/20 border border-ctp-teal/40 font-mono text-[9px] text-ctp-teal font-bold">
                 RUNBOOKS
               </span>
             </div>
-            <div class="font-mono text-[11px] text-ctp-subtext flex items-center gap-1">
-              <span class="text-ctp-sapphire font-semibold">nguyenvu.click</span>
-              <span>/blog</span>
+            <div class="font-mono text-[10px] text-ctp-subtext flex items-center gap-1">
+              <span class="text-ctp-sapphire font-semibold">nguyenvu.click/blog</span>
+              <span>•</span>
+              <span class="text-ctp-yellow font-semibold">0329553597</span>
             </div>
           </div>
         </a>
 
         <!-- Center Segmented Glass Tab Bar -->
-        <nav class="hidden lg:flex items-center gap-1 p-1 rounded-xl bg-ctp-crust/75 border border-ctp-blue/25 text-xs font-medium">
-          <a href="index.html" class="nav-tab-pill px-3.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
-            <i data-lucide="compass" class="w-3.5 h-3.5 text-ctp-sapphire"></i> Trang chủ
+        <nav class="hidden lg:flex items-center gap-1 p-1 rounded-xl bg-ctp-crust/80 border border-ctp-blue/25 text-[11px] font-medium">
+          <a href="index.html" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
+            <i data-lucide="compass" class="w-3.5 h-3.5 text-ctp-sapphire shrink-0"></i>
+            <span>Trang chủ</span>
           </a>
-          <a href="blog.html" class="nav-tab-pill nav-tab-active px-3.5 py-1.5 rounded-lg font-semibold flex items-center gap-1.5">
-            <i data-lucide="book-open" class="w-3.5 h-3.5 text-ctp-teal"></i> Blog &amp; Runbooks
-            <span id="navTotalBadge" class="px-1.5 py-0.2 rounded bg-ctp-teal/25 text-ctp-yellow font-mono text-[10px]">12</span>
+          <a href="blog.html" class="nav-tab-pill nav-tab-active px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1">
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-ctp-teal shrink-0"></i>
+            <span>Runbooks</span>
+            <span id="navTotalBadge" class="px-1.5 py-0.2 rounded bg-ctp-teal/25 text-ctp-yellow font-mono text-[9px]">15</span>
           </a>
-          <a href="#config-diff-section" class="nav-tab-pill px-3 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
-            <i data-lucide="git-compare" class="w-3.5 h-3.5 text-ctp-yellow"></i> Config Diff &amp; Wireshark
+          <a href="#troubleshooting-matrix" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
+            <i data-lucide="life-buoy" class="w-3.5 h-3.5 text-ctp-yellow shrink-0"></i>
+            <span>Xử lý sự cố</span>
           </a>
-          <a href="#cheat-sheets" class="nav-tab-pill px-3 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
-            <i data-lucide="terminal" class="w-3.5 h-3.5 text-ctp-green"></i> CLI Cheat Sheets
+          <a href="#config-diff-section" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
+            <i data-lucide="git-compare" class="w-3.5 h-3.5 text-ctp-sapphire shrink-0"></i>
+            <span>Wireshark/Diff</span>
           </a>
-          <a href="toolkit.html" class="nav-tab-pill px-3.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1.5">
-            <i data-lucide="wrench" class="w-3.5 h-3.5 text-ctp-peach"></i> NetTools (12)
+          <a href="#cheat-sheets" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
+            <i data-lucide="terminal" class="w-3.5 h-3.5 text-ctp-green shrink-0"></i>
+            <span>24 Lệnh CLI</span>
+          </a>
+          <a href="toolkit.html" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
+            <i data-lucide="wrench" class="w-3.5 h-3.5 text-ctp-peach shrink-0"></i>
+            <span>NetTools (15)</span>
           </a>
         </nav>
 
-        <!-- Right Quick Action Buttons -->
-        <div class="flex items-center gap-2 shrink-0">
-          <button onclick="toggleZenMode()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-ctp-crust/85 border border-ctp-blue/35 text-xs font-mono text-ctp-subtext hover:text-white transition" title="Mở rộng khung đọc toàn màn hình">
-            <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-ctp-teal"></i>
+        <!-- Right Quick Action & Contact Cluster (Zero Clipping) -->
+        <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+          <button onclick="toggleZenMode()" class="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 border border-ctp-blue/35 text-[11px] font-mono text-ctp-subtext hover:text-white transition" title="Mở rộng khung đọc toàn màn hình">
+            <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-ctp-teal shrink-0"></i>
             <span id="zenBtnText">Zen Mode</span>
           </button>
-          <button onclick="openEditor()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire via-ctp-blue to-ctp-teal text-ctp-crust font-mono font-bold text-xs transition flex items-center gap-1.5 shadow-lg shadow-ctp-sapphire/25">
-            <i data-lucide="pen-line" class="w-3.5 h-3.5"></i>
-            <span>+ Viết Runbook</span>
+          <button onclick="openEditor()" class="px-2.5 py-1.5 rounded-xl bg-ctp-blue/25 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-sapphire/45 text-[11px] font-mono font-bold text-white transition flex items-center gap-1">
+            <i data-lucide="pen-line" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>+ Viết bài</span>
+          </button>
+          <button onclick="toggleCornerMenu()" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire via-ctp-blue to-ctp-teal text-ctp-crust font-bold text-xs hover:opacity-95 transition shadow-lg shadow-ctp-sapphire/30 flex items-center gap-1.5 shrink-0">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5 shrink-0"></i>
+            <span>Liên hệ ngay</span>
           </button>
         </div>
 
       </div>
 
       <!-- Bottom Glowing Scroll Progress Bar inside Navbar -->
-      <div class="w-full h-[2px] bg-ctp-crust/60">
+      <div class="w-full h-[2px] bg-ctp-crust/60 rounded-b-2xl overflow-hidden">
         <div id="readProgress" class="h-full bg-gradient-to-r from-ctp-sapphire via-ctp-teal to-ctp-yellow w-0 transition-all duration-150"></div>
       </div>
     </div>
   </header>
 
-  <main class="relative z-10 max-w-7xl mx-auto px-4 pt-8 pb-28 space-y-12 pointer-events-auto">
+  <main class="relative z-10 max-w-7xl mx-auto px-4 pt-8 pb-24 space-y-12 pointer-events-auto">
 
     <!-- HERO BANNER & AUTHOR CREDENTIALS -->
     <section class="bento-card rounded-3xl p-6 sm:p-8 no-print">
@@ -252,13 +270,13 @@
         <div class="lg:col-span-8 space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ctp-teal/20 border border-ctp-teal/45 text-ctp-teal text-xs font-mono">
             <i data-lucide="book-open-check" class="w-3.5 h-3.5"></i>
-            <span>Production Engineering Documentation &amp; CLI Runbooks</span>
+            <span>15 Production Runbooks • Troubleshooting Playbook • 24 CLI Cheat Sheets</span>
           </div>
           <h1 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
             Thư Viện Runbook Hạ Tầng Mạng, Máy Chủ Ảo Hóa &amp; Tổng Đài IP
           </h1>
           <p class="text-sm sm:text-base text-ctp-subtext leading-relaxed">
-            Tổng hợp kịch bản cấu hình chuẩn Production, bảng quy hoạch VLAN/IP, sơ đồ kiến trúc và kinh nghiệm xử lý sự cố thực chiến trên 10 hãng chủ lực: <strong class="text-white">Fortinet FortiGate, MikroTik, Cisco, Cisco Meraki, Grandstream, Ubiquiti UniFi, Aruba, DrayTek, TP-Link Omada, HPE &amp; Proxmox VE 10G ZFS</strong>.
+            Tổng hợp 15 bộ tài liệu triển khai chuẩn Production, bảng quy hoạch VLAN/IP, sơ đồ kiến trúc và sổ tay xử lý sự cố thực chiến trên 10 hãng chủ lực: <strong class="text-white">Fortinet FortiGate, MikroTik, Cisco, Cisco Meraki, Grandstream, Ubiquiti UniFi, Aruba, DrayTek, TP-Link Omada, HPE &amp; Proxmox VE 10G ZFS</strong>.
           </p>
         </div>
 
@@ -268,8 +286,8 @@
           <div class="space-y-1 font-mono text-xs overflow-hidden">
             <div class="text-ctp-yellow font-bold text-[10px]">★ AUTHOR &amp; ARCHITECT</div>
             <div class="font-display font-bold text-base text-white truncate">Nguyễn Nguyên Vũ</div>
-            <div class="text-ctp-sapphire text-[11px] truncate">System &amp; Network Engineer</div>
-            <div class="flex items-center gap-2 pt-1">
+            <div class="text-ctp-sapphire text-[11px] truncate">Zalo: 0329.553.597</div>
+            <div class="flex items-center gap-1.5 pt-1">
               <button onclick="exportAllPostsJson()" class="px-2 py-0.5 rounded bg-ctp-surface0/80 hover:bg-ctp-teal hover:text-ctp-crust text-[10px] transition">Backup .JSON</button>
               <button onclick="window.print()" class="px-2 py-0.5 rounded bg-ctp-surface0/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-[10px] transition">In PDF</button>
             </div>
@@ -281,17 +299,17 @@
       <div class="mt-6 pt-6 border-t border-ctp-blue/25 space-y-4">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div class="flex flex-wrap gap-1.5 font-mono text-xs">
-            <button onclick="filterCat('ALL')" data-cat="ALL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold">Tất cả (12)</button>
-            <button onclick="filterCat('FIREWALL_WAN')" data-cat="FIREWALL_WAN" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">🛡️ FortiGate, MikroTik &amp; DrayTek</button>
-            <button onclick="filterCat('SWITCH_WIFI')" data-cat="SWITCH_WIFI" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">📡 Cisco, Meraki, Aruba, UniFi &amp; Omada</button>
-            <button onclick="filterCat('VOIP_ELV')" data-cat="VOIP_ELV" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">📞 Grandstream VoIP &amp; ELV</button>
-            <button onclick="filterCat('SERVER_VIRTUAL')" data-cat="SERVER_VIRTUAL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">🖥️ HPE, Proxmox 10G &amp; Docker</button>
+            <button onclick="filterCat('ALL')" data-cat="ALL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold">Tất cả (15)</button>
+            <button onclick="filterCat('FIREWALL_WAN')" data-cat="FIREWALL_WAN" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">🛡️ FortiGate, MikroTik &amp; DrayTek (4)</button>
+            <button onclick="filterCat('SWITCH_WIFI')" data-cat="SWITCH_WIFI" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">📡 Cisco, Meraki, Aruba, UniFi &amp; Omada (6)</button>
+            <button onclick="filterCat('VOIP_ELV')" data-cat="VOIP_ELV" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">📞 Grandstream VoIP &amp; ELV (2)</button>
+            <button onclick="filterCat('SERVER_VIRTUAL')" data-cat="SERVER_VIRTUAL" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-subtext hover:text-white border border-ctp-blue/25">🖥️ HPE, Proxmox 10G &amp; AD (3)</button>
             <button onclick="filterCat('SAVED')" data-cat="SAVED" class="cat-pill px-3.5 py-1.5 rounded-xl bg-ctp-crust/80 text-ctp-yellow hover:text-white border border-ctp-yellow/35">★ Đã lưu (<span id="savedCountBadge">0</span>)</button>
           </div>
 
           <div class="relative w-full md:w-80 shrink-0">
             <i data-lucide="search" class="w-4 h-4 text-ctp-subtext absolute left-3.5 top-2.5"></i>
-            <input id="searchBox" oninput="renderBlog()" type="text" placeholder="Tìm VLAN, LACP, Winbox, UCM6300, ZFS..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-ctp-crust/95 border border-ctp-blue/35 text-xs font-mono text-white focus:outline-none focus:border-ctp-sapphire" />
+            <input id="searchBox" oninput="renderBlog()" type="text" placeholder="Tìm FortiGate, Aruba, UniFi, Meraki, UCM..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-ctp-crust/95 border border-ctp-blue/35 text-xs font-mono text-white focus:outline-none focus:border-ctp-sapphire" />
           </div>
         </div>
       </div>
@@ -301,7 +319,7 @@
     <section id="readerGrid" class="grid lg:grid-cols-12 gap-8 items-start">
 
       <!-- Left Column: Runbook Cards List (4 cols) -->
-      <div id="articleListContainer" class="lg:col-span-4 space-y-3.5 max-h-[1300px] overflow-y-auto pr-1 no-print">
+      <div id="articleListContainer" class="lg:col-span-4 space-y-3.5 max-h-[1450px] overflow-y-auto pr-1 no-print">
         <div id="articleList" class="space-y-3.5"></div>
       </div>
 
@@ -316,12 +334,13 @@
               <a href="#sec-specs" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-subtext transition">2. Thông số</a>
               <a href="#sec-body" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-subtext transition">3. Quy trình</a>
               <a href="#sec-cli" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-teal transition">4. Mã CLI</a>
+              <a href="#sec-checklist" class="px-2.5 py-1 rounded-lg bg-ctp-crust/80 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-yellow transition">5. Checklist</a>
             </div>
             <div class="flex items-center gap-1.5">
               <button onclick="adjustFontSize(-1)" class="px-2.5 py-1 rounded-lg bg-ctp-crust border border-ctp-blue/30 text-ctp-subtext hover:text-white" title="Giảm cỡ chữ">A-</button>
               <button onclick="adjustFontSize(1)" class="px-2.5 py-1 rounded-lg bg-ctp-crust border border-ctp-blue/30 text-ctp-subtext hover:text-white" title="Tăng cỡ chữ">A+</button>
               <button onclick="clapCurrentPost()" class="px-3 py-1 rounded-lg bg-ctp-teal/20 border border-ctp-teal/50 text-ctp-yellow font-bold hover:bg-ctp-teal hover:text-ctp-crust transition">
-                👏 <span id="clapCountText">28</span>
+                👏 <span id="clapCountText">36</span>
               </button>
             </div>
           </div>
@@ -331,6 +350,30 @@
         </div>
       </div>
 
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- NEW SECTION: REAL-WORLD FIELD TROUBLESHOOTING MATRIX (SỔ TAY XỬ LÝ LỖI)  -->
+    <!-- ======================================================================== -->
+    <section id="troubleshooting-matrix" class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 border border-ctp-teal/50 no-print">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-ctp-yellow flex items-center gap-1.5">
+            <i data-lucide="life-buoy" class="w-4 h-4"></i> Real-World Network Troubleshooting Playbook
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1">
+            Sổ Tay Chẩn Đoán &amp; Xử Lý Sự Cố Thực Chiến (10 Hãng Chủ Lực)
+          </h2>
+        </div>
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+          <button onclick="filterTs('ALL')" id="tsbtn-ALL" class="px-3 py-1.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold">Tất cả sự cố (6)</button>
+          <button onclick="filterTs('VPN_WAN')" id="tsbtn-VPN_WAN" class="px-3 py-1.5 rounded-xl bg-ctp-crust text-ctp-subtext border border-ctp-blue/25">Lỗi VPN &amp; Multi-WAN</button>
+          <button onclick="filterTs('SW_WIFI')" id="tsbtn-SW_WIFI" class="px-3 py-1.5 rounded-xl bg-ctp-crust text-ctp-subtext border border-ctp-blue/25">Lỗi Switch &amp; Wi-Fi</button>
+          <button onclick="filterTs('VOIP_SRV')" id="tsbtn-VOIP_SRV" class="px-3 py-1.5 rounded-xl bg-ctp-crust text-ctp-subtext border border-ctp-blue/25">Lỗi Tổng đài &amp; Proxmox</button>
+        </div>
+      </div>
+
+      <div id="tsGrid" class="grid md:grid-cols-2 gap-4 font-mono text-xs"></div>
     </section>
 
     <!-- INTERACTIVE CONFIG DIFF VIEWER & WIRESHARK 802.1Q / SIP PACKET INSPECTOR -->
@@ -396,48 +439,119 @@
 
     </section>
 
-    <!-- QUICK CLI CHEAT SHEETS FOR YOUR 10 CORE BRANDS (CLEAN NON-INLINE HANDLER) -->
+    <!-- EXPANDED 24 QUICK CLI CHEAT SHEETS FOR YOUR 10 CORE BRANDS -->
     <section id="cheat-sheets" class="bento-card rounded-3xl p-6 sm:p-8 space-y-5 no-print">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-ctp-yellow">★ Rapid Troubleshooting Reference</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Bảng Tra Cứu Nhanh Lệnh Chẩn Đoán (10 Hãng Chủ Lực)</h2>
+          <span class="font-mono text-xs uppercase tracking-widest text-ctp-yellow">★ Rapid CLI Troubleshooting Reference (24 Commands)</span>
+          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Kho 24 Lệnh Chẩn Đoán Nhanh Trên MobaXterm (10 Hãng Chủ Lực)</h2>
         </div>
-        <span class="text-xs font-mono text-ctp-subtext">Nhấp vào từng ô lệnh để sao chép nhanh vào MobaXterm</span>
+        <span class="text-xs font-mono text-ctp-subtext">Nhấp vào bất kỳ ô lệnh nào để sao chép tức thì vào Clipboard</span>
       </div>
 
-      <div id="cheatSheetGrid" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 font-mono text-xs">
-        <!-- Populated cleanly via JS to prevent any HTML attribute syntax issues -->
-      </div>
+      <div id="cheatSheetGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 font-mono text-xs"></div>
     </section>
 
   </main>
 
-  <!-- FLOATING BOTTOM QUICK-ACTION DOCK -->
-  <div class="fixed bottom-4 inset-x-0 z-40 flex justify-center px-4 pointer-events-none no-print">
-    <div class="pointer-events-auto px-3 py-2 rounded-2xl bg-ctp-crust/85 backdrop-blur-2xl border border-ctp-sapphire/40 shadow-[0_15px_40px_rgba(0,0,0,0.85)] flex items-center gap-1.5 sm:gap-2 font-mono text-xs">
-      <a href="index.html" class="p-1.5 rounded-xl hover:bg-white/10 text-ctp-sapphire transition flex items-center gap-1.5" title="Về Trang chủ">
-        <img src="./avatar.jpg" alt="NV" class="w-5 h-5 rounded-full object-cover border border-ctp-sapphire" />
-        <span class="hidden sm:inline text-white font-semibold">Home</span>
+  <!-- ======================================================================== -->
+  <!-- BOTTOM-RIGHT CORNER CONTACT HUB (ZALO 0329553597, EMAIL & FACEBOOK)      -->
+  <!-- ======================================================================== -->
+  <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2.5 no-print">
+
+    <!-- Collapsible Direct Contact Card -->
+    <div id="cornerQuickMenu" class="hidden flex-col gap-2 p-3.5 rounded-3xl bg-ctp-crust/95 backdrop-blur-2xl border-2 border-ctp-sapphire/55 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(0,242,254,0.28)] font-mono text-xs w-72">
+      <div class="flex items-center justify-between pb-2.5 border-b border-ctp-blue/25">
+        <div class="flex items-center gap-2.5">
+          <img src="./avatar.jpg" alt="NV" class="w-9 h-9 rounded-full object-cover object-[center_15%] border border-ctp-sapphire avatar-hd" />
+          <div>
+            <div class="font-display font-bold text-white text-xs">Nguyễn Nguyên Vũ</div>
+            <div class="text-[10px] text-ctp-teal flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-ctp-green animate-ping"></span> Liên hệ trực tiếp
+            </div>
+          </div>
+        </div>
+        <button onclick="toggleCornerMenu()" class="text-ctp-subtext hover:text-ctp-red text-xs px-1.5">✕</button>
+      </div>
+
+      <!-- 1. Zalo 0329553597 -->
+      <div class="p-2.5 rounded-2xl bg-ctp-mantle/90 border border-ctp-sapphire/35 flex items-center justify-between gap-2">
+        <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 flex-1 group">
+          <div class="w-8 h-8 rounded-xl bg-ctp-sapphire/20 flex items-center justify-center text-ctp-sapphire group-hover:bg-ctp-sapphire group-hover:text-ctp-crust transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="text-[10px] text-ctp-subtext">CHAT ZALO / SĐT</div>
+            <div class="text-white font-bold text-xs group-hover:text-ctp-sapphire transition">0329.553.597</div>
+          </div>
+        </a>
+        <button onclick="copyContactText('0329553597', 'SĐT Zalo')" class="px-2 py-1 rounded-lg bg-ctp-crust hover:bg-ctp-teal hover:text-ctp-crust text-[10px] text-ctp-teal border border-ctp-teal/30 transition">
+          Copy
+        </button>
+      </div>
+
+      <!-- 2. Direct Phone Call -->
+      <a href="tel:0329553597" class="p-2.5 rounded-2xl bg-ctp-mantle/90 hover:bg-ctp-green/20 border border-ctp-green/35 flex items-center justify-between transition group">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-ctp-green/20 flex items-center justify-center text-ctp-green group-hover:bg-ctp-green group-hover:text-ctp-crust transition">
+            <i data-lucide="phone-outgoing" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="text-[10px] text-ctp-subtext">GỌI ĐIỆN TRỰC TIẾP</div>
+            <div class="text-white font-bold text-xs">0329 553 597</div>
+          </div>
+        </div>
+        <span class="text-[10px] text-ctp-green font-bold pr-1">Gọi →</span>
       </a>
-      <span class="h-4 w-[1px] bg-white/15"></span>
-      <button onclick="openEditor()" class="px-2.5 py-1.5 rounded-xl bg-ctp-teal/20 hover:bg-ctp-teal hover:text-ctp-crust text-ctp-yellow font-bold transition">
-        + Viết bài
-      </button>
-      <button onclick="toggleZenMode()" class="px-2.5 py-1.5 rounded-xl hover:bg-white/10 text-ctp-subtext hover:text-white transition">
-        Zen Mode
-      </button>
-      <a href="toolkit.html" class="px-2.5 py-1.5 rounded-xl hover:bg-white/10 text-ctp-subtext hover:text-white transition">
-        NetTools (12)
+
+      <!-- 3. Email nguyenvuhs9@gmail.com -->
+      <div class="p-2.5 rounded-2xl bg-ctp-mantle/90 border border-ctp-teal/35 flex items-center justify-between gap-2">
+        <a href="mailto:nguyenvuhs9@gmail.com" class="flex items-center gap-2.5 flex-1 overflow-hidden group">
+          <div class="w-8 h-8 rounded-xl bg-ctp-teal/20 flex items-center justify-center text-ctp-teal shrink-0 group-hover:bg-ctp-teal group-hover:text-ctp-crust transition">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <div class="truncate">
+            <div class="text-[10px] text-ctp-subtext">EMAIL CÁ NHÂN</div>
+            <div class="text-white font-bold text-[11px] truncate group-hover:text-ctp-teal transition">nguyenvuhs9@gmail.com</div>
+          </div>
+        </a>
+        <button onclick="copyContactText('nguyenvuhs9@gmail.com', 'Email')" class="px-2 py-1 rounded-lg bg-ctp-crust hover:bg-ctp-teal hover:text-ctp-crust text-[10px] text-ctp-teal border border-ctp-teal/30 shrink-0 transition">
+          Copy
+        </button>
+      </div>
+
+      <!-- 4. Facebook https://www.facebook.com/ngvu15?locale=vi_VN -->
+      <a href="https://www.facebook.com/ngvu15?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-ctp-mantle/90 hover:bg-ctp-blue/25 border border-ctp-blue/40 flex items-center justify-between transition group">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-ctp-blue/20 flex items-center justify-center text-ctp-blue group-hover:bg-ctp-blue group-hover:text-ctp-crust transition">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="text-[10px] text-ctp-subtext">FACEBOOK CÁ NHÂN</div>
+            <div class="text-white font-bold text-xs">fb.com/ngvu15</div>
+          </div>
+        </div>
+        <i data-lucide="external-link" class="w-3.5 h-3.5 text-ctp-sapphire mr-1"></i>
       </a>
-      <span class="h-4 w-[1px] bg-white/15"></span>
-      <button onclick="spawnFoodBurst()" class="p-2 rounded-xl bg-ctp-blue/20 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-sapphire transition" title="Thả mồi gọi đàn cá">
-        <i data-lucide="fish" class="w-4 h-4"></i>
-      </button>
-      <button onclick="window.print()" class="p-2 rounded-xl bg-ctp-surface0/70 hover:bg-ctp-peach hover:text-ctp-crust text-ctp-peach transition" title="In Runbook PDF">
-        <i data-lucide="printer" class="w-4 h-4"></i>
+
+      <!-- Save vCard Action -->
+      <button onclick="downloadVCard()" class="w-full py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire to-ctp-teal text-ctp-crust font-bold text-xs hover:opacity-95 transition flex items-center justify-center gap-1.5 mt-0.5">
+        <i data-lucide="user-plus" class="w-3.5 h-3.5"></i> Lưu Danh Bạ (.VCF)
       </button>
     </div>
+
+    <!-- Floating Corner Avatar Contact Trigger Orb -->
+    <button onclick="toggleCornerMenu()" class="group relative flex items-center gap-2.5 p-1.5 pr-3.5 rounded-full bg-ctp-crust/90 backdrop-blur-xl border-2 border-ctp-sapphire/60 shadow-[0_10px_30px_rgba(0,242,254,0.4)] hover:scale-105 transition" title="Liên hệ Nguyễn Nguyên Vũ (Zalo, SĐT, Email, Facebook)">
+      <div class="relative w-10 h-10 rounded-full overflow-hidden border border-ctp-teal">
+        <img src="./avatar.jpg" alt="Liên hệ" class="w-full h-full object-cover object-[center_15%] avatar-hd" />
+      </div>
+      <div class="text-left font-mono">
+        <div class="text-[10px] text-ctp-teal font-bold flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-ctp-green animate-ping"></span> Liên hệ Vũ
+        </div>
+        <div class="text-[11px] text-white font-bold">Zalo • FB • Mail</div>
+      </div>
+    </button>
   </div>
 
   <!-- Modal Write New Runbook Post -->
@@ -467,7 +581,7 @@
   </div>
 
   <!-- Toast Notification -->
-  <div id="toastNotification" class="fixed bottom-20 right-5 z-50 px-4 py-2.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs shadow-2xl hidden items-center gap-2 no-print">
+  <div id="toastNotification" class="fixed bottom-6 left-6 z-50 px-4 py-2.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs shadow-2xl hidden items-center gap-2 no-print">
     <span>✓ Đã sao chép vào Clipboard!</span>
   </div>
 
@@ -478,10 +592,9 @@
         <img src="./avatar.jpg" alt="NV" class="w-7 h-7 rounded-full object-cover border border-ctp-sapphire" />
         <span>© 2026 <strong class="text-white">Nguyễn Nguyên Vũ</strong> — <span class="text-ctp-sapphire">nguyenvu.click/blog</span></span>
       </div>
-      <div class="flex items-center gap-5">
-        <a href="index.html" class="hover:text-white">Trang chủ</a>
-        <a href="blog.html" class="hover:text-white">Blog kỹ thuật (12)</a>
-        <a href="toolkit.html" class="hover:text-white">NetTools (12)</a>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="text-ctp-sapphire hover:underline">Zalo: 0329553597</a>
+        <a href="https://www.facebook.com/ngvu15?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="text-ctp-blue hover:underline">Facebook</a>
         <a href="mailto:nguyenvuhs9@gmail.com" class="text-ctp-teal hover:underline">nguyenvuhs9@gmail.com</a>
       </div>
     </div>
@@ -489,6 +602,46 @@
 
   <script>
     lucide.createIcons();
+
+    function toggleCornerMenu() {
+      const menu = document.getElementById('cornerQuickMenu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+
+    function showToast(msg = '✓ Đã sao chép vào Clipboard!') {
+      const t = document.getElementById('toastNotification');
+      t.innerHTML = '<span>' + msg + '</span>';
+      t.classList.remove('hidden');
+      t.classList.add('flex');
+      setTimeout(() => { t.classList.add('hidden'); t.classList.remove('flex'); }, 2200);
+    }
+
+    function copyContactText(txt, label) {
+      navigator.clipboard.writeText(txt);
+      showToast('✓ Đã sao chép ' + label + ': ' + txt);
+    }
+
+    function downloadVCard() {
+      const vcf = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Nguyễn Nguyên Vũ',
+        'N:Nguyễn;Nguyên Vũ;;;',
+        'TITLE:System & Network Engineer',
+        'TEL;TYPE=CELL,VOICE:0329553597',
+        'EMAIL;TYPE=INTERNET:nguyenvuhs9@gmail.com',
+        'URL:https://nguyenvu.click',
+        'NOTE:Zalo: 0329553597 | Facebook: https://www.facebook.com/ngvu15?locale=vi_VN',
+        'END:VCARD'
+      ].join('\n');
+      const blob = new Blob([vcf], { type: 'text/vcard;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'Nguyen-Nguyen-Vu-Contact.vcf';
+      a.click();
+      showToast('✓ Đã tải danh bạ Nguyễn Nguyên Vũ (.VCF)!');
+    }
 
     // 1. Dynamic Circular Avatar Favicon Generator for Browser Tab Bar
     function generateCircularAvatarFavicon() {
@@ -520,7 +673,7 @@
 
           fctx.beginPath();
           fctx.arc(50, 50, 8, 0, Math.PI * 2);
-          fctx.fillStyle = '#011124';
+          fctx.fillStyle = '#010d1c';
           fctx.fill();
           fctx.beginPath();
           fctx.arc(50, 50, 5.5, 0, Math.PI * 2);
@@ -539,26 +692,32 @@
       if (el) el.textContent = new Date().toLocaleTimeString('vi-VN', { hour12: false }) + ' GMT+7';
     }, 1000);
 
-    function showToast(msg = '✓ Đã sao chép vào Clipboard!') {
-      const t = document.getElementById('toastNotification');
-      t.innerHTML = '<span>' + msg + '</span>';
-      t.classList.remove('hidden');
-      t.classList.add('flex');
-      setTimeout(() => { t.classList.add('hidden'); t.classList.remove('flex'); }, 2200);
-    }
-
-    // 2. Clean Cheat Sheet Data & Renderer (Zero Inline Escaping Issues)
+    // 2. Expanded 24 Quick CLI Cheat Sheets (Clean Non-Inline Handler)
     const cheatSheets = [
-      { brand: '1. Fortinet FortiGate', title: 'Debug Packet Flow Trace', short: 'diag debug flow trace start', cmd: 'diagnose debug flow filter addr 10.10.20.50\ndiagnose debug flow trace start 100\ndiagnose debug enable', highlight: false },
-      { brand: '2. MikroTik RouterOS', title: 'Live Packet Sniffer CLI', short: '/tool sniffer quick ip-address=', cmd: '/tool sniffer quick interface=all ip-address=10.10.20.50', highlight: false },
-      { brand: '3. Cisco Catalyst', title: 'Check Err-Disabled & LACP', short: 'show interfaces status err-disabled', cmd: 'show interfaces status err-disabled\nshow spanning-tree blockedports\nshow etherchannel summary', highlight: false },
-      { brand: '4. Aruba Networking', title: 'LLDP Neighbor & LACP Check', short: 'show lldp info remote-device', cmd: 'show lacp interfaces\nshow lldp info remote-device\nshow logging -r', highlight: false },
-      { brand: '5. DrayTek Vigor', title: 'Multi-WAN & IPsec Status', short: 'wan status && vpn status', cmd: 'wan status\nvpn status\nip route status', highlight: false },
-      { brand: '6. Grandstream UCM', title: 'Check SIP Trunk & Phones', short: 'pjsip show registrations', cmd: 'pjsip show registrations\npjsip show endpoints\nsip set debug on', highlight: true },
-      { brand: '7. Ubiquiti UniFi', title: 'SSH Adopt & Status Info', short: 'mca-cli-op info / set-inform', cmd: 'mca-cli-op info\nset-inform http://10.10.99.10:8080/inform', highlight: true },
-      { brand: '8. TP-Link Omada', title: 'PoE Budget & VLAN Binding', short: 'show power inline', cmd: 'show interface switchport\nshow power inline\nshow ip dhcp snooping binding', highlight: true },
-      { brand: '9. Cisco Meraki', title: 'Local Status & Cloud Check', short: 'http://setup.meraki.com', cmd: 'curl -L https://api.meraki.com/api/v1/organizations', highlight: true },
-      { brand: '10. HPE & Proxmox VE', title: 'Quorum & ZFS Health Check', short: 'pvecm status && zpool status', cmd: 'pvecm status\nzpool status -v\nqm list', highlight: true }
+      { brand: '01. Fortinet FortiGate', title: 'Debug Packet Flow Trace', short: 'diag debug flow trace start 100', cmd: 'diagnose debug reset\ndiagnose debug flow filter addr 10.10.20.50\ndiagnose debug flow show function-name enable\ndiagnose debug flow trace start 100\ndiagnose debug enable', highlight: false },
+      { brand: '02. Fortinet FortiGate', title: 'Sniff Packet On Interface', short: 'diag sniffer packet any "port 5060"', cmd: 'diagnose sniffer packet any "host 10.10.50.2 and port 5060" 4 0 l', highlight: false },
+      { brand: '03. Fortinet FortiGate', title: 'Check HA & SD-WAN SLA', short: 'get sys ha status / diag sys sdwan', cmd: 'get system ha status\ndiagnose sys sdwan health-check', highlight: false },
+      { brand: '04. MikroTik RouterOS', title: 'Live Packet Sniffer CLI', short: '/tool sniffer quick ip-address=', cmd: '/tool sniffer quick interface=all ip-address=10.10.20.50', highlight: false },
+      { brand: '05. MikroTik RouterOS', title: 'Export Compact Config', short: '/export terse show-sensitive', cmd: '/export file=backup_routeros_v7 compact', highlight: false },
+      { brand: '06. MikroTik RouterOS', title: 'Check Port Scanners List', short: '/ip firewall address-list print', cmd: '/ip firewall address-list print where list="PORT_SCANNERS"', highlight: false },
+      { brand: '07. Cisco Catalyst', title: 'Check Err-Disabled & LACP', short: 'show interfaces status err-disabled', cmd: 'show interfaces status err-disabled\nshow spanning-tree blockedports\nshow etherchannel summary', highlight: false },
+      { brand: '08. Cisco Catalyst', title: 'DHCP Snooping & ARP Table', short: 'show ip dhcp snooping binding', cmd: 'show ip dhcp snooping binding\nshow ip arp inspection statistics', highlight: false },
+      { brand: '09. Cisco Meraki', title: 'Local Status & API Query', short: 'http://setup.meraki.com', cmd: 'curl -L https://api.meraki.com/api/v1/organizations -H "X-Cisco-Meraki-API-Key: YOUR_KEY"', highlight: true },
+      { brand: '10.Cisco Meraki', title: 'Check Cable Test & PoE', short: 'Switch Port Cable Test GUI/API', cmd: '# Meraki MS Switch Local Status Page: http://switch.meraki.com', highlight: true },
+      { brand: '11. Aruba Networking', title: 'LLDP Neighbor & LACP Check', short: 'show lldp info remote-device', cmd: 'show lacp interfaces\nshow lldp info remote-device\nshow logging -r', highlight: false },
+      { brand: '12. Aruba Networking', title: 'VSF Stack & PoE Status', short: 'show vsf && show power-over-ethernet', cmd: 'show vsf\nshow power-over-ethernet brief', highlight: false },
+      { brand: '13. DrayTek Vigor', title: 'Multi-WAN & IPsec Status', short: 'wan status && vpn status', cmd: 'wan status\nvpn status\nip route status', highlight: false },
+      { brand: '14. DrayTek Vigor', title: 'Clear NAT Sessions & HA', short: 'sys ha status / ip nat clear', cmd: 'sys ha status\nsys ver', highlight: false },
+      { brand: '15. Grandstream UCM', title: 'Check SIP Trunk & Phones', short: 'pjsip show registrations', cmd: 'pjsip show registrations\npjsip show endpoints\ncore show channels concise', highlight: true },
+      { brand: '16. Grandstream UCM', title: 'Live SIP Packet Debug', short: 'pjsip set logger on', cmd: 'pjsip set logger on\nrtp set debug on', highlight: true },
+      { brand: '17. Ubiquiti UniFi', title: 'SSH L3 Adoption Inform', short: 'mca-cli-op set-inform http://...', cmd: 'mca-cli-op info\nmca-cli-op set-inform http://10.10.99.10:8080/inform', highlight: true },
+      { brand: '18. Ubiquiti UniFi', title: 'UDM-Pro OS Shell & Logs', short: 'unifi-os shell / tail -f server.log', cmd: 'unifi-os shell\nsystemctl status unifi\ntail -n 100 /usr/lib/unifi/logs/server.log', highlight: true },
+      { brand: '19. TP-Link Omada', title: 'PoE Budget & VLAN Binding', short: 'show power inline / switchport', cmd: 'show interface switchport\nshow power inline\nshow ip dhcp snooping binding', highlight: true },
+      { brand: '20. TP-Link Omada', title: 'Check Controller Ports', short: 'netstat -tulnp | grep 2981', cmd: 'ss -tulnp | grep -E "8043|29810|29811|29812|29814"', highlight: true },
+      { brand: '21. HPE & Proxmox VE', title: 'Quorum & ZFS Health Check', short: 'pvecm status && zpool status', cmd: 'pvecm status\nzpool status -v\nqm list', highlight: true },
+      { brand: '22. HPE ProLiant iLO', title: 'IPMI Hardware Sensor Check', short: 'ipmitool sensor list', cmd: 'ipmitool sensor list | grep -E "Temp|Fan|PS"\nipmitool sel elist', highlight: true },
+      { brand: '23. 1Panel & Docker', title: 'Container & Bot Logs', short: 'docker ps / docker logs -f', cmd: 'docker ps --format "table {{.Names}}\\t{{.Status}}\\t{{.Ports}}"\ndocker logs -f --tail 50 traffic-fine-bot', highlight: false },
+      { brand: '24. Windows Server AD', title: 'Check AD, DNS, DHCP & NPS', short: 'Get-Service ADWS, DNS, IAS', cmd: 'Get-Service ADWS, DNS, DHCPServer, IAS\ndcdiag /v', highlight: false }
     ];
 
     function renderCheatSheets() {
@@ -568,7 +727,7 @@
         return `
           <div onclick="copyCheatSheet(${idx})" class="p-3.5 rounded-2xl bg-ctp-crust/90 border border-ctp-blue/25 hover:border-ctp-sapphire cursor-pointer space-y-1 transition">
             <div class="${colorCls} font-bold">${item.brand}</div>
-            <div class="text-white text-[11px]">${item.title}</div>
+            <div class="text-white text-[11px] font-semibold">${item.title}</div>
             <code class="text-[10px] text-ctp-teal block truncate">${item.short}</code>
           </div>
         `;
@@ -582,6 +741,73 @@
       showToast('✓ Đã copy lệnh ' + item.brand + '!');
     }
     renderCheatSheets();
+
+    // 3. Real-World Field Troubleshooting Matrix
+    const tsPlaybook = [
+      {
+        cat: 'VPN_WAN',
+        symptom: '1. Hầm IPsec VPN giữa FortiGate và DrayTek Vigor / MikroTik báo Phase 1 UP nhưng Phase 2 không thông',
+        cause: 'Lệch thông số Local/Remote Subnet (Proxy-ID), lệch nhóm Diffie-Hellman PFS (Group 14 vs Group 2) hoặc quên tạo Static Route đẩy về giao diện hầm VPN.',
+        diag: 'diagnose vpn ike log-filter dst-addr4 <IP_WAN_Peer>\ndiagnose debug application ike -1',
+        fix: 'Đồng bộ chính xác Encryption = AES-256, Auth = SHA-256, DH Group = 14 (2048-bit) ở cả Phase 1 và Phase 2 (bật PFS Group 14), đồng thời đặt TCP MSS Clamping = 1350 bytes.'
+      },
+      {
+        cat: 'VPN_WAN',
+        symptom: '2. Người dùng bị văng phiên đăng nhập Ngân hàng / Thuế điện tử khi gộp nhiều đường mạng (Multi-WAN)',
+        cause: 'Cấu hình cân bằng tải theo chế độ Session-Based (Round-Robin) khiến các gói tin HTTPS của cùng 1 phiên đi ra qua 2 địa chỉ IP WAN công cộng khác nhau.',
+        diag: 'MikroTik: /ip firewall mangle print\nDrayTek: wan status',
+        fix: 'Trên MikroTik PCC chuyển sang phân loại "both-addresses" (hoặc cố định TCP 443). Trên DrayTek Vigor chuyển Load-Balance Mode sang "IP-Based" thay vì "Session-Based".'
+      },
+      {
+        cat: 'SW_WIFI',
+        symptom: '3. Access Point UniFi / TP-Link Omada báo "Adoption Failed" hoặc lặp vòng "Adopting -> Disconnected"',
+        cause: 'AP chưa nhận đúng địa chỉ IP của Controller (khác VLAN), bị chặn cổng TCP 8080 (UniFi) / 29810-29814 (Omada), hoặc lệch múi giờ/NTP trên AP.',
+        diag: 'ssh ubnt@<IP_AP> -> mca-cli-op info',
+        fix: 'SSH vào AP bằng MobaXterm và gõ lệnh "mca-cli-op set-inform http://<IP_Controller>:8080/inform" hai lần liên tiếp, đồng thời kiểm tra Native VLAN trên cổng Switch PoE.'
+      },
+      {
+        cat: 'SW_WIFI',
+        symptom: '4. Cổng Switch Cisco Catalyst / Aruba tự động tắt đèn (Trạng thái Err-Disabled) làm mất mạng cả phòng',
+        cause: 'Người dùng dưới phòng ban vô tình cắm 2 đầu của 1 sợi dây nhảy vào 2 ổ mạng trên tường hoặc cắm qua Switch chia cổng bị Loop, kích hoạt BPDU Guard.',
+        diag: 'show interfaces status err-disabled\nshow logging',
+        fix: 'Tháo sợi dây gây Loop tại phòng ban, sau đó vào cổng Switch gõ "shutdown" -> "no shutdown" và bật tự động khôi phục: "errdisable recovery cause bpduguard".'
+      },
+      {
+        cat: 'VOIP_SRV',
+        symptom: '5. Điện thoại IP Grandstream GRP/GXP cắm vào Switch PoE nhưng nhận nhầm IP mạng máy tính (Data VLAN)',
+        cause: 'Chưa bật giao thức LLDP-MED trên cổng Switch PoE nên điện thoại không biết thẻ Voice VLAN ID (VLAN 50) cần gắn.',
+        diag: 'show lldp neighbors detail\nshow interface switchport',
+        fix: 'Bật toàn cục "lldp run" trên Switch Cisco/Aruba/Omada và khai báo "switchport voice vlan 50" kèm "mls qos trust cos" trên các cổng cắm điện thoại.'
+      },
+      {
+        cat: 'VOIP_SRV',
+        symptom: '6. Cuộc gọi qua tổng đài Grandstream UCM6300 đổ chuông nhưng nhấc máy không nghe tiếng 1 chiều (One-Way Audio)',
+        cause: 'Tính năng SIP ALG trên Router/Firewall biên tự ý sửa đổi gói tin SDP hoặc chưa cấu hình External IP / NAT Port Forwarding dải RTP 10000-20000.',
+        diag: 'UCM6302*CLI> rtp set debug on\npjsip set logger on',
+        fix: 'Tắt hoàn toàn SIP ALG (Session Helper) trên FortiGate / MikroTik / DrayTek và khai báo đúng địa chỉ WAN Tĩnh + Local Network trong mục NAT Settings của UCM6300.'
+      }
+    ];
+
+    function filterTs(cat) {
+      ['ALL', 'VPN_WAN', 'SW_WIFI', 'VOIP_SRV'].forEach(c => {
+        const b = document.getElementById('tsbtn-' + c);
+        b.className = c === cat
+          ? 'px-3 py-1.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold'
+          : 'px-3 py-1.5 rounded-xl bg-ctp-crust text-ctp-subtext border border-ctp-blue/25 hover:text-white';
+      });
+      const list = cat === 'ALL' ? tsPlaybook : tsPlaybook.filter(x => x.cat === cat);
+      document.getElementById('tsGrid').innerHTML = list.map(item => `
+        <div class="p-5 rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 space-y-2.5 flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="text-ctp-yellow font-bold text-sm leading-snug">${item.symptom}</div>
+            <div><span class="text-ctp-red font-bold">▸ Nguyên nhân:</span> <span class="text-ctp-subtext">${item.cause}</span></div>
+            <div><span class="text-ctp-green font-bold">▸ Cách khắc phục:</span> <span class="text-white">${item.fix}</span></div>
+          </div>
+          <pre class="p-3 rounded-xl bg-ctp-mantle border border-ctp-blue/25 text-[11px] text-ctp-teal overflow-x-auto">${item.diag}</pre>
+        </div>
+      `).join('');
+    }
+    filterTs('ALL');
 
     // Dual-Theme Switcher
     let isNocTheme = false;
@@ -609,7 +835,6 @@
       }
     }
 
-    // Reader Font Size Adjuster & Clap Counter
     let currentFontSize = 15;
     function adjustFontSize(delta) {
       currentFontSize = Math.min(20, Math.max(13, currentFontSize + delta));
@@ -619,7 +844,7 @@
 
     let clapsMap = JSON.parse(localStorage.getItem('nguyenvu_blog_claps')) || {};
     function clapCurrentPost() {
-      clapsMap[currentArticleId] = (clapsMap[currentArticleId] || 28) + 1;
+      clapsMap[currentArticleId] = (clapsMap[currentArticleId] || 36) + 1;
       localStorage.setItem('nguyenvu_blog_claps', JSON.stringify(clapsMap));
       document.getElementById('clapCountText').textContent = clapsMap[currentArticleId];
       showToast('👏 Cảm ơn bạn đã vỗ tay cho Runbook này!');
@@ -633,7 +858,7 @@
     }
 
     // =========================================================================
-    // 12 COMPREHENSIVE ENGINEERING RUNBOOKS (WITH TOPOLOGY, TABLES & CLI)
+    // 15 COMPREHENSIVE ENGINEERING RUNBOOKS (WITH TOPOLOGY, TABLES & CHECKLIST)
     // =========================================================================
     const initialArticles = [
       {
@@ -663,8 +888,14 @@
           ['Uplink Trunk', '802.3ad LACP (x1 + x2)', '20Gbps Full-Duplex • Native VLAN 1 • Allowed: 10,20,30,50,99'],
           ['SD-WAN SLA', 'Ping 1.1.1.1 & 8.8.8.8', 'Interval: 500ms • Failthreshold: 3 • Latency < 25ms, Jitter < 5ms']
         ],
+        checklist: [
+          'Đấu nối 2 dây nhảy Cat6 độc lập giữa port7 và port8 của 2 thiết bị FortiGate làm đường Heartbeat',
+          'Kiểm tra cùng phiên bản Firmware FortiOS trên cả 2 thiết bị trước khi đóng cụm HA',
+          'Bật Session Pickup để không bị rớt kết nối TCP và VPN khi chuyển mạch Failover',
+          'Tắt SIP ALG (Session Helper) nếu bên dưới có tổng đài IP Grandstream UCM'
+        ],
         body: `1. Quy hoạch cụm HA Active-Passive (FGCP):
-Khi triển khai cặp tường lửa Fortinet FortiGate cho trụ sở chính hoặc bệnh viện, cần sử dụng tối thiểu 2 cổng vật lý độc lập (ví dụ port7 và port8) nối trực tiếp làm đường Heartbeat (HA Sync). Bật tính năng "set session-pickup enable" để toàn bộ bảng trạng thái kết nối TCP và phiên IPsec VPN được đồng bộ sang thiết bị Secondary theo thời gian thực, đảm bảo khi rút cáp nguồn thiết bị chính thì người dùng không bị rớt gói tin.
+Khi triển khai cặp tường lửa Fortinet FortiGate cho trụ sở chính hoặc bệnh viện, cần sử dụng tối thiểu 2 cổng vật lý độc lập (ví dụ port7 và port8) nối trực tiếp làm đường Heartbeat (HA Sync). Bật tính năng "set session-pickup enable" để toàn bộ bảng trạng thái kết nối TCP và phiên IPsec VPN được đồng bộ sang thiết bị Secondary theo thời gian thực.
 
 2. Kết nối 10G SFP+ LACP xuống Core Switch:
 Thay vì sử dụng cổng đơn lẻ gây nghẽn cổ chai giữa các VLAN, khởi tạo giao diện Aggregate 802.3ad (gom cổng x1 và x2 10G SFP+) nối xuống Core Switch Cisco/Aruba. Toàn bộ Sub-interface VLAN (VLAN 10 Server, VLAN 20 Wi-Fi, VLAN 30 CCTV, VLAN 50 Grandstream VoIP, VLAN 99 Management) được gắn trên giao diện LACP này.
@@ -738,6 +969,12 @@ Secondary : FG100F-NODE02 (serial: FG100FTK2200YYYY) - Slave (In-Sync)`
           ['Bộ lọc PSD', 'Weight Threshold = 21', 'Delay Threshold = 3s • Low Port Weight = 3 • Timeout = 14d'],
           ['Cân bằng tải', 'PCC both-addresses-and-ports', 'Giữ nguyên phiên HTTPS Banking / Giao dịch']
         ],
+        checklist: [
+          'Tắt hoàn toàn dịch vụ Telnet, FTP, WWW, API trên /ip service',
+          'Đổi cổng Winbox sang 58291 và giới hạn Available From = 10.10.99.0/24',
+          'Tắt RoMON và Neighbor Discovery trên tất cả các cổng WAN',
+          'Kiểm tra thử nghiệm quét Nmap từ 1 máy trạm để xác nhận IP bị đưa vào danh sách chặn'
+        ],
         body: `1. Khóa chặt dịch vụ quản trị (Service Hardening):
 Trên MikroTik RouterOS, việc để cổng Winbox mặc định (8291), WWW (80) hoặc API (8728) mở trên tất cả các giao diện là rủi ro bảo mật lớn nhất. Cần tắt toàn bộ dịch vụ không dùng (telnet, ftp, www, api), đổi cổng Winbox sang cổng cao (ví dụ 58291) và chỉ cho phép kết nối từ dải mạng quản trị (Management VLAN 99).
 
@@ -781,41 +1018,48 @@ Columns: LIST, ADDRESS, CREATION-TIME, TIMEOUT
       {
         id: 'cisco-aruba-switching-lacp-dai',
         cat: 'SWITCH_WIFI',
-        vendor: '★ Cisco Catalyst & ★ Aruba AOS-CX',
+        vendor: '★ Cisco Catalyst (IOS-XE / CBS)',
         level: 'Campus Switching Runbook',
         date: '21/10/2026',
         readTime: '11 phút đọc',
-        title: 'Cấu Hình Chuyển Mạch Cisco Catalyst & Aruba AOS-CX: LACP Trunking, DHCP Snooping, DAI & Voice VLAN',
-        excerpt: 'Bộ lệnh chuẩn hóa cho cả hai hệ sinh thái Switch phổ biến nhất doanh nghiệp: gom cổng LACP 10G, chống cắm nhầm Router phát DHCP giả mạo và ưu tiên gói tin thoại.',
+        title: 'Cấu Hình Chuyển Mạch Cisco Catalyst: LACP EtherChannel 10G, DHCP Snooping, Dynamic ARP Inspection & Voice VLAN',
+        excerpt: 'Bộ lệnh chuẩn hóa cho Switch Cisco Catalyst 2960X/9200/9300: gom cổng LACP 10G, chống cắm nhầm Router phát DHCP giả mạo và ưu tiên gói tin thoại.',
         topology: `
-     [Core Switch Cisco 9300 / Aruba 6300M]
+     [Core Switch Cisco Catalyst 9300]
                ||              ||
-     (LACP Po1 / lag1 - 10G SFP+ Trunk: VLAN 10,20,50,99)
+     (LACP Po1 - 20Gbps Trunk: VLAN 10,20,50,99)
                ||              ||
-     [Access Switch Cisco 2960X / Aruba 6100 PoE+]
+     [Access Switch Cisco 2960X / 9200 PoE+]
         /              |               \\
   [PC VLAN 20]   [IP Phone VLAN 50]   [DHCP Rogue Blocked]`,
         specs: [
-          ['Giao thức Trunk', 'IEEE 802.3ad LACP Active', 'Cisco: channel-group 1 mode active | Aruba: lag 1'],
+          ['Giao thức Trunk', 'IEEE 802.3ad LACP Active', 'channel-group 1 mode active • load-balance src-dst-ip'],
           ['Bảo mật Lớp 2', 'DHCP Snooping + ARP Inspection', 'Chỉ Trust cổng Uplink nối lên Core Switch / Firewall'],
-          ['Chống Loop mạng', 'BPDU Guard + Root Guard', 'Tự động đưa cổng Access bị cắm vòng dây vào trạng thái Err-Disable']
+          ['Chống Loop mạng', 'PortFast + BPDU Guard', 'Tự động khôi phục cổng sau 300s (Errdisable Recovery)']
+        ],
+        checklist: [
+          'Cấu hình ip dhcp snooping trust trên cổng Port-Channel Uplink trước khi bật toàn cục',
+          'Tắt chèn Option 82 (no ip dhcp snooping information option) nếu dùng Router phát DHCP',
+          'Bật errdisable recovery cause bpduguard để không phải mở lại cổng thủ công'
         ],
         body: `1. Chống cắm nhầm thiết bị phát DHCP giả mạo (DHCP Snooping):
-Trong môi trường văn phòng hoặc tòa nhà lớn, người dùng vô tình cắm dây mạng vào cổng LAN của bộ phát Wi-Fi cá nhân sẽ làm phát tán IP sai (192.168.0.x/192.168.1.x) gây mất mạng toàn bộ tầng. Bật DHCP Snooping trên Cisco Catalyst và Aruba Switch giúp chặn hoàn toàn bản tin DHCP Offer từ các cổng Access (Untrusted) và chỉ cho phép nhận IP từ cổng Uplink (Trusted).
+Trong môi trường văn phòng hoặc tòa nhà lớn, người dùng vô tình cắm dây mạng vào cổng LAN của bộ phát Wi-Fi cá nhân sẽ làm phát tán IP sai (192.168.0.x/192.168.1.x) gây mất mạng toàn bộ tầng. Bật DHCP Snooping trên Cisco Catalyst giúp chặn hoàn toàn bản tin DHCP Offer từ các cổng Access (Untrusted).
 
 2. Bảo vệ chống giả mạo ARP (Dynamic ARP Inspection - DAI):
-Dựa trên bảng cơ sở dữ liệu DHCP Snooping Binding, tính năng DAI kiểm tra mọi gói tin ARP đi qua Switch và loại bỏ ngay lập tức các gói tin ARP Spoofing / Man-in-the-Middle.`,
-        cli: `! =================================================================
-! PHẦN A: CẤU HÌNH TRÊN CISCO CATALYST (IOS / IOS-XE)
-! =================================================================
-ip dhcp snooping
+Dựa trên bảng cơ sở dữ liệu DHCP Snooping Binding, tính năng DAI kiểm tra mọi gói tin ARP đi qua Switch và loại bỏ ngay lập tức các gói tin ARP Spoofing.`,
+        cli: `ip dhcp snooping
 ip dhcp snooping vlan 10,20,50
 no ip dhcp snooping information option
 ip arp inspection vlan 10,20,50
 
 errdisable recovery cause bpduguard
+errdisable recovery cause psecure-violation
 errdisable recovery interval 300
 
+interface range TenGigabitEthernet1/0/1 - 2
+ description UPLINK_TO_CORE_SWITCH
+ channel-group 1 mode active
+!
 interface Port-channel1
  switchport mode trunk
  switchport trunk allowed vlan 10,20,30,50,99
@@ -828,33 +1072,214 @@ interface range GigabitEthernet1/0/1 - 24
  switchport voice vlan 50
  spanning-tree portfast
  spanning-tree bpduguard enable
-
-! =================================================================
-! PHẦN B: CẤU HÌNH TƯƠNG ĐƯƠNG TRÊN ARUBA AOS-CX (6100 / 6200 / 6300)
-! =================================================================
-dhcp-snooping
-dhcp-snooping vlan 10,20,50
-arp-inspection vlan 10,20,50
-
-interface lag 1
- no shutdown
- no routing
- vlan trunk native 1
- vlan trunk allowed 10,20,30,50,99
- lacp mode active
- dhcp-snooping trust
- arp-inspection trust`,
+ ip dhcp snooping limit rate 15`,
         verify: `Cisco-Switch# show ip dhcp snooping binding
 MacAddress          IpAddress        Lease(sec)  Type           VLAN  Interface
 ------------------  ---------------  ----------  -------------  ----  --------------------
 00:0B:82:8A:11:22   10.10.50.101     86120       dhcp-snooping   50   GigabitEthernet1/0/5`
       },
       {
+        id: 'aruba-aoscx-vsf-switching',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ Aruba Networking (AOS-CX & Instant On)',
+        level: 'Aruba Switching & Wi-Fi Runbook',
+        date: '20/10/2026',
+        readTime: '10 phút đọc',
+        title: 'Triển Khai Chuyển Mạch Aruba AOS-CX (6100/6200/6300): Gộp Stack VSF, LACP LAG, Bảo Mật Lớp 2 & Wi-Fi Aruba',
+        excerpt: 'Hướng dẫn cấu hình dòng Switch Aruba thế hệ mới chạy hệ điều hành AOS-CX: gộp cụm VSF Stacking, cấu hình Multi-Chassis LAG và phân tách VLAN cho AP Aruba.',
+        topology: `
+    [Aruba CX 6300M Member 1 (Commander)] <=== VSF Stack Ring ===> [Aruba CX 6300M Member 2 (Standby)]
+                              \\                                        /
+                               \\========== (Multi-Chassis LAG 1) =====/
+                                                  ||
+                                    [Aruba CX 6100 PoE+ Access Switch]`,
+        specs: [
+          ['Gộp cụm VSF Stack', 'Virtual Switching Framework', 'Sử dụng 2 cổng 10G/25G SFP+ nối vòng Ring giữa các Switch'],
+          ['Cấu hình Trunk', 'vlan trunk native 1 / allowed', 'Khác với cú pháp ProCurve cũ (tagged/untagged)'],
+          ['Bảo mật truy cập', 'dhcp-snooping & arp-inspection', 'Kết hợp loop-protect trên toàn bộ cổng Access']
+        ],
+        checklist: [
+          'Khai báo "no routing" trên cổng vật lý trước khi gán VLAN trên hệ điều hành Aruba AOS-CX',
+          'Bật "loop-protect" và "spanning-tree bpdu-guard" trên các cổng cắm thiết bị đầu cuối',
+          'Lưu cấu hình bằng lệnh "write memory" sau khi hoàn tất'
+        ],
+        body: `1. Sự khác biệt cốt lõi giữa Aruba AOS-CX mới và Aruba ProCurve (AOS-S) cũ:
+Trên các dòng Switch Aruba thế hệ mới (CX 6100, 6200F, 6300M), mặc định các cổng có thể ở chế độ định tuyến Lớp 3 (Routed Port). Do đó trước khi gán VLAN Access hoặc Trunk, cần dùng lệnh "no routing" trong giao diện cổng, sau đó dùng "vlan access <id>" hoặc "vlan trunk allowed <id>".
+
+2. Chống vòng lặp phần cứng bằng Loop-Protect:
+Tính năng Loop-Protect của Aruba gửi các gói tin kiểm tra định kỳ ra các cổng Access; nếu gói tin quay ngược trở lại chính Switch đó do người dùng cắm vòng dây, cổng sẽ lập tức bị khóa an toàn.`,
+        cli: `! 1. Bật DHCP Snooping & ARP Inspection trên Aruba AOS-CX
+dhcp-snooping
+dhcp-snooping vlan 10,20,50
+arp-inspection vlan 10,20,50
+
+! 2. Cấu hình cổng 10G LACP Trunk (LAG 1)
+interface lag 1
+ description UPLINK_TO_FORTIGATE_CORE
+ no shutdown
+ no routing
+ vlan trunk native 1
+ vlan trunk allowed 10,20,30,50,99
+ lacp mode active
+ dhcp-snooping trust
+ arp-inspection trust
+
+! 3. Cấu hình cổng Access cấp nguồn PoE+ cho AP Aruba & Điện thoại IP
+interface 1/1/1-1/1/24
+ no shutdown
+ no routing
+ vlan trunk native 20
+ vlan trunk allowed 20,50
+ loop-protect
+ spanning-tree port-type admin-edge
+ spanning-tree bpdu-guard
+ exit
+write memory`,
+        verify: `Aruba-6300M# show lacp interfaces
+State: A = Active, P = Passive, F = Fast, S = Slow, I = In-Sync
+Port      LAG   actor_state   partner_state   Port-Status
+1/1/25    lag1  A,F,I         A,F,I           up
+1/1/26    lag1  A,F,I         A,F,I           up`
+      },
+      {
+        id: 'cisco-meraki-cloud-fullstack',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ Cisco Meraki (MX / MS / MR)',
+        level: 'Cloud SDN Full-Stack Runbook',
+        date: '19/10/2026',
+        readTime: '10 phút đọc',
+        title: 'Quản Trị Hạ Tầng Cisco Meraki Cloud Full-Stack: MX Auto-VPN, MS Switch Layer-3 & MR Wi-Fi 6 High-Density',
+        excerpt: 'Quy trình triển khai nhanh Zero-Touch Provisioning trên Meraki Dashboard, thiết lập Auto-VPN liên chi nhánh, định tuyến OSPF và tối ưu sóng MR Wi-Fi.',
+        topology: `
+        [Cisco Meraki Cloud Dashboard (HTTPS / UDP 7351)]
+                /               |                \\
+      [Meraki MX85/95] ---> [Meraki MS250] ---> [Meraki MR46 Wi-Fi 6]`,
+        specs: [
+          ['Cổng kết nối Cloud', 'UDP 7351 & TCP 443', 'Bắt buộc mở cho Meraki thiết lập kết nối quản trị đám mây'],
+          ['Công nghệ VPN', 'Meraki Auto-VPN (Hub & Spoke)', 'Tự động trao đổi khóa và định tuyến subnet nội bộ không cần IP tĩnh'],
+          ['Chế độ SSID Wi-Fi', 'Bridge Mode (VLAN Tagging)', 'Đẩy người dùng về đúng VLAN nội bộ hoặc Nat Mode cho Guest Wi-Fi']
+        ],
+        checklist: [
+          'Claim Serial Number thiết bị vào Organization trên Meraki Dashboard trước khi cắm mạng tại công trường',
+          'Đặt chế độ Bridge Mode cho SSID Nhân viên và bật Nat Mode (Meraki DHCP) kèm Firewall Layer-7 cho SSID Khách',
+          'Bật 802.11r Adaptive & 802.11k/v cho các SSID phục vụ gọi thoại VoIP/Zalo'
+        ],
+        body: `1. Triển khai Zero-Touch Provisioning và trang trạng thái cục bộ (Local Status Page):
+Khi thiết bị Meraki MX, MS hoặc MR vừa khui thùng chưa có cấu hình IP tĩnh, kỹ sư có thể kết nối trực tiếp vào thiết bị và truy cập địa chỉ "http://setup.meraki.com" (hoặc "http://ap.meraki.com", "http://switch.meraki.com") để khai báo VLAN Management và địa chỉ IP tĩnh trước khi thiết bị đồng bộ lên Cloud.
+
+2. Thiết kế Wi-Fi mật độ cao trên Meraki MR (AutoRF):
+Trong mục Radio Settings (RF Profiles), tạo Profile riêng cho khu vực văn phòng đông người: tắt các tốc độ truyền dẫn thấp (1, 2, 5.5, 6, 9, 11 Mbps), đặt Minimum Bitrate ở mức 12 hoặc 24 Mbps để thu nhỏ bán kính tế bào sóng và tăng dung lượng tải.`,
+        cli: `# 1. Các tên miền quản trị cục bộ (Local Status Page) của thiết bị Cisco Meraki
+Meraki MX Security Appliance : http://setup.meraki.com (hoặc http://mx.meraki.com)
+Meraki MS Switch             : http://switch.meraki.com
+Meraki MR Access Point       : http://ap.meraki.com
+
+# 2. Kiểm tra danh sách thiết bị & trạng thái Uplink qua Meraki Dashboard REST API v1
+curl -L --request GET \\
+  --url https://api.meraki.com/api/v1/organizations/{organizationId}/devices/statuses \\
+  --header 'X-Cisco-Meraki-API-Key: YOUR_MERAKI_API_KEY' \\
+  --header 'Accept: application/json'`,
+        verify: `HTTP/2 200 OK
+[
+  { "name": "HQ-MX95-Core", "serial": "Q2QN-XXXX-XXXX", "status": "online", "wan1Ip": "118.69.xx.xx" },
+  { "name": "Floor1-MS250-48LP", "serial": "Q2HP-XXXX-XXXX", "status": "online" }
+]`
+      },
+      {
+        id: 'ubiquiti-unifi-controller-ppsk',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ Ubiquiti UniFi (UDM-Pro / USW / U6-Pro)',
+        level: 'UniFi SDN & Wireless Runbook',
+        date: '18/10/2026',
+        readTime: '10 phút đọc',
+        title: 'Vận Hành Hệ Sinh Thái Ubiquiti UniFi Chuyên Sâu: UDM-Pro, L3 SSH Adoption, Private Pre-Shared Key (PPSK) & Tinh Chỉnh RF',
+        excerpt: 'Giải pháp dùng 1 tên Wi-Fi (SSID) duy nhất nhưng tự động đẩy người dùng vào các VLAN khác nhau theo mật khẩu (PPSK) và kỹ thuật Adopt thiết bị khác lớp mạng.',
+        topology: `
+  [UniFi OS Console / UDM-Pro / Self-Hosted Controller]
+                           |
+             (L3 Inform TCP 8080 / STUN UDP 3478)
+                           |
+        [UniFi Switch Pro PoE+] ---> [UniFi U6-Pro / U6-LR / U7-Pro]`,
+        specs: [
+          ['Cổng dịch vụ UniFi', 'TCP 8080 (Inform) • UDP 3478 (STUN)', 'TCP 8443 (GUI) • UDP 10001 (Device Discovery)'],
+          ['Tính năng PPSK', '1 SSID -> Nhiều Mật Khẩu/VLAN', 'Mật khẩu A vào VLAN 20 Nhân sự, Mật khẩu B vào VLAN 30 Kỹ thuật'],
+          ['Tối ưu sóng 5GHz', 'Channel Width 40MHz • Non-DFS', 'Ưu tiên kênh 36, 40, 44, 48, 149, 153, 157, 161']
+        ],
+        checklist: [
+          'Tắt tính năng Wireless Meshing nếu toàn bộ AP UniFi đều đã được kéo dây mạng cáp đồng PoE',
+          'Bật DHCP Guarding trên từng Network VLAN trong UniFi Controller chỉ định đúng IP của DHCP Server chính',
+          'Sao lưu file cấu hình .unf định kỳ sau mỗi lần cập nhật thay đổi'
+        ],
+        body: `1. Ứng dụng Private Pre-Shared Key (PPSK) giảm thiểu Overhead sóng Wi-Fi:
+Nếu một Access Point phải phát quá nhiều tên Wi-Fi (4-6 SSIDs), một phần lớn thời gian phát sóng (Airtime) sẽ bị tiêu tốn chỉ để phát các gói tin quảng bá (Management Beacon Frames). Với PPSK trên UniFi Network 8.x, bạn chỉ cần tạo 1 SSID duy nhất cho toàn công ty; tùy vào mật khẩu người dùng nhập vào, AP sẽ tự động gắn thẻ VLAN tương ứng (VLAN Ban Giám Đốc, VLAN Nhân Viên, VLAN IoT).
+
+2. Kỹ thuật L3 SSH Adoption khi Controller đặt trên Server Proxmox/1Panel khác lớp mạng:
+Khi AP và Controller không nằm chung một dải Broadcast Layer-2, dùng MobaXterm SSH vào IP của AP và gõ lệnh "set-inform" trỏ thẳng về IP của máy chủ Controller.`,
+        cli: `# 1. Lệnh SSH Adoption & Kiểm tra trạng thái trên Ubiquiti UniFi AP / Switch
+ssh ubnt@10.10.99.105
+mca-cli-op info
+mca-cli-op set-inform http://10.10.99.10:8080/inform
+
+# 2. Truy cập UniFi OS Shell & Kiểm tra dịch vụ trên UDM-Pro / UDM-SE
+ssh root@10.10.99.1
+unifi-os shell
+systemctl status unifi
+tail -f /usr/lib/unifi/logs/server.log`,
+        verify: `UniFi-U6Pro-BZ.6.6.65# mca-cli-op info
+Model:       U6-Pro | Version: 6.6.65.15248
+IP Address:  10.10.99.105
+Status:      Connected (http://10.10.99.10:8080/inform)`
+      },
+      {
+        id: 'tplink-omada-sdn-jetstream-eap',
+        cat: 'SWITCH_WIFI',
+        vendor: '★ TP-Link Omada SDN (OC200/300 / JetStream / EAP)',
+        level: 'Omada SDN Campus Runbook',
+        date: '17/10/2026',
+        readTime: '9 phút đọc',
+        title: 'Triển Khai Hệ Sinh Thái TP-Link Omada SDN: Bộ Điều Khiển OC200/OC300, Switch JetStream L2+ & EAP Wi-Fi 6 Roaming',
+        excerpt: 'Cấu hình VLAN 802.1Q giữa Switch JetStream và Access Point EAP620/660HD, thiết lập Captive Portal Voucher và quản trị Cloud SDN.',
+        topology: `
+  [Omada Hardware Controller OC300 / Docker Software Controller]
+                               |
+          [Switch TP-Link JetStream TL-SG3428XMP PoE+]
+                /                             \\
+     [EAP660 HD Wi-Fi 6]              [EAP620 HD Wi-Fi 6]`,
+        specs: [
+          ['Cổng Adopt v2', 'TCP 29810 - 29814', 'Bắt buộc mở khi Adopt thiết bị Omada qua Internet / VPN'],
+          ['Cấu hình cổng AP', 'General / Trunk Mode', 'Untagged Native VLAN 99 (MGMT) • Tagged VLAN 20, 40'],
+          ['Chuyển vùng AI', '802.11k/v/r Fast Roaming', 'Kết hợp Non-Stick Roaming ngắt kết nối client yếu sóng']
+        ],
+        checklist: [
+          'Khai báo DHCP Option 138 (IP của Omada Controller) trên Router nếu thiết bị khác lớp mạng',
+          'Bật Loopback Detection trên các cổng Access của Switch JetStream',
+          'Lập lịch tự động Reboot hoặc tối ưu kênh truyền (WLAN Optimization) vào 3h sáng'
+        ],
+        body: `1. Quy hoạch VLAN trên Switch TP-Link JetStream khi quản lý qua Omada SDN:
+Trong giao diện Omada Controller (Settings -> Wired Networks -> LAN -> Profile), hệ thống tự động tạo các Switch Port Profile cho từng VLAN. Đối với cổng cắm Access Point EAP, hãy giữ nguyên Profile "All" (hoặc tạo Custom Profile có Native Network là VLAN Quản trị và Tagged Networks là các VLAN Wi-Fi).`,
+        cli: `! Cấu hình CLI độc lập trên Switch TP-Link JetStream (TL-SG3428MP / SG3428XMP)
+vlan 20
+ name STAFF_WIFI
+vlan 99
+ name MGMT_OMADA
+!
+interface gigabitEthernet 1/0/1
+ description "UPLINK_TO_EAP660HD"
+ switchport general allowed vlan 99 untagged
+ switchport general allowed vlan 20 tagged
+ switchport pvid 99
+ power inline supply enable
+ spanning-tree portfast`,
+        verify: `TL-SG3428XMP# show power inline
+Interface   Power-Mode   Oper-Status   Power-Allocated(W)   Power-Consumed(W)
+Gi1/0/1     auto         on            30.0                 14.8 (EAP660 HD)`
+      },
+      {
         id: 'grandstream-ucm6300-voip-pbx',
         cat: 'VOIP_ELV',
         vendor: '★ Grandstream (UCM6300 / GRP / GWN)',
         level: 'Enterprise VoIP Runbook',
-        date: '20/10/2026',
+        date: '16/10/2026',
         readTime: '11 phút đọc',
         title: 'Triển Khai Tổng Đài IP Grandstream UCM6300 Series: Đấu Nối SIP Trunk, IVR, Zero-Config & Bảo Mật Thoại',
         excerpt: 'Hướng dẫn toàn diện thiết lập tổng đài Grandstream UCM6301/6302/6304, phân bổ nhánh gọi vào/ra (Inbound/Outbound Routes), tự động đẩy cấu hình máy nhánh GRP/GXP và chống cước tặc.',
@@ -876,6 +1301,11 @@ MacAddress          IpAddress        Lease(sec)  Type           VLAN  Interface
           ['Cổng tín hiệu & thoại', 'UDP/TCP/TLS 5060 • RTP 10000-20000', 'Đánh dấu QoS DSCP EF (46) & 802.1p CoS = 5'],
           ['Cấp phát tự động', 'Zero-Config + DHCP Option 66', 'Tự động nhận diện MAC OUI 00:0B:82 / C0:74:AD'],
           ['Bảo mật tổng đài', 'Fail2ban + Outbound PIN + ACL', 'Chặn tuyệt đối Guest SIP Call & Giới hạn IP SIP Proxy']
+        ],
+        checklist: [
+          'Tắt tùy chọn Allow Guest SIP Calls trong SIP Settings để chặn cuộc gọi nặc danh',
+          'Bật Fail2ban với ngưỡng Max Retry = 3 trong System Security',
+          'Khai báo DHCP Option 66 trỏ về IP của tổng đài UCM6300 trên Voice VLAN 50'
         ],
         body: `1. Quy hoạch mạng Voice VLAN tách biệt và QoS:
 Lưu lượng thoại thời gian thực (RTP) rất nhạy cảm với độ trễ (>150ms) và biến thiên độ trễ (Jitter >30ms). Khi triển khai tổng đài Grandstream UCM6300 Series, toàn bộ điện thoại bàn IP (GRP2602P, GRP2612, GXP1625) cần được đặt vào Voice VLAN riêng (ví dụ VLAN 50). Nhờ giao thức LLDP-MED trên Switch PoE, điện thoại tự động gắn thẻ VLAN 50 với độ ưu tiên CoS = 5.
@@ -902,57 +1332,11 @@ UCM6302*CLI> pjsip show endpoints`,
 PJSIP/101-000001a2!from-internal!098xxxxxxx!1!Up!Dial!PJSIP/098xxxxxxx@Viettel_SIP_Trunk!34!alaw`
       },
       {
-        id: 'meraki-unifi-omada-cloud-wifi',
-        cat: 'SWITCH_WIFI',
-        vendor: '★ Cisco Meraki • ★ UniFi • ★ TP-Link Omada',
-        level: 'Cloud SDN & Wireless Runbook',
-        date: '19/10/2026',
-        readTime: '10 phút đọc',
-        title: 'Triển Khai & Tối Ưu Hóa Mạng Cloud SDN Đa Nền Tảng: Cisco Meraki, Ubiquiti UniFi & TP-Link Omada',
-        excerpt: 'Chuẩn hóa quy hoạch kênh truyền 5GHz/6GHz, cấu hình VLAN Trunking cho Access Point, tối ưu Roaming 802.11k/v/r và xử lý lỗi mất kết nối Controller.',
-        topology: `
-   [Meraki Cloud / UniFi Controller / Omada OC300]
-                         |
-            (Management VLAN 99 - Native)
-                         |
-       [PoE+ Switch Trunk Port: Native 99, Tagged 20,30,40]
-          /              |                 \\
-  [Cisco Meraki MR]  [UniFi U6-Pro]   [Omada EAP660 HD]`,
-        specs: [
-          ['Quy hoạch kênh 2.4GHz', 'Kênh 1, 6, 11 • Độ rộng 20MHz', 'Công suất phát TX Power: Low / Medium (11-14 dBm)'],
-          ['Quy hoạch kênh 5GHz', 'Kênh 36-48, 149-161 • 40MHz', 'Công suất phát TX Power: Medium / High (17-20 dBm)'],
-          ['Chuyển vùng mượt', '802.11k (Neighbor) + 802.11v + 802.11r', 'Bật Minimum RSSI (-72 dBm) & Band Steering ưu tiên 5GHz']
-        ],
-        body: `1. Quy tắc cấu hình cổng Switch Trunk nối tới Access Point (Meraki, UniFi, Omada):
-Khi triển khai các dòng Access Point doanh nghiệp phát đồng thời nhiều SSID thuộc nhiều VLAN khác nhau, cổng Switch PoE+ nối với AP bắt buộc phải cấu hình ở chế độ Trunk:
-- Native VLAN (Untagged / PVID): Đặt là VLAN Quản trị (ví dụ VLAN 99) để AP nhận IP quản lý.
-- Allowed Tagged VLANs: Cho phép các VLAN người dùng (20, 40) đi qua có gắn thẻ 802.1Q.
-
-2. Tinh chỉnh công suất phát để chống hiện tượng "Sticky Client":
-Luôn đặt công suất băng tần 2.4GHz thấp hơn 5GHz từ 6 đến 7 dBm để thiết bị di động ưu tiên kết nối vào băng tần 5GHz tốc độ cao.`,
-        cli: `# 1. Lệnh SSH Adoption & Chẩn đoán trên Ubiquiti UniFi AP / Switch
-ssh ubnt@10.10.99.105
-mca-cli-op info
-mca-cli-op set-inform http://10.10.99.10:8080/inform
-
-# 2. Cấu hình cổng Switch TP-Link JetStream (Omada) nối xuống AP
-interface gigabitEthernet 1/0/1
- description "UPLINK_TO_WIFI6_AP"
- switchport general allowed vlan 99 untagged
- switchport general allowed vlan 20,40 tagged
- switchport pvid 99
- power inline supply enable
- spanning-tree portfast`,
-        verify: `UniFi-U6Pro-BZ.6.6.65# mca-cli-op info
-Model:       U6-Pro | IP Address: 10.10.99.105
-Status:      Connected (http://10.10.99.10:8080/inform)`
-      },
-      {
         id: 'draytek-multiwan-ipsec-matrix',
         cat: 'FIREWALL_WAN',
         vendor: '★ DrayTek Vigor (2927 / 2962 / 3910)',
         level: 'Multi-WAN & VPN Runbook',
-        date: '18/10/2026',
+        date: '15/10/2026',
         readTime: '9 phút đọc',
         title: 'Cấu Hình DrayTek Vigor 2927 / 3910: Cân Bằng Tải Multi-WAN, IPsec VPN Site-to-Site & Dự Phòng HA',
         excerpt: 'Kinh nghiệm vận hành dòng Router quốc dân tại các chi nhánh doanh nghiệp: cố định phiên HTTPS, nối VPN LAN-to-LAN tốc độ cao về trụ sở FortiGate/MikroTik.',
@@ -966,6 +1350,11 @@ Status:      Connected (http://10.10.99.10:8080/inform)`
           ['Chế độ Load-Balance', 'According to Line Speed / IP-Based', 'Tránh đổi IP đột ngột khi giao dịch HTTPS / Banking'],
           ['Cấu hình IPsec IKEv2', 'AES-256 + SHA256 + DH Group 14', 'Bật Dead Peer Detection (DPD) & Change Default Route'],
           ['Dự phòng phần cứng', 'High-Availability (Hot-Standby)', 'Đồng bộ Virtual IP LAN Gateway giữa 2 thiết bị Vigor']
+        ],
+        checklist: [
+          'Đặt chế độ Load-Balance sang IP-Based để tránh văng phiên đăng nhập ngân hàng',
+          'Đổi cổng quản trị HTTPS từ 443 sang cổng cao (ví dụ 8443) và tắt đăng nhập từ WAN trừ IP Whitelist',
+          'Bật Ping to Keep Alive tới IP LAN đầu bên kia trong cấu hình VPN LAN-to-LAN'
         ],
         body: `1. Xử lý triệt để lỗi rớt phiên khi cân bằng tải nhiều đường WAN:
 Chuyển sang chế độ "IP-Based" hoặc tạo Load-Balance Policy cố định cổng TCP 443 theo Destination IP để giữ nguyên phiên đăng nhập ngân hàng và cổng thanh toán.
@@ -990,7 +1379,7 @@ Reply from 10.10.10.11: time=2.1ms TTL=63 (0% packet loss)`
         cat: 'SERVER_VIRTUAL',
         vendor: '★ HPE ProLiant • Supermicro • Proxmox VE',
         level: 'Data Center & Virtualization Runbook',
-        date: '17/10/2026',
+        date: '14/10/2026',
         readTime: '12 phút đọc',
         title: 'Triển Khai Cụm Máy Chủ HPE ProLiant & Supermicro 8-Node Chạy Proxmox VE, QDevice Quorum, ZFS & Cáp Quang 10G',
         excerpt: 'Kiến trúc ảo hóa độ sẵn sàng cao (HA): quản trị phần cứng qua iLO/IPMI, tách mạng Corosync Ring, tối ưu bộ nhớ ZFS ARC và đấu nối quang 10G SFP+ liên phòng máy.',
@@ -1004,6 +1393,11 @@ Reply from 10.10.10.11: time=2.1ms TTL=63 (0% packet loss)`
           ['Quản trị phần cứng', 'HPE iLO 5/6 & Supermicro IPMI', 'Tách riêng VLAN Out-of-Band Management (OOB)'],
           ['Cụm Proxmox HA', 'Corosync v3 KNET + QDevice', 'Đảm bảo số phiếu bầu lẻ chống hiện tượng Split-Brain'],
           ['Lưu trữ ZFS Pool', 'ZFS RAID10 (Striped Mirrors)', 'Bật nén LZ4, ashift=12 cho NVMe/SSD & giới hạn RAM ARC']
+        ],
+        checklist: [
+          'Chuyển card RAID trên máy chủ HPE/Supermicro sang HBA Mode trước khi tạo ZFS Pool',
+          'Khai báo tối thiểu 2 đường mạng vật lý khác nhau cho Corosync Ring 0 và Ring 1',
+          'Giới hạn dung lượng RAM tối đa cho ZFS ARC để không chiếm hết RAM của máy ảo'
         ],
         body: `1. Chuẩn bị phần cứng HPE ProLiant & Supermicro 3U 8-Node (SYS-5039MS-H8TRF):
 Chuyển card điều khiển ổ cứng trên HPE/Supermicro sang chế độ HBA / IT Mode (Pass-through) để ZFS quản lý trực tiếp từng ổ đĩa vật lý, theo dõi thông số SMART và tự sửa lỗi bit-rot.
@@ -1032,7 +1426,7 @@ zfs set compression=lz4 rpool-nvme`,
         cat: 'VOIP_ELV',
         vendor: '★ Hạ tầng Điện nhẹ ELV (Bệnh viện & Tòa nhà)',
         level: 'ELV & Infrastructure Design',
-        date: '15/10/2026',
+        date: '13/10/2026',
         readTime: '10 phút đọc',
         title: 'Quy Hoạch Hạ Tầng Mạng Bảo Mật, Camera CCTV, Âm Thanh Công Cộng (PA) & Kiểm Toán Bản Vẽ ELV Bệnh Viện / Tòa Nhà',
         excerpt: 'Phương pháp thiết kế tổng thể hạ tầng CNTT & Điện nhẹ cho bệnh viện và các khối nhà Block A/B: bóc tách khối lượng Camera, Loa PA, AP Wi-Fi, nút mạng RJ45 và phân vùng bảo mật.',
@@ -1046,6 +1440,11 @@ zfs set compression=lz4 rpool-nvme`,
           ['Mạng Y tế / HIS', 'VLAN 10 (Cô lập bảo mật)', 'Tường lửa kiểm soát chặt chẽ truy cập vào máy chủ HIS/PACS'],
           ['Mạng Camera CCTV', 'VLAN 30 (IGMP Snooping)', 'Tính toán băng thông NVR H.265+ & dự phòng nguồn PoE+'],
           ['Âm thanh PA Audio', 'Chia vùng theo tầng/khối nhà', 'Tích hợp tiếp điểm khô (Dry-Contact) ưu tiên phát tin báo cháy']
+        ],
+        checklist: [
+          'Đảm bảo mọi tuyến cáp đồng Cat6/Cat6A từ tủ IDF tới thiết bị không vượt quá 90 mét',
+          'Dự phòng tối thiểu 20% công suất nguồn PoE+ trên mỗi Switch tầng',
+          'Đánh nhãn (Labeling) đồng bộ cả 2 đầu cáp tại Patch Panel và mặt ổ cắm RJ45'
         ],
         body: `1. Phương pháp kiểm toán bản vẽ mặt bằng (ELV Layout Audit) cho Block A & Block B:
 Kiểm tra bán kính cáp đồng Cat6/Cat6A từ tủ IDF tầng tới điểm xa nhất (Camera, AP, ổ cắm tường RJ45) không vượt quá 90 mét và tính toán tổng công suất tiêu thụ PoE (Watt) để chọn Switch PoE+ có công suất dư tối thiểu 20%.`,
@@ -1078,6 +1477,11 @@ VLAN 99 : 10.10.99.0/24 -> Quản trị thiết bị mạng (Switch, Firewall, C
           ['Cường độ sóng chính', 'Primary RSSI >= -65 dBm', 'Cho thoại VoIP qua Wi-Fi & họp Video yêu cầu >= -62 dBm'],
           ['Tỷ lệ Tín hiệu/Nhiễu', 'SNR >= 25 dB (5GHz)', 'Chồng lấn tế bào sóng (Roaming Cell Overlap): 15% - 20%']
         ],
+        checklist: [
+          'Đo và áp đúng tỷ lệ thước đo (Scale Tool) trên một kích thước cửa hoặc hành lang đã biết',
+          'Vẽ đầy đủ lõi thang máy bê tông và phòng kỹ thuật có độ suy hao 20-25 dB',
+          'Kiểm tra tab Channel Interference đảm bảo không có 2 AP cùng kênh nhìn thấy nhau ở mức > -85 dBm'
+        ],
         body: `1. Hiệu chuẩn tỷ lệ thước đo (Scale) và vẽ tường suy hao trong Ekahau AI Pro:
 Độ chính xác của bản đồ nhiệt mô phỏng phụ thuộc vào việc chọn đúng tỷ lệ mét trên bản vẽ và khai báo đúng độ suy hao của từng loại vách ngăn.`,
         cli: `# Các thông số mục tiêu (Coverage Requirements) cấu hình trong Ekahau AI Pro
@@ -1105,6 +1509,11 @@ Min SNR             : 25 dB | Min Data Rate: 24 Mbps`,
           ['Cấu hình Serial COM', 'Baud: 9600 • Data: 8 • Parity: N • Stop: 1', 'Tắt Flow Control (XON/XOFF = Off, RTS/CTS = Off)'],
           ['Bộ cài đặt hệ điều hành', 'pfSense-CE-memstick-serial-amd64.img', 'Ghi ra USB bằng Rufus / BalenaEtcher'],
           ['Card mạng tích hợp', 'Intel PRO/1000 Gigabit (igb0 - igb3)', 'Hỗ trợ tập lệnh mã hóa phần cứng AES-NI cho VPN']
+        ],
+        checklist: [
+          'Thay viên pin CMOS CR2032 3V mới trên bo mạch chủ trước khi lắp vào tủ Rack',
+          'Tải đúng bản cài đặt pfSense Memstick Serial (không dùng bản VGA)',
+          'Bật tính năng mã hóa phần cứng AES-NI trong System -> Advanced -> Miscellaneous'
         ],
         body: `1. Bảo dưỡng phần cứng, thay pin CMOS và nâng cấp RAM:
 Tháo nắp máy, vệ sinh bụi, thay viên pin cúc áo CR2032 3V mới để giữ cấu hình BIOS và nâng cấp thêm thanh RAM DDR3 trước khi nạp pfSense qua cổng Console RJ45.`,
@@ -1139,6 +1548,11 @@ dmesg | grep -i igb`,
           ['Cơ sở dữ liệu Bot', 'SQLite3 (Lightweight Embedded)', 'Lưu biển số đăng ký, lịch sử tra cứu và chống gửi trùng'],
           ['Bảo mật truy cập', 'Cloudflare Tunnel / Reverse Proxy', 'Không cần mở trực tiếp cổng 80/443 trên tường lửa biên']
         ],
+        checklist: [
+          'Cấu hình Restart Policy = always cho các Container quan trọng trên 1Panel',
+          'Gắn Volume lưu trữ file cơ sở dữ liệu SQLite ra thư mục ngoài Host để không mất dữ liệu khi rebuild',
+          'Thiết lập lịch Snapshot máy ảo tự động hàng tuần trên ESXi / Proxmox'
+        ],
         body: `1. Chuẩn hóa môi trường Self-Hosting bằng 1Panel trên Ubuntu VM:
 Quản lý trực quan toàn bộ Docker Containers, chứng chỉ SSL tự động gia hạn cho tên miền nguyenvu.click và vận hành Bot Python tra cứu phạt nguội tự động.`,
         cli: `# Kiểm tra trạng thái các Container đang chạy trên Ubuntu VM
@@ -1169,6 +1583,11 @@ c49d10e83a11   traffic-fine-bot   Up 45 days   (Healthy)`
           ['Cổng dịch vụ RADIUS', 'UDP 1812 (Auth) • UDP 1813 (Acct)', 'Khai báo Shared Secret giữa AP/Controller và Windows NPS'],
           ['Dynamic VLAN Assign', 'RADIUS Attributes (Tunnel-Pvt-Group-ID)', 'Tự động đẩy nhân viên vào đúng VLAN phòng ban khi đăng nhập']
         ],
+        checklist: [
+          'Đăng ký dịch vụ NPS vào Active Directory (Register Server in Active Directory)',
+          'Cấp chứng chỉ số hợp lệ cho máy chủ NPS để phục vụ xác thực PEAP',
+          'Kiểm tra mở cổng UDP 1812 và 1813 trên Windows Firewall'
+        ],
         body: `1. Loại bỏ rủi ro lộ mật khẩu Wi-Fi chung bằng xác thực 802.1X RADIUS:
 Kết hợp Windows Server Active Directory với dịch vụ NPS (Network Policy Server) cho phép xác thực từng người dùng và tự động ngắt quyền truy cập Wi-Fi lẫn VPN ngay khi khóa tài khoản AD.`,
         cli: `# 1. Kiểm tra trạng thái dịch vụ Active Directory & NPS RADIUS bằng PowerShell
@@ -1180,8 +1599,8 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
       }
     ];
 
-    let articles = JSON.parse(localStorage.getItem('nguyenvu_blog_v9')) || initialArticles;
-    let savedIds = JSON.parse(localStorage.getItem('nguyenvu_saved_posts_v9')) || ['fortigate-ha-sdwan-lacp'];
+    let articles = JSON.parse(localStorage.getItem('nguyenvu_blog_v10')) || initialArticles;
+    let savedIds = JSON.parse(localStorage.getItem('nguyenvu_saved_posts_v10')) || ['fortigate-ha-sdwan-lacp'];
     let currentFilter = 'ALL';
     let currentArticleId = articles[0].id;
 
@@ -1196,7 +1615,7 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
       if (ev) ev.stopPropagation();
       if (savedIds.includes(id)) savedIds = savedIds.filter(i => i !== id);
       else savedIds.push(id);
-      localStorage.setItem('nguyenvu_saved_posts_v9', JSON.stringify(savedIds));
+      localStorage.setItem('nguyenvu_saved_posts_v10', JSON.stringify(savedIds));
       renderBlog();
       showToast(savedIds.includes(id) ? '★ Đã lưu Runbook vào danh sách yêu thích!' : 'Đã bỏ lưu Runbook.');
     }
@@ -1211,7 +1630,6 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
       renderBlog();
     }
 
-    // Safe CLI Copy Function by Active Article ID (Eliminates VS Code HTML Parser Errors)
     function copyActiveArticleCli() {
       const a = articles.find(x => x.id === currentArticleId);
       if (!a) return;
@@ -1240,7 +1658,7 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
         const isSaved = savedIds.includes(a.id);
         const isActive = a.id === currentArticleId;
         return `
-        <article onclick="openArticle('${a.id}')" class="bento-card rounded-2xl p-5 cursor-pointer transition ${isActive ? 'border-ctp-sapphire ring-2 ring-ctp-sapphire/60 bg-ctp-base/90' : ''}">
+        <article onclick="openArticle('${a.id}')" class="bento-card rounded-2xl p-5 cursor-pointer transition ${isActive ? 'border-ctp-sapphire ring-2 ring-ctp-sapphire/70 bg-ctp-base/90' : ''}">
           <div class="flex items-center justify-between text-[11px] font-mono mb-2">
             <span class="px-2.5 py-0.5 rounded-md bg-ctp-teal/20 text-ctp-yellow font-bold truncate max-w-[210px]">${escapeHtml(a.vendor)}</span>
             <div class="flex items-center gap-2 shrink-0">
@@ -1288,7 +1706,7 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
 
     function renderArticleDetail(a) {
       const isSaved = savedIds.includes(a.id);
-      document.getElementById('clapCountText').textContent = clapsMap[a.id] || 28;
+      document.getElementById('clapCountText').textContent = clapsMap[a.id] || 36;
 
       const specsHtml = (a.specs && a.specs.length > 0) ? `
         <div id="sec-specs" class="space-y-2.5 scroll-mt-24">
@@ -1320,6 +1738,20 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
         <div id="sec-topo" class="space-y-2 scroll-mt-24">
           <div class="text-xs font-mono text-ctp-teal font-bold uppercase tracking-wider">▸ Sơ Đồ Kiến Trúc Kết Nối (ASCII Topology Blueprint)</div>
           <pre class="p-4 rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 font-mono text-xs text-ctp-sapphire overflow-x-auto leading-snug">${escapeHtml(a.topology.trim())}</pre>
+        </div>
+      ` : '';
+
+      const checklistHtml = (a.checklist && a.checklist.length > 0) ? `
+        <div id="sec-checklist" class="space-y-2.5 scroll-mt-24">
+          <div class="text-xs font-mono text-ctp-yellow font-bold uppercase tracking-wider">▸ Checklist Nghiệm Thu Trước Khi Đưa Vào Vận Hành (Pre-Flight Audit)</div>
+          <div class="p-4 rounded-2xl bg-ctp-crust/90 border border-ctp-blue/30 space-y-2 font-mono text-xs">
+            ${a.checklist.map(item => `
+              <label class="flex items-start gap-2.5 cursor-pointer text-ctp-subtext hover:text-white transition">
+                <input type="checkbox" checked class="mt-0.5 rounded accent-ctp-teal" />
+                <span>${escapeHtml(item)}</span>
+              </label>
+            `).join('')}
+          </div>
         </div>
       ` : '';
 
@@ -1380,6 +1812,7 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
             </div>
           </div>
 
+          ${checklistHtml}
           ${verifyHtml}
         </div>
       `;
@@ -1420,7 +1853,6 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
     }
     switchDiffTab('mkt');
 
-    // Wireshark Packet Dissector Details
     const packetDetails = [
       '▸ Frame 201: 842 bytes on wire, Interface: Gi1/0/12 (Cisco/Aruba PoE+ Switch)<br/>▸ IEEE 802.1Q Virtual LAN, PRI: 5 (Voice), DEI: 0, ID: 50 (VOICE_GRANDSTREAM)<br/>▸ Differentiated Services Field: 0xb8 (DSCP: EF PHB, ECN: Not-ECT)<br/>▸ Session Initiation Protocol (INVITE) • Codec: G.711 PCMU (8000 Hz)',
       '▸ Frame 202: 146 bytes on wire, Interface: sfp-sfpplus1 (10G Optical Interconnect)<br/>▸ IEEE 802.1Q Virtual LAN, PRI: 6, ID: 99 (PROXMOX_COROSYNC_RING0)<br/>▸ Kronosnet (KNET) Protocol • Node 1 -&gt; Node 2 Quorum Heartbeat (Latency: 0.16ms)',
@@ -1432,7 +1864,6 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
       document.getElementById('packetDetail').innerHTML = packetDetails[idx];
     }
 
-    // Modal Editor Functions
     function openEditor() {
       const m = document.getElementById('editorModal');
       m.classList.remove('hidden');
@@ -1464,7 +1895,7 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
         cli: cli || '# Production CLI configuration'
       };
       articles.unshift(item);
-      localStorage.setItem('nguyenvu_blog_v9', JSON.stringify(articles));
+      localStorage.setItem('nguyenvu_blog_v10', JSON.stringify(articles));
       currentArticleId = item.id;
       closeEditor();
       renderBlog();
@@ -1694,10 +2125,12 @@ New-NpsRadiusClient -Name "WiFi_Controller" -Address "10.10.99.10" -SharedSecret
         ctx.fillStyle = f.color;
         ctx.beginPath(); ctx.moveTo(f.size * 1.2, 0);
         ctx.quadraticCurveTo(0, -f.size * 0.55, -f.size, 0);
-        ctx.quadraticCurveTo(0, f.size * 0.55, f.size * 1.2, 0); ctx.fill();
+        ctx.quadraticCurveTo(0, f.size * 0.55, f.size * 1.2, 0);
+        ctx.fill();
         ctx.beginPath(); ctx.moveTo(-f.size * 0.85, 0);
         ctx.lineTo(-f.size * 1.6, -f.size * 0.5 + tail * 0.4);
-        ctx.lineTo(-f.size * 1.6, f.size * 0.5 + tail * 0.4); ctx.closePath(); ctx.fill();
+        ctx.lineTo(-f.size * 1.6, f.size * 0.5 + tail * 0.4);
+        ctx.closePath(); ctx.fill();
         ctx.restore();
       });
 
