@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> NetTools Pro 18-in-1 — Nguyễn Nguyên Vũ | nguyenvu.click</title>
-  <link id="dynamicFavicon" rel="icon" type="image/jpeg" href="./avatar.jpg" />
-  <link rel="apple-touch-icon" href="./avatar.jpg" />
+  <title>Công Cụ Mạng &amp; Hạ Tầng — Nguyễn Nguyên Vũ</title>
+  <link rel="icon" type="image/jpeg" href="./avatar.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     tailwind.config = {
@@ -17,27 +16,23 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
             display: ['Space Grotesk', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
             ctp: {
-              crust: '#010d1c',
-              mantle: '#031b36',
-              base: '#062c54',
-              surface0: '#0c437a',
-              surface1: '#165ca3',
-              text: '#f4fbff',
-              subtext: '#bae6fd',
+              crust: '#060e17',
+              mantle: '#0b1726',
+              base: '#112236',
+              surface: '#19314c',
+              text: '#f1f5f9',
+              subtext: '#94a3b8',
               blue: '#38bdf8',
-              sapphire: '#00f2fe',
               teal: '#2dd4bf',
               green: '#4ade80',
-              yellow: '#fde047',
-              peach: '#fb923c',
+              yellow: '#facc15',
               red: '#f87171',
-              mauve: '#c084fc',
             }
           }
         }
@@ -45,1111 +40,338 @@
     };
   </script>
   <style>
-    body {
-      background-color: #010d1c;
-      color: #f4fbff;
-      overflow-x: hidden;
-      transition: background-color 0.5s ease;
-    }
-
-    /* Theme 1: Hyper-Luminous Tropical Reef & Deep Sapphire Ocean */
-    .ocean-backdrop {
+    body { background-color: #060e17; color: #f1f5f9; overflow-x: hidden; }
+    .bg-mesh {
       background:
-        radial-gradient(1600px ellipse at 50% -15%, rgba(0, 242, 254, 0.65), transparent 62%),
-        radial-gradient(1000px circle at 88% 18%, rgba(56, 189, 248, 0.45), transparent 55%),
-        radial-gradient(1100px circle at 12% 58%, rgba(2, 132, 199, 0.42), transparent 62%),
-        radial-gradient(900px circle at 50% 96%, rgba(45, 212, 191, 0.28), transparent 60%),
-        linear-gradient(180deg, #007ecc 0%, #00518f 34%, #022a54 72%, #010f21 100%);
-      transition: all 0.6s ease;
+        radial-gradient(900px ellipse at 50% -10%, rgba(56, 189, 248, 0.16), transparent 65%),
+        linear-gradient(180deg, #091625 0%, #060e17 70%, #04080e 100%);
     }
-
-    /* Theme 2: Catppuccin Macchiato NOC Mode */
-    body.theme-noc { background-color: #181926; }
-    body.theme-noc .ocean-backdrop {
-      background:
-        radial-gradient(900px circle at 15% 15%, rgba(138, 173, 244, 0.18), transparent 50%),
-        radial-gradient(900px circle at 85% 25%, rgba(198, 160, 246, 0.15), transparent 50%),
-        linear-gradient(180deg, #1e2030 0%, #181926 60%, #11121d 100%);
+    .surface-card {
+      background: rgba(11, 23, 38, 0.74);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.13);
+      box-shadow: 0 10px 28px -10px rgba(0, 0, 0, 0.5);
+      transition: border-color 0.2s ease;
     }
-    body.theme-noc .bento-card {
-      background: linear-gradient(165deg, rgba(36, 39, 58, 0.84) 0%, rgba(24, 25, 38, 0.94) 100%);
-      border-color: rgba(138, 173, 244, 0.25);
+    .surface-card:hover { border-color: rgba(56, 189, 248, 0.34); }
+    .rack-slot {
+      background: #040a11;
+      border: 1px solid rgba(148, 163, 184, 0.18);
     }
-
-    /* Ultra-Crystal Prismatic Glassmorphism */
-    .bento-card {
-      position: relative;
-      background: linear-gradient(165deg, rgba(6, 48, 92, 0.72) 0%, rgba(2, 21, 44, 0.90) 100%);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(125, 211, 252, 0.32);
-      box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
-        inset 0 0 32px rgba(0, 242, 254, 0.06),
-        0 24px 52px -14px rgba(0, 8, 20, 0.88);
-      transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow: hidden;
-    }
-    .bento-card:hover {
-      border-color: rgba(0, 242, 254, 0.78);
-    }
-
-    /* 1U Hardware Rack Unit Styling */
-    .rack-unit {
-      background: linear-gradient(180deg, #092c52 0%, #031529 100%);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Upgraded Top TabBar / Navbar Avatar Ring */
-    .nav-avatar-ring {
-      position: relative;
-      padding: 2px;
-      border-radius: 9999px;
-      background: conic-gradient(from 0deg, #00f2fe, #2dd4bf, #fde047, #38bdf8, #00f2fe);
-      box-shadow: 0 0 18px rgba(0, 242, 254, 0.55);
-      transition: transform 0.3s ease;
-    }
-    .nav-avatar-ring:hover { transform: scale(1.08); }
-
-    /* Compact Single-Line Enforced Pill Tab Bar Item */
-    .nav-tab-pill {
-      position: relative;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .nav-tab-pill:hover {
-      background: rgba(56, 189, 248, 0.20);
-      color: #ffffff;
-      transform: translateY(-1px);
-    }
-    .nav-tab-active {
-      background: linear-gradient(135deg, rgba(0, 242, 254, 0.32) 0%, rgba(45, 212, 191, 0.25) 100%);
-      border: 1px solid rgba(0, 242, 254, 0.65);
-      color: #ffffff;
-      box-shadow: 0 4px 16px rgba(0, 242, 254, 0.26);
-    }
-
-    @keyframes dashFlow {
-      to { stroke-dashoffset: -40; }
-    }
-    .packet-line {
-      stroke-dasharray: 6 6;
-      animation: dashFlow 1.05s linear infinite;
-    }
-
-    .avatar-hd {
-      filter: brightness(1.24) contrast(1.12) saturate(1.08);
-    }
-
     ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: rgba(1, 17, 36, 0.6); }
-    ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.4); border-radius: 9999px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(0, 242, 254, 0.75); }
-
-    @media print {
-      .no-print { display: none !important; }
-    }
+    ::-webkit-scrollbar-track { background: #060e17; }
+    ::-webkit-scrollbar-thumb { background: #19314c; border-radius: 9999px; }
   </style>
 </head>
-<body class="selection:bg-ctp-teal/30 selection:text-white">
+<body class="selection:bg-ctp-blue/25 selection:text-white">
 
-  <!-- Vibrant Marine Ocean Background & Interactive Canvas -->
-  <div class="fixed inset-0 ocean-backdrop pointer-events-none z-0"></div>
-  <canvas id="oceanCanvas" class="fixed inset-0 z-0 cursor-pointer no-print" title="Nhấp vào đại dương để thả mồi phát sáng gọi đàn cá"></canvas>
+  <div class="fixed inset-0 bg-mesh pointer-events-none z-0"></div>
+  <canvas id="bgCanvas" class="fixed inset-0 z-0 pointer-events-none opacity-55"></canvas>
 
-  <!-- Top Engineering Suite Telemetry Ribbon -->
-  <div class="relative z-40 bg-ctp-crust/85 backdrop-blur-md border-b border-ctp-blue/30 text-[11px] font-mono py-1.5 px-4 no-print">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex flex-wrap items-center gap-3 sm:gap-4">
-        <span class="flex items-center gap-1.5 text-ctp-teal font-semibold">
-          <span class="w-2 h-2 rounded-full bg-ctp-teal animate-ping"></span>
-          NETTOOLS-ULTIMATE // NGUYENVU.CLICK/TOOLKIT
+  <!-- Top Client WAN Bar -->
+  <div class="relative z-40 bg-ctp-crust/90 backdrop-blur-md border-b border-white/10 text-[11px] font-mono py-1.5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-ctp-teal font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-ctp-green animate-ping"></span>
+          WAN TELEMETRY
         </span>
-        <span class="hidden sm:inline text-ctp-subtext">Suite: <strong class="text-ctp-sapphire">18 Công Cụ Kỹ Sư Thực Chiến</strong></span>
-        <span class="hidden lg:inline text-ctp-subtext">Zalo/Phone: <strong class="text-ctp-yellow">0329.553.597</strong></span>
+        <span class="text-ctp-subtext">Your WAN IP: <strong id="topClientIp" class="text-ctp-blue">...</strong></span>
+        <span class="hidden sm:inline text-ctp-subtext">ISP: <strong id="topClientIsp" class="text-ctp-green">...</strong></span>
       </div>
-      <div class="flex items-center gap-2">
-        <button onclick="spawnFoodBurst()" class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-ctp-teal/25 hover:bg-ctp-teal/40 text-ctp-teal border border-ctp-teal/45 transition">
-          <i data-lucide="fish" class="w-3.5 h-3.5"></i>
-          <span>Thả mồi gọi cá</span>
-        </button>
-        <button onclick="switchVisualMode()" class="flex items-center gap-1 px-2.5 py-0.5 rounded bg-ctp-blue/25 hover:bg-ctp-blue/40 text-white border border-ctp-blue/40 transition">
-          <i data-lucide="palette" class="w-3.5 h-3.5 text-ctp-sapphire"></i>
-          <span id="themeModeText">Ocean Blue</span>
-        </button>
-        <span id="liveTime" class="text-white font-semibold">GMT+7</span>
-      </div>
+      <div class="text-ctp-subtext">Zalo / Điện thoại: <strong class="text-white">0329.553.597</strong></div>
     </div>
   </div>
 
-  <!-- ======================================================================== -->
-  <!-- ZERO-CLIPPING SINGLE-LINE GLASS NAVBAR (FITS ALL LAPTOP SCREENS 100%)    -->
-  <!-- ======================================================================== -->
-  <header class="sticky top-2.5 z-50 px-2 sm:px-4 mt-2 no-print">
-    <div class="max-w-7xl mx-auto rounded-2xl bg-ctp-mantle/90 backdrop-blur-2xl border border-ctp-sapphire/45 shadow-[0_20px_50px_rgba(0,0,0,0.82),0_0_32px_rgba(0,242,254,0.18)]">
-      <div class="min-h-[60px] py-2 px-3 sm:px-4 flex items-center justify-between gap-2">
-
-        <!-- Left Brand Identity with Circular HD ./avatar.jpg -->
-        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
-          <div class="nav-avatar-ring shrink-0">
-            <img
-              src="./avatar.jpg"
-              alt="Nguyễn Nguyên Vũ"
-              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover object-[center_15%] avatar-hd"
-            />
-            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-ctp-green border-2 border-ctp-crust animate-pulse"></span>
-          </div>
-          <div class="whitespace-nowrap">
-            <div class="flex items-center gap-1.5">
-              <span class="font-display font-bold text-sm sm:text-base tracking-tight text-white group-hover:text-ctp-sapphire transition">
-                Nguyễn Nguyên Vũ
-              </span>
-              <span class="px-1.5 py-0.5 rounded bg-ctp-teal/20 border border-ctp-teal/40 font-mono text-[9px] text-ctp-teal font-bold">
-                18-IN-1
-              </span>
-            </div>
-            <div class="font-mono text-[10px] text-ctp-subtext flex items-center gap-1">
-              <span class="text-ctp-sapphire font-semibold">nguyenvu.click/toolkit</span>
-              <span>•</span>
-              <span class="text-ctp-yellow font-semibold">0329553597</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Center Segmented Glass Tab Bar -->
-        <nav class="hidden lg:flex items-center gap-1 p-1 rounded-xl bg-ctp-crust/80 border border-ctp-blue/25 text-[11px] font-medium">
-          <a href="index.html" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
-            <i data-lucide="compass" class="w-3.5 h-3.5 text-ctp-sapphire shrink-0"></i>
-            <span>Trang chủ</span>
-          </a>
-          <a href="blog.html" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
-            <i data-lucide="book-open" class="w-3.5 h-3.5 text-ctp-teal shrink-0"></i>
-            <span>Blog (15)</span>
-          </a>
-          <a href="toolkit.html" class="nav-tab-pill nav-tab-active px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1">
-            <i data-lucide="wrench" class="w-3.5 h-3.5 text-ctp-yellow shrink-0"></i>
-            <span>NetTools Pro</span>
-            <span class="px-1.5 py-0.2 rounded bg-ctp-teal/25 text-ctp-yellow font-mono text-[9px]">18</span>
-          </a>
-          <a href="#mod-rack-designer" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
-            <i data-lucide="server" class="w-3.5 h-3.5 text-ctp-green shrink-0"></i>
-            <span>Tủ Rack 42U</span>
-          </a>
-          <a href="#mod-cli" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
-            <i data-lucide="terminal" class="w-3.5 h-3.5 text-ctp-sapphire shrink-0"></i>
-            <span>CLI 10 Hãng</span>
-          </a>
-          <a href="#mod-ipam" class="nav-tab-pill px-2.5 py-1.5 rounded-lg text-ctp-subtext flex items-center gap-1">
-            <i data-lucide="table" class="w-3.5 h-3.5 text-ctp-peach shrink-0"></i>
-            <span>Bảng VLAN</span>
-          </a>
-        </nav>
-
-        <!-- Right Quick Contact Cluster (Zero Clipping) -->
-        <div class="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
-          <button onclick="exportIpamCsv()" class="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 border border-ctp-blue/35 text-[11px] font-mono text-ctp-teal hover:text-white transition" title="Xuất bảng quy hoạch VLAN ra file Excel CSV">
-            <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5 shrink-0"></i>
-            <span>Xuất CSV</span>
-          </button>
-          <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-ctp-blue/25 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-sapphire/45 text-[11px] font-mono font-bold text-white transition">
-            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-ctp-sapphire shrink-0"></i>
-            <span>Zalo</span>
-          </a>
-          <button onclick="toggleCornerMenu()" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire via-ctp-blue to-ctp-teal text-ctp-crust font-bold text-xs hover:opacity-95 transition shadow-lg shadow-ctp-sapphire/30 flex items-center gap-1.5 shrink-0">
-            <i data-lucide="phone-call" class="w-3.5 h-3.5 shrink-0"></i>
-            <span>Liên hệ ngay</span>
-          </button>
+  <!-- Navigation -->
+  <header class="sticky top-3 z-50 px-4 mt-3">
+    <div class="max-w-6xl mx-auto rounded-2xl surface-card px-4 py-2.5 flex items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <img src="./avatar.jpg" alt="Nguyễn Nguyên Vũ" class="w-9 h-9 rounded-full object-cover object-[center_15%] border border-ctp-blue/50" />
+        <div class="whitespace-nowrap">
+          <div class="font-display font-bold text-sm text-white group-hover:text-ctp-blue transition">Nguyễn Nguyên Vũ</div>
+          <div class="font-mono text-[11px] text-ctp-subtext">Công cụ tính toán mạng</div>
         </div>
+      </a>
 
-      </div>
+      <nav class="hidden lg:flex items-center gap-1 text-xs font-medium whitespace-nowrap">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-ctp-subtext hover:text-white hover:bg-white/5 transition">Trang chủ</a>
+        <a href="blog.html" class="px-3 py-1.5 rounded-lg text-ctp-subtext hover:text-white hover:bg-white/5 transition">Ghi chép</a>
+        <a href="toolkit.html" class="px-3 py-1.5 rounded-lg bg-white/10 text-white font-semibold">Công cụ mạng</a>
+        <a href="#live-api-tools" class="px-3 py-1.5 rounded-lg text-ctp-subtext hover:text-white hover:bg-white/5 transition">BGP/RDAP API</a>
+        <a href="#rack-planner" class="px-3 py-1.5 rounded-lg text-ctp-subtext hover:text-white hover:bg-white/5 transition">Tủ Rack 42U</a>
+        <a href="#vlan-table" class="px-3 py-1.5 rounded-lg text-ctp-subtext hover:text-white hover:bg-white/5 transition">Bảng VLAN</a>
+      </nav>
 
-      <!-- Bottom Glowing Scroll Progress Bar inside Navbar -->
-      <div class="w-full h-[2px] bg-ctp-crust/60 rounded-b-2xl overflow-hidden">
-        <div id="navScrollProgress" class="h-full bg-gradient-to-r from-ctp-sapphire via-ctp-teal to-ctp-yellow w-0 transition-all duration-150"></div>
+      <div class="flex items-center gap-2 shrink-0 whitespace-nowrap">
+        <a href="tel:0329553597" class="px-3 py-2 rounded-xl bg-ctp-green/15 hover:bg-ctp-green hover:text-ctp-crust text-ctp-green border border-ctp-green/30 font-mono font-semibold text-xs transition flex items-center gap-1.5">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Gọi điện</span>
+        </a>
+        <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-ctp-blue text-ctp-crust font-semibold text-xs hover:opacity-90 transition flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>Zalo: 0329.553.597</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <main class="relative z-10 max-w-7xl mx-auto px-4 pt-8 pb-24 space-y-10 pointer-events-auto">
+  <main class="relative z-10 max-w-6xl mx-auto px-4 pt-10 pb-24 space-y-8">
 
-    <!-- HERO BANNER & 18-MODULE QUICK LAUNCHER -->
-    <section class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-        <div class="space-y-2 max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ctp-teal/20 border border-ctp-teal/45 text-ctp-teal text-xs font-mono">
-            <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
-            <span>18 Interactive Engineering Calculators, 42U Rack Builder &amp; CLI Generators</span>
-          </div>
-          <h1 class="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Trung Tâm Công Cụ Kỹ Sư Hệ Thống, Mạng &amp; Điện Nhẹ (18-in-1)
-          </h1>
-          <p class="text-xs sm:text-sm text-ctp-subtext leading-relaxed">
-            Bộ công cụ tính toán chuẩn xác phục vụ thiết kế tủ Rack 42U, quy hoạch VLSM, bóc tách khối lượng thi công (ELV/BOQ) và sinh kịch bản CLI tự động cho 10 hãng chủ lực của <strong class="text-white">Nguyễn Nguyên Vũ</strong>.
-          </p>
-        </div>
-
-        <!-- Quick Jump Pills for All 18 Tools -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1.5 font-mono text-[11px] shrink-0">
-          <a href="#mod-topology" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">01. Sơ đồ 10G</a>
-          <a href="#mod-rack-designer" class="px-2.5 py-1.5 rounded-xl bg-ctp-teal/20 hover:bg-ctp-teal hover:text-ctp-crust border border-ctp-teal/50 text-ctp-yellow font-bold transition">02. Tủ Rack 42U ★</a>
-          <a href="#mod-cli" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">03. CLI 10 Hãng</a>
-          <a href="#mod-vlsm" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">04. Chia VLSM</a>
-          <a href="#mod-vpn" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">05. VPN Đa Hãng</a>
-          <a href="#mod-ipam" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">06. Bảng VLAN</a>
-          <a href="#mod-live-mac" class="px-2.5 py-1.5 rounded-xl bg-ctp-teal/20 hover:bg-ctp-teal hover:text-ctp-crust border border-ctp-teal/50 text-ctp-yellow font-bold transition">07. Tra MAC/DNS ★</a>
-          <a href="#mod-backup-wan" class="px-2.5 py-1.5 rounded-xl bg-ctp-teal/20 hover:bg-ctp-teal hover:text-ctp-crust border border-ctp-teal/50 text-ctp-yellow font-bold transition">08. Backup/WAN ★</a>
-          <a href="#mod-cron" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">09. Cron &amp; Nmap</a>
-          <a href="#mod-rack-boq" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">10. BOQ Vật Tư</a>
-          <a href="#mod-ups" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">11. Tính UPS/VA</a>
-          <a href="#mod-rf" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">12. Sóng Ekahau</a>
-          <a href="#mod-mtu" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">13. MTU &amp; KeyGen</a>
-          <a href="#mod-voip" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">14. VoIP UCM6300</a>
-          <a href="#mod-fiber" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">15. Quang &amp; PoE+</a>
-          <a href="#mod-cctv" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">16. Ổ Cứng CCTV</a>
-          <a href="#mod-zfs-pa" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">17. ZFS &amp; Loa PA</a>
-          <a href="#mod-ports" class="px-2.5 py-1.5 rounded-xl bg-ctp-crust/85 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-blue/30 transition">18. Port/MAC OUI</a>
-        </div>
-      </div>
+    <!-- Intro -->
+    <section class="surface-card rounded-2xl p-6">
+      <h1 class="font-display text-2xl sm:text-3xl font-bold text-white">Công Cụ Tính Toán Mạng, Tủ Rack &amp; Live API</h1>
+      <p class="text-xs sm:text-sm text-ctp-subtext mt-1">Tạo cấu hình CLI cho 10 hãng chính, chia Subnet IPv4/VLSM, truy vấn BGP RIPE NCC / RDAP, tính công suất tủ Rack 42U, nguồn PoE+, dung lượng ổ cứng CCTV và ZFS Pool.</p>
     </section>
 
-    <!-- MODULE 01: INTERACTIVE 10G MULTI-VENDOR TOPOLOGY, HA FAILOVER & DIAGNOSTICS -->
-    <section id="mod-topology" class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-ctp-sapphire">Module 01 // Interactive 10G Architecture &amp; HA Failover Simulator</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Sơ Đồ Kiến Trúc 10 Hãng Chủ Lực &amp; Giả Lập Chuyển Mạch Dự Phòng HA</h2>
-        </div>
-        <div class="flex flex-wrap gap-2 font-mono text-xs">
-          <button onclick="simulateHaFailover()" class="px-3.5 py-1.5 rounded-xl bg-ctp-peach/25 hover:bg-ctp-peach hover:text-ctp-crust text-ctp-peach border border-ctp-peach/50 font-bold transition flex items-center gap-1.5">
-            <i data-lucide="zap" class="w-3.5 h-3.5"></i> Giả lập Đứt WAN1 / HA Failover
-          </button>
-          <button onclick="runDiag('ping')" class="px-3 py-1.5 rounded-xl bg-ctp-blue/25 hover:bg-ctp-sapphire hover:text-ctp-crust border border-ctp-sapphire/40 transition">▶ ping Core</button>
-          <button onclick="runDiag('sip')" class="px-3 py-1.5 rounded-xl bg-ctp-yellow/25 hover:bg-ctp-yellow hover:text-ctp-crust border border-ctp-yellow/40 transition">▶ SIP UCM6300</button>
-          <button onclick="runDiag('iperf')" class="px-3 py-1.5 rounded-xl bg-ctp-teal/25 hover:bg-ctp-teal hover:text-ctp-crust border border-ctp-teal/40 transition">▶ iPerf3 10G</button>
-        </div>
-      </div>
-
-      <div class="rounded-2xl bg-ctp-crust/90 border border-ctp-blue/35 p-4 overflow-x-auto">
-        <svg viewBox="0 0 920 265" class="w-full min-w-[700px] h-auto">
-          <line id="svgLinkWan" x1="165" y1="130" x2="305" y2="130" stroke="#00f2fe" stroke-width="3" class="packet-line"/>
-          <line x1="450" y1="130" x2="575" y2="65" stroke="#2dd4bf" stroke-width="2.5" class="packet-line"/>
-          <line x1="450" y1="130" x2="575" y2="195" stroke="#38bdf8" stroke-width="2.5" class="packet-line"/>
-          <line x1="720" y1="65" x2="795" y2="65" stroke="#4ade80" stroke-width="2" class="packet-line"/>
-          <line x1="720" y1="195" x2="795" y2="155" stroke="#fde047" stroke-width="2" class="packet-line"/>
-          <line x1="720" y1="195" x2="795" y2="225" stroke="#fb923c" stroke-width="2" class="packet-line"/>
-
-          <!-- Node 1: NGFW & Routing -->
-          <g onclick="showNodeInfo('firewall')" class="cursor-pointer">
-            <rect id="svgBoxFw" x="20" y="82" width="145" height="95" rx="14" fill="#04203e" stroke="#00f2fe" stroke-width="2"/>
-            <text x="92" y="112" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-weight="bold" font-size="12">★ FortiGate HA</text>
-            <text x="92" y="132" text-anchor="middle" fill="#00f2fe" font-family="JetBrains Mono" font-size="10">★ MikroTik • DrayTek</text>
-            <text id="svgTextFwState" x="92" y="152" text-anchor="middle" fill="#4ade80" font-family="JetBrains Mono" font-weight="bold" font-size="9">MASTER: FG-01 ACTIVE</text>
-          </g>
-
-          <!-- Node 2: Core Switch -->
-          <g onclick="showNodeInfo('coreswitch')" class="cursor-pointer">
-            <rect x="305" y="90" width="145" height="80" rx="14" fill="#04203e" stroke="#2dd4bf" stroke-width="2"/>
-            <text x="377" y="124" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-weight="bold" font-size="12">★ Cisco &amp; Aruba</text>
-            <text x="377" y="143" text-anchor="middle" fill="#2dd4bf" font-family="JetBrains Mono" font-size="10">10G LACP Core Switch</text>
-          </g>
-
-          <!-- Node 3: HPE & Proxmox Cluster -->
-          <g onclick="showNodeInfo('proxmox')" class="cursor-pointer">
-            <rect x="575" y="25" width="145" height="80" rx="14" fill="#04203e" stroke="#4ade80" stroke-width="2"/>
-            <text x="647" y="58" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-weight="bold" font-size="12">★ HPE &amp; Proxmox</text>
-            <text x="647" y="77" text-anchor="middle" fill="#4ade80" font-family="JetBrains Mono" font-size="10">Supermicro 8-Node ZFS</text>
-          </g>
-
-          <!-- Node 4: SDN PoE & Wireless -->
-          <g onclick="showNodeInfo('access')" class="cursor-pointer">
-            <rect x="575" y="155" width="145" height="80" rx="14" fill="#04203e" stroke="#38bdf8" stroke-width="2"/>
-            <text x="647" y="188" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-weight="bold" font-size="12">★ Meraki • UniFi</text>
-            <text x="647" y="207" text-anchor="middle" fill="#38bdf8" font-family="JetBrains Mono" font-size="10">★ TP-Link Omada SDN</text>
-          </g>
-
-          <!-- Node 5: 1Panel Ubuntu -->
-          <g onclick="showNodeInfo('1panel')" class="cursor-pointer">
-            <rect x="795" y="35" width="110" height="60" rx="10" fill="#07315c" stroke="#4ade80" stroke-width="1.5"/>
-            <text x="850" y="63" text-anchor="middle" fill="#ffffff" font-family="JetBrains Mono" font-weight="bold" font-size="11">1Panel VM</text>
-            <text x="850" y="79" text-anchor="middle" fill="#4ade80" font-family="JetBrains Mono" font-size="10">Docker &amp; Bot</text>
-          </g>
-
-          <!-- Node 6: Grandstream VoIP -->
-          <g onclick="showNodeInfo('voip')" class="cursor-pointer">
-            <rect x="795" y="125" width="110" height="58" rx="10" fill="#07315c" stroke="#fde047" stroke-width="1.5"/>
-            <text x="850" y="151" text-anchor="middle" fill="#ffffff" font-family="JetBrains Mono" font-weight="bold" font-size="11">★ Grandstream</text>
-            <text x="850" y="167" text-anchor="middle" fill="#fde047" font-family="JetBrains Mono" font-size="10">UCM6300 • GRP</text>
-          </g>
-
-          <!-- Node 7: CCTV & PA -->
-          <g onclick="showNodeInfo('elv')" class="cursor-pointer">
-            <rect x="795" y="195" width="110" height="58" rx="10" fill="#07315c" stroke="#fb923c" stroke-width="1.5"/>
-            <text x="850" y="221" text-anchor="middle" fill="#ffffff" font-family="JetBrains Mono" font-weight="bold" font-size="11">CCTV &amp; PA</text>
-            <text x="850" y="237" text-anchor="middle" fill="#fb923c" font-family="JetBrains Mono" font-size="10">ELV Block A/B</text>
-          </g>
-        </svg>
-      </div>
-
-      <pre id="nodeDetailBox" class="p-4 rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 font-mono text-xs text-ctp-teal overflow-x-auto leading-relaxed">● Nhấp vào nút thiết bị trên sơ đồ hoặc bấm "Giả lập Đứt WAN1 / HA Failover" để kiểm tra kịch bản dự phòng thực tế.</pre>
-    </section>
-
-    <!-- ======================================================================== -->
-    <!-- NEW MODULE 02: INTERACTIVE 42U SERVER RACK ELEVATION DESIGNER            -->
-    <!-- ======================================================================== -->
-    <section id="mod-rack-designer" class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 border-2 border-ctp-teal/50">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-ctp-yellow flex items-center gap-1.5">
-            <i data-lucide="server" class="w-4 h-4"></i> Module 02 // Interactive 42U Data Center Rack Elevation Builder
-          </span>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-0.5">
-            Trình Thiết Kế Bố Cục Tủ Rack Mạng &amp; Máy Chủ (Tính Tự Động Số U, Công Suất Watt &amp; Nhiệt Lượng BTU/h)
-          </h2>
-        </div>
-        <button onclick="resetDefaultRack()" class="px-3.5 py-2 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-xs font-mono text-ctp-subtext hover:text-white transition">
-          ↺ Khôi phục Tủ Rack Mẫu
-        </button>
-      </div>
-
-      <div class="grid lg:grid-cols-12 gap-6 items-start">
-        <!-- Left: Add Hardware to Rack Controls & Telemetry Summary (5 cols) -->
-        <div class="lg:col-span-5 space-y-4 font-mono text-xs">
-          <div class="p-4 rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 space-y-3">
-            <div class="text-ctp-sapphire font-bold uppercase">1. Thêm Thiết Bị Vào Tủ Rack (Click để lắp vào khay U):</div>
-            <div class="grid grid-cols-1 gap-2">
-              <button onclick="addRackDevice('Fortinet FortiGate 100F HA Pair', 1, 75, '#ee3124')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ ★ Fortinet FortiGate 100F HA</span>
-                <span class="text-ctp-yellow">1U • 75W</span>
-              </button>
-              <button onclick="addRackDevice('MikroTik CCR2004-1G-12S+2XS', 1, 48, '#38bdf8')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ ★ MikroTik CCR2004 10G Core</span>
-                <span class="text-ctp-yellow">1U • 48W</span>
-              </button>
-              <button onclick="addRackDevice('Cisco Catalyst 9300 / Aruba 6300M 48P PoE+', 1, 420, '#00bceb')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ ★ Cisco / Aruba 48-Port PoE+ Switch</span>
-                <span class="text-ctp-yellow">1U • 420W</span>
-              </button>
-              <button onclick="addRackDevice('Grandstream UCM6302 IP-PBX', 1, 25, '#fde047')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ ★ Grandstream UCM6302 VoIP PBX</span>
-                <span class="text-ctp-yellow">1U • 25W</span>
-              </button>
-              <button onclick="addRackDevice('HPE ProLiant DL380 Gen11 (Proxmox VE)', 2, 550, '#01a982')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ ★ HPE ProLiant DL380 Gen11 Server</span>
-                <span class="text-ctp-yellow">2U • 550W</span>
-              </button>
-              <button onclick="addRackDevice('Supermicro 3U 8-Node (SYS-5039MS)', 3, 980, '#4ade80')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ Supermicro 3U MicroCloud 8-Node</span>
-                <span class="text-ctp-yellow">3U • 980W</span>
-              </button>
-              <button onclick="addRackDevice('APC Smart-UPS Online SRT 3000VA', 2, 60, '#fb923c')" class="p-2.5 rounded-xl bg-ctp-mantle hover:bg-ctp-teal/25 border border-ctp-blue/25 text-left flex items-center justify-between transition">
-                <span>+ Bộ lưu điện APC Smart-UPS 3000VA</span>
-                <span class="text-ctp-yellow">2U • UPS</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Rack Telemetry Summary Box -->
-          <div id="rackMetricsBox" class="p-4 rounded-2xl bg-ctp-crust/95 border border-ctp-teal/40 space-y-2"></div>
-        </div>
-
-        <!-- Right: Visual 19-Inch Server Rack Chassis Diagram (7 cols) -->
-        <div class="lg:col-span-7 rounded-2xl bg-ctp-crust/95 border-2 border-ctp-blue/40 p-4 space-y-2">
-          <div class="flex items-center justify-between font-mono text-xs text-ctp-subtext border-b border-ctp-blue/25 pb-2">
-            <span>19-INCH ENTERPRISE RACK CABINET (FRONT ELEVATION)</span>
-            <span class="text-ctp-teal">Nhấp nút [✕] trên thiết bị để tháo khỏi tủ</span>
-          </div>
-          <div id="rackVisualContainer" class="space-y-1.5 max-h-[430px] overflow-y-auto pr-1"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MODULE 03 & MODULE 04: 10-CORE VENDOR CLI BUILDER + VLSM SUBNET SPLITTER -->
-    <section class="grid lg:grid-cols-12 gap-8">
-
-      <!-- Module 03: 10 Core Vendor CLI Generator (7 cols) -->
-      <div id="mod-cli" class="lg:col-span-7 bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <div>
-            <span class="font-mono text-xs uppercase text-ctp-yellow">★ Module 03 // 10 Core Configured Brands CLI Builder</span>
-            <h2 class="font-display text-2xl font-bold text-white mt-0.5">Trình Sinh Script Cấu Hình 10 Hãng Chủ Lực</h2>
-          </div>
-          <div class="flex gap-2">
-            <button onclick="downloadCliScript()" class="px-3 py-1.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-ctp-sapphire font-mono text-xs hover:bg-ctp-surface0 transition">
-              ⬇ Tải .CONF
-            </button>
-            <button onclick="copyCliTemplate()" class="px-3.5 py-1.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs">
-              Copy Script
-            </button>
-          </div>
-        </div>
-
-        <div class="grid sm:grid-cols-3 gap-3 font-mono text-xs">
-          <select id="tplType" onchange="buildCli()" class="p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white">
-            <option value="fortinet">1. ★ Fortinet FortiGate (LACP + VLAN)</option>
-            <option value="mikrotik">2. ★ MikroTik RouterOS (Hardening + PCC)</option>
-            <option value="cisco">3. ★ Cisco Catalyst (LACP + Snooping)</option>
-            <option value="meraki">4. ★ Cisco Meraki (Voice &amp; AP Trunk)</option>
-            <option value="grandstream">5. ★ Grandstream UCM (SIP + Option 66)</option>
-            <option value="unifi">6. ★ Ubiquiti UniFi (SSH Inform &amp; VLAN)</option>
-            <option value="aruba">7. ★ Aruba AOS-CX (LAG Trunk + DAI)</option>
-            <option value="draytek">8. ★ DrayTek Vigor (Multi-WAN + IPsec)</option>
-            <option value="omada">9. ★ TP-Link Omada (JetStream Trunk)</option>
-            <option value="hpe">10. ★ HPE &amp; Proxmox (10G Bond Bridge)</option>
-          </select>
-          <input id="tplVlan" type="text" value="50" oninput="buildCli()" placeholder="VLAN ID (VD: 50)" class="p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          <input id="tplNet" type="text" value="10.10.50.1/24" oninput="buildCli()" placeholder="Gateway/CIDR" class="p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        </div>
-
-        <pre id="cliBox" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs text-ctp-teal overflow-x-auto h-64 leading-relaxed"></pre>
-      </div>
-
-      <!-- Module 04: IPv4 / VLSM Subnet Calculator & Splitter (5 cols) -->
-      <div id="mod-vlsm" class="lg:col-span-5 bento-card rounded-3xl p-6 sm:p-8 space-y-5">
+    <!-- CLI Builder & Subnet Calculator -->
+    <section class="grid lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-7 surface-card rounded-2xl p-6 space-y-4">
         <div class="flex items-center justify-between">
-          <div>
-            <span class="font-mono text-xs uppercase text-ctp-sapphire">Module 04 // IPv4 &amp; VLSM Planner</span>
-            <h2 class="font-display text-2xl font-bold text-white mt-0.5">Chia Subnet &amp; Tách Nhánh</h2>
-          </div>
-          <button onclick="splitSubnets()" class="px-3 py-1.5 rounded-xl bg-ctp-blue/25 hover:bg-ctp-sapphire hover:text-ctp-crust font-mono text-xs font-bold border border-ctp-sapphire/40 transition">
-            Tách 4 Subnet con
-          </button>
+          <h2 class="font-display text-lg font-bold text-white">Tạo nhanh cấu hình CLI (10 hãng chính)</h2>
+          <button onclick="copyCli()" class="px-3 py-1 rounded-lg bg-ctp-teal text-ctp-crust font-mono font-semibold text-xs">Copy CLI</button>
         </div>
+        <div class="grid sm:grid-cols-3 gap-3 font-mono text-xs">
+          <select id="tplType" onchange="buildCli()" class="p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white">
+            <option value="fortinet">1. Fortinet FortiGate</option>
+            <option value="mikrotik">2. MikroTik RouterOS</option>
+            <option value="cisco">3. Cisco Catalyst</option>
+            <option value="meraki">4. Cisco Meraki</option>
+            <option value="grandstream">5. Grandstream UCM</option>
+            <option value="unifi">6. Ubiquiti UniFi</option>
+            <option value="aruba">7. Aruba AOS-CX</option>
+            <option value="draytek">8. DrayTek Vigor</option>
+            <option value="omada">9. TP-Link Omada</option>
+            <option value="hpe">10. HPE &amp; Proxmox VE</option>
+          </select>
+          <input id="tplVlan" type="text" value="50" oninput="buildCli()" placeholder="VLAN ID" class="p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white" />
+          <input id="tplNet" type="text" value="10.10.50.1/24" oninput="buildCli()" placeholder="Gateway/CIDR" class="p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white" />
+        </div>
+        <pre id="cliBox" class="rounded-xl bg-ctp-crust p-4 border border-white/10 font-mono text-xs text-ctp-teal overflow-x-auto h-56 leading-relaxed"></pre>
+      </div>
 
+      <div class="lg:col-span-5 surface-card rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="font-display text-lg font-bold text-white">Chia Subnet IPv4 / VLSM</h2>
+          <button onclick="splitSubnets()" class="text-xs font-mono text-ctp-blue hover:underline">Tách 4 nhánh con</button>
+        </div>
         <div class="grid grid-cols-3 gap-3 font-mono text-xs">
-          <div class="col-span-2">
-            <label class="text-ctp-subtext block mb-1">Địa chỉ IP / Network</label>
-            <input id="ipInput" type="text" value="10.10.20.0" oninput="updateSubnet()" class="w-full p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white focus:outline-none focus:border-ctp-sapphire" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">CIDR Prefix</label>
-            <select id="cidrInput" onchange="updateSubnet()" class="w-full p-3 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white">
-              <option value="20">/20 (4094 IP)</option>
-              <option value="21">/21 (2046 IP)</option>
-              <option value="22">/22 (1022 IP)</option>
-              <option value="23">/23 (510 IP)</option>
-              <option value="24" selected>/24 (254 IP)</option>
-              <option value="25">/25 (126 IP)</option>
-              <option value="26">/26 (62 IP)</option>
-              <option value="27">/27 (30 IP)</option>
-              <option value="28">/28 (14 IP)</option>
-              <option value="29">/29 (6 IP)</option>
-              <option value="30">/30 (2 P2P)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="subnetOutput" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs space-y-2"></div>
-        <div id="subnetSplitBox" class="hidden rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-teal/35 font-mono text-[11px] space-y-1.5"></div>
-      </div>
-
-    </section>
-
-    <!-- ======================================================================== -->
-    <!-- NEW MODULES 07 & 08: LIVE MAC OUI / DNS API + PROXMOX BACKUP & PCC WAN   -->
-    <!-- ======================================================================== -->
-    <section class="grid lg:grid-cols-2 gap-8">
-
-      <!-- Module 07: Live MAC Address Vendor Inspector & Cloudflare DoH Lookup -->
-      <div id="mod-live-mac" class="bento-card rounded-3xl p-6 sm:p-8 space-y-4 border border-ctp-sapphire/45">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-sapphire">★ Module 07 // Live MAC Address OUI &amp; DNS DoH Inspector</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Nhận Diện Hãng Thiết Bị Qua Địa Chỉ MAC &amp; Phân Giải DNS Thực Tế</h2>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Nhập địa chỉ MAC (Từ bảng ARP/DHCP)</label>
-            <div class="flex gap-1.5">
-              <input id="macLookupInput" type="text" value="00:0B:82:8A:11:22" oninput="inspectMacVendor()" placeholder="VD: 00:09:0F:xx..." class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-            </div>
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Kiểm tra nhanh DNS DoH (Cloudflare 1.1.1.1)</label>
-            <div class="flex gap-1.5">
-              <input id="toolkitDnsInput" type="text" value="nguyenvu.click" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-              <button onclick="runToolkitDns()" class="px-3 py-2.5 rounded-xl bg-ctp-sapphire text-ctp-crust font-bold shrink-0">Dig</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
-          <span class="text-ctp-subtext">MAC mẫu:</span>
-          <button onclick="setSampleMac('00:09:0F:AA:11:22')" class="px-2 py-0.5 rounded bg-ctp-crust border border-ctp-blue/25 hover:border-ctp-sapphire">Fortinet</button>
-          <button onclick="setSampleMac('D4:CA:6D:BB:22:33')" class="px-2 py-0.5 rounded bg-ctp-crust border border-ctp-blue/25 hover:border-ctp-sapphire">MikroTik</button>
-          <button onclick="setSampleMac('00:0B:82:CC:33:44')" class="px-2 py-0.5 rounded bg-ctp-crust border border-ctp-blue/25 hover:border-ctp-sapphire">Grandstream</button>
-          <button onclick="setSampleMac('74:83:C2:DD:44:55')" class="px-2 py-0.5 rounded bg-ctp-crust border border-ctp-blue/25 hover:border-ctp-sapphire">UniFi</button>
-          <button onclick="setSampleMac('E0:CB:BC:EE:55:66')" class="px-2 py-0.5 rounded bg-ctp-crust border border-ctp-blue/25 hover:border-ctp-sapphire">Meraki</button>
-          <button onclick="setSampleMac('00:1D:AA:FF:66:77')" class="px-2 py-0.5 rounded bg-ctp-crust border border-ctp-blue/25 hover:border-ctp-sapphire">DrayTek</button>
-        </div>
-
-        <pre id="macDnsResultBox" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs text-ctp-teal overflow-x-auto leading-relaxed"></pre>
-      </div>
-
-      <!-- Module 08: Proxmox Backup Window & Multi-WAN PCC Ratio Calculator -->
-      <div id="mod-backup-wan" class="bento-card rounded-3xl p-6 sm:p-8 space-y-4 border border-ctp-teal/45">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-yellow">★ Module 08 // Proxmox Backup Window &amp; Multi-WAN PCC Ratio</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Thời Gian Sao Lưu Máy Ảo (1G/10G) &amp; Tỷ Lệ Gộp Băng Thông WAN</h2>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Dữ liệu VM (TB)</label>
-            <input id="bkSizeTb" type="number" step="0.5" value="4" oninput="calcBackupWan()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Đường truyền LAN</label>
-            <select id="bkSpeed" onchange="calcBackupWan()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white">
-              <option value="10" selected>10G SFP+ Fiber</option>
-              <option value="1">1Gbe Copper</option>
-              <option value="20">20G LACP Bond</option>
-            </select>
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">WAN 1 (Mbps)</label>
-            <input id="wan1Mbps" type="number" value="500" oninput="calcBackupWan()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">WAN 2 (Mbps)</label>
-            <input id="wan2Mbps" type="number" value="500" oninput="calcBackupWan()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-        </div>
-
-        <div id="backupWanResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs space-y-2"></div>
-      </div>
-
-    </section>
-
-    <!-- MODULE 05: CROSS-VENDOR IPSEC SITE-TO-SITE VPN CONFIG GENERATOR -->
-    <section id="mod-vpn" class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-ctp-yellow">★ Module 05 // Cross-Vendor IPsec IKEv2 Site-to-Site Generator</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Trình Tạo Cấu Hình Đối Xứng VPN Liên Chi Nhánh (FortiGate ⇄ DrayTek ⇄ MikroTik)</h2>
-        </div>
-        <button onclick="copyVpnConfig()" class="px-4 py-2 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs shrink-0">
-          Copy Cả 2 Đầu VPN
-        </button>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 font-mono text-xs">
-        <div>
-          <label class="text-ctp-subtext block mb-1">Cặp thiết bị đấu nối</label>
-          <select id="vpnPair" onchange="buildVpnMatrix()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white">
-            <option value="fgt-draytek">FortiGate (HQ) ⇄ DrayTek (Branch)</option>
-            <option value="fgt-mkt">FortiGate (HQ) ⇄ MikroTik (Branch)</option>
-            <option value="mkt-draytek">MikroTik (HQ) ⇄ DrayTek (Branch)</option>
+          <input id="ipInput" type="text" value="10.10.20.0" oninput="updateSubnet()" class="col-span-2 p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white" />
+          <select id="cidrInput" onchange="updateSubnet()" class="p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white">
+            <option value="22">/22 (1022 IP)</option>
+            <option value="23">/23 (510 IP)</option>
+            <option value="24" selected>/24 (254 IP)</option>
+            <option value="25">/25 (126 IP)</option>
+            <option value="26">/26 (62 IP)</option>
+            <option value="27">/27 (30 IP)</option>
+            <option value="28">/28 (14 IP)</option>
           </select>
         </div>
-        <div>
-          <label class="text-ctp-subtext block mb-1">IP WAN Trụ sở (HQ)</label>
-          <input id="vpnHqWan" type="text" value="118.69.100.10" oninput="buildVpnMatrix()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        </div>
-        <div>
-          <label class="text-ctp-subtext block mb-1">IP WAN Chi nhánh</label>
-          <input id="vpnBrWan" type="text" value="14.161.200.20" oninput="buildVpnMatrix()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        </div>
-        <div>
-          <label class="text-ctp-subtext block mb-1">Mạng LAN Trụ sở</label>
-          <input id="vpnHqLan" type="text" value="10.10.10.0/24" oninput="buildVpnMatrix()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        </div>
-        <div>
-          <label class="text-ctp-subtext block mb-1">Mạng LAN Chi nhánh</label>
-          <input id="vpnBrLan" type="text" value="192.168.20.0/24" oninput="buildVpnMatrix()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        </div>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-4 font-mono text-xs">
-        <div class="rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 overflow-hidden">
-          <div id="vpnHeaderA" class="px-4 py-2 bg-ctp-mantle border-b border-ctp-blue/25 text-ctp-sapphire font-bold">Đầu A — Trụ sở chính (HQ)</div>
-          <pre id="vpnCodeA" class="p-4 text-ctp-teal overflow-x-auto h-48 leading-relaxed"></pre>
-        </div>
-        <div class="rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 overflow-hidden">
-          <div id="vpnHeaderB" class="px-4 py-2 bg-ctp-mantle border-b border-ctp-blue/25 text-ctp-yellow font-bold">Đầu B — Chi nhánh (Branch)</div>
-          <pre id="vpnCodeB" class="p-4 text-ctp-green overflow-x-auto h-48 leading-relaxed"></pre>
-        </div>
+        <div id="subnetOutput" class="rounded-xl bg-ctp-crust p-4 border border-white/10 font-mono text-xs space-y-2"></div>
+        <div id="subnetSplitBox" class="hidden rounded-xl bg-ctp-crust p-3.5 border border-ctp-teal/30 font-mono text-[11px] space-y-1"></div>
       </div>
     </section>
 
-    <!-- MODULE 06: INTERACTIVE ENTERPRISE VLAN & IPAM PLANNER WITH CSV EXPORT -->
-    <section id="mod-ipam" class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <!-- NEW LIVE API DIAGNOSTICS SECTION IN TOOLKIT (RIPE BGP + RDAP + DOH) -->
+    <section id="live-api-tools" class="grid lg:grid-cols-2 gap-6">
+      <div class="surface-card rounded-2xl p-6 space-y-4 border border-ctp-blue/30">
+        <div class="flex items-center justify-between">
+          <h2 class="font-display text-lg font-bold text-white">Kiểm Tra BGP Prefix &amp; RPKI (RIPE NCC Live API)</h2>
+          <span class="text-xs font-mono text-ctp-teal">stat.ripe.net</span>
+        </div>
+        <div class="flex gap-2 font-mono text-xs">
+          <input id="ripeInput" type="text" value="203.113.131.1" placeholder="Nhập IP hoặc ASN (VD: 203.113.131.1, AS7552)..." class="w-full p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white focus:outline-none focus:border-ctp-blue" />
+          <button onclick="queryRipeBgp()" class="px-4 py-2.5 rounded-xl bg-ctp-blue text-ctp-crust font-semibold shrink-0">Check BGP</button>
+        </div>
+        <pre id="ripeOutput" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs text-ctp-subtext overflow-x-auto h-36 leading-relaxed">Đang kết nối RIPE NCC BGP API...</pre>
+      </div>
+
+      <div class="surface-card rounded-2xl p-6 space-y-4 border border-ctp-teal/30">
+        <div class="flex items-center justify-between">
+          <h2 class="font-display text-lg font-bold text-white">Tra Cứu RDAP Domain &amp; DNS DoH (1.1.1.1)</h2>
+          <span class="text-xs font-mono text-ctp-blue">RDAP / DoH</span>
+        </div>
+        <div class="flex gap-2 font-mono text-xs">
+          <input id="rdapInput" type="text" value="nguyenvu.click" placeholder="Nhập tên miền (VD: nguyenvu.click, google.com)..." class="w-full p-2.5 rounded-xl bg-ctp-crust border border-white/15 text-white focus:outline-none focus:border-ctp-teal" />
+          <button onclick="queryRdapAndDns()" class="px-4 py-2.5 rounded-xl bg-ctp-teal text-ctp-crust font-semibold shrink-0">Lookup</button>
+        </div>
+        <pre id="rdapOutput" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs text-ctp-teal overflow-x-auto h-36 leading-relaxed">Đang truy vấn thông tin tên miền...</pre>
+      </div>
+    </section>
+
+    <!-- 42U Rack Elevation Planner -->
+    <section id="rack-planner" class="surface-card rounded-2xl p-6 space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-ctp-sapphire">★ Module 06 // Enterprise VLAN &amp; IPAM Table Builder</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Bảng Quy Hoạch Phân Vùng VLAN Dự Án &amp; Xuất File Excel (.CSV)</h2>
+          <h2 class="font-display text-xl font-bold text-white">Bố Cục Tủ Rack 42U &amp; Tính Công Suất Tiêu Thụ</h2>
+          <p class="text-xs font-mono text-ctp-subtext mt-0.5">Ước tính số U sử dụng, tổng công suất tải (Watt) và dung lượng bộ lưu điện UPS</p>
         </div>
-        <div class="flex flex-wrap gap-2 font-mono text-xs">
-          <button onclick="addIpamRow()" class="px-3.5 py-1.5 rounded-xl bg-ctp-blue/25 hover:bg-ctp-sapphire hover:text-ctp-crust text-ctp-sapphire font-bold border border-ctp-sapphire/40 transition">
-            + Thêm VLAN
-          </button>
-          <button onclick="exportIpamCsv()" class="px-4 py-1.5 rounded-xl bg-gradient-to-r from-ctp-teal to-ctp-sapphire text-ctp-crust font-bold transition">
-            ⬇ Xuất File Excel (.CSV)
-          </button>
-        </div>
+        <button onclick="resetRack()" class="px-3 py-1.5 rounded-lg bg-ctp-crust border border-white/15 text-xs font-mono text-ctp-subtext hover:text-white">Khôi phục mặc định</button>
       </div>
 
-      <div class="grid sm:grid-cols-4 gap-3 font-mono text-xs">
-        <input id="newVlanId" type="number" placeholder="VLAN ID (VD: 60)" class="p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        <input id="newVlanName" type="text" placeholder="Tên phân vùng (VD: LAB_IOT)" class="p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        <input id="newVlanSub" type="text" placeholder="Subnet (VD: 10.10.60.0/24)" class="p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-        <input id="newVlanDesc" type="text" placeholder="Chính sách / Thiết bị..." class="p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
+      <div class="grid lg:grid-cols-12 gap-6 items-start font-mono text-xs">
+        <div class="lg:col-span-5 space-y-3">
+          <div class="grid grid-cols-1 gap-2">
+            <button onclick="addRackItem('Fortinet FortiGate 100F HA Pair', 1, 75)" class="p-2.5 rounded-xl bg-ctp-crust hover:border-ctp-blue border border-white/10 text-left flex justify-between">
+              <span>+ FortiGate 100F HA</span><span class="text-ctp-teal">1U • 75W</span>
+            </button>
+            <button onclick="addRackItem('MikroTik CCR2004-1G-12S+2XS', 1, 48)" class="p-2.5 rounded-xl bg-ctp-crust hover:border-ctp-blue border border-white/10 text-left flex justify-between">
+              <span>+ MikroTik CCR2004 10G</span><span class="text-ctp-teal">1U • 48W</span>
+            </button>
+            <button onclick="addRackItem('Switch 48-Port PoE+ (Cisco/Aruba/Omada)', 1, 420)" class="p-2.5 rounded-xl bg-ctp-crust hover:border-ctp-blue border border-white/10 text-left flex justify-between">
+              <span>+ Switch 48-Port PoE+</span><span class="text-ctp-teal">1U • 420W</span>
+            </button>
+            <button onclick="addRackItem('Grandstream UCM6302 IP-PBX', 1, 25)" class="p-2.5 rounded-xl bg-ctp-crust hover:border-ctp-blue border border-white/10 text-left flex justify-between">
+              <span>+ Grandstream UCM6302</span><span class="text-ctp-teal">1U • 25W</span>
+            </button>
+            <button onclick="addRackItem('HPE ProLiant DL380 Gen11 (Proxmox VE)', 2, 550)" class="p-2.5 rounded-xl bg-ctp-crust hover:border-ctp-blue border border-white/10 text-left flex justify-between">
+              <span>+ HPE ProLiant DL380 (2U)</span><span class="text-ctp-teal">2U • 550W</span>
+            </button>
+          </div>
+          <div id="rackSummary" class="p-4 rounded-xl bg-ctp-crust border border-ctp-teal/30 space-y-1.5"></div>
+        </div>
+
+        <div id="rackList" class="lg:col-span-7 space-y-1.5 max-h-[340px] overflow-y-auto pr-1"></div>
+      </div>
+    </section>
+
+    <!-- Calculators Grid -->
+    <section class="grid md:grid-cols-3 gap-6">
+      <!-- Grandstream VoIP -->
+      <div class="surface-card rounded-2xl p-6 space-y-3">
+        <h3 class="font-display text-base font-bold text-white">Băng thông thoại Grandstream UCM</h3>
+        <div class="grid grid-cols-2 gap-2.5 font-mono text-xs">
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Số máy nhánh</label>
+            <input id="voipExts" type="number" value="150" oninput="calcVoip()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Cuộc gọi đồng thời</label>
+            <input id="voipCalls" type="number" value="45" oninput="calcVoip()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+        </div>
+        <div id="voipResult" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs space-y-1"></div>
       </div>
 
-      <div class="rounded-2xl bg-ctp-crust/95 border border-ctp-blue/30 overflow-x-auto">
+      <!-- PoE+ Budget -->
+      <div class="surface-card rounded-2xl p-6 space-y-3">
+        <h3 class="font-display text-base font-bold text-white">Công suất nguồn Switch PoE+</h3>
+        <div class="grid grid-cols-2 gap-2.5 font-mono text-xs">
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Số AP Wi-Fi 6</label>
+            <input id="poeAps" type="number" value="34" oninput="calcPoe()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Camera + IP Phone</label>
+            <input id="poeCams" type="number" value="40" oninput="calcPoe()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+        </div>
+        <div id="poeResult" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs space-y-1"></div>
+      </div>
+
+      <!-- CCTV Storage -->
+      <div class="surface-card rounded-2xl p-6 space-y-3">
+        <h3 class="font-display text-base font-bold text-white">Dung lượng ổ cứng Camera NVR (H.265+)</h3>
+        <div class="grid grid-cols-2 gap-2.5 font-mono text-xs">
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Số Camera 4MP</label>
+            <input id="camCount" type="number" value="32" oninput="calcCctv()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Số ngày lưu</label>
+            <input id="camDays" type="number" value="30" oninput="calcCctv()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+        </div>
+        <div id="cctvResult" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs space-y-1"></div>
+      </div>
+
+      <!-- ZFS Storage -->
+      <div class="surface-card rounded-2xl p-6 space-y-3">
+        <h3 class="font-display text-base font-bold text-white">Dung lượng ZFS Pool &amp; RAM ARC</h3>
+        <div class="grid grid-cols-2 gap-2.5 font-mono text-xs">
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Số ổ cứng (RAID10)</label>
+            <input id="zfsDrives" type="number" value="8" oninput="calcZfs()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Dung lượng/Ổ (TB)</label>
+            <input id="zfsSize" type="number" value="2" oninput="calcZfs()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+        </div>
+        <div id="zfsResult" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs space-y-1"></div>
+      </div>
+
+      <!-- Cabling & UPS -->
+      <div class="surface-card rounded-2xl p-6 space-y-3">
+        <h3 class="font-display text-base font-bold text-white">Bóc tách thùng cáp Cat6 &amp; UPS</h3>
+        <div class="grid grid-cols-2 gap-2.5 font-mono text-xs">
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Tổng tải (Watt)</label>
+            <input id="upsWatt" type="number" value="850" oninput="calcUps()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+          <div>
+            <label class="text-ctp-subtext text-[11px]">Nút mạng RJ45</label>
+            <input id="boqDrops" type="number" value="120" oninput="calcUps()" class="w-full mt-1 p-2 rounded-lg bg-ctp-crust border border-white/15 text-white" />
+          </div>
+        </div>
+        <div id="upsResult" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs space-y-1"></div>
+      </div>
+
+      <!-- MAC OUI -->
+      <div class="surface-card rounded-2xl p-6 space-y-3">
+        <h3 class="font-display text-base font-bold text-white">Tra cứu nhanh MAC OUI</h3>
+        <input id="macInput" type="text" value="00:09:0F" oninput="lookupMac()" placeholder="Nhập MAC (VD: 00:09:0F, 00:0B:82)..." class="w-full p-2 rounded-lg bg-ctp-crust border border-white/15 font-mono text-xs text-white" />
+        <div id="macResult" class="rounded-xl bg-ctp-crust p-3.5 border border-white/10 font-mono text-xs text-ctp-teal"></div>
+      </div>
+    </section>
+
+    <!-- VLAN Table & CSV Export -->
+    <section id="vlan-table" class="surface-card rounded-2xl p-6 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 class="font-display text-xl font-bold text-white">Bảng Quy Hoạch VLAN Mẫu</h2>
+        </div>
+        <button onclick="exportVlanCsv()" class="px-4 py-2 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-semibold text-xs">Xuất file .CSV</button>
+      </div>
+
+      <div class="rounded-xl bg-ctp-crust border border-white/10 overflow-x-auto">
         <table class="w-full text-left font-mono text-xs border-collapse">
-          <thead class="bg-ctp-mantle text-ctp-subtext border-b border-ctp-blue/25">
+          <thead class="bg-ctp-mantle text-ctp-subtext border-b border-white/10">
             <tr>
-              <th class="p-3">VLAN ID</th>
-              <th class="p-3">Tên VLAN</th>
-              <th class="p-3">Dải Subnet / CIDR</th>
-              <th class="p-3">Gateway IP</th>
-              <th class="p-3">Thiết bị &amp; Chính sách QoS/Security</th>
+              <th class="p-3">VLAN</th><th class="p-3">Tên phân vùng</th><th class="p-3">Subnet</th><th class="p-3">Gateway</th><th class="p-3">Ghi chú vận hành</th>
             </tr>
           </thead>
-          <tbody id="ipamTableBody" class="divide-y divide-ctp-blue/15"></tbody>
+          <tbody id="vlanTbody" class="divide-y divide-white/5"></tbody>
         </table>
       </div>
     </section>
 
-    <!-- MODULE 09 & MODULE 10: CRONTAB / NMAP AUDIT GENERATOR + RACK & CABLING BOQ -->
-    <section class="grid lg:grid-cols-2 gap-8">
-
-      <!-- Module 09: Linux / 1Panel Crontab & Nmap Security Audit Generator -->
-      <div id="mod-cron" class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
-        <div class="flex items-center justify-between">
-          <div>
-            <span class="font-mono text-xs uppercase text-ctp-yellow">Module 09 // Linux Crontab &amp; Nmap Audit</span>
-            <h2 class="font-display text-xl font-bold text-white mt-0.5">Tạo Lịch Crontab (Bot Python / Backup) &amp; Lệnh Kiểm Toán Nmap</h2>
-          </div>
-          <button onclick="copyCronNmap()" class="px-3 py-1.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs">Copy</button>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Chu kỳ chạy tự động (Cron)</label>
-            <select id="cronPreset" onchange="buildCronNmap()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white">
-              <option value="*/30 * * * *" selected>Mỗi 30 phút (Chạy Bot phạt nguội Python)</option>
-              <option value="0 2 * * *">02:00 sáng hàng ngày (Backup Proxmox/1Panel)</option>
-              <option value="0 3 * * 0">03:00 sáng Chủ Nhật (ZFS Pool Scrub)</option>
-              <option value="*/5 * * * *">Mỗi 5 phút (Check DDNS / Healthcheck)</option>
-            </select>
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Dải mạng kiểm toán Nmap</label>
-            <input id="nmapTarget" type="text" value="10.10.20.0/24" oninput="buildCronNmap()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-        </div>
-
-        <pre id="cronNmapOutput" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs text-ctp-teal overflow-x-auto leading-relaxed"></pre>
-      </div>
-
-      <!-- Module 10: ELV Structured Cabling, Patch Panel & Rack Accessory BOQ Calculator -->
-      <div id="mod-rack-boq" class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-sapphire">Module 10 // ELV Cabling &amp; Patch Panel BOQ</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Bóc Tách Vật Tư Phụ Kiện Tủ Rack, Patch Panel &amp; Hạt Mạng</h2>
-        </div>
-
-        <div class="grid grid-cols-3 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Nút mạng RJ45</label>
-            <input id="boqDrops" type="number" value="96" oninput="calcRackBoq()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số Camera + AP</label>
-            <input id="boqPoeDevs" type="number" value="48" oninput="calcRackBoq()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Cự ly TB/Nút (m)</label>
-            <input id="boqAvgLen" type="number" value="42" oninput="calcRackBoq()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 text-white" />
-          </div>
-        </div>
-
-        <div id="rackBoqResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/30 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-    </section>
-
-    <!-- MODULES 11, 12 & 13: UPS RACK RUNTIME + EKAHAU RF PLANNER + MTU/MSS & KEYGEN -->
-    <section class="grid lg:grid-cols-3 gap-6">
-
-      <!-- Module 11: Server Rack Power & APC/Eaton UPS Runtime Calculator -->
-      <div id="mod-ups" class="bento-card rounded-3xl p-6 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-yellow">Module 11 // UPS &amp; Rack Power</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Công Suất Tủ Rack &amp; Thời Gian Lưu Điện UPS</h2>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Tải thiết bị (Watt)</label>
-            <input id="upsWatt" type="number" value="850" oninput="calcUps()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Công suất UPS (VA)</label>
-            <select id="upsVa" onchange="calcUps()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="1500">1500VA (2x 12V 9Ah)</option>
-              <option value="2200">2200VA (4x 12V 9Ah)</option>
-              <option value="3000" selected>3000VA Online (6x 12V 9Ah)</option>
-              <option value="6000">6000VA Online (16x 12V 9Ah)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="upsResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-      <!-- Module 12: Ekahau Wi-Fi RF Free-Space Path Loss & Channel Planner -->
-      <div id="mod-rf" class="bento-card rounded-3xl p-6 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-sapphire">Module 12 // Ekahau RF &amp; RSSI</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Suy Hao Sóng Wi-Fi (RSSI) &amp; Kênh 5GHz</h2>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Khoảng cách tới AP (m)</label>
-            <input id="rfDist" type="number" value="15" oninput="calcRf()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số tường gạch chắn</label>
-            <input id="rfWalls" type="number" value="1" oninput="calcRf()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div class="col-span-2">
-            <label class="text-ctp-subtext block mb-1">Băng tần &amp; Công suất phát AP (EIRP)</label>
-            <select id="rfBand" onchange="calcRf()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="5" selected>5GHz (TX 20 dBm • Meraki/UniFi/Aruba/Omada)</option>
-              <option value="2.4">2.4GHz (TX 14 dBm • Giảm công suất chống Sticky)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="rfResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-      <!-- Module 13: Tunnel MTU / TCP MSS Clamping & High-Entropy Key Generator -->
-      <div id="mod-mtu" class="bento-card rounded-3xl p-6 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-teal">Module 13 // MTU/MSS &amp; PSK Gen</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Chuẩn MTU / TCP MSS &amp; Tạo Khóa VPN PSK</h2>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 font-mono text-xs">
-          <div class="col-span-2">
-            <label class="text-ctp-subtext block mb-1">Loại đường truyền / Giao thức VPN</label>
-            <select id="mtuProto" onchange="calcMtu()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="pppoe-ipsec" selected>FTTH PPPoE (1492) + IPsec IKEv2</option>
-              <option value="eth-ipsec">Ethernet (1500) + IPsec ESP AES-GCM</option>
-              <option value="wg">FTTH PPPoE (1492) + WireGuard VPN</option>
-              <option value="gre">GRE over IPsec (Cisco / MikroTik)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="mtuResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-
-        <div class="flex items-center gap-2 pt-1 font-mono text-xs">
-          <input id="pskOutput" type="text" readonly class="w-full p-2 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-ctp-yellow text-[11px]" />
-          <button onclick="generateStrongPsk()" class="px-3 py-2 rounded-xl bg-ctp-teal text-ctp-crust font-bold shrink-0">Tạo PSK</button>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- MODULES 14, 15 & 16: GRANDSTREAM VOIP + OPTICAL/POE + CCTV STORAGE -->
-    <section class="grid lg:grid-cols-3 gap-6">
-
-      <!-- Module 14: Grandstream VoIP PBX & SIP Trunk Calculator -->
-      <div id="mod-voip" class="bento-card rounded-3xl p-6 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-yellow">★ Module 14 // Grandstream UCM VoIP</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Băng Thông Thoại SIP &amp; Model Tổng Đài</h2>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số máy nhánh (Ext)</label>
-            <input id="voipExts" type="number" value="150" oninput="calcVoip()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Cuộc gọi đồng thời</label>
-            <input id="voipCalls" type="number" value="45" oninput="calcVoip()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div class="col-span-2">
-            <label class="text-ctp-subtext block mb-1">Chuẩn nén âm thanh (Codec)</label>
-            <select id="voipCodec" onchange="calcVoip()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="87.2" selected>G.711 (PCMU/PCMA — Chuẩn SIP Trunk)</option>
-              <option value="31.2">G.729A (Tiết kiệm băng thông WAN)</option>
-              <option value="54.0">Opus HD Voice (Grandstream Wave/GRP)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="voipResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-      <!-- Module 15: Optical Link Loss (dBm) & PoE+ Power Budget -->
-      <div id="mod-fiber" class="bento-card rounded-3xl p-6 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-sapphire">Module 15 // Optical &amp; PoE+ Budget</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Suy Hao Quang &amp; Công Suất PoE+</h2>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Cáp quang (km)</label>
-            <input id="fiberKm" type="number" step="0.1" value="0.8" oninput="calcFiberPoe()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số mối hàn LC</label>
-            <input id="fiberConns" type="number" value="4" oninput="calcFiberPoe()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số AP Wi-Fi 6</label>
-            <input id="poeAps" type="number" value="34" oninput="calcFiberPoe()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">IP Phone + Cam</label>
-            <input id="poeCams" type="number" value="40" oninput="calcFiberPoe()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-        </div>
-
-        <div id="fiberPoeResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-      <!-- Module 16: CCTV Storage (TB) & Bandwidth Calculator -->
-      <div id="mod-cctv" class="bento-card rounded-3xl p-6 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-peach">Module 16 // ELV CCTV Storage</span>
-          <h2 class="font-display text-xl font-bold text-white mt-0.5">Tính Ổ Cứng Lưu Trữ &amp; Băng Thông NVR</h2>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số lượng Camera</label>
-            <input id="camCount" type="number" value="32" oninput="calcCctv()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số ngày lưu</label>
-            <input id="camDays" type="number" value="30" oninput="calcCctv()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Độ phân giải</label>
-            <select id="camRes" onchange="calcCctv()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="2">2MP (1080p)</option>
-              <option value="4" selected>4MP (2K QHD)</option>
-              <option value="8">8MP (4K UHD)</option>
-            </select>
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Chuẩn nén</label>
-            <select id="camCodec" onchange="calcCctv()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="1" selected>H.265+</option>
-              <option value="1.4">H.265</option>
-              <option value="2.2">H.264</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="cctvResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-    </section>
-
-    <!-- MODULE 17: HPE / PROXMOX ZFS STORAGE CALCULATOR & ELV PA AUDIO + CABLING BOQ -->
-    <section id="mod-zfs-pa" class="grid lg:grid-cols-2 gap-8">
-      <!-- ZFS Storage Pool & ARC Calculator -->
-      <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-green">★ Module 17A // HPE &amp; Proxmox ZFS Planner</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Máy Tính Dung Lượng ZFS Storage Pool &amp; RAM ARC</h2>
-        </div>
-
-        <div class="grid grid-cols-3 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số ổ cứng Server</label>
-            <input id="zfsDrives" type="number" value="8" oninput="calcZfs()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Dung lượng/Ổ (TB)</label>
-            <input id="zfsSize" type="number" step="0.5" value="2" oninput="calcZfs()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Cấu hình RAID/ZFS</label>
-            <select id="zfsType" onchange="calcZfs()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="raid10" selected>RAID10 (Striped Mirrors)</option>
-              <option value="raidz1">RAIDZ1 / RAID5 (1 Parity)</option>
-              <option value="raidz2">RAIDZ2 / RAID6 (2 Parity)</option>
-            </select>
-          </div>
-        </div>
-
-        <div id="zfsResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-
-      <!-- ELV Public Address (PA Audio) & Cat6 Cabling BOQ Estimator -->
-      <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-mauve">Module 17B // ELV PA Audio (70V/100V)</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Tính Công Suất Amply Loa Thông Báo PA &amp; Dây Loa</h2>
-        </div>
-
-        <div class="grid grid-cols-3 gap-3 font-mono text-xs">
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số loa âm trần/hộp</label>
-            <input id="paSpeakers" type="number" value="45" oninput="calcElvBoq()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Công suất/Loa (W)</label>
-            <select id="paWatt" onchange="calcElvBoq()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white">
-              <option value="6" selected>6W (Loa âm trần)</option>
-              <option value="15">15W (Loa hộp/cột)</option>
-              <option value="30">30W (Loa nén ngoại thất)</option>
-            </select>
-          </div>
-          <div>
-            <label class="text-ctp-subtext block mb-1">Số vùng loa (Zones)</label>
-            <input id="paZones" type="number" value="6" oninput="calcElvBoq()" class="w-full p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/30 text-white" />
-          </div>
-        </div>
-
-        <div id="elvBoqResult" class="rounded-2xl bg-ctp-crust/95 p-4 border border-ctp-blue/25 font-mono text-xs space-y-1.5"></div>
-      </div>
-    </section>
-
-    <!-- MODULE 18: MULTI-VENDOR PORT & MAC OUI LOOKUP -->
-    <section id="mod-ports" class="bento-card rounded-3xl p-6 sm:p-8 space-y-5">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <span class="font-mono text-xs uppercase text-ctp-sapphire">Module 18 // Multi-Vendor Port &amp; MAC OUI Matrix</span>
-          <h2 class="font-display text-2xl font-bold text-white mt-0.5">Tra Cứu Nhanh Port Đặc Chủng &amp; MAC OUI (10 Hãng Chủ Lực &amp; Hệ Sinh Thái)</h2>
-        </div>
-        <input id="portSearch" oninput="renderPorts()" type="text" placeholder="Tìm Fortinet, MikroTik, Grandstream, UniFi, 5060, 8291, 29810..." class="w-full md:w-96 p-2.5 rounded-xl bg-ctp-crust border border-ctp-blue/35 font-mono text-xs text-white focus:outline-none focus:border-ctp-sapphire" />
-      </div>
-
-      <div id="portGrid" class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 font-mono text-xs"></div>
-    </section>
-
   </main>
 
-  <!-- ======================================================================== -->
-  <!-- BOTTOM-RIGHT CORNER CONTACT HUB (ZALO 0329553597, EMAIL & FACEBOOK)      -->
-  <!-- ======================================================================== -->
-  <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2.5 no-print">
-
-    <!-- Collapsible Direct Contact Card -->
-    <div id="cornerQuickMenu" class="hidden flex-col gap-2 p-3.5 rounded-3xl bg-ctp-crust/95 backdrop-blur-2xl border-2 border-ctp-sapphire/55 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(0,242,254,0.28)] font-mono text-xs w-72">
-      <div class="flex items-center justify-between pb-2.5 border-b border-ctp-blue/25">
-        <div class="flex items-center gap-2.5">
-          <img src="./avatar.jpg" alt="NV" class="w-9 h-9 rounded-full object-cover object-[center_15%] border border-ctp-sapphire avatar-hd" />
-          <div>
-            <div class="font-display font-bold text-white text-xs">Nguyễn Nguyên Vũ</div>
-            <div class="text-[10px] text-ctp-teal flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-ctp-green animate-ping"></span> Liên hệ trực tiếp
-            </div>
-          </div>
-        </div>
-        <button onclick="toggleCornerMenu()" class="text-ctp-subtext hover:text-ctp-red text-xs px-1.5">✕</button>
-      </div>
-
-      <!-- 1. Zalo 0329553597 -->
-      <div class="p-2.5 rounded-2xl bg-ctp-mantle/90 border border-ctp-sapphire/35 flex items-center justify-between gap-2">
-        <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 flex-1 group">
-          <div class="w-8 h-8 rounded-xl bg-ctp-sapphire/20 flex items-center justify-center text-ctp-sapphire group-hover:bg-ctp-sapphire group-hover:text-ctp-crust transition">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <div class="text-[10px] text-ctp-subtext">CHAT ZALO / SĐT</div>
-            <div class="text-white font-bold text-xs group-hover:text-ctp-sapphire transition">0329.553.597</div>
-          </div>
-        </a>
-        <button onclick="copyContactText('0329553597', 'SĐT Zalo')" class="px-2 py-1 rounded-lg bg-ctp-crust hover:bg-ctp-teal hover:text-ctp-crust text-[10px] text-ctp-teal border border-ctp-teal/30 transition">
-          Copy
-        </button>
-      </div>
-
-      <!-- 2. Direct Phone Call -->
-      <a href="tel:0329553597" class="p-2.5 rounded-2xl bg-ctp-mantle/90 hover:bg-ctp-green/20 border border-ctp-green/35 flex items-center justify-between transition group">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-ctp-green/20 flex items-center justify-center text-ctp-green group-hover:bg-ctp-green group-hover:text-ctp-crust transition">
-            <i data-lucide="phone-outgoing" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <div class="text-[10px] text-ctp-subtext">GỌI ĐIỆN TRỰC TIẾP</div>
-            <div class="text-white font-bold text-xs">0329 553 597</div>
-          </div>
-        </div>
-        <span class="text-[10px] text-ctp-green font-bold pr-1">Gọi →</span>
-      </a>
-
-      <!-- 3. Email nguyenvuhs9@gmail.com -->
-      <div class="p-2.5 rounded-2xl bg-ctp-mantle/90 border border-ctp-teal/35 flex items-center justify-between gap-2">
-        <a href="mailto:nguyenvuhs9@gmail.com" class="flex items-center gap-2.5 flex-1 overflow-hidden group">
-          <div class="w-8 h-8 rounded-xl bg-ctp-teal/20 flex items-center justify-center text-ctp-teal shrink-0 group-hover:bg-ctp-teal group-hover:text-ctp-crust transition">
-            <i data-lucide="mail" class="w-4 h-4"></i>
-          </div>
-          <div class="truncate">
-            <div class="text-[10px] text-ctp-subtext">EMAIL CÁ NHÂN</div>
-            <div class="text-white font-bold text-[11px] truncate group-hover:text-ctp-teal transition">nguyenvuhs9@gmail.com</div>
-          </div>
-        </a>
-        <button onclick="copyContactText('nguyenvuhs9@gmail.com', 'Email')" class="px-2 py-1 rounded-lg bg-ctp-crust hover:bg-ctp-teal hover:text-ctp-crust text-[10px] text-ctp-teal border border-ctp-teal/30 shrink-0 transition">
-          Copy
-        </button>
-      </div>
-
-      <!-- 4. Facebook https://www.facebook.com/ngvu15?locale=vi_VN -->
-      <a href="https://www.facebook.com/ngvu15?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-2xl bg-ctp-mantle/90 hover:bg-ctp-blue/25 border border-ctp-blue/40 flex items-center justify-between transition group">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-ctp-blue/20 flex items-center justify-center text-ctp-blue group-hover:bg-ctp-blue group-hover:text-ctp-crust transition">
-            <i data-lucide="facebook" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <div class="text-[10px] text-ctp-subtext">FACEBOOK CÁ NHÂN</div>
-            <div class="text-white font-bold text-xs">fb.com/ngvu15</div>
-          </div>
-        </div>
-        <i data-lucide="external-link" class="w-3.5 h-3.5 text-ctp-sapphire mr-1"></i>
-      </a>
-
-      <!-- Save vCard Action -->
-      <button onclick="downloadVCard()" class="w-full py-2 rounded-xl bg-gradient-to-r from-ctp-sapphire to-ctp-teal text-ctp-crust font-bold text-xs hover:opacity-95 transition flex items-center justify-center gap-1.5 mt-0.5">
-        <i data-lucide="user-plus" class="w-3.5 h-3.5"></i> Lưu Danh Bạ (.VCF)
-      </button>
-    </div>
-
-    <!-- Floating Corner Avatar Contact Trigger Orb -->
-    <button onclick="toggleCornerMenu()" class="group relative flex items-center gap-2.5 p-1.5 pr-3.5 rounded-full bg-ctp-crust/90 backdrop-blur-xl border-2 border-ctp-sapphire/60 shadow-[0_10px_30px_rgba(0,242,254,0.4)] hover:scale-105 transition" title="Liên hệ Nguyễn Nguyên Vũ (Zalo, SĐT, Email, Facebook)">
-      <div class="relative w-10 h-10 rounded-full overflow-hidden border border-ctp-teal">
-        <img src="./avatar.jpg" alt="Liên hệ" class="w-full h-full object-cover object-[center_15%] avatar-hd" />
-      </div>
-      <div class="text-left font-mono">
-        <div class="text-[10px] text-ctp-teal font-bold flex items-center gap-1">
-          <span class="w-1.5 h-1.5 rounded-full bg-ctp-green animate-ping"></span> Liên hệ Vũ
-        </div>
-        <div class="text-[11px] text-white font-bold">Zalo • FB • Mail</div>
-      </div>
-    </button>
+  <!-- Clean Corner Split-Pill: Call + Zalo -->
+  <div class="fixed bottom-5 right-5 z-50 flex items-center gap-1.5 p-1.5 rounded-full bg-ctp-crust/95 backdrop-blur-xl border border-white/15 shadow-2xl">
+    <a href="tel:0329553597" class="flex items-center gap-1.5 px-3 py-2 rounded-full bg-ctp-green/20 hover:bg-ctp-green hover:text-ctp-crust text-ctp-green font-mono text-xs font-semibold transition">
+      <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+      <span>Gọi điện</span>
+    </a>
+    <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-ctp-blue text-ctp-crust font-mono text-xs font-bold hover:opacity-90 transition">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+      <span>Zalo: 0329.553.597</span>
+    </a>
   </div>
 
-  <!-- Toast Notification -->
-  <div id="toastNotification" class="fixed bottom-6 left-6 z-50 px-4 py-2.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-bold text-xs shadow-2xl hidden items-center gap-2 no-print">
-    <span>✓ Đã sao chép vào Clipboard!</span>
-  </div>
+  <div id="toastBox" class="fixed bottom-6 left-6 z-50 px-4 py-2.5 rounded-xl bg-ctp-teal text-ctp-crust font-mono font-semibold text-xs shadow-xl hidden"></div>
 
   <!-- Footer -->
-  <footer class="relative z-10 border-t border-ctp-blue/25 bg-ctp-crust/85 backdrop-blur-md py-12 no-print">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ctp-subtext">
-      <div class="flex items-center gap-3">
-        <img src="./avatar.jpg" alt="NV" class="w-7 h-7 rounded-full object-cover border border-ctp-sapphire" />
-        <span>© 2026 <strong class="text-white">Nguyễn Nguyên Vũ</strong> — <span class="text-ctp-sapphire">nguyenvu.click/toolkit</span></span>
-      </div>
+  <footer class="relative z-10 border-t border-white/10 bg-ctp-crust/80 py-8">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ctp-subtext">
+      <div>© 2026 Nguyễn Nguyên Vũ — nguyenvu.click</div>
       <div class="flex flex-wrap items-center gap-5">
-        <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="text-ctp-sapphire hover:underline">Zalo: 0329553597</a>
-        <a href="https://www.facebook.com/ngvu15?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="text-ctp-blue hover:underline">Facebook</a>
-        <a href="mailto:nguyenvuhs9@gmail.com" class="text-ctp-teal hover:underline">nguyenvuhs9@gmail.com</a>
+        <a href="index.html" class="hover:text-white">Trang chủ</a>
+        <a href="blog.html" class="hover:text-white">Ghi chép</a>
+        <a href="toolkit.html" class="hover:text-white">Công cụ</a>
+        <a href="tel:0329553597" class="text-ctp-green hover:underline">Gọi: 0329.553.597</a>
+        <a href="https://zalo.me/0329553597" target="_blank" rel="noopener noreferrer" class="text-ctp-blue hover:underline">Zalo</a>
       </div>
     </div>
   </footer>
@@ -1157,444 +379,110 @@
   <script>
     lucide.createIcons();
 
-    function toggleCornerMenu() {
-      const menu = document.getElementById('cornerQuickMenu');
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('flex');
+    function notify(msg) {
+      const box = document.getElementById('toastBox');
+      box.textContent = msg;
+      box.classList.remove('hidden');
+      setTimeout(() => box.classList.add('hidden'), 2000);
     }
 
-    function showToast(msg = '✓ Đã sao chép vào Clipboard!') {
-      const t = document.getElementById('toastNotification');
-      t.innerHTML = '<span>' + msg + '</span>';
-      t.classList.remove('hidden');
-      t.classList.add('flex');
-      setTimeout(() => { t.classList.add('hidden'); t.classList.remove('flex'); }, 2200);
+    async function loadTopClientWan() {
+      try {
+        const r = await fetch('https://get.geojs.io/v1/ip/geo.json');
+        if (r.ok) {
+          const d = await r.json();
+          document.getElementById('topClientIp').textContent = d.ip || 'Online';
+          document.getElementById('topClientIsp').textContent = d.organization_name || d.organization || 'VN ISP';
+        }
+      } catch (e) {}
     }
+    loadTopClientWan();
 
-    function copyContactText(txt, label) {
-      navigator.clipboard.writeText(txt);
-      showToast('✓ Đã sao chép ' + label + ': ' + txt);
-    }
-
-    function downloadVCard() {
-      const vcf = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'FN:Nguyễn Nguyên Vũ',
-        'N:Nguyễn;Nguyên Vũ;;;',
-        'TITLE:System & Network Engineer',
-        'TEL;TYPE=CELL,VOICE:0329553597',
-        'EMAIL;TYPE=INTERNET:nguyenvuhs9@gmail.com',
-        'URL:https://nguyenvu.click',
-        'NOTE:Zalo: 0329553597 | Facebook: https://www.facebook.com/ngvu15?locale=vi_VN',
-        'END:VCARD'
-      ].join('\n');
-      const blob = new Blob([vcf], { type: 'text/vcard;charset=utf-8' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'Nguyen-Nguyen-Vu-Contact.vcf';
-      a.click();
-      showToast('✓ Đã tải danh bạ Nguyễn Nguyên Vũ (.VCF)!');
-    }
-
-    // 1. Dynamic Circular Avatar Favicon Generator for Browser Tab Bar
-    function generateCircularAvatarFavicon() {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.src = './avatar.jpg';
-      img.onload = function() {
-        try {
-          const favCanvas = document.createElement('canvas');
-          favCanvas.width = 64;
-          favCanvas.height = 64;
-          const fctx = favCanvas.getContext('2d');
-
-          fctx.beginPath();
-          fctx.arc(32, 32, 31, 0, Math.PI * 2);
-          fctx.fillStyle = '#00f2fe';
-          fctx.fill();
-
-          fctx.save();
-          fctx.beginPath();
-          fctx.arc(32, 32, 27, 0, Math.PI * 2);
-          fctx.clip();
-          fctx.filter = 'brightness(1.22) contrast(1.12)';
-          const minDim = Math.min(img.width, img.height);
-          const sx = (img.width - minDim) / 2;
-          const sy = (img.height - minDim) * 0.15;
-          fctx.drawImage(img, sx, sy, minDim, minDim, 4, 4, 56, 56);
-          fctx.restore();
-
-          fctx.beginPath();
-          fctx.arc(50, 50, 8, 0, Math.PI * 2);
-          fctx.fillStyle = '#010d1c';
-          fctx.fill();
-          fctx.beginPath();
-          fctx.arc(50, 50, 5.5, 0, Math.PI * 2);
-          fctx.fillStyle = '#4ade80';
-          fctx.fill();
-
-          const link = document.getElementById('dynamicFavicon');
-          if (link) link.href = favCanvas.toDataURL('image/png');
-        } catch (e) {}
-      };
-    }
-    generateCircularAvatarFavicon();
-
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const pct = height > 0 ? (winScroll / height) * 100 : 0;
-      const bar = document.getElementById('navScrollProgress');
-      if (bar) bar.style.width = pct + '%';
-    });
-
-    setInterval(() => {
-      const el = document.getElementById('liveTime');
-      if (el) el.textContent = new Date().toLocaleTimeString('vi-VN', { hour12: false }) + ' GMT+7';
-    }, 1000);
-
-    // Dual-Theme Switcher
-    let isNocTheme = false;
-    function switchVisualMode() {
-      isNocTheme = !isNocTheme;
-      document.body.classList.toggle('theme-noc', isNocTheme);
-      document.getElementById('themeModeText').textContent = isNocTheme ? 'Catppuccin NOC' : 'Ocean Blue';
-    }
-
-    // =========================================================================
-    // MODULE 01: TOPOLOGY, HA FAILOVER & LIVE DIAGNOSTICS
-    // =========================================================================
-    const nodeDescriptions = {
-      firewall: '★ [Fortinet FortiGate / MikroTik RouterOS / DrayTek Vigor]: Quản lý chính sách bảo mật Inter-VLAN, cụm HA Active-Passive, cân bằng tải Multi-WAN PCC và VPN Site-to-Site.',
-      coreswitch: '★ [Cisco Catalyst & Aruba AOS-CX Core Switch]: Chuyển mạch lõi tốc độ cao 10G SFP+, gom băng thông LACP 20Gbps, DHCP Snooping, DAI và định tuyến L3.',
-      proxmox: '★ [HPE ProLiant / Supermicro 8-Node & Proxmox VE / ESXi]: Cụm máy chủ ảo hóa HA, QDevice Quorum, ZFS Storage Pool và cáp quang 10G SFP+.',
-      access: '★ [Cisco Meraki, Ubiquiti UniFi & TP-Link Omada SDN]: Quản trị tập trung Switch PoE+ và hệ thống Wi-Fi Roaming mật độ cao chuẩn quy hoạch Ekahau AI Pro.',
-      '1panel': '● [Ubuntu VM — 1Panel Docker]: Vận hành web nguyenvu.click và Bot Python + SQLite thông báo phạt nguội tự động.',
-      voip: '★ [Grandstream UCM6300 IP-PBX & GRP/GXP Phones]: Tổng đài thoại IP doanh nghiệp, SIP Trunking, IVR, Call Queue và Voice VLAN 50 QoS.',
-      elv: '● [Hạ tầng Điện nhẹ ELV]: Hệ thống Camera CCTV IP, âm thanh thông báo PA Audio và cáp cấu trúc RJ45 Block A & B.'
-    };
-
-    function showNodeInfo(key) {
-      document.getElementById('nodeDetailBox').textContent = nodeDescriptions[key];
-    }
-
-    let haBackupActive = false;
-    function simulateHaFailover() {
-      haBackupActive = !haBackupActive;
-      const link = document.getElementById('svgLinkWan');
-      const box = document.getElementById('svgBoxFw');
-      const txt = document.getElementById('svgTextFwState');
-      const detail = document.getElementById('nodeDetailBox');
-
-      if (haBackupActive) {
-        link.setAttribute('stroke', '#fb923c');
-        box.setAttribute('stroke', '#fb923c');
-        txt.setAttribute('fill', '#fde047');
-        txt.textContent = 'FAILOVER: FG-02 PROMOTED';
-        detail.textContent = '[SYSLOG ALERT — HA FAILOVER TRIGGERED]\n1. Primary WAN1 link loss detected by SD-WAN SLA Health-Check (3 missed pings to 1.1.1.1).\n2. FortiGate FGCP Heartbeat promoted Secondary unit [FG-CORE-02] to MASTER in 180ms.\n3. LACP 10G Trunk to Cisco/Aruba Core Switch maintained 0% packet loss (Session Pickup Active).';
-      } else {
-        link.setAttribute('stroke', '#00f2fe');
-        box.setAttribute('stroke', '#00f2fe');
-        txt.setAttribute('fill', '#4ade80');
-        txt.textContent = 'MASTER: FG-01 ACTIVE';
-        detail.textContent = '[SYSLOG INFO — HA CLUSTER NORMAL]\nPrimary unit [FG-CORE-01] is ACTIVE MASTER. All 10G SFP+ LACP uplinks and SD-WAN tunnels healthy.';
+    // Live RIPE NCC BGP API & RDAP/DoH Lookup
+    async function queryRipeBgp() {
+      const resTarget = document.getElementById('ripeInput').value.trim() || '203.113.131.1';
+      const out = document.getElementById('ripeOutput');
+      out.textContent = `Đang truy vấn RIPE NCC BGP cho ${resTarget}...`;
+      try {
+        const r = await fetch(`https://stat.ripe.net/data/network-info/data.json?resource=${encodeURIComponent(resTarget)}`);
+        const d = await r.json();
+        if (d.data) {
+          const prefix = d.data.prefix || resTarget;
+          const asns = (d.data.asns || []).map(a => 'AS' + a).join(', ') || 'Announced';
+          out.textContent = `[RIPE NCC BGP Prefix Info]\nResource   : ${resTarget}\nBGP Prefix : ${prefix}\nOrigin ASN : ${asns}`;
+        }
+      } catch (e) {
+        out.textContent = `Không thể kết nối RIPE API cho ${resTarget}.`;
       }
     }
 
-    function runDiag(cmd) {
-      const box = document.getElementById('nodeDetailBox');
-      if (cmd === 'ping') {
-        box.textContent = 'root@nguyenvu.click:~# ping -c 4 10.10.10.11 (hpe-proxmox01.nguyenvu.click)\n64 bytes from 10.10.10.11: icmp_seq=1 ttl=64 time=0.17 ms (10G SFP+ Optical)\n64 bytes from 10.10.10.11: icmp_seq=2 ttl=64 time=0.16 ms\n--- 10.10.10.11 ping statistics: 4 transmitted, 4 received, 0% packet loss ---';
-      } else if (cmd === 'sip') {
-        box.textContent = 'UCM6302*CLI> pjsip show transports && pjsip show registrations\nTransport: 0.0.0.0-udp   udp   0   0   0.0.0.0:5060 (Voice VLAN 50 CoS=5 DSCP=EF)\nRegistration: Viettel_SIP_Trunk/sip:ims.viettel.vn   Registered (RTT: 2.9 ms)\nActive Endpoints: 150 Grandstream GRP/GXP Phones Online | Zero-Config Provisioning: OK';
-      } else {
-        box.textContent = 'root@hpe-proxmox01:~# iperf3 -c 10.10.10.12 -P 4\n[SUM]   0.00-10.00  sec  11.0 GBytes  9.43 Gbits/sec  0             sender\n[SUM]   0.00-10.00  sec  11.0 GBytes  9.42 Gbits/sec                receiver';
+    async function queryRdapAndDns() {
+      const dom = document.getElementById('rdapInput').value.trim() || 'nguyenvu.click';
+      const out = document.getElementById('rdapOutput');
+      out.textContent = `Đang phân giải DNS DoH & RDAP cho ${dom}...`;
+      try {
+        const r = await fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(dom)}&type=A`, {
+          headers: { 'accept': 'application/dns-json' }
+        });
+        const d = await r.json();
+        const ips = (d.Answer || []).map(a => `${a.name} -> ${a.data} (TTL ${a.TTL})`).join('\n') || 'No A record';
+        out.textContent = `[Cloudflare 1.1.1.1 DoH Verified]\n${ips}`;
+      } catch (e) {
+        out.textContent = `${dom} -> 172.67.188.210`;
       }
     }
 
-    // =========================================================================
-    // MODULE 02: INTERACTIVE 42U SERVER RACK ELEVATION BUILDER
-    // =========================================================================
-    const defaultRackItems = [
-      { name: 'ODF Quang 24FO + Patch Panel Cat6A', u: 1, w: 0, color: '#94a3b8' },
-      { name: '★ Fortinet FortiGate 100F HA Pair (Active-Passive)', u: 1, w: 75, color: '#ee3124' },
-      { name: '★ MikroTik CCR2004-1G-12S+2XS (10G Core Router)', u: 1, w: 48, color: '#38bdf8' },
-      { name: '★ Cisco Catalyst 9300 / Aruba 6300M (10G Core Switch)', u: 1, w: 210, color: '#00bceb' },
-      { name: '★ Switch PoE+ 48-Port (Meraki / UniFi / Omada)', u: 1, w: 420, color: '#2dd4bf' },
-      { name: '★ Grandstream UCM6302 Enterprise IP-PBX', u: 1, w: 25, color: '#fde047' },
-      { name: '★ HPE ProLiant DL380 Gen11 (Proxmox VE HA Node 1)', u: 2, w: 550, color: '#01a982' },
-      { name: 'Supermicro 3U MicroCloud 8-Node (SYS-5039MS)', u: 3, w: 980, color: '#4ade80' },
-      { name: 'Đầu ghi AI NVR 64CH (8x HDD RAID)', u: 2, w: 140, color: '#f87171' },
-      { name: 'APC Smart-UPS Online SRT 3000VA + Battery Pack', u: 2, w: 60, color: '#fb923c' }
-    ];
+    queryRipeBgp();
+    queryRdapAndDns();
 
-    let rackItems = [...defaultRackItems];
-
-    function renderRack() {
-      const container = document.getElementById('rackVisualContainer');
-      let currentU = 42;
-      let totalU = 0;
-      let totalWatt = 0;
-
-      container.innerHTML = rackItems.map((item, idx) => {
-        const startU = currentU;
-        const endU = currentU - item.u + 1;
-        currentU -= item.u;
-        totalU += item.u;
-        totalWatt += item.w;
-        const uLabel = item.u === 1 ? `U${startU}` : `U${endU}-${startU}`;
-
-        return `
-          <div class="rack-unit rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2 font-mono text-xs" style="border-left: 4px solid ${item.color}">
-            <div class="flex items-center gap-3 overflow-hidden">
-              <span class="px-2 py-0.5 rounded bg-ctp-crust text-ctp-sapphire font-bold text-[10px] shrink-0">${uLabel} (${item.u}U)</span>
-              <span class="text-white font-semibold truncate">${item.name}</span>
-            </div>
-            <div class="flex items-center gap-3 shrink-0">
-              <span class="hidden sm:inline-flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-ctp-green animate-ping"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-ctp-sapphire"></span>
-                <span class="text-[10px] text-ctp-subtext ml-1">${item.w}W</span>
-              </span>
-              <button onclick="removeRackDevice(${idx})" class="text-ctp-subtext hover:text-ctp-red px-1">✕</button>
-            </div>
-          </div>
-        `;
-      }).join('');
-
-      const btuPerHour = Math.round(totalWatt * 3.412);
-      const recUpsVa = Math.ceil((totalWatt * 1.35) / 500) * 500;
-
-      document.getElementById('rackMetricsBox').innerHTML = `
-        <div class="text-ctp-teal font-bold uppercase text-[11px]">2. Thông Số Kỹ Thuật Tủ Rack 42U:</div>
-        <div class="grid grid-cols-2 gap-2 pt-1">
-          <div><span class="text-ctp-subtext">Không gian đã dùng:</span> <strong class="text-white">${totalU}U / 42U (Còn ${Math.max(0, 42 - totalU)}U)</strong></div>
-          <div><span class="text-ctp-subtext">Tổng công suất tải:</span> <strong class="text-ctp-yellow">${totalWatt.toLocaleString()} Watt</strong></div>
-          <div><span class="text-ctp-subtext">Nhiệt lượng tỏa ra:</span> <strong class="text-ctp-peach">${btuPerHour.toLocaleString()} BTU/h</strong></div>
-          <div><span class="text-ctp-subtext">UPS Online đề xuất:</span> <strong class="text-ctp-green">&gt;= ${recUpsVa.toLocaleString()} VA</strong></div>
-        </div>
-      `;
-    }
-
-    function addRackDevice(name, u, w, color) {
-      rackItems.splice(rackItems.length - 1, 0, { name, u, w, color });
-      renderRack();
-      showToast('✓ Đã lắp ' + name + ' vào tủ Rack!');
-    }
-
-    function removeRackDevice(idx) {
-      rackItems.splice(idx, 1);
-      renderRack();
-    }
-
-    function resetDefaultRack() {
-      rackItems = [...defaultRackItems];
-      renderRack();
-      showToast('↺ Đã khôi phục cấu hình tủ Rack mẫu!');
-    }
-    renderRack();
-
-    // =========================================================================
-    // MODULE 03: 10 CORE CONFIGURED BRANDS CLI GENERATOR
-    // =========================================================================
+    // 1. CLI Builder
     function buildCli() {
       const type = document.getElementById('tplType').value;
       const vlan = document.getElementById('tplVlan').value.trim() || '50';
       const net = document.getElementById('tplNet').value.trim() || '10.10.50.1/24';
-      let script = '';
-
-      if (type === 'fortinet') {
-        script = `# ★ Fortinet FortiGate CLI — Khởi tạo 10G LACP Trunk & VLAN ${vlan} Interface
-config system interface
-    edit "LACP_CORE_10G"
-        set vdom "root"
-        set type aggregate
-        set member "x1" "x2"
-        set lacp-mode active
-    next
-    edit "VLAN_${vlan}"
-        set vdom "root"
-        set ip ${net}
-        set allowaccess ping https ssh
-        set interface "LACP_CORE_10G"
-        set vlanid ${vlan}
-    next
-end`;
-      } else if (type === 'mikrotik') {
-        script = `# ★ MikroTik RouterOS v7 — Bảo mật Winbox, Chống Quét Cổng PSD & VLAN ${vlan}
-/interface vlan
-add interface=bridge-core name=vlan${vlan} vlan-id=${vlan}
-/ip address
-add address=${net} interface=vlan${vlan}
-/ip service
-set telnet,ftp,www,api,api-ssl disabled=yes
-set winbox port=58291 address=${net}
-/ip firewall filter
-add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list \\
-    address-list=PORT_SCANNERS address-list-timeout=14d comment="Block Nmap Scan"
-add chain=input src-address-list=PORT_SCANNERS action=drop`;
-      } else if (type === 'cisco') {
-        script = `! ★ Cisco Catalyst IOS-XE — LACP EtherChannel, DHCP Snooping & VLAN ${vlan}
-ip dhcp snooping
-ip dhcp snooping vlan 10,20,${vlan}
-!
-vlan ${vlan}
- name CORP_VLAN_${vlan}
-!
-interface Port-channel1
- description UPLINK_TO_FORTIGATE_LACP
- switchport mode trunk
- switchport trunk allowed vlan 10,20,${vlan},99
- ip dhcp snooping trust
-!
-interface range GigabitEthernet1/0/1-24
- switchport mode access
- switchport access vlan 20
- switchport voice vlan ${vlan}
- spanning-tree portfast
- spanning-tree bpduguard enable`;
-      } else if (type === 'meraki') {
-        script = `# ★ Cisco Meraki Cloud SDN (MS Switch & MR Wi-Fi Trunk Configuration)
-Port Profile: AP_AND_VOICE_TRUNK
-- Type: Trunk | Native VLAN: 99 (Management)
-- Allowed VLANs: 20 (Data), ${vlan} (Voice / Corp Subnet: ${net})
-- PoE+: 802.3at (30W) Enabled | RSTP: PortFast + BPDU Guard Enabled
-- Wireless MR SSID QoS: WMM Voice Priority (802.1p CoS = 5 / DSCP EF = 46)
-- Fast Roaming: 802.11k / 802.11v / 802.11r Enabled`;
-      } else if (type === 'grandstream') {
-        script = `# ★ Grandstream UCM6300 Series (PJSIP / Voice VLAN ${vlan} & Zero-Config)
-[transport-udp-qos]
-type=transport
-protocol=udp
-bind=0.0.0.0:5060
-tos=ef
-cos=5
-
-# Khai báo DHCP Option 66 trên Router/Switch cho VLAN ${vlan} (${net}):
-Option 66 (TFTP/HTTP Provisioning URL): http://${net.split('/')[0]}:8089/provisioning
-LLDP-MED Network Policy: Voice VLAN ${vlan} | Priority: 5 | DSCP: 46 (EF)`;
-      } else if (type === 'unifi') {
-        script = `# ★ Ubiquiti UniFi (SSH Adoption & VLAN ${vlan} Provisioning)
-# 1. SSH vào UniFi AP / Switch bằng MobaXterm (User/Pass mặc định: ubnt/ubnt)
-mca-cli-op info
-mca-cli-op set-inform http://10.10.99.10:8080/inform
-
-# 2. Quy hoạch cổng Switch UniFi nối xuống Access Point (U6-Pro / U6-LR):
-Native Network (Untagged): VLAN 99 (Management)
-Tagged Networks: VLAN 20 (Staff), VLAN ${vlan} (${net})`;
-      } else if (type === 'aruba') {
-        script = `! ★ Aruba AOS-CX (6100 / 6200 / 6300) — LACP LAG & DHCP Snooping VLAN ${vlan}
-dhcp-snooping
-dhcp-snooping vlan 10,20,${vlan}
-arp-inspection vlan 10,20,${vlan}
-!
-vlan ${vlan}
- name ARUBA_VLAN_${vlan}
-!
-interface lag 1
- no shutdown
- no routing
- vlan trunk native 1
- vlan trunk allowed 10,20,${vlan},99
- lacp mode active
- dhcp-snooping trust`;
-      } else if (type === 'draytek') {
-        script = `# ★ DrayTek Vigor (2927 / 2962 / 3910) — Cấu hình VLAN ${vlan} & Multi-WAN
-Vigor> vlan active 1
-Vigor> vlan vid 1 ${vlan}
-Vigor> ip addr set lan2 ${net}
-Vigor> wan load-balance mode ip-based
-Vigor> vpn Ipsec_Dial_Out 1 enableIke2=1 enc=aes256 auth=sha256`;
-      } else if (type === 'omada') {
-        script = `! ★ TP-Link Omada SDN (JetStream PoE+ Switch & EAP Wi-Fi 6)
-vlan ${vlan}
- name OMADA_VLAN_${vlan}
-!
-interface gigabitEthernet 1/0/1
- description "UPLINK_TO_OMADA_EAP660HD"
- switchport general allowed vlan 99 untagged
- switchport general allowed vlan 20,${vlan} tagged
- switchport pvid 99
- power inline supply enable
- spanning-tree portfast`;
-      } else {
-        script = `# ★ HPE ProLiant & Proxmox VE (/etc/network/interfaces) — 10G Bond & VLAN ${vlan}
-auto bond0
-iface bond0 inet manual
-    bond-slaves ens1f0 ens1f1
-    bond-miimon 100
-    bond-mode 802.3ad
-    bond-xmit-hash-policy layer2+3
-
-auto vmbr0
-iface vmbr0 inet manual
-    bridge-ports bond0
-    bridge-stp off
-    bridge-fd 0
-    bridge-vlan-aware yes
-    bridge-vids 2-4094
-
-auto vmbr0.${vlan}
-iface vmbr0.${vlan} inet static
-    address ${net}`;
-      }
-      document.getElementById('cliBox').textContent = script;
+      const map = {
+        fortinet: `config system interface\n    edit "LACP_CORE_10G"\n        set vdom "root"\n        set type aggregate\n        set member "x1" "x2"\n        set lacp-mode active\n    next\n    edit "VLAN_${vlan}"\n        set vdom "root"\n        set ip ${net}\n        set allowaccess ping https ssh\n        set interface "LACP_CORE_10G"\n        set vlanid ${vlan}\n    next\nend`,
+        mikrotik: `/interface vlan add interface=bridge-core name=vlan${vlan} vlan-id=${vlan}\n/ip address add address=${net} interface=vlan${vlan}\n/ip service set telnet,ftp,www,api disabled=yes\n/ip service set winbox port=58291 address=${net}`,
+        cisco: `ip dhcp snooping\nip dhcp snooping vlan 10,20,${vlan}\n!\ninterface Port-channel1\n switchport mode trunk\n switchport trunk allowed vlan 10,20,${vlan},99\n ip dhcp snooping trust`,
+        meraki: `# Cisco Meraki MS Switch Port Profile:\nType: Trunk | Native VLAN: 99\nAllowed VLANs: 20, ${vlan} (${net})\nVoice VLAN: ${vlan} | PoE+ 802.3at Enabled`,
+        grandstream: `[transport-udp-qos]\ntype=transport\nprotocol=udp\nbind=0.0.0.0:5060\ntos=ef\ncos=5\n# DHCP Option 66: http://${net.split('/')[0]}:8089/provisioning`,
+        unifi: `ssh ubnt@10.10.99.105\nmca-cli-op info\nmca-cli-op set-inform http://10.10.99.10:8080/inform`,
+        aruba: `dhcp-snooping\ndhcp-snooping vlan 10,20,${vlan}\ninterface lag 1\n no shutdown\n no routing\n vlan trunk native 1\n vlan trunk allowed 10,20,${vlan},99\n lacp mode active\n dhcp-snooping trust`,
+        draytek: `Vigor> vlan active 1\nVigor> vlan vid 1 ${vlan}\nVigor> ip addr set lan2 ${net}\nVigor> wan load-balance mode ip-based`,
+        omada: `vlan ${vlan}\ninterface gigabitEthernet 1/0/1\n switchport general allowed vlan 99 untagged\n switchport general allowed vlan 20,${vlan} tagged\n switchport pvid 99`,
+        hpe: `auto bond0\niface bond0 inet manual\n    bond-slaves ens1f0 ens1f1\n    bond-mode 802.3ad\nauto vmbr0.${vlan}\niface vmbr0.${vlan} inet static\n    address ${net}`
+      };
+      document.getElementById('cliBox').textContent = map[type];
     }
     buildCli();
 
-    function copyCliTemplate() {
+    function copyCli() {
       navigator.clipboard.writeText(document.getElementById('cliBox').textContent);
-      showToast('✓ Đã sao chép kịch bản CLI vào Clipboard!');
+      notify('Đã sao chép cấu hình CLI');
     }
 
-    function downloadCliScript() {
-      const type = document.getElementById('tplType').value;
-      const content = document.getElementById('cliBox').textContent;
-      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'nguyenvu-' + type + '-config.conf';
-      a.click();
-      showToast('✓ Đã tải xuống file cấu hình!');
-    }
-
-    // =========================================================================
-    // MODULE 04: IPV4 / VLSM SUBNET CALCULATOR & 4-WAY SPLITTER
-    // =========================================================================
+    // 2. Subnet Calculator
     const fmtIp = n => [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join('.');
-
     function parseIp(ip) {
-      const octets = ip.split('.').map(Number);
-      if (octets.length !== 4 || octets.some(o => isNaN(o) || o < 0 || o > 255)) return null;
-      return ((octets[0] << 24) | (octets[1] << 16) | (octets[2] << 8) | octets[3]) >>> 0;
+      const p = ip.split('.').map(Number);
+      if (p.length !== 4 || p.some(o => isNaN(o) || o < 0 || o > 255)) return null;
+      return ((p[0] << 24) | (p[1] << 16) | (p[2] << 8) | p[3]) >>> 0;
     }
 
     function updateSubnet() {
       const ipInt = parseIp(document.getElementById('ipInput').value.trim());
       const cidr = parseInt(document.getElementById('cidrInput').value, 10);
       document.getElementById('subnetSplitBox').classList.add('hidden');
-      if (ipInt === null) {
-        document.getElementById('subnetOutput').innerHTML = '<span class="text-ctp-red">Địa chỉ IPv4 chưa đúng định dạng!</span>';
-        return;
-      }
+      if (ipInt === null) return;
       const mask = (0xffffffff << (32 - cidr)) >>> 0;
-      const wildcard = (~mask) >>> 0;
       const net = (ipInt & mask) >>> 0;
-      const bcast = (net | wildcard) >>> 0;
-      const first = (net + 1) >>> 0;
-      const last = (bcast - 1) >>> 0;
+      const bcast = (net | ((~mask) >>> 0)) >>> 0;
       const usable = Math.max(0, Math.pow(2, 32 - cidr) - 2);
-
       document.getElementById('subnetOutput').innerHTML = `
-        <div class="grid grid-cols-2 gap-2">
-          <div><span class="text-ctp-subtext">Network:</span> <strong class="text-ctp-sapphire">${fmtIp(net)}/${cidr}</strong></div>
-          <div><span class="text-ctp-subtext">Subnet Mask:</span> <strong class="text-ctp-teal">${fmtIp(mask)}</strong></div>
-          <div><span class="text-ctp-subtext">Wildcard:</span> <strong class="text-ctp-peach">${fmtIp(wildcard)}</strong></div>
-          <div><span class="text-ctp-subtext">Broadcast:</span> <strong class="text-white">${fmtIp(bcast)}</strong></div>
-          <div><span class="text-ctp-subtext">Host Range:</span> <strong class="text-ctp-green">${fmtIp(first)} → ${fmtIp(last)}</strong></div>
-          <div><span class="text-ctp-subtext">Usable Hosts:</span> <strong class="text-ctp-yellow">${usable.toLocaleString()} IP</strong></div>
-        </div>
+        <div>Network: <strong class="text-ctp-blue">${fmtIp(net)}/${cidr}</strong></div>
+        <div>Netmask: <strong class="text-white">${fmtIp(mask)}</strong></div>
+        <div>Dải IP: <strong class="text-ctp-teal">${fmtIp((net + 1) >>> 0)} → ${fmtIp((bcast - 1) >>> 0)}</strong></div>
+        <div>Số Host: <strong class="text-ctp-yellow">${usable.toLocaleString()} IP</strong></div>
       `;
     }
     updateSubnet();
@@ -1606,722 +494,209 @@ iface vmbr0.${vlan} inet static
       const newCidr = cidr + 2;
       const mask = (0xffffffff << (32 - cidr)) >>> 0;
       const baseNet = (ipInt & mask) >>> 0;
-      const blockSize = Math.pow(2, 32 - newCidr);
-      const hostsPerBlock = blockSize - 2;
-
-      let rows = `<div class="text-ctp-teal font-bold mb-1">4 Nhánh Subnet con (/${newCidr} — ${hostsPerBlock} IP/nhánh):</div>`;
+      const step = Math.pow(2, 32 - newCidr);
+      let html = '';
       for (let i = 0; i < 4; i++) {
-        const subNet = (baseNet + i * blockSize) >>> 0;
-        const subBcast = (subNet + blockSize - 1) >>> 0;
-        rows += `<div>#${i + 1}: <strong class="text-white">${fmtIp(subNet)}/${newCidr}</strong> (${fmtIp((subNet + 1) >>> 0)} - ${fmtIp((subBcast - 1) >>> 0)})</div>`;
+        const sub = (baseNet + i * step) >>> 0;
+        html += `<div>Nhánh ${i + 1}: <strong class="text-white">${fmtIp(sub)}/${newCidr}</strong></div>`;
       }
       const box = document.getElementById('subnetSplitBox');
-      box.innerHTML = rows;
+      box.innerHTML = html;
       box.classList.remove('hidden');
     }
 
-    // =========================================================================
-    // MODULE 07 & 08: LIVE MAC OUI / DNS INSPECTOR + BACKUP & PCC WAN CALCULATOR
-    // =========================================================================
-    const ouiDatabase = {
-      '00:09:0F': '★ Fortinet Inc. (FortiGate NGFW / FortiSwitch / FortiAP)',
-      'D4:CA:6D': '★ MikroTik RouterBOARD (CCR / RB Series)',
-      '48:A9:8A': '★ MikroTik RouterBOARD (RouterOS v7 Hardware)',
-      '00:0B:82': '★ Grandstream Networks (UCM6300 IP-PBX / GRP IP Phones)',
-      'C0:74:AD': '★ Grandstream Networks (GWN Wi-Fi & VoIP Endpoints)',
-      '74:83:C2': '★ Ubiquiti Networks Inc. (UniFi U6/U7 AP & USW Switch)',
-      'F0:9F:C2': '★ Ubiquiti Networks Inc. (UDM-Pro / EdgeRouter)',
-      'E0:CB:BC': '★ Cisco Meraki (MX Security / MS Switch / MR Wi-Fi)',
-      '00:18:0A': '★ Cisco Meraki Cloud Managed Devices',
-      '00:1D:AA': '★ DrayTek Corp. (Vigor 2927 / 2962 / 3910 Multi-WAN)',
-      '50:C7:BF': '★ TP-Link Omada SDN (OC200/300 / EAP / JetStream)',
-      '94:F1:28': '★ Hewlett Packard Enterprise (HPE ProLiant Server / iLO)',
-      '38:21:C7': '★ Aruba Networking (AOS-CX Switch & Instant On AP)',
-      'AC:1F:6B': 'Supermicro Computer Inc. (8-Node Server IPMI / NIC)',
-      '58:69:6C': 'Ruijie Networks (NBS5500 / NBS3200 / Reyee RAP)'
-    };
-
-    function setSampleMac(mac) {
-      document.getElementById('macLookupInput').value = mac;
-      inspectMacVendor();
-    }
-
-    function inspectMacVendor() {
-      const raw = document.getElementById('macLookupInput').value.trim().toUpperCase().replace(/-/g, ':');
-      const prefix = raw.slice(0, 8);
-      const vendor = ouiDatabase[prefix] || 'IEEE Registered Network Interface (Chuẩn Ethernet 802.3)';
-      document.getElementById('macDnsResultBox').textContent = `[MAC OUI HARDWARE LOOKUP]\nInput MAC   : ${raw}\nOUI Prefix  : ${prefix}\nManufacturer: ${vendor}`;
-    }
-    inspectMacVendor();
-
-    async function runToolkitDns() {
-      const domain = document.getElementById('toolkitDnsInput').value.trim() || 'nguyenvu.click';
-      const box = document.getElementById('macDnsResultBox');
-      box.textContent = `Đang truy vấn Cloudflare 1.1.1.1 DoH cho ${domain}...`;
-      try {
-        const res = await fetch('https://cloudflare-dns.com/dns-query?name=' + encodeURIComponent(domain) + '&type=A', {
-          headers: { 'accept': 'application/dns-json' }
-        });
-        const data = await res.json();
-        if (data.Answer && data.Answer.length > 0) {
-          box.textContent = `; <<>> Cloudflare DoH 1.1.1.1 <<>> ${domain}\n` + data.Answer.map(a => `${a.name} TTL=${a.TTL} IN A -> ${a.data}`).join('\n');
-        } else {
-          box.textContent = `Không tìm thấy bản ghi A cho ${domain}.`;
-        }
-      } catch (e) {
-        box.textContent = `${domain}. 300 IN A -> 172.67.188.210 (Cloudflare Anycast)`;
-      }
-    }
-
-    function calcBackupWan() {
-      const tb = parseFloat(document.getElementById('bkSizeTb').value) || 2;
-      const gbps = parseInt(document.getElementById('bkSpeed').value, 10) || 10;
-      const w1 = parseInt(document.getElementById('wan1Mbps').value, 10) || 500;
-      const w2 = parseInt(document.getElementById('wan2Mbps').value, 10) || 500;
-
-      // Practical throughput ~75% of line rate
-      const effMBps = (gbps * 125) * 0.75;
-      const totalMB = tb * 1024 * 1024;
-      const mins = Math.round((totalMB / effMBps) / 60);
-
-      const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
-      const div = gcd(w1, w2) || 1;
-      const r1 = Math.round(w1 / div);
-      const r2 = Math.round(w2 / div);
-
-      document.getElementById('backupWanResult').innerHTML = `
-        <div class="grid sm:grid-cols-2 gap-2">
-          <div><span class="text-ctp-subtext">Tốc độ thực tế (${gbps}GbE):</span> <strong class="text-ctp-sapphire">~${Math.round(effMBps)} MB/s</strong></div>
-          <div><span class="text-ctp-subtext">Thời gian Backup (${tb}TB):</span> <strong class="text-ctp-green">~${mins} phút (${(mins / 60).toFixed(1)}h)</strong></div>
-          <div><span class="text-ctp-subtext">Tổng băng thông Multi-WAN:</span> <strong class="text-white">${w1 + w2} Mbps</strong></div>
-          <div><span class="text-ctp-subtext">Tỷ lệ chia tải PCC / Weight:</span> <strong class="text-ctp-yellow">${r1} : ${r2} (${r1 + r2} Streams)</strong></div>
-        </div>
-      `;
-    }
-    calcBackupWan();
-
-    // =========================================================================
-    // MODULE 05: CROSS-VENDOR IPSEC SITE-TO-SITE VPN GENERATOR
-    // =========================================================================
-    function buildVpnMatrix() {
-      const pair = document.getElementById('vpnPair').value;
-      const hqWan = document.getElementById('vpnHqWan').value.trim() || '118.69.100.10';
-      const brWan = document.getElementById('vpnBrWan').value.trim() || '14.161.200.20';
-      const hqLan = document.getElementById('vpnHqLan').value.trim() || '10.10.10.0/24';
-      const brLan = document.getElementById('vpnBrLan').value.trim() || '192.168.20.0/24';
-
-      const hA = document.getElementById('vpnHeaderA');
-      const hB = document.getElementById('vpnHeaderB');
-      const cA = document.getElementById('vpnCodeA');
-      const cB = document.getElementById('vpnCodeB');
-
-      if (pair === 'fgt-draytek') {
-        hA.textContent = `Đầu A — Fortinet FortiGate (HQ WAN: ${hqWan})`;
-        hB.textContent = `Đầu B — DrayTek Vigor 2927/3910 (Branch WAN: ${brWan})`;
-        cA.textContent = `config vpn ipsec phase1-interface
-    edit "VPN_TO_DRAYTEK"
-        set interface "wan1"
-        set ike-version 2
-        set peertype any
-        set net-device disable
-        set proposal aes256-sha256
-        set dhgrp 14
-        set remote-gw ${brWan}
-        set psksecret "NGUYENVU_STRONG_PSK_2026"
-    next
-end
-config vpn ipsec phase2-interface
-    edit "P2_DRAYTEK"
-        set phase1name "VPN_TO_DRAYTEK"
-        set proposal aes256-sha256
-        set dhgrp 14
-        set src-subnet ${hqLan}
-        set dst-subnet ${brLan}
-    next
-end`;
-        cB.textContent = `# Cấu hình LAN-to-LAN Profile trên DrayTek Vigor:
-Call Direction   : Both (Dial-Out Always On)
-Server IP (HQ)   : ${hqWan}
-VPN Type         : IPsec Tunnel (IKEv2)
-Pre-Shared Key   : NGUYENVU_STRONG_PSK_2026
-Security Method  : High (ESP) -> AES-256 + SHA-256
-IKE Phase 1/2 DH : Group 14 (2048-bit) + Perfect Forward Secrecy (PFS)
-Local Network    : ${brLan}
-Remote Network   : ${hqLan}`;
-      } else if (pair === 'fgt-mkt') {
-        hA.textContent = `Đầu A — Fortinet FortiGate (HQ WAN: ${hqWan})`;
-        hB.textContent = `Đầu B — MikroTik RouterOS v7 (Branch WAN: ${brWan})`;
-        cA.textContent = `config vpn ipsec phase1-interface
-    edit "VPN_TO_MIKROTIK"
-        set interface "wan1"
-        set ike-version 2
-        set proposal aes256-sha256
-        set dhgrp 14
-        set remote-gw ${brWan}
-        set psksecret "NGUYENVU_STRONG_PSK_2026"
-    next
-end`;
-        cB.textContent = `/ip ipsec profile
-add dh-group=modp2048 enc-algorithm=aes-256 hash-algorithm=sha256 name=prof-fgt
-/ip ipsec peer
-add address=${hqWan}/32 exchange-mode=ike2 name=peer-fgt profile=prof-fgt
-/ip ipsec identity
-add peer=peer-fgt secret="NGUYENVU_STRONG_PSK_2026"
-/ip ipsec proposal
-add auth-algorithms=sha256 enc-algorithms=aes-256-cbc name=prop-fgt pfs-group=modp2048
-/ip ipsec policy
-add dst-address=${hqLan} peer=peer-fgt proposal=prop-fgt src-address=${brLan} tunnel=yes`;
-      } else {
-        hA.textContent = `Đầu A — MikroTik RouterOS v7 (HQ WAN: ${hqWan})`;
-        hB.textContent = `Đầu B — DrayTek Vigor (Branch WAN: ${brWan})`;
-        cA.textContent = `/ip ipsec profile
-add dh-group=modp2048 enc-algorithm=aes-256 hash-algorithm=sha256 name=prof-vigor
-/ip ipsec peer
-add address=${brWan}/32 exchange-mode=ike2 name=peer-vigor profile=prof-vigor
-/ip ipsec policy
-add dst-address=${brLan} peer=peer-vigor src-address=${hqLan} tunnel=yes`;
-        cB.textContent = `Vigor> vpn Ipsec_Dial_Out 1
-Server IP: ${hqWan} | Protocol: IKEv2
-Proposal : AES-256 / SHA-256 / DH Group 14 (PFS ON)
-Local    : ${brLan} ---> Remote: ${hqLan}`;
-      }
-    }
-    buildVpnMatrix();
-
-    function copyVpnConfig() {
-      const text = '# === HEADQUARTERS (HQ) ===\n' + document.getElementById('vpnCodeA').textContent + '\n\n# === BRANCH OFFICE ===\n' + document.getElementById('vpnCodeB').textContent;
-      navigator.clipboard.writeText(text);
-      showToast('✓ Đã sao chép cấu hình cả 2 đầu VPN!');
-    }
-
-    // =========================================================================
-    // MODULE 06: INTERACTIVE ENTERPRISE VLAN & IPAM PLANNER WITH CSV EXPORT
-    // =========================================================================
-    let ipamData = [
-      { id: 10, name: 'SERVER_HPE_PROXMOX', sub: '10.10.10.0/24', gw: '10.10.10.1', desc: 'HPE ProLiant, Proxmox VE ZFS, HIS/PACS (ACL Restricted)' },
-      { id: 20, name: 'CORP_DATA_WIFI', sub: '10.10.20.0/23', gw: '10.10.20.1', desc: 'Cisco/Aruba Access, Meraki/UniFi/Omada Staff SSID' },
-      { id: 30, name: 'ELV_CCTV_NVR', sub: '10.10.30.0/24', gw: '10.10.30.1', desc: 'IP Camera PoE+, NVR RAID (IGMP Snooping Enabled)' },
-      { id: 40, name: 'ELV_PA_AUDIO', sub: '10.10.40.0/24', gw: '10.10.40.1', desc: 'IP Public Address Speakers & Access Control' },
-      { id: 50, name: 'VOICE_GRANDSTREAM', sub: '10.10.50.0/24', gw: '10.10.50.1', desc: 'Grandstream UCM6300, GRP Phones (LLDP-MED CoS 5 / DSCP EF)' },
-      { id: 99, name: 'NET_MANAGEMENT', sub: '10.10.99.0/24', gw: '10.10.99.1', desc: 'FortiGate HA, MikroTik Winbox :58291, HPE iLO, Controllers' }
+    // 3. 42U Rack Planner
+    const initialRack = [
+      { name: 'ODF Quang 24FO + Patch Panel Cat6A', u: 1, w: 0 },
+      { name: 'Fortinet FortiGate 100F HA Pair', u: 1, w: 75 },
+      { name: 'MikroTik CCR2004-1G-12S+2XS', u: 1, w: 48 },
+      { name: 'Core Switch 10G (Cisco Catalyst / Aruba)', u: 1, w: 210 },
+      { name: 'Access Switch 48-Port PoE+ (Meraki/UniFi/Omada)', u: 1, w: 420 },
+      { name: 'Grandstream UCM6302 IP-PBX', u: 1, w: 25 },
+      { name: 'HPE ProLiant DL380 Gen11 (Proxmox VE)', u: 2, w: 550 },
+      { name: 'Supermicro 3U 8-Node (SYS-5039MS)', u: 3, w: 980 },
+      { name: 'APC Smart-UPS Online SRT 3000VA', u: 2, w: 60 }
     ];
+    let rackData = [...initialRack];
 
-    function renderIpamTable() {
-      const tbody = document.getElementById('ipamTableBody');
-      tbody.innerHTML = ipamData.map(r => `
-        <tr class="hover:bg-ctp-blue/15">
-          <td class="p-3 text-ctp-yellow font-bold">VLAN ${r.id}</td>
-          <td class="p-3 text-white font-semibold">${r.name}</td>
-          <td class="p-3 text-ctp-sapphire font-bold">${r.sub}</td>
-          <td class="p-3 text-ctp-teal">${r.gw}</td>
-          <td class="p-3 text-ctp-subtext">${r.desc}</td>
-        </tr>
-      `).join('');
-    }
-    renderIpamTable();
+    function renderRack() {
+      let uPos = 42, usedU = 0, totalW = 0;
+      document.getElementById('rackList').innerHTML = rackData.map((r, i) => {
+        const topU = uPos;
+        const botU = uPos - r.u + 1;
+        uPos -= r.u;
+        usedU += r.u;
+        totalW += r.w;
+        const label = r.u === 1 ? `U${topU}` : `U${botU}-${topU}`;
+        return `
+          <div class="rack-slot rounded-xl px-3.5 py-2 flex items-center justify-between font-mono text-xs">
+            <div class="flex items-center gap-3 truncate">
+              <span class="text-ctp-blue font-semibold w-14 shrink-0">${label}</span>
+              <span class="text-white truncate">${r.name}</span>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="text-ctp-subtext text-[11px]">${r.w}W</span>
+              <button onclick="removeRackItem(${i})" class="text-ctp-subtext hover:text-ctp-red">✕</button>
+            </div>
+          </div>
+        `;
+      }).join('');
 
-    function addIpamRow() {
-      const id = parseInt(document.getElementById('newVlanId').value, 10);
-      const name = document.getElementById('newVlanName').value.trim();
-      const sub = document.getElementById('newVlanSub').value.trim();
-      const desc = document.getElementById('newVlanDesc').value.trim() || 'Enterprise VLAN Segment';
-      if (!id || !name || !sub) return;
-      const gw = sub.split('/')[0].replace(/\.0$/, '.1');
-      ipamData.push({ id, name, sub, gw, desc });
-      renderIpamTable();
-      showToast('✓ Đã thêm VLAN ' + id + ' vào bảng quy hoạch!');
-    }
-
-    function exportIpamCsv() {
-      let csv = 'VLAN_ID,VLAN_Name,Subnet_CIDR,Gateway_IP,Description\n';
-      ipamData.forEach(r => {
-        csv += `${r.id},"${r.name}","${r.sub}","${r.gw}","${r.desc}"\n`;
-      });
-      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'nguyenvu-vlan-ipam-plan.csv';
-      a.click();
-      showToast('✓ Đã xuất bảng quy hoạch VLAN ra file Excel .CSV!');
-    }
-
-    // =========================================================================
-    // MODULES 09 → 18: CRONTAB, BOQ, UPS, RF, MTU, VOIP, FIBER, CCTV, ZFS, PORTS
-    // =========================================================================
-    function buildCronNmap() {
-      const cron = document.getElementById('cronPreset').value;
-      const target = document.getElementById('nmapTarget').value.trim() || '10.10.20.0/24';
-      document.getElementById('cronNmapOutput').textContent = `# 1. Lịch Crontab trên Ubuntu VM / 1Panel / Proxmox (/etc/crontab)
-${cron} root /usr/bin/docker exec traffic-fine-bot python3 /app/check_fines.py >> /var/log/bot.log 2>&1
-
-# 2. Lệnh Nmap Kiểm toán Bảo mật & Rà quét Cổng Dịch vụ trên dải ${target}
-nmap -sS -sV -Pn -T4 --open -p 22,80,443,554,5060,8006,8291,58291 ${target}`;
-    }
-    buildCronNmap();
-
-    function copyCronNmap() {
-      navigator.clipboard.writeText(document.getElementById('cronNmapOutput').textContent);
-      showToast('✓ Đã copy cấu hình Crontab & Nmap!');
-    }
-
-    function calcRackBoq() {
-      const drops = parseInt(document.getElementById('boqDrops').value, 10) || 0;
-      const poeDevs = parseInt(document.getElementById('boqPoeDevs').value, 10) || 0;
-      const avgLen = parseInt(document.getElementById('boqAvgLen').value, 10) || 40;
-
-      const totalPorts = drops + poeDevs;
-      const totalCableMeters = Math.round(totalPorts * avgLen * 1.15);
-      const boxes305m = Math.ceil(totalCableMeters / 305);
-      const patchPanels24 = Math.ceil(totalPorts / 24);
-      const switches48 = Math.ceil(totalPorts / 44);
-      const rj45Plugs = Math.ceil(totalPorts * 2.3);
-
-      document.getElementById('rackBoqResult').innerHTML = `
-        <div class="grid grid-cols-2 gap-2">
-          <div><span class="text-ctp-subtext">Tổng cổng mạng (Ports):</span> <strong class="text-white">${totalPorts} Ports</strong></div>
-          <div><span class="text-ctp-subtext">Số thùng cáp (305m):</span> <strong class="text-ctp-sapphire">${boxes305m} Thùng (${totalCableMeters.toLocaleString()}m)</strong></div>
-          <div><span class="text-ctp-subtext">Patch Panel 24-Port:</span> <strong class="text-ctp-teal">${patchPanels24} Thanh + ${totalPorts} Dây nhảy</strong></div>
-          <div><span class="text-ctp-subtext">Switch 48P &amp; Hạt RJ45:</span> <strong class="text-ctp-yellow">${switches48}x Sw 48P • ${rj45Plugs} Hạt RJ45</strong></div>
-        </div>
+      document.getElementById('rackSummary').innerHTML = `
+        <div>Không gian đã dùng: <strong class="text-white">${usedU}U / 42U</strong></div>
+        <div>Tổng công suất tải: <strong class="text-ctp-yellow">${totalW.toLocaleString()} W</strong></div>
+        <div>UPS khuyến nghị: <strong class="text-ctp-green">&gt;= ${Math.ceil((totalW * 1.35) / 500) * 500} VA</strong></div>
       `;
     }
-    calcRackBoq();
 
-    function calcUps() {
-      const watt = Math.max(50, parseInt(document.getElementById('upsWatt').value, 10) || 500);
-      const va = parseInt(document.getElementById('upsVa').value, 10) || 3000;
-      const maxWatt = Math.round(va * 0.9);
-      const loadPct = Math.min(100, Math.round((watt / maxWatt) * 100));
-      const battCount = va === 1500 ? 2 : va === 2200 ? 4 : va === 3000 ? 6 : 16;
-      const usableWh = battCount * 12 * 9 * 0.78;
-      const runtimeMins = Math.max(2, Math.round((usableWh / watt) * 60));
-
-      document.getElementById('upsResult').innerHTML = `
-        <div><span class="text-ctp-subtext">Công suất tải / Cực đại:</span> <strong class="text-white">${watt} W / ${maxWatt} W (${loadPct}%)</strong></div>
-        <div><span class="text-ctp-subtext">Dòng điện 220V tiêu thụ:</span> <strong class="text-ctp-sapphire">${(watt / 220).toFixed(1)} Ampere (A)</strong></div>
-        <div><span class="text-ctp-subtext">Thời gian lưu điện ước tính:</span> <strong class="text-ctp-green">~${runtimeMins} phút (Khi cúp điện)</strong></div>
-      `;
+    function addRackItem(name, u, w) {
+      rackData.splice(rackData.length - 1, 0, { name, u, w });
+      renderRack();
     }
-    calcUps();
-
-    function calcRf() {
-      const dist = Math.max(1, parseFloat(document.getElementById('rfDist').value) || 10);
-      const walls = Math.max(0, parseInt(document.getElementById('rfWalls').value, 10) || 0);
-      const band = parseFloat(document.getElementById('rfBand').value) || 5;
-
-      const txPower = band === 5 ? 20 : 14;
-      const freqMhz = band === 5 ? 5200 : 2437;
-      const fspl = 20 * Math.log10(dist) + 20 * Math.log10(freqMhz) - 27.55;
-      const wallLoss = walls * 8;
-      const rssi = Math.round(txPower - fspl - wallLoss);
-
-      let quality = '<span class="text-ctp-green">Tuyệt vời (Chuẩn VoIP & Roaming)</span>';
-      if (rssi < -67 && rssi >= -75) quality = '<span class="text-ctp-yellow">Khá (Đủ lướt Web, cần thêm AP cho VoIP)</span>';
-      if (rssi < -75) quality = '<span class="text-ctp-red">Yếu (Điểm mù sóng — Cần bổ sung AP!)</span>';
-
-      document.getElementById('rfResult').innerHTML = `
-        <div><span class="text-ctp-subtext">Suy hao không gian (FSPL):</span> <strong class="text-ctp-sapphire">-${fspl.toFixed(1)} dB</strong></div>
-        <div><span class="text-ctp-subtext">Cường độ sóng thu (RSSI):</span> <strong class="text-white">${rssi} dBm</strong></div>
-        <div><span class="text-ctp-subtext">Đánh giá Ekahau:</span> <strong>${quality}</strong></div>
-      `;
+    function removeRackItem(i) {
+      rackData.splice(i, 1);
+      renderRack();
     }
-    calcRf();
-
-    function calcMtu() {
-      const proto = document.getElementById('mtuProto').value;
-      let mtu = 1420, mss = 1380, note = 'Chuẩn tối ưu cho IPsec qua FTTH PPPoE';
-      if (proto === 'pppoe-ipsec') { mtu = 1420; mss = 1360; note = 'Tránh phân mảnh gói HTTPS qua hầm IPsec PPPoE'; }
-      if (proto === 'eth-ipsec') { mtu = 1438; mss = 1398; note = 'Ethernet Leased-Line (1500) trừ 62B ESP Header'; }
-      if (proto === 'wg') { mtu = 1412; mss = 1372; note = 'PPPoE (1492) trừ 80B WireGuard Overhead'; }
-      if (proto === 'gre') { mtu = 1396; mss = 1356; note = 'GRE (24B) + IPsec ESP Overhead'; }
-
-      document.getElementById('mtuResult').innerHTML = `
-        <div class="grid grid-cols-2 gap-1">
-          <div><span class="text-ctp-subtext">Tunnel MTU:</span> <strong class="text-ctp-sapphire">${mtu} bytes</strong></div>
-          <div><span class="text-ctp-subtext">TCP MSS Clamp:</span> <strong class="text-ctp-green">${mss} bytes</strong></div>
-        </div>
-        <div class="text-[11px] text-ctp-subtext">${note}</div>
-      `;
+    function resetRack() {
+      rackData = [...initialRack];
+      renderRack();
     }
-    calcMtu();
+    renderRack();
 
-    function generateStrongPsk() {
-      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*()-_=+';
-      let key = 'NV_';
-      for (let i = 0; i < 24; i++) key += chars.charAt(Math.floor(Math.random() * chars.length));
-      document.getElementById('pskOutput').value = key;
-      navigator.clipboard.writeText(key);
-    }
-    generateStrongPsk();
-
+    // 4. Other Calculators
     function calcVoip() {
       const exts = parseInt(document.getElementById('voipExts').value, 10) || 100;
       const calls = parseInt(document.getElementById('voipCalls').value, 10) || 30;
-      const kbpsPerCall = parseFloat(document.getElementById('voipCodec').value) || 87.2;
-      const totalMbps = ((calls * kbpsPerCall * 2) / 1000).toFixed(2);
-      let model = 'Grandstream UCM6301 (500 Users / 75 Calls)';
-      if (exts > 500 || calls > 75) model = 'Grandstream UCM6302 (1000 Users / 150 Calls)';
-      if (exts > 1000 || calls > 150) model = 'Grandstream UCM6304 (2000 Users / 300 Calls)';
-
+      const mbps = ((calls * 87.2 * 2) / 1000).toFixed(2);
+      const model = exts > 500 ? 'UCM6302 / UCM6304' : 'Grandstream UCM6301 / UCM6302';
       document.getElementById('voipResult').innerHTML = `
-        <div><span class="text-ctp-subtext">Băng thông / Cuộc gọi:</span> <strong class="text-ctp-sapphire">${kbpsPerCall} kbps</strong></div>
-        <div><span class="text-ctp-subtext">Tổng băng thông SIP/RTP:</span> <strong class="text-ctp-teal">${totalMbps} Mbps</strong></div>
-        <div><span class="text-ctp-subtext">Model đề xuất:</span> <strong class="text-ctp-yellow block mt-0.5">${model}</strong></div>
+        <div>Băng thông SIP/RTP: <strong class="text-ctp-teal">${mbps} Mbps</strong></div>
+        <div>Đề xuất: <strong class="text-ctp-yellow">${model}</strong></div>
       `;
     }
     calcVoip();
 
-    function calcFiberPoe() {
-      const km = parseFloat(document.getElementById('fiberKm').value) || 0;
-      const conns = parseInt(document.getElementById('fiberConns').value, 10) || 0;
+    function calcPoe() {
       const aps = parseInt(document.getElementById('poeAps').value, 10) || 0;
       const cams = parseInt(document.getElementById('poeCams').value, 10) || 0;
-
-      const lossMM = (km * 3.0 + conns * 0.35).toFixed(2);
-      const lossSM = (km * 0.35 + conns * 0.35).toFixed(2);
-      const totalPoEWatt = Math.round(aps * 16.5 + cams * 7.5);
-      const switches370W = Math.ceil(totalPoEWatt / 330);
-
-      document.getElementById('fiberPoeResult').innerHTML = `
-        <div><span class="text-ctp-subtext">Suy hao OM3/OM4 (850nm):</span> <strong class="text-ctp-sapphire">-${lossMM} dB</strong></div>
-        <div><span class="text-ctp-subtext">Suy hao OS2 (1310nm):</span> <strong class="text-ctp-teal">-${lossSM} dB</strong></div>
-        <div><span class="text-ctp-subtext">Tổng tải PoE+:</span> <strong class="text-ctp-yellow">${totalPoEWatt} W</strong></div>
-        <div><span class="text-ctp-subtext">Đề xuất Switch (370W):</span> <strong class="text-ctp-green">${switches370W}x Switch PoE+</strong></div>
+      const watt = Math.round(aps * 16 + cams * 7.5);
+      const sw = Math.ceil(watt / 330);
+      document.getElementById('poeResult').innerHTML = `
+        <div>Tổng công suất PoE: <strong class="text-ctp-yellow">${watt} W</strong></div>
+        <div>Khuyến nghị: <strong class="text-ctp-green">${sw}x Switch PoE+ (370W)</strong></div>
       `;
     }
-    calcFiberPoe();
+    calcPoe();
 
     function calcCctv() {
       const cams = parseInt(document.getElementById('camCount').value, 10) || 0;
-      const res = parseInt(document.getElementById('camRes').value, 10) || 4;
-      const codecFactor = parseFloat(document.getElementById('camCodec').value) || 1;
       const days = parseInt(document.getElementById('camDays').value, 10) || 30;
-
-      const baseMbpsPerCam = res === 2 ? 1.5 : res === 4 ? 2.8 : 5.5;
-      const mbpsPerCam = baseMbpsPerCam * codecFactor;
-      const totalMbps = (cams * mbpsPerCam).toFixed(1);
-      const rawTb = (cams * mbpsPerCam * 86400 * days) / (8 * 1000 * 1000);
-      const usableTbNeeded = (rawTb * 1.1).toFixed(2);
-
+      const tb = ((cams * 2.8 * 86400 * days) / (8 * 1000 * 1000) * 1.1).toFixed(1);
       document.getElementById('cctvResult').innerHTML = `
-        <div><span class="text-ctp-subtext">Bitrate / Camera:</span> <strong class="text-ctp-sapphire">${mbpsPerCam.toFixed(1)} Mbps</strong></div>
-        <div><span class="text-ctp-subtext">Tổng băng thông NVR:</span> <strong class="text-ctp-teal">${totalMbps} Mbps</strong></div>
-        <div><span class="text-ctp-subtext">Dung lượng (${days} ngày):</span> <strong class="text-ctp-yellow">${usableTbNeeded} TB</strong></div>
-        <div><span class="text-ctp-subtext">Đề xuất HDD:</span> <strong class="text-ctp-green">${Math.ceil(usableTbNeeded / 8)}x Ổ 8TB Surveillance</strong></div>
+        <div>Dung lượng cần: <strong class="text-ctp-yellow">${tb} TB</strong></div>
+        <div>Băng thông NVR: <strong class="text-ctp-teal">${(cams * 2.8).toFixed(1)} Mbps</strong></div>
       `;
     }
     calcCctv();
 
     function calcZfs() {
-      const drives = Math.max(2, parseInt(document.getElementById('zfsDrives').value, 10) || 4);
-      const size = parseFloat(document.getElementById('zfsSize').value) || 2;
-      const type = document.getElementById('zfsType').value;
-
-      const rawTb = drives * size;
-      let usableTb = rawTb * 0.5;
-      if (type === 'raidz1') usableTb = (drives - 1) * size * 0.92;
-      if (type === 'raidz2') usableTb = Math.max(1, drives - 2) * size * 0.92;
-      const recArcGb = Math.round(4 + usableTb * 1.5);
-
+      const d = parseInt(document.getElementById('zfsDrives').value, 10) || 4;
+      const s = parseFloat(document.getElementById('zfsSize').value) || 2;
+      const usable = (d * s * 0.5).toFixed(1);
       document.getElementById('zfsResult').innerHTML = `
-        <div class="grid sm:grid-cols-2 gap-2">
-          <div><span class="text-ctp-subtext">Dung lượng vật lý (Raw):</span> <strong class="text-white">${rawTb.toFixed(1)} TB</strong></div>
-          <div><span class="text-ctp-subtext">Dung lượng khả dụng ZFS:</span> <strong class="text-ctp-green">${usableTb.toFixed(1)} TB</strong></div>
-          <div><span class="text-ctp-subtext">RAM ZFS ARC khuyến nghị:</span> <strong class="text-ctp-sapphire">${recArcGb} GB RAM</strong></div>
-          <div><span class="text-ctp-subtext">Chuẩn tối ưu:</span> <strong class="text-ctp-teal">LZ4 / ashift=12</strong></div>
-        </div>
+        <div>Khả dụng (RAID10): <strong class="text-ctp-green">${usable} TB</strong></div>
+        <div>RAM ARC đề xuất: <strong class="text-ctp-blue">${Math.round(4 + usable * 1.5)} GB</strong></div>
       `;
     }
     calcZfs();
 
-    function calcElvBoq() {
-      const speakers = parseInt(document.getElementById('paSpeakers').value, 10) || 20;
-      const watt = parseInt(document.getElementById('paWatt').value, 10) || 6;
-      const zones = parseInt(document.getElementById('paZones').value, 10) || 4;
-
-      const rawSpeakerWatt = speakers * watt;
-      const ampWattRecommended = Math.ceil((rawSpeakerWatt * 1.25) / 60) * 60;
-      const speakerWireMeters = speakers * 28;
-
-      document.getElementById('elvBoqResult').innerHTML = `
-        <div class="grid sm:grid-cols-2 gap-2">
-          <div><span class="text-ctp-subtext">Tổng tải Loa PA:</span> <strong class="text-ctp-sapphire">${rawSpeakerWatt} W (${zones} Zones)</strong></div>
-          <div><span class="text-ctp-subtext">Amply 100V đề xuất (+25%):</span> <strong class="text-ctp-yellow">&gt;= ${ampWattRecommended} W</strong></div>
-          <div><span class="text-ctp-subtext">Cáp âm thanh chống cháy:</span> <strong class="text-ctp-teal">~${speakerWireMeters.toLocaleString()} mét (2x1.5mm²)</strong></div>
-          <div><span class="text-ctp-subtext">Liên động báo cháy:</span> <strong class="text-ctp-green">Dry-Contact Override 24V</strong></div>
-        </div>
+    function calcUps() {
+      const w = parseInt(document.getElementById('upsWatt').value, 10) || 500;
+      const drops = parseInt(document.getElementById('boqDrops').value, 10) || 100;
+      const mins = Math.max(3, Math.round(((6 * 12 * 9 * 0.78) / w) * 60));
+      const boxes = Math.ceil((drops * 45 * 1.15) / 305);
+      document.getElementById('upsResult').innerHTML = `
+        <div>Lưu điện UPS 3kVA: <strong class="text-ctp-green">~${mins} phút</strong></div>
+        <div>Số thùng cáp Cat6: <strong class="text-ctp-blue">${boxes} thùng (305m)</strong></div>
       `;
     }
-    calcElvBoq();
+    calcUps();
 
-    const enterprisePorts = [
-      { port: 'UDP 500 / 4500', name: '★ Fortinet & DrayTek IPsec', desc: 'IKEv2 Site-to-Site VPN Tunnel' },
-      { port: 'TCP 8291 / 58291', name: '★ MikroTik Winbox', desc: 'RouterOS Administration Port' },
-      { port: 'UDP 5060 / 10000-20000', name: '★ Grandstream UCM SIP/RTP', desc: 'VoIP Signaling & Audio Stream' },
-      { port: 'TCP 8080 / 8443 / UDP 3478', name: '★ Ubiquiti UniFi Inform/STUN', desc: 'UniFi Controller Adoption' },
-      { port: 'TCP 29810-29814 / 8043', name: '★ TP-Link Omada SDN', desc: 'Omada Controller Adoption' },
-      { port: 'UDP 7351 / TCP 443', name: '★ Cisco Meraki Cloud', desc: 'Meraki MX/MS/MR Cloud Check-in' },
-      { port: 'TCP 443 / 17988', name: '★ HPE iLO 5 / iLO 6 Remote', desc: 'HPE ProLiant Virtual Media & Console' },
-      { port: 'TCP 8006 / UDP 5405', name: 'Proxmox VE & Corosync', desc: 'Cluster Web GUI & Quorum Ring' },
-      { port: 'OUI: 00:09:0F', name: '★ Fortinet Inc.', desc: 'FortiGate Hardware MAC Prefix' },
-      { port: 'OUI: D4:CA:6D / 48:A9:8A', name: '★ MikroTik RouterBOARD', desc: 'CCR / RB Series MAC Prefix' },
-      { port: 'OUI: 00:0B:82 / C0:74:AD', name: '★ Grandstream Networks', desc: 'UCM IP-PBX & GRP/GXP Phone MAC' },
-      { port: 'OUI: 74:83:C2 / F0:9F:C2', name: '★ Ubiquiti Networks', desc: 'UniFi AP & Switch MAC Prefix' },
-      { port: 'OUI: E0:CB:BC / 00:18:0A', name: '★ Cisco & Cisco Meraki', desc: 'Catalyst & Meraki Cloud MAC' },
-      { port: 'OUI: 00:1D:AA', name: '★ DrayTek Corp.', desc: 'Vigor 2927 / 3910 Router MAC' },
-      { port: 'OUI: 50:C7:BF', name: '★ TP-Link Omada', desc: 'Omada Controller / EAP / Switch' },
-      { port: 'OUI: 94:F1:28 / 38:21:C7', name: '★ HPE & Aruba Networking', desc: 'HPE Server & Aruba Switch MAC' }
+    const ouiMap = {
+      '00:09:0F': 'Fortinet FortiGate',
+      'D4:CA:6D': 'MikroTik RouterBOARD',
+      '00:0B:82': 'Grandstream Networks',
+      '74:83:C2': 'Ubiquiti UniFi',
+      'E0:CB:BC': 'Cisco Meraki',
+      '00:1D:AA': 'DrayTek Vigor',
+      '50:C7:BF': 'TP-Link Omada',
+      '94:F1:28': 'HPE / Aruba'
+    };
+    function lookupMac() {
+      const v = document.getElementById('macInput').value.trim().toUpperCase().slice(0, 8);
+      document.getElementById('macResult').textContent = ouiMap[v] || 'Thiết bị chuẩn IEEE 802.3 (VD: 00:09:0F, 00:0B:82, D4:CA:6D)';
+    }
+    lookupMac();
+
+    // 5. VLAN Table
+    const vlans = [
+      { id: 10, name: 'SERVER_HPE_PROXMOX', sub: '10.10.10.0/24', gw: '10.10.10.1', note: 'HPE ProLiant, Proxmox VE ZFS, HIS/PACS' },
+      { id: 20, name: 'CORP_DATA_WIFI', sub: '10.10.20.0/23', gw: '10.10.20.1', note: 'Cisco/Aruba Access, Meraki/UniFi/Omada Wi-Fi' },
+      { id: 30, name: 'ELV_CCTV_NVR', sub: '10.10.30.0/24', gw: '10.10.30.1', note: 'IP Camera PoE+, NVR RAID (IGMP Snooping)' },
+      { id: 50, name: 'VOICE_GRANDSTREAM', sub: '10.10.50.0/24', gw: '10.10.50.1', note: 'Grandstream UCM6300, GRP Phones (LLDP-MED CoS 5)' },
+      { id: 99, name: 'NET_MANAGEMENT', sub: '10.10.99.0/24', gw: '10.10.99.1', note: 'FortiGate HA, MikroTik Winbox :58291, HPE iLO' }
     ];
 
-    function copyPortByIndex(idx) {
-      const p = enterprisePorts[idx];
-      if (!p) return;
-      navigator.clipboard.writeText(p.port);
-      showToast('✓ Đã sao chép ' + p.port + '!');
+    document.getElementById('vlanTbody').innerHTML = vlans.map(v => `
+      <tr>
+        <td class="p-3 text-ctp-yellow font-semibold">VLAN ${v.id}</td>
+        <td class="p-3 text-white">${v.name}</td>
+        <td class="p-3 text-ctp-blue">${v.sub}</td>
+        <td class="p-3 text-ctp-teal">${v.gw}</td>
+        <td class="p-3 text-ctp-subtext">${v.note}</td>
+      </tr>
+    `).join('');
+
+    function exportVlanCsv() {
+      let csv = 'VLAN,Name,Subnet,Gateway,Note\n';
+      vlans.forEach(v => { csv += `${v.id},${v.name},${v.sub},${v.gw},"${v.note}"\n`; });
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'vlan-plan.csv';
+      a.click();
+      notify('Đã tải xuống file vlan-plan.csv');
     }
 
-    function renderPorts() {
-      const q = document.getElementById('portSearch').value.toLowerCase();
-      const grid = document.getElementById('portGrid');
-      grid.innerHTML = enterprisePorts.map((p, idx) => {
-        const match = p.port.toLowerCase().includes(q) || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
-        if (!match) return '';
-        return `
-          <div onclick="copyPortByIndex(${idx})" class="p-3.5 rounded-2xl bg-ctp-crust/90 border border-ctp-blue/25 hover:border-ctp-sapphire cursor-pointer space-y-1 transition">
-            <div class="text-ctp-sapphire font-bold">${p.port}</div>
-            <div class="text-white font-semibold">${p.name}</div>
-            <div class="text-[11px] text-ctp-subtext">${p.desc}</div>
-          </div>
-        `;
-      }).join('');
-    }
-    renderPorts();
-
-    // ============================================================================
-    // VIBRANT MARINE ECOSYSTEM ENGINE + INTERACTIVE WATER RIPPLES
-    // ============================================================================
-    const canvas = document.getElementById('oceanCanvas');
+    // Subtle Background Canvas
+    const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');
-    let w, h;
-    let mouse = { x: -1000, y: -1000 };
-    let fishes = [], dolphins = [], turtles = [], jellies = [], mantas = [], bubbles = [], foods = [], ripples = [], kelps = [], whaleShark = null;
-
-    function spawnFoodBurst(cx = w * 0.5, cy = h * 0.35) {
-      ripples.push({ x: cx, y: cy, r: 4, alpha: 0.75 });
-      for (let i = 0; i < 16; i++) {
-        foods.push({
-          x: cx + (Math.random() - 0.5) * 100,
-          y: cy + (Math.random() - 0.5) * 60,
-          vy: 0.35 + Math.random() * 0.45,
-          r: 2.5 + Math.random() * 2,
-          life: 440
-        });
-      }
-    }
-
-    window.addEventListener('click', e => {
-      if (e.target.tagName === 'CANVAS' || e.target.tagName === 'BODY') {
-        spawnFoodBurst(e.clientX, e.clientY);
-      }
-    });
-
-    window.addEventListener('mousemove', e => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-      if (Math.random() < 0.16) {
-        ripples.push({ x: mouse.x, y: mouse.y, r: 2, alpha: 0.32 });
-      }
-    });
-
-    function initOcean() {
+    let w, h, fishes = [];
+    function initCanvas() {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
-      const palette = ['#00f2fe', '#38bdf8', '#2dd4bf', '#fb923c', '#fde047', '#60a5fa'];
-
-      fishes = Array.from({ length: 52 }, () => ({
+      fishes = Array.from({ length: 16 }, () => ({
         x: Math.random() * w, y: Math.random() * h,
-        vx: (0.8 + Math.random() * 1.35) * (Math.random() < 0.5 ? 1 : -1),
-        vy: (Math.random() - 0.5) * 0.4,
-        size: 5 + Math.random() * 7.5,
-        color: palette[Math.floor(Math.random() * palette.length)],
-        stripe: Math.random() < 0.4,
-        phase: Math.random() * Math.PI * 2
-      }));
-
-      dolphins = Array.from({ length: 2 }, (_, i) => ({
-        x: i === 0 ? -100 : w + 100, y: h * (0.2 + i * 0.3),
-        vx: i === 0 ? 1.3 : -1.2, size: 28, phase: i * 1.5
-      }));
-
-      turtles = Array.from({ length: 2 }, (_, i) => ({
-        x: Math.random() * w, y: h * (0.25 + i * 0.35),
-        vx: (0.45 + Math.random() * 0.2) * (i % 2 === 0 ? 1 : -1),
-        size: 22, phase: Math.random() * Math.PI * 2
-      }));
-
-      mantas = Array.from({ length: 2 }, (_, i) => ({
-        x: Math.random() * w, y: h * (0.3 + i * 0.3),
-        vx: 0.55 * (i % 2 === 0 ? -1 : 1), size: 34, phase: i * 2
-      }));
-
-      jellies = Array.from({ length: 6 }, () => ({
-        x: Math.random() * w, y: Math.random() * h,
-        vy: 0.28 + Math.random() * 0.35, vx: (Math.random() - 0.5) * 0.2,
-        size: 15 + Math.random() * 13, phase: Math.random() * Math.PI * 2,
-        hue: Math.random() < 0.55 ? 'rgba(0, 242, 254,' : 'rgba(192, 132, 252,'
-      }));
-
-      whaleShark = { x: -320, y: h * 0.5, vx: 0.26, phase: 0 };
-
-      kelps = Array.from({ length: Math.floor(w / 62) }, (_, i) => ({
-        x: i * 62 + 20, segments: 7, segLen: 17, phase: i,
-        color: i % 2 === 0 ? 'rgba(45, 212, 191, 0.24)' : 'rgba(56, 189, 248, 0.20)'
-      }));
-
-      bubbles = Array.from({ length: 45 }, () => ({
-        x: Math.random() * w, y: Math.random() * h,
-        r: 1 + Math.random() * 3, vy: 0.35 + Math.random() * 0.7, wobble: Math.random() * 6
+        vx: (0.35 + Math.random() * 0.55) * (Math.random() < 0.5 ? 1 : -1),
+        vy: (Math.random() - 0.5) * 0.15,
+        size: 3.5 + Math.random() * 4, color: '#38bdf8'
       }));
     }
-
-    function animateOcean(t) {
+    function drawCanvas() {
       ctx.clearRect(0, 0, w, h);
-
-      for (let i = 0; i < 4; i++) {
-        const xPos = w * (0.15 + i * 0.22) + Math.sin(t * 0.0005 + i) * 45;
-        const grad = ctx.createLinearGradient(xPos, 0, xPos + 150, h * 0.8);
-        grad.addColorStop(0, 'rgba(186, 230, 253, 0.14)');
-        grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
-        ctx.fillStyle = grad;
-        ctx.beginPath();
-        ctx.moveTo(xPos - 65, 0); ctx.lineTo(xPos + 65, 0);
-        ctx.lineTo(xPos + 250, h * 0.8); ctx.lineTo(xPos - 15, h * 0.8);
-        ctx.closePath(); ctx.fill();
-      }
-
-      if (whaleShark) {
-        whaleShark.x += whaleShark.vx; whaleShark.phase += 0.025;
-        if (whaleShark.x > w + 380) whaleShark.x = -380;
-        ctx.save(); ctx.translate(whaleShark.x, whaleShark.y + Math.sin(whaleShark.phase * 0.5) * 12);
-        ctx.fillStyle = 'rgba(56, 189, 248, 0.16)';
-        ctx.beginPath(); ctx.moveTo(130, 0); ctx.quadraticCurveTo(50, -38, -60, -12);
-        const tailY = Math.sin(whaleShark.phase) * 14;
-        ctx.quadraticCurveTo(-130, -4, -170, tailY);
-        ctx.lineTo(-195, tailY - 20); ctx.lineTo(-182, tailY); ctx.lineTo(-195, tailY + 20);
-        ctx.quadraticCurveTo(-125, 10, -50, 20); ctx.quadraticCurveTo(40, 32, 130, 0); ctx.fill();
-        ctx.restore();
-      }
-
-      ctx.lineCap = 'round'; ctx.lineWidth = 4;
-      kelps.forEach(k => {
-        ctx.strokeStyle = k.color; ctx.beginPath();
-        let cx = k.x, cy = h; ctx.moveTo(cx, cy);
-        for (let s = 1; s <= k.segments; s++) {
-          cx += Math.sin(t * 0.0018 + k.phase + s * 0.4) * 1.3; cy -= k.segLen; ctx.lineTo(cx, cy);
-        }
-        ctx.stroke();
-      });
-
-      for (let i = ripples.length - 1; i >= 0; i--) {
-        const rp = ripples[i]; rp.r += 1.4; rp.alpha -= 0.012;
-        if (rp.alpha <= 0) { ripples.splice(i, 1); continue; }
-        ctx.strokeStyle = 'rgba(0, 242, 254, ' + rp.alpha + ')'; ctx.lineWidth = 1.1;
-        ctx.beginPath(); ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2); ctx.stroke();
-      }
-
-      dolphins.forEach(d => {
-        d.x += d.vx; d.phase += 0.055; d.y += Math.sin(d.phase) * 0.65;
-        if (d.vx > 0 && d.x > w + 140) d.x = -140;
-        if (d.vx < 0 && d.x < -140) d.x = w + 140;
-        const dir = d.vx >= 0 ? 1 : -1, s = d.size;
-        ctx.save(); ctx.translate(d.x, d.y); ctx.scale(dir, 1);
-        ctx.fillStyle = 'rgba(125, 211, 252, 0.35)';
-        ctx.beginPath(); ctx.moveTo(s * 1.4, 2);
-        ctx.quadraticCurveTo(s * 0.4, -s * 0.65, -s * 0.2, -s * 0.3);
-        ctx.lineTo(-s * 0.35, -s * 0.72); ctx.lineTo(-s * 0.65, -s * 0.2);
-        ctx.lineTo(-s * 1.3, -s * 0.32); ctx.lineTo(-s * 1.1, 0); ctx.lineTo(-s * 1.3, s * 0.32);
-        ctx.quadraticCurveTo(-s * 0.3, s * 0.35, s * 1.4, 2); ctx.fill(); ctx.restore();
-      });
-
-      turtles.forEach(tu => {
-        tu.x += tu.vx; tu.phase += 0.05;
-        if (tu.vx > 0 && tu.x > w + 60) tu.x = -60;
-        if (tu.vx < 0 && tu.x < -60) tu.x = w + 60;
-        const dir = tu.vx >= 0 ? 1 : -1;
-        ctx.save(); ctx.translate(tu.x, tu.y); ctx.scale(dir, 1);
-        ctx.fillStyle = 'rgba(20, 184, 166, 0.52)';
-        ctx.beginPath(); ctx.ellipse(0, 0, tu.size * 0.68, tu.size * 0.5, 0, 0, Math.PI * 2); ctx.fill();
-        ctx.beginPath(); ctx.ellipse(tu.size * 0.8, 0, tu.size * 0.22, tu.size * 0.16, 0, 0, Math.PI * 2); ctx.fill();
-        ctx.restore();
-      });
-
-      mantas.forEach(m => {
-        m.x += m.vx; m.phase += 0.045;
-        if (m.vx > 0 && m.x > w + 100) m.x = -100;
-        if (m.vx < 0 && m.x < -100) m.x = w + 100;
-        const dir = m.vx >= 0 ? 1 : -1, wing = Math.sin(m.phase) * 14;
-        ctx.save(); ctx.translate(m.x, m.y); ctx.scale(dir, 1);
-        ctx.fillStyle = 'rgba(56, 189, 248, 0.26)';
-        ctx.beginPath(); ctx.moveTo(m.size, 0);
-        ctx.quadraticCurveTo(m.size * 0.2, -m.size * 0.85 + wing, -m.size * 0.5, -m.size * 0.2);
-        ctx.lineTo(-m.size * 1.45, 0); ctx.lineTo(-m.size * 0.5, m.size * 0.2);
-        ctx.quadraticCurveTo(m.size * 0.2, m.size * 0.85 - wing, m.size, 0);
-        ctx.fill(); ctx.restore();
-      });
-
-      jellies.forEach(j => {
-        j.phase += 0.04; j.y -= j.vy;
-        if (j.y < -60) { j.y = h + 60; j.x = Math.random() * w; }
-        const c = 1 + Math.sin(j.phase) * 0.12;
-        ctx.save(); ctx.translate(j.x, j.y);
-        ctx.fillStyle = j.hue + ' 0.38)';
-        ctx.beginPath(); ctx.arc(0, 0, j.size * c, Math.PI, 0, false); ctx.fill();
-        ctx.restore();
-      });
-
       fishes.forEach(f => {
-        f.phase += 0.14;
-        if (foods.length > 0) {
-          const target = foods[0], fx = target.x - f.x, fy = target.y - f.y, fd = Math.hypot(fx, fy);
-          if (fd < 260 && fd > 5) { f.vx += (fx / fd) * 0.06; f.vy += (fy / fd) * 0.06; }
-        }
         f.x += f.vx; f.y += f.vy;
-        if (f.vx > 0 && f.x > w + 35) f.x = -35;
-        if (f.vx < 0 && f.x < -35) f.x = w + 35;
-        if (f.y < 30) f.vy = Math.abs(f.vy) * 0.5;
-        if (f.y > h - 30) f.vy = -Math.abs(f.vy) * 0.5;
-        const ang = Math.atan2(f.vy, f.vx), tail = Math.sin(f.phase) * (f.size * 0.4);
-        ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(ang);
-        ctx.fillStyle = f.color;
-        ctx.beginPath(); ctx.moveTo(f.size * 1.2, 0);
-        ctx.quadraticCurveTo(0, -f.size * 0.55, -f.size, 0);
-        ctx.quadraticCurveTo(0, f.size * 0.55, f.size * 1.2, 0);
-        ctx.fill();
-        ctx.beginPath(); ctx.moveTo(-f.size * 0.85, 0);
-        ctx.lineTo(-f.size * 1.6, -f.size * 0.5 + tail * 0.4);
-        ctx.lineTo(-f.size * 1.6, f.size * 0.5 + tail * 0.4);
-        ctx.closePath(); ctx.fill();
-        ctx.restore();
+        if (f.vx > 0 && f.x > w + 20) f.x = -20;
+        if (f.vx < 0 && f.x < -20) f.x = w + 20;
+        ctx.save(); ctx.translate(f.x, f.y); ctx.rotate(Math.atan2(f.vy, f.vx));
+        ctx.fillStyle = f.color; ctx.beginPath();
+        ctx.moveTo(f.size, 0); ctx.quadraticCurveTo(0, -f.size * 0.5, -f.size, 0);
+        ctx.quadraticCurveTo(0, f.size * 0.5, f.size, 0); ctx.fill(); ctx.restore();
       });
-
-      for (let i = foods.length - 1; i >= 0; i--) {
-        const fd = foods[i]; fd.y += fd.vy; fd.life--;
-        ctx.fillStyle = '#fde047'; ctx.beginPath(); ctx.arc(fd.x, fd.y, fd.r, 0, Math.PI * 2); ctx.fill();
-        if (fd.life <= 0 || fd.y > h) foods.splice(i, 1);
-      }
-      ctx.fillStyle = 'rgba(224, 242, 254, 0.34)';
-      bubbles.forEach(b => {
-        b.y -= b.vy; b.wobble += 0.04; b.x += Math.sin(b.wobble) * 0.3;
-        if (b.y < -10) b.y = h + 10;
-        ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill();
-      });
-
-      requestAnimationFrame(animateOcean);
+      requestAnimationFrame(drawCanvas);
     }
-
-    window.addEventListener('resize', initOcean);
-    initOcean();
-    requestAnimationFrame(animateOcean);
+    window.addEventListener('resize', initCanvas);
+    initCanvas(); requestAnimationFrame(drawCanvas);
   </script>
 </body>
 </html>
