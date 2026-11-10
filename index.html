@@ -2,27 +2,1270 @@
 <html lang="vi" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#13181d" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nguyễn Nguyên Vũ — System & Network Engineer" />
+  <meta property="og:description" content="Enterprise Networking • Security • Virtualization • Infrastructure" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin />
   <title>Nguyễn Nguyên Vũ — System, Network & Infrastructure Engineer (nguyenvu.click)</title>
   <meta name="description" content="Hồ sơ năng lực Nguyễn Nguyên Vũ — Kỹ sư Hệ thống, Hạ tầng Mạng & DevSecOps tại TP. Hồ Chí Minh. SĐT/Zalo: 0329.553.597." />
   <link id="favIcon" rel="icon" type="image/jpeg" href="./avatar.jpg" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind utilities compiled for production; no runtime CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          }
-        }
+
+  <style id="compiledTailwind">
+/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+:root, :host {
+  --font-sans: "Plus Jakarta Sans",system-ui,sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono",monospace;
+  --color-amber-200: oklch(92.4% 0.12 95.746);
+  --color-amber-300: oklch(87.9% 0.169 91.605);
+  --color-amber-400: oklch(82.8% 0.189 84.429);
+  --color-amber-500: oklch(76.9% 0.188 70.08);
+  --color-amber-600: oklch(66.6% 0.179 58.318);
+  --color-amber-700: oklch(55.5% 0.163 48.998);
+  --color-amber-800: oklch(47.3% 0.137 46.201);
+  --color-emerald-200: oklch(90.5% 0.093 164.15);
+  --color-emerald-300: oklch(84.5% 0.143 164.978);
+  --color-emerald-400: oklch(76.5% 0.177 163.223);
+  --color-emerald-500: oklch(69.6% 0.17 162.48);
+  --color-emerald-700: oklch(50.8% 0.118 165.612);
+  --color-stone-100: oklch(97% 0.001 106.424);
+  --color-stone-200: oklch(92.3% 0.003 48.717);
+  --color-stone-300: oklch(86.9% 0.005 56.366);
+  --color-stone-400: oklch(70.9% 0.01 56.259);
+  --color-stone-900: oklch(21.6% 0.006 56.043);
+  --color-black: #000;
+  --color-white: #fff;
+  --spacing: 0.25rem;
+  --container-lg: 32rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --tracking-tight: -0.025em;
+  --tracking-wide: 0.025em;
+  --leading-snug: 1.375;
+  --leading-relaxed: 1.625;
+  --radius-lg: 0.5rem;
+  --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --blur-xs: 4px;
+  --blur-md: 12px;
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --default-font-family: var(--font-sans);
+  --default-mono-font-family: var(--font-mono);
+}
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+html, :host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+  font-feature-settings: var(--default-font-feature-settings, normal);
+  font-variation-settings: var(--default-font-variation-settings, normal);
+  -webkit-tap-highlight-color: transparent;
+}
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+b, strong {
+  font-weight: bolder;
+}
+code, kbd, samp, pre {
+  font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+  font-feature-settings: var(--default-mono-font-feature-settings, normal);
+  font-variation-settings: var(--default-mono-font-variation-settings, normal);
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+:-moz-focusring {
+  outline: auto;
+}
+progress {
+  vertical-align: baseline;
+}
+summary {
+  display: list-item;
+}
+ol, ul, menu {
+  list-style: none;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+button, input, select, optgroup, textarea, ::file-selector-button {
+  font: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  border-radius: 0;
+  background-color: transparent;
+  opacity: 1;
+}
+:where(select:is([multiple], [size])) optgroup {
+  font-weight: bolder;
+}
+:where(select:is([multiple], [size])) optgroup option {
+  padding-inline-start: 20px;
+}
+::file-selector-button {
+  margin-inline-end: 4px;
+}
+::placeholder {
+  opacity: 1;
+}
+@supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+  ::placeholder {
+    color: currentcolor;
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, currentcolor 50%, transparent);
+    }
+  }
+}
+textarea {
+  resize: vertical;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-date-and-time-value {
+  min-height: 1lh;
+  text-align: inherit;
+}
+::-webkit-datetime-edit {
+  display: inline-flex;
+}
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+  padding-block: 0;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+  appearance: button;
+}
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.inset-0 {
+  inset: calc(var(--spacing) * 0);
+}
+.top-12 {
+  top: calc(var(--spacing) * 12);
+}
+.right-1 {
+  right: calc(var(--spacing) * 1);
+}
+.right-4 {
+  right: calc(var(--spacing) * 4);
+}
+.bottom-1 {
+  bottom: calc(var(--spacing) * 1);
+}
+.bottom-8 {
+  bottom: calc(var(--spacing) * 8);
+}
+.bottom-14 {
+  bottom: calc(var(--spacing) * 14);
+}
+.left-5 {
+  left: calc(var(--spacing) * 5);
+}
+.left-6 {
+  left: calc(var(--spacing) * 6);
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-0\.5 {
+  margin-inline: calc(var(--spacing) * 0.5);
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.my-auto {
+  margin-block: auto;
+}
+.mt-0\.5 {
+  margin-top: calc(var(--spacing) * 0.5);
+}
+.mt-1 {
+  margin-top: calc(var(--spacing) * 1);
+}
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.h-1 {
+  height: calc(var(--spacing) * 1);
+}
+.h-1\.5 {
+  height: calc(var(--spacing) * 1.5);
+}
+.h-2\.5 {
+  height: calc(var(--spacing) * 2.5);
+}
+.h-4 {
+  height: calc(var(--spacing) * 4);
+}
+.h-7 {
+  height: calc(var(--spacing) * 7);
+}
+.h-14 {
+  height: calc(var(--spacing) * 14);
+}
+.h-20 {
+  height: calc(var(--spacing) * 20);
+}
+.h-auto {
+  height: auto;
+}
+.h-full {
+  height: 100%;
+}
+.max-h-20 {
+  max-height: calc(var(--spacing) * 20);
+}
+.max-h-64 {
+  max-height: calc(var(--spacing) * 64);
+}
+.min-h-\[calc\(100vh-52px\)\] {
+  min-height: calc(100vh - 52px);
+}
+.w-1\.5 {
+  width: calc(var(--spacing) * 1.5);
+}
+.w-2\.5 {
+  width: calc(var(--spacing) * 2.5);
+}
+.w-7 {
+  width: calc(var(--spacing) * 7);
+}
+.w-14 {
+  width: calc(var(--spacing) * 14);
+}
+.w-16 {
+  width: calc(var(--spacing) * 16);
+}
+.w-20 {
+  width: calc(var(--spacing) * 20);
+}
+.w-\[330px\] {
+  width: 330px;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-\[1400px\] {
+  max-width: 1400px;
+}
+.max-w-lg {
+  max-width: var(--container-lg);
+}
+.min-w-0 {
+  min-width: calc(var(--spacing) * 0);
+}
+.flex-1 {
+  flex: 1;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.animate-ping {
+  animation: var(--animate-ping);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-0\.5 {
+  gap: calc(var(--spacing) * 0.5);
+}
+.gap-1 {
+  gap: calc(var(--spacing) * 1);
+}
+.gap-1\.5 {
+  gap: calc(var(--spacing) * 1.5);
+}
+.gap-2 {
+  gap: calc(var(--spacing) * 2);
+}
+.gap-2\.5 {
+  gap: calc(var(--spacing) * 2.5);
+}
+.gap-3 {
+  gap: calc(var(--spacing) * 3);
+}
+.gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+.space-y-0\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 0.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 0.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-1 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-1\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-2 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-2\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-3 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-3\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-4 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.divide-y {
+  :where(& > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  }
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.rounded-full {
+  border-radius: calc(infinity * 1px);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-2 {
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+}
+.border-t {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+.border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+.border-amber-300\/45 {
+  border-color: color-mix(in srgb, oklch(87.9% 0.169 91.605) 45%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-amber-300) 45%, transparent);
+  }
+}
+.border-amber-400 {
+  border-color: var(--color-amber-400);
+}
+.border-amber-400\/70 {
+  border-color: color-mix(in srgb, oklch(82.8% 0.189 84.429) 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-amber-400) 70%, transparent);
+  }
+}
+.border-white\/10 {
+  border-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+}
+.border-white\/15 {
+  border-color: color-mix(in srgb, #fff 15%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 15%, transparent);
+  }
+}
+.border-white\/20 {
+  border-color: color-mix(in srgb, #fff 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+}
+.bg-amber-500\/25 {
+  background-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 25%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-amber-500) 25%, transparent);
+  }
+}
+.bg-amber-600\/90 {
+  background-color: color-mix(in srgb, oklch(66.6% 0.179 58.318) 90%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-amber-600) 90%, transparent);
+  }
+}
+.bg-amber-700 {
+  background-color: var(--color-amber-700);
+}
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-black\/5 {
+  background-color: color-mix(in srgb, #000 5%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 5%, transparent);
+  }
+}
+.bg-black\/20 {
+  background-color: color-mix(in srgb, #000 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
+  }
+}
+.bg-black\/30 {
+  background-color: color-mix(in srgb, #000 30%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
+  }
+}
+.bg-black\/40 {
+  background-color: color-mix(in srgb, #000 40%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
+  }
+}
+.bg-black\/65 {
+  background-color: color-mix(in srgb, #000 65%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 65%, transparent);
+  }
+}
+.bg-black\/75 {
+  background-color: color-mix(in srgb, #000 75%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 75%, transparent);
+  }
+}
+.bg-black\/80 {
+  background-color: color-mix(in srgb, #000 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-black) 80%, transparent);
+  }
+}
+.bg-emerald-400 {
+  background-color: var(--color-emerald-400);
+}
+.bg-emerald-500 {
+  background-color: var(--color-emerald-500);
+}
+.bg-emerald-700\/50 {
+  background-color: color-mix(in srgb, oklch(50.8% 0.118 165.612) 50%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-emerald-700) 50%, transparent);
+  }
+}
+.bg-stone-900 {
+  background-color: var(--color-stone-900);
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-white\/5 {
+  background-color: color-mix(in srgb, #fff 5%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+  }
+}
+.bg-white\/10 {
+  background-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+}
+.object-cover {
+  object-fit: cover;
+}
+.object-\[center_15\%\] {
+  object-position: center 15%;
+}
+.p-1 {
+  padding: calc(var(--spacing) * 1);
+}
+.p-1\.5 {
+  padding: calc(var(--spacing) * 1.5);
+}
+.p-2 {
+  padding: calc(var(--spacing) * 2);
+}
+.p-2\.5 {
+  padding: calc(var(--spacing) * 2.5);
+}
+.p-3 {
+  padding: calc(var(--spacing) * 3);
+}
+.p-3\.5 {
+  padding: calc(var(--spacing) * 3.5);
+}
+.p-4 {
+  padding: calc(var(--spacing) * 4);
+}
+.p-5 {
+  padding: calc(var(--spacing) * 5);
+}
+.px-0\.5 {
+  padding-inline: calc(var(--spacing) * 0.5);
+}
+.px-1 {
+  padding-inline: calc(var(--spacing) * 1);
+}
+.px-1\.5 {
+  padding-inline: calc(var(--spacing) * 1.5);
+}
+.px-2 {
+  padding-inline: calc(var(--spacing) * 2);
+}
+.px-2\.5 {
+  padding-inline: calc(var(--spacing) * 2.5);
+}
+.px-3 {
+  padding-inline: calc(var(--spacing) * 3);
+}
+.px-3\.5 {
+  padding-inline: calc(var(--spacing) * 3.5);
+}
+.px-4 {
+  padding-inline: calc(var(--spacing) * 4);
+}
+.py-0\.5 {
+  padding-block: calc(var(--spacing) * 0.5);
+}
+.py-1 {
+  padding-block: calc(var(--spacing) * 1);
+}
+.py-1\.5 {
+  padding-block: calc(var(--spacing) * 1.5);
+}
+.py-2 {
+  padding-block: calc(var(--spacing) * 2);
+}
+.py-5 {
+  padding-block: calc(var(--spacing) * 5);
+}
+.pt-0\.5 {
+  padding-top: calc(var(--spacing) * 0.5);
+}
+.pt-1 {
+  padding-top: calc(var(--spacing) * 1);
+}
+.pt-2 {
+  padding-top: calc(var(--spacing) * 2);
+}
+.pt-20 {
+  padding-top: calc(var(--spacing) * 20);
+}
+.pr-1 {
+  padding-right: calc(var(--spacing) * 1);
+}
+.pr-2 {
+  padding-right: calc(var(--spacing) * 2);
+}
+.pb-1 {
+  padding-bottom: calc(var(--spacing) * 1);
+}
+.pb-1\.5 {
+  padding-bottom: calc(var(--spacing) * 1.5);
+}
+.pb-2 {
+  padding-bottom: calc(var(--spacing) * 2);
+}
+.pb-2\.5 {
+  padding-bottom: calc(var(--spacing) * 2.5);
+}
+.pl-1 {
+  padding-left: calc(var(--spacing) * 1);
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+}
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+}
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+}
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+}
+.text-\[9px\] {
+  font-size: 9px;
+}
+.text-\[10px\] {
+  font-size: 10px;
+}
+.text-\[11px\] {
+  font-size: 11px;
+}
+.leading-none {
+  --tw-leading: 1;
+  line-height: 1;
+}
+.leading-relaxed {
+  --tw-leading: var(--leading-relaxed);
+  line-height: var(--leading-relaxed);
+}
+.leading-snug {
+  --tw-leading: var(--leading-snug);
+  line-height: var(--leading-snug);
+}
+.font-bold {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+.font-normal {
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+}
+.font-semibold {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+.tracking-tight {
+  --tw-tracking: var(--tracking-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.tracking-wide {
+  --tw-tracking: var(--tracking-wide);
+  letter-spacing: var(--tracking-wide);
+}
+.text-amber-200 {
+  color: var(--color-amber-200);
+}
+.text-amber-300 {
+  color: var(--color-amber-300);
+}
+.text-black {
+  color: var(--color-black);
+}
+.text-emerald-200 {
+  color: var(--color-emerald-200);
+}
+.text-emerald-300 {
+  color: var(--color-emerald-300);
+}
+.text-emerald-400 {
+  color: var(--color-emerald-400);
+}
+.text-stone-100 {
+  color: var(--color-stone-100);
+}
+.text-stone-200 {
+  color: var(--color-stone-200);
+}
+.text-stone-300 {
+  color: var(--color-stone-300);
+}
+.text-stone-400 {
+  color: var(--color-stone-400);
+}
+.text-white {
+  color: var(--color-white);
+}
+.text-white\/20 {
+  color: color-mix(in srgb, #fff 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+}
+.underline {
+  text-decoration-line: underline;
+}
+.accent-amber-700 {
+  accent-color: var(--color-amber-700);
+}
+.opacity-85 {
+  opacity: 85%;
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.ring-2 {
+  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.ring-\[var\(--accent\)\] {
+  --tw-ring-color: var(--accent);
+}
+.ring-white {
+  --tw-ring-color: var(--color-white);
+}
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(var(--blur-md));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.backdrop-blur-xs {
+  --tw-backdrop-blur: blur(var(--blur-xs));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.transition {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.selection\:bg-amber-800\/25 {
+  & *::selection {
+    background-color: color-mix(in srgb, oklch(47.3% 0.137 46.201) 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-amber-800) 25%, transparent);
+    }
+  }
+  &::selection {
+    background-color: color-mix(in srgb, oklch(47.3% 0.137 46.201) 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-amber-800) 25%, transparent);
+    }
+  }
+}
+.hover\:border-\[var\(--accent\)\] {
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--accent);
+    }
+  }
+}
+.hover\:bg-amber-500\/40 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 40%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-amber-500) 40%, transparent);
       }
-    };
-  </script>
+    }
+  }
+}
+.hover\:bg-white\/20 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, #fff 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+      }
+    }
+  }
+}
+.hover\:text-amber-300 {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-amber-300);
+    }
+  }
+}
+.hover\:text-white {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
+.hover\:underline {
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-line: underline;
+    }
+  }
+}
+.focus\:outline-none {
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
+.sm\:inline {
+  @media (width >= 40rem) {
+    display: inline;
+  }
+}
+.sm\:w-\[360px\] {
+  @media (width >= 40rem) {
+    width: 360px;
+  }
+}
+.sm\:grid-cols-2 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.sm\:grid-cols-3 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.sm\:flex-nowrap {
+  @media (width >= 40rem) {
+    flex-wrap: nowrap;
+  }
+}
+.sm\:p-6 {
+  @media (width >= 40rem) {
+    padding: calc(var(--spacing) * 6);
+  }
+}
+.sm\:text-3xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+}
+.sm\:text-4xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
+.sm\:text-\[13px\] {
+  @media (width >= 40rem) {
+    font-size: 13px;
+  }
+}
+.md\:inline {
+  @media (width >= 48rem) {
+    display: inline;
+  }
+}
+.lg\:col-span-4 {
+  @media (width >= 64rem) {
+    grid-column: span 4 / span 4;
+  }
+}
+.lg\:col-span-8 {
+  @media (width >= 64rem) {
+    grid-column: span 8 / span 8;
+  }
+}
+.lg\:grid-cols-12 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.lg\:divide-x {
+  @media (width >= 64rem) {
+    :where(& > :not(:last-child)) {
+      --tw-divide-x-reverse: 0;
+      border-inline-style: var(--tw-border-style);
+      border-inline-start-width: calc(1px * var(--tw-divide-x-reverse));
+      border-inline-end-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+    }
+  }
+}
+.lg\:divide-y-0 {
+  @media (width >= 64rem) {
+    :where(& > :not(:last-child)) {
+      --tw-divide-y-reverse: 0;
+      border-bottom-style: var(--tw-border-style);
+      border-top-style: var(--tw-border-style);
+      border-top-width: calc(0px * var(--tw-divide-y-reverse));
+      border-bottom-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
+    }
+  }
+}
+.xl\:flex {
+  @media (width >= 80rem) {
+    display: flex;
+  }
+}
+.xl\:inline {
+  @media (width >= 80rem) {
+    display: inline;
+  }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-divide-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-divide-x-reverse: 0;
+    }
+  }
+}
+
+</style>
   <style>
     /* =========================================================================
        BESPOKE SWISS EDITORIAL + TEENAGE ENGINEERING / LINEAR HARDWARE SYSTEM
@@ -356,6 +1599,129 @@
     ::-webkit-scrollbar { width: 5px; height: 5px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--ink-3); }
+
+
+    #mobileMusicFab { display:none; }
+    .yt-fallback-poster { display:flex; height:206px; align-items:center; justify-content:center; flex-direction:column; gap:9px; color:#f0e9df; background:radial-gradient(circle at 50% 15%,#3a2e2a,#0c1016 72%); text-decoration:none; }
+    .yt-play-icon { display:grid; place-items:center; width:62px;height:47px;border-radius:14px;background:#c53e36;color:white;font-size:23px;box-shadow:0 7px 30px rgba(197,62,54,.28); }
+    @media (max-width:767px){
+      #mobileMusicFab { display:flex; position:fixed; right:16px;bottom:max(16px,env(safe-area-inset-bottom)); align-items:center; gap:5px; justify-content:center; padding:11px 14px; border-radius:16px; background:#9b321b; border:1px solid rgba(255,255,255,.45); color:#fff; z-index:43; box-shadow:0 9px 28px rgba(0,0,0,.27); font-size:19px; font-weight:700; }
+      .yt-fallback-poster{height:200px;}
+    }
+
+    /* =========== NV Portfolio / V2.0 Design System =========== */
+    :root { --radius-xl:22px; --radius-md:14px; --focus-ring:rgba(222,168,98,.75); }
+    html { scroll-padding-top: 100px; }
+    body { font-synthesis:none; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; }
+    body::selection { background:rgba(210,157,95,.30); }
+    #backdropPhoto { object-position:center; }
+    #backdropGridOverlay { opacity:.42; }
+    .dev-shell {
+      border-radius:var(--radius-xl);
+      border-color:rgba(255,255,255,.20);
+      box-shadow:0 22px 100px rgba(0,0,0,.37), 0 1px 0 rgba(255,255,255,.13) inset;
+      overflow:hidden;
+    }
+    .dev-cell { border-radius:var(--radius-md); box-shadow:0 1px 0 rgba(255,255,255,.045) inset; }
+    .dev-cell:hover { transform: translateY(-1px); }
+    .btn-solid,.btn-outline { border-radius:10px; min-height:33px; }
+    .btn-solid:active,.btn-outline:active,.dev-cell:active { transform:translateY(0); }
+    :where(button,a,input,select,[role="button"]):focus-visible {
+      outline:2px solid var(--focus-ring); outline-offset:3px;
+    }
+    button,select,input { touch-action:manipulation; }
+    button:disabled { cursor:not-allowed; opacity:.55; }
+    header { position:sticky!important; top:0; z-index:45!important; box-shadow:0 10px 38px rgba(0,0,0,.17); }
+    header .sbtn { border-radius:8px; min-width:38px; min-height:29px; }
+    header button { border-radius:7px; }
+    #headerRegionSelect { max-width:190px; text-overflow:ellipsis; }
+    #mainWorkspace { padding-top:24px; padding-bottom:30px; min-height:calc(100dvh - 64px); }
+    #mainWorkspace > .dev-shell { border:1px solid rgba(255,255,255,.28); }
+    #mainWorkspace aside, #mainWorkspace section { min-width:0; }
+    #mainWorkspace h1 { letter-spacing:-.035em; font-size:clamp(2rem,3.5vw,2.9rem); line-height:1.03; }
+    #mainWorkspace aside > div:first-child > p { font-size:13px; line-height:1.8; }
+    #mainWorkspace .kbd-tag { border-radius:5px; }
+    #wpane-matrix,#wpane-blueprint,#wpane-telemetry { animation:nv-panel-in .32s cubic-bezier(.18,.7,.2,1); }
+    @keyframes nv-panel-in { from { opacity:.4; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+    #mainWorkspace section > div:first-child button { line-height:1.3; }
+    #domainGrid > *, #domainDetailBox { border-radius:14px; }
+    #hifiAudioDrawer {
+      top:66px;right:max(14px,calc((100vw - 1460px)/2));
+      width:min(410px,calc(100vw - 28px));
+      max-height:calc(100dvh - 82px);
+      overflow:auto;overscroll-behavior:contain;
+      padding:16px; border-radius:20px;
+      z-index:60!important;
+    }
+    #ytPlayerShell { padding:5px; min-height:216px; border-radius:13px; background:#0c1016; overflow:hidden; border:1px solid rgba(255,255,255,.14); }
+    #ytVisibleMount, #ytVisibleMount iframe { display:block; width:100%!important; height:206px!important; min-height:200px; border:0; border-radius:9px; }
+    #youtubeOpenLink { display:inline-flex; align-items:center; color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
+    #ytErrorHint { line-height:1.5; }
+    #audioChannelGrid { max-height:230px; }
+    #audioChannelGrid button { border-radius:10px; min-height:49px; }
+    #audioChannelGrid img { width:52px; height:36px; border-radius:6px; }
+    #ytSearchResultsBox { border-radius:10px; }
+    #hifiAudioDrawer input[type="text"] { min-height:36px; font-size:12px; border-radius:8px; }
+    #hifiAudioDrawer button { min-height:31px; }
+    #cmdModal > div { border-radius:19px; max-height:78dvh; overflow:auto; }
+    #toastBanner { max-width:min(470px,calc(100vw - 30px)); border-radius:12px; z-index:80!important; line-height:1.6; }
+    #zenHud { border-radius:17px; max-height:85dvh; overflow:auto; }
+    #mobileControlToggle { display:none; }
+    .topology-scroll { width:100%; max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; }
+    .topology-scroll svg { min-width:700px; }
+    .status-dot { width:7px; height:7px; border-radius:50%; background:#a1a1aa; display:inline-block; vertical-align:middle; }
+    .status-dot.ok { background:#34d399; box-shadow:0 0 0 3px rgba(52,211,153,.11); }
+    .status-dot.bad { background:#f59e0b; }
+    #apiStatusText { font-size:10px; letter-spacing:.005em; }
+    @media (max-width:1023px) {
+      #mainWorkspace { display:block; }
+      #mainWorkspace > .dev-shell { display:block; }
+      #mainWorkspace aside { border-bottom:1px solid var(--line); }
+    }
+    @media (max-width:767px) {
+      header { position:sticky; padding-bottom:0; }
+      header > div { display:flex!important; flex-wrap:wrap!important; align-items:center; padding:11px 14px!important; gap:8px!important; }
+      #mobileControlToggle { display:inline-flex; margin-left:auto; align-items:center; justify-content:center; gap:6px; min-height:38px; padding:0 11px; border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.08); color:#f4ecdf; font-size:12px; }
+      #topControls { display:none!important; width:100%; border-top:1px solid rgba(255,255,255,.14); padding-top:10px; flex-wrap:wrap!important; justify-content:flex-start; max-height:45dvh; overflow:auto; }
+      #topControls.is-open { display:flex!important; }
+      #topControls .sbtn { min-height:36px; }
+      #headerStatusStrip { min-width:0; flex:1; }
+      #headerStatusStrip > :nth-child(n+3) { display:none; }
+      #mainWorkspace { padding:12px 10px max(18px,env(safe-area-inset-bottom)); min-height:unset; }
+      #mainWorkspace > .dev-shell { border-radius:17px; }
+      #mainWorkspace aside,#mainWorkspace section { padding:18px!important; }
+      #mainWorkspace h1 { font-size:clamp(1.7rem,8vw,2.3rem); }
+      #mainWorkspace aside > div:first-child > p { font-size:13px; }
+      #mainWorkspace aside .grid.grid-cols-2 { gap:7px; }
+      #mainWorkspace aside .grid.grid-cols-2 > div { min-width:0; }
+      #mainWorkspace section > div:first-child { overflow-x:auto; flex-wrap:nowrap!important; scrollbar-width:none; }
+      #mainWorkspace section > div:first-child > div:first-child { flex-wrap:nowrap!important; min-width:max-content; }
+      #mainWorkspace section > div:first-child button { min-height:44px; white-space:nowrap; font-size:11px; padding:10px 12px; }
+      #mainWorkspace section > div:first-child > div:last-child { display:none!important; }
+      #wpane-telemetry input,#wpane-telemetry button { min-height:40px; }
+      #wpane-telemetry .grid.grid-cols-2 { gap:7px; }
+      #wpane-telemetry .grid.grid-cols-2 > div { min-width:0; }
+      #wpane-blueprint > .dev-cell { padding:10px; }
+      #hifiAudioDrawer { top:auto; left:8px; right:8px; bottom:max(8px,env(safe-area-inset-bottom)); width:auto; max-height:92dvh; padding:13px; border-radius:18px; }
+      #ytPlayerShell { min-height:205px; }
+      #ytVisibleMount,#ytVisibleMount iframe { height:200px!important; }
+      #zenHud { left:10px; right:10px; bottom:max(10px,env(safe-area-inset-bottom)); max-width:none; padding:14px; }
+      #cmdModal { padding:64px 10px 12px; }
+      #toastBanner { bottom:max(14px,env(safe-area-inset-bottom)); left:14px; }
+      [class*="text-[9px]"] { font-size:10.5px!important; }
+      [class*="text-[10px]"] { font-size:11px!important; }
+      [class*="text-[11px]"] { font-size:11.5px!important; }
+    }
+    @media (max-width:375px) {
+      #mainWorkspace aside,#mainWorkspace section { padding:14px!important; }
+      #headerRegionSelect { max-width:132px; }
+      #mainWorkspace .grid.grid-cols-4 > button { padding:7px 3px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; }
+      #scenicCanvas { opacity:.20; }
+    }
+  
   </style>
 </head>
 <body data-scene="vn" data-tod="day" class="selection:bg-amber-800/25">
@@ -378,9 +1744,9 @@
        ========================================================================= -->
   <canvas id="scenicCanvas" class="fixed inset-0 pointer-events-none z-10"></canvas>
 
-  <!-- Official YouTube IFrame API Mount + Piped Direct Audio Stream Engine -->
+  <!-- User-controlled local audio and the official visible YouTube player -->
   <audio id="html5AudioEngine" crossorigin="anonymous" preload="none"></audio>
-  <div id="hiddenYtAudioBridge"><div id="ytHiddenMount"></div></div>
+
   <input id="localAudioFileInput" type="file" accept="audio/*" class="hidden" onchange="handleLocalAudioUpload(event)" />
 
   <!-- =========================================================================
@@ -389,10 +1755,14 @@
   <header class="relative z-40 border-b border-white/15 bg-black/75 backdrop-blur-md text-stone-200 text-[11px] font-mono">
     <div class="max-w-[1400px] mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
       <!-- Live Telemetry + Compact 24-Region Selector -->
-      <div class="flex flex-wrap items-center gap-2.5">
+      <div id="headerStatusStrip" class="flex flex-wrap items-center gap-2.5">
+        <a href="#mainWorkspace" class="inline-flex items-center gap-2 text-white pr-2 font-semibold tracking-wide" aria-label="Về đầu trang">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-amber-600/90 text-white font-bold">NV</span>
+          <span class="hidden sm:inline text-[10px]">NGUYENVU.CLICK <span class="text-stone-400 font-normal">/ STUDIO</span></span>
+        </a>
         <span class="inline-flex items-center gap-1.5 text-emerald-300 font-semibold">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>20 LIVE APIs</span>
+          <span id="navApiStatus">NETWORK LIVE</span>
         </span>
         <span class="text-stone-300">WAN: <strong id="navWanIp" class="text-white">...</strong></span>
         <span class="hidden md:inline text-stone-300">ASN: <strong id="navWanAsn" class="text-amber-200">...</strong></span>
@@ -406,8 +1776,9 @@
         <span class="hidden xl:inline text-stone-400 text-[10px]" id="regionGpsText">20.25°N, 105.97°E</span>
       </div>
 
-      <!-- Country Switcher + Subtle Optional Audio Popover Trigger -->
-      <div class="flex flex-wrap items-center gap-1">
+      <!-- Country Switcher + compact mobile controls -->
+      <button id="mobileControlToggle" onclick="toggleMobileControls()" aria-controls="topControls" aria-expanded="false">☷ Tùy chọn</button>
+      <div id="topControls" class="flex flex-wrap items-center gap-1">
         <button onclick="setScene('vn')" data-sbtn="vn" class="sbtn px-2 py-0.5 bg-amber-700 text-white font-semibold transition">1.VN</button>
         <button onclick="setScene('jp')" data-sbtn="jp" class="sbtn px-2 py-0.5 bg-white/10 hover:bg-white/20 text-stone-200 transition">2.JP</button>
         <button onclick="setScene('cn')" data-sbtn="cn" class="sbtn px-2 py-0.5 bg-white/10 hover:bg-white/20 text-stone-200 transition">3.CN</button>
@@ -436,17 +1807,19 @@
     </div>
   </header>
 
+  <button id="mobileMusicFab" onclick="toggleAudioDrawer()" aria-label="Mở trình phát nhạc" title="Playlist Việt Nam" type="button">♫ <span class="text-[10px]">MUSIC</span></button>
+
   <!-- =========================================================================
        OPTIONAL COMPACT MUSIC POPOVER (ANCHORED TOP-RIGHT, HIDDEN BY DEFAULT)
        ========================================================================= -->
-  <aside id="hifiAudioDrawer" class="fixed top-12 right-4 z-50 w-[330px] sm:w-[360px] dev-shell p-3.5 space-y-2.5 shadow-2xl hidden">
+  <aside id="hifiAudioDrawer" aria-label="Trình phát nhạc" aria-hidden="true" class="fixed top-12 right-4 z-50 w-[330px] sm:w-[360px] dev-shell p-3.5 space-y-2.5 shadow-2xl hidden">
     <div class="flex items-center justify-between border-b hairline pb-1.5 font-mono text-[11px]">
       <div class="flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-        <span class="t-1 font-bold">OPTIONAL BACKGROUND AUDIO</span>
+        <span class="t-1 font-bold">MUSIC / 08 TRACKS</span>
       </div>
       <div class="flex items-center gap-1">
-        <button onclick="cycleAudioEngineMode()" id="engineModeBtn" class="px-1.5 py-0.5 btn-outline text-[10px] t-emerald font-semibold">▶ YT API+</button>
+        <button onclick="cycleAudioEngineMode()" id="engineModeBtn" class="px-1.5 py-0.5 btn-outline text-[10px] t-emerald font-semibold">▶ OFFICIAL YT</button>
         <button onclick="document.getElementById('localAudioFileInput').click()" class="px-1.5 py-0.5 btn-outline text-[10px]" title="Mở file MP3 từ máy">📂 MP3</button>
         <button onclick="toggleAudioDrawer()" class="px-1.5 py-0.5 btn-outline text-[10px]">✕</button>
       </div>
@@ -470,15 +1843,15 @@
             <span id="audioYtIdBadge" class="t-accent font-semibold shrink-0">YT</span>
           </div>
           <div id="drawerNowPlayingTitle" class="font-semibold text-xs t-1 truncate">01. Thành Đô Remix — Tomrry</div>
-          <div id="drawerNowPlayingSub" class="font-mono text-[10px] t-2 truncate">Optional Ambient / Remix Stream</div>
+          <div id="drawerNowPlayingSub" class="font-mono text-[10px] t-2 truncate">Official YouTube video / Local audio</div>
         </div>
       </div>
 
       <div class="space-y-1 font-mono text-[9px]">
         <div class="flex items-center justify-between t-2">
           <span id="ytTimeCurrent">00:00</span>
-          <span id="ytStreamStateText" class="t-emerald">Stream Ready</span>
-          <span id="ytTimeDuration">03:48</span>
+          <span id="ytStreamStateText" class="t-emerald">Chờ phát</span>
+          <span id="ytTimeDuration">00:00</span>
         </div>
         <input id="ytProgressSlider" type="range" min="0" max="100" value="0" oninput="seekYouTubeAudio(this.value)" class="w-full h-1 accent-amber-700 cursor-pointer" />
       </div>
@@ -504,11 +1877,25 @@
       </div>
     </div>
 
-    <div id="audioChannelGrid" class="grid grid-cols-1 gap-1 max-h-32 overflow-y-auto pr-1 font-mono text-[10px]"></div>
+    <div id="ytPlayerShell" aria-label="Trình phát YouTube chính thức">
+        <div id="ytVisibleMount">
+          <a id="ytPosterLink" href="https://www.youtube.com/watch?v=wbeWoVdEceY" target="_blank" rel="noopener noreferrer" class="yt-fallback-poster" aria-label="Mở MV trên YouTube">
+            <span class="yt-play-icon">▶</span>
+            <span class="font-semibold">Official YouTube player</span>
+            <span class="text-[11px] text-stone-400">Nhấn ▶ để phát hoặc xem trên YouTube</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-center justify-between gap-2 font-mono text-[10px] t-2">
+        <span id="ytErrorHint" class="min-w-0">Nhấn ▶ để phát MV trên YouTube.</span>
+        <a id="youtubeOpenLink" href="https://www.youtube.com/watch?v=wbeWoVdEceY" target="_blank" rel="noopener noreferrer" class="shrink-0">Xem YouTube ↗</a>
+      </div>
+      <div class="flex items-center justify-between gap-2 text-[10px] font-mono t-3"><span>Playlist trending • 10.11.2026</span><a href="https://yt50.app/vn/music" target="_blank" rel="noopener noreferrer" class="t-accent underline">Nguồn BXH ↗</a></div>
+      <div id="audioChannelGrid" class="grid grid-cols-1 gap-1 overflow-y-auto pr-1 font-mono text-[10px]"></div>
 
     <div class="pt-1 border-t hairline space-y-1 font-mono text-[10px]">
       <div class="flex gap-1">
-        <input id="customStreamInput" type="text" placeholder="Tìm bài hát hoặc dán link YouTube..." class="w-full px-2 py-1 bg-transparent border hairline-strong t-1 text-[10px] focus:outline-none" onkeydown="if(event.key==='Enter') searchOrPlayYouTube()" />
+        <input id="customStreamInput" type="text" placeholder="Tìm trong playlist / dán link YouTube..." class="w-full px-2 py-1 bg-transparent border hairline-strong t-1 text-[10px] focus:outline-none" onkeydown="if(event.key==='Enter') searchOrPlayYouTube()" />
         <button onclick="searchOrPlayYouTube()" class="px-2 py-1 btn-solid font-semibold shrink-0">🔍</button>
       </div>
       <div id="ytSearchResultsBox" class="hidden space-y-1 max-h-20 overflow-y-auto border hairline p-1 bg-black/20"></div>
@@ -549,7 +1936,7 @@
             <span>~/nguyenvu.click/monograph</span>
             <div class="flex items-center gap-1.5">
               <span class="seal-stamp">NGUYÊN VŨ • ẤN</span>
-              <span id="uptimeCounter" class="px-1.5 py-0.5 border hairline-strong t-emerald font-semibold text-[10px]">SLA 99.98%</span>
+              <span id="uptimeCounter" class="px-1.5 py-0.5 border hairline-strong t-emerald font-semibold text-[10px]">SESSION 00:00</span>
             </div>
           </div>
 
@@ -656,7 +2043,7 @@
             </button>
             <button onclick="switchTab('telemetry')" id="wtab-telemetry" class="px-3.5 py-1.5 btn-outline flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              <span>03. 20 LIVE APIS &amp; CLI SHELL</span>
+              <span>03. LIVE DIAGNOSTICS &amp; CLI</span>
             </button>
           </div>
 
@@ -682,11 +2069,11 @@
             <div class="flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] t-2">
               <span>4-TIER ENTERPRISE TOPOLOGY BLUEPRINT (CLICK TIERS OR TEST <strong class="t-accent">&lt;200ms HA FAILOVER</strong>)</span>
               <button onclick="simulateWanFailover()" id="failoverSimBtn" class="px-2.5 py-0.5 btn-solid text-[10px] font-semibold">
-                ⚡ Mô phỏng Đứt WAN 1 (Test SD-WAN SLA)
+                ⚡ Mô phỏng chuyển tuyến WAN
               </button>
             </div>
 
-            <svg viewBox="0 0 820 116" class="w-full h-auto select-none">
+            <div class="topology-scroll" aria-label="Sơ đồ mạng doanh nghiệp cuộn ngang trên điện thoại" tabindex="0"><svg viewBox="0 0 820 116" class="w-full h-auto select-none">
               <line id="svgLink1" x1="175" y1="58" x2="225" y2="58" stroke="var(--accent)" stroke-width="2" class="packet-flow"/>
               <line x1="385" y1="58" x2="435" y2="58" stroke="var(--emerald)" stroke-width="2" class="packet-flow"/>
               <line x1="595" y1="58" x2="645" y2="58" stroke="var(--accent)" stroke-width="2" class="packet-flow"/>
@@ -722,7 +2109,7 @@
                 <text x="657" y="68" font-family="JetBrains Mono" font-size="9" fill="var(--ink-2)">Quorum HA • NVMe ZFS</text>
                 <text x="657" y="85" font-family="JetBrains Mono" font-size="9" fill="var(--accent)">Docker • 3-2-1 Backup</text>
               </g>
-            </svg>
+            </svg></div>
 
             <div id="tierInspectNote" class="px-3 py-1.5 border hairline font-mono text-[11px] t-1 bg-black/5">
               <strong class="t-accent">TIER 01:</strong> Định tuyến biên đa đường truyền (Multi-WAN SLA), cụm tường lửa HA Active-Passive đồng bộ bảng trạng thái phiên kết nối và hầm IPsec IKEv2 / WireGuard.
@@ -760,7 +2147,7 @@
         <div id="wpane-telemetry" class="hidden space-y-2.5 my-auto">
           <div class="flex flex-wrap sm:flex-nowrap gap-1.5 font-mono text-xs">
             <input id="probeTargetInput" type="text" placeholder="Nhập IP, ASN hoặc Domain (VD: 203.113.131.1, AS7552, nguyenvu.click)..." class="w-full px-3 py-1.5 bg-transparent border hairline-strong t-1 focus:outline-none" onkeydown="if(event.key==='Enter') run20ApiTelemetry(this.value)" />
-            <button onclick="run20ApiTelemetry(document.getElementById('probeTargetInput').value)" class="px-3.5 py-1.5 btn-solid font-semibold shrink-0">Chạy 20 APIs</button>
+            <button onclick="run20ApiTelemetry(document.getElementById('probeTargetInput').value)" class="px-3.5 py-1.5 btn-solid font-semibold shrink-0">Phân tích mạng</button>
           </div>
 
           <div class="flex flex-wrap items-center justify-between gap-1 font-mono text-[11px]">
@@ -771,44 +2158,44 @@
               <button onclick="run20ApiTelemetry('210.245.24.20')" class="px-2 py-0.5 btn-outline">AS18403 FPT</button>
               <button onclick="run20ApiTelemetry('nguyenvu.click')" class="px-2 py-0.5 btn-outline">nguyenvu.click</button>
             </div>
-            <span class="t-emerald font-semibold">● 20/20 Live Endpoints</span>
+            <span id="apiStatusText" class="t-2 font-semibold"><span class="status-dot"></span> Chưa kiểm tra kết nối</span>
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 font-mono text-[11px]">
             <div class="p-2 dev-cell">
-              <div class="text-[9px] t-3">01-04 // WAN IP &amp; ANYCAST POP</div>
+              <div class="text-[9px] t-3">WAN IP / EDGE INFO</div>
               <div id="telWanIp" class="font-bold t-accent truncate mt-0.5">Đang tải...</div>
-              <div id="telEdgePop" class="text-[10px] t-2 truncate">CF POP: SGN • TLSv1.3</div>
+              <div id="telEdgePop" class="text-[10px] t-2 truncate">Edge: chưa đo</div>
             </div>
 
             <div class="p-2 dev-cell">
-              <div class="text-[9px] t-3">05-08 // BGP PREFIX &amp; RPKI ROA</div>
+              <div class="text-[9px] t-3">BGP PREFIX / RPKI</div>
               <div id="telBgpPrefix" class="font-bold t-1 truncate mt-0.5">...</div>
-              <div id="telRpkiState" class="text-[10px] t-emerald font-semibold truncate">RPKI: VALIDATED</div>
+              <div id="telRpkiState" class="text-[10px] t-emerald font-semibold truncate">RPKI: chưa kiểm tra</div>
             </div>
 
             <div class="p-2 dev-cell">
-              <div class="text-[9px] t-3">09-12 // ASN PEERS &amp; IXP</div>
+              <div class="text-[9px] t-3">ASN / BGP NEIGHBORS</div>
               <div id="telAsnPeers" class="font-bold t-1 truncate mt-0.5">AS---</div>
               <div id="telOrgName" class="text-[10px] t-2 truncate">ISP / Autonomous System</div>
             </div>
 
             <div class="p-2 dev-cell">
-              <div class="text-[9px] t-3">13-16 // TRIPLE DoH &amp; RDAP/PTR</div>
-              <div id="telDnsResolved" class="font-bold t-emerald truncate mt-0.5">1.1.1.1 • 8.8.8.8 • 9.9.9.9</div>
-              <div id="telRdapPtr" class="text-[10px] t-2 truncate">RDAP &amp; rDNS PTR Verified</div>
+              <div class="text-[9px] t-3">DNS OVER HTTPS / RDAP</div>
+              <div id="telDnsResolved" class="font-bold t-emerald truncate mt-0.5">DNS: chưa tra cứu</div>
+              <div id="telRdapPtr" class="text-[10px] t-2 truncate">Tra cứu RDAP/PTR trong CLI</div>
             </div>
 
             <div class="p-2 dev-cell">
-              <div class="text-[9px] t-3">17-18 // REGION WEATHER, AQI &amp; ELEVATION</div>
+              <div class="text-[9px] t-3">REGION / AIR QUALITY</div>
               <div id="telEnvWeather" class="font-bold t-1 truncate mt-0.5">--°C • Độ ẩm --%</div>
               <div id="telEnvAqi" class="text-[10px] t-2 truncate">AQI: -- • Cao độ: --m</div>
             </div>
 
             <div class="p-2 dev-cell">
-              <div class="text-[9px] t-3">19-20 // MULTI-POP RTT &amp; SLA</div>
+              <div class="text-[9px] t-3">HTTP REQUEST TIMING (not ICMP)</div>
               <div id="telRttSummary" class="font-bold t-accent truncate mt-0.5">RTT: -- ms</div>
-              <div id="telCfGlobal" class="text-[10px] t-emerald truncate">All Edge POPs Operational</div>
+              <div id="telCfGlobal" class="text-[10px] t-emerald truncate">Chưa đo HTTP</div>
             </div>
           </div>
 
@@ -818,7 +2205,7 @@
               <span>INTERACTIVE NOC CLI SHELL (GÕ: myip, bgp, rpki, peers, dig, rdap, ptr, failover)</span>
               <canvas id="rttSparkCanvas" width="120" height="16" class="bg-black/40 border border-white/10"></canvas>
             </div>
-            <pre id="telRawConsole" class="text-stone-200 overflow-x-auto leading-relaxed max-h-20">Đang khởi tạo 20 kết nối API thực tế...</pre>
+            <pre id="telRawConsole" class="text-stone-200 overflow-x-auto leading-relaxed max-h-20">Nhập IP / ASN / domain để kiểm tra các nguồn công khai...</pre>
             <div class="pt-1 border-t border-white/10 flex flex-wrap sm:flex-nowrap items-center gap-1.5">
               <span class="text-emerald-400 font-bold shrink-0">vu@noc-hcm:~#</span>
               <input id="cliShellInput" type="text" placeholder="Nhập lệnh: myip | bgp 203.113.131.1 | rpki | peers AS7552 | dig nguyenvu.click | rdap | failover" class="w-full bg-transparent text-white focus:outline-none text-[11px]" onkeydown="if(event.key==='Enter') execNocCliCommand(this.value)" />
@@ -834,7 +2221,7 @@
 
         <!-- Workbench Footer Bar -->
         <div class="pt-2 border-t hairline flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] t-2">
-          <span>Phím tắt: <strong class="t-accent">1–7</strong> đổi quốc gia • <strong class="t-accent">⌘K</strong> bảng lệnh nhanh</span>
+          <span>NV / PORTFOLIO V2.0 · Phím tắt: <strong class="t-accent">1–7</strong> đổi quốc gia • <strong class="t-accent">⌘K</strong> bảng lệnh nhanh</span>
           <div class="flex items-center gap-3">
             <button onclick="exportSceneryPostcard()" class="t-emerald font-semibold hover:underline">📸 Tải Bưu Thiếp Cảnh Sắc</button>
             <button onclick="toggleZenMode()" class="t-accent font-semibold hover:underline">✦ Toàn màn hình ngắm cảnh →</button>
@@ -860,7 +2247,7 @@
   </div>
 
   <!-- TOAST -->
-  <div id="toastBanner" class="fixed bottom-14 left-5 z-50 hidden px-4 py-2 terminal-box font-mono text-xs text-amber-300 shadow-2xl"></div>
+  <div role="status" aria-live="polite" id="toastBanner" class="fixed bottom-14 left-5 z-50 hidden px-4 py-2 terminal-box font-mono text-xs text-amber-300 shadow-2xl"></div>
 
   <!-- =========================================================================
        APPLICATION LOGIC: OFFICIAL YOUTUBE API + 3-BAND EQ + NATURE SOUNDSCAPE
@@ -883,6 +2270,7 @@
       ta.select();
       try { document.execCommand('copy'); } catch (e) {}
       document.body.removeChild(ta);
+      if(navigator.clipboard?.writeText && location.protocol==='https:') navigator.clipboard.writeText(str).catch(()=>{});
       notify('Đã sao chép: ' + label);
     }
 
@@ -894,7 +2282,7 @@
       if (el) {
         const m = String(Math.floor(sessionSeconds / 60)).padStart(2, '0');
         const s = String(sessionSeconds % 60).padStart(2, '0');
-        el.textContent = `SLA 99.98% • ${m}:${s}`;
+        el.textContent = `SESSION ${m}:${s}`;
       }
     }, 1000);
 
@@ -1213,9 +2601,10 @@
       }
     };
 
-    let activeScene = localStorage.getItem('nv_atlas_scene') || 'vn';
-    let activeRegionIdx = parseInt(localStorage.getItem('nv_atlas_reg_idx') || '0', 10);
-    let activeTod = localStorage.getItem('nv_dev_tod') || 'day';
+    const prefs={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{window.localStorage.setItem(k,v)}catch(e){}}};
+    let activeScene = prefs.get('nv_atlas_scene') || 'vn';
+    let activeRegionIdx = parseInt(prefs.get('nv_atlas_reg_idx') || '0', 10);
+    let activeTod = prefs.get('nv_dev_tod') || 'day';
     let activeWeatherFx = 'mist';
     let zenActive = false;
 
@@ -1229,8 +2618,8 @@
       if (!WORLD_ATLAS[key]) key = 'vn';
       activeScene = key;
       activeRegionIdx = regIdx;
-      localStorage.setItem('nv_atlas_scene', key);
-      localStorage.setItem('nv_atlas_reg_idx', String(regIdx));
+      prefs.set('nv_atlas_scene', key);
+      prefs.set('nv_atlas_reg_idx', String(regIdx));
       document.body.setAttribute('data-scene', key);
 
       const { country, region, idx, total } = getCurrentRegionObj();
@@ -1240,11 +2629,11 @@
       img.style.opacity = '0.25';
       const pre = new Image();
       pre.onload = () => {
-        img.src = region.photo;
+        img.src = pre.src;
         img.style.opacity = key === 'dev' ? '0.14' : '1';
       };
       pre.onerror = () => { img.style.opacity = '0'; };
-      pre.src = region.photo;
+      pre.src = window.matchMedia('(max-width:767px)').matches ? region.photo.replace('w=2000','w=1100') : region.photo;
 
       document.getElementById('cardSceneTag').textContent = `📍 ${country.name.toUpperCase()} (${idx + 1}/${total})`;
       document.getElementById('cardRegionTitle').textContent = region.title;
@@ -1277,6 +2666,13 @@
       fetchEnvironmentalApis();
     }
 
+    function toggleMobileControls(){
+      const panel=document.getElementById('topControls');
+      const btn=document.getElementById('mobileControlToggle');
+      const open=panel.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded',String(open));
+      btn.textContent=open?'✕ Đóng':'☷ Tùy chọn';
+    }
     function selectSubRegion(idx) {
       setScene(activeScene, idx);
       notify('Đang ngắm: ' + getCurrentRegionObj().region.title);
@@ -1312,7 +2708,7 @@
       const order = ['day', 'dusk', 'night'];
       const labels = { day: '☀ Ban ngày', dusk: '🌅 Hoàng hôn', night: '🌙 Đêm trăng' };
       activeTod = order[(order.indexOf(activeTod) + 1) % order.length];
-      localStorage.setItem('nv_dev_tod', activeTod);
+      prefs.set('nv_dev_tod', activeTod);
       document.body.setAttribute('data-tod', activeTod);
       document.getElementById('todBtn').textContent = labels[activeTod];
       notify('Chu kỳ thiên văn: ' + labels[activeTod]);
@@ -1336,728 +2732,312 @@
     // =========================================================================
     // 3. OFFICIAL YOUTUBE IFRAME API + 3-BAND EQ + AMBIENT NATURE SOUNDSCAPE
     // =========================================================================
+    // =========================================================================
+    // MUSIC • Official, visible YouTube player / user-selected local audio.
+    // 01 is preserved from the original site. 02–08: Vietnam YouTube Trending
+    // music chart snapshot, 10 November 2026. No unlicensed stream extraction.
+    // =========================================================================
     const AUDIO_CHANNELS = [
-      {
-        id: 'yt-01',
-        num: '01',
-        title: 'Thành Đô Remix — Tomrry × Style Tino (Hot TikTok)',
-        artist: 'Triệu Lôi × Tomrry × Style Tino • YouTube Official',
-        bpm: 135,
-        ytIds: ['wbeWoVdEceY', '379ZWhCxjCI', 'Kwhe7AqTL94', 'BCcl9cgG9qQ'],
-        notes: [329.63, 392.00, 440.00, 523.25, 587.33, 523.25, 440.00, 392.00, 329.63, 293.66, 261.63, 293.66, 329.63, 392.00, 329.63, 293.66]
-      },
-      {
-        id: 'yt-02',
-        num: '02',
-        title: 'Giá Như Anh Là Em Remix — Style Tino 2026',
-        artist: 'Đỗ Dũng × Style Tino • YouTube Official Remix',
-        bpm: 136,
-        ytIds: ['PWqZo4Qzc4o', 'n3RdGznOUlo', 'iy0zX2nuP1g'],
-        notes: [329.63, 392.00, 493.88, 587.33, 659.25, 587.33, 493.88, 392.00, 369.99, 440.00, 493.88, 440.00, 369.99, 329.63, 293.66, 329.63]
-      },
-      {
-        id: 'yt-03',
-        num: '03',
-        title: 'Đối Nhân Xử Thế — Lã Phong Lâm × Tomrry Remix',
-        artist: 'Lã Phong Lâm × Tomrry • YouTube Hot Trend',
-        bpm: 134,
-        ytIds: ['8zWdPCVghTI', 'Fj57sa8lcHo', '8McolnoJDTM', 'eYAn9b4ap4o'],
-        notes: [293.66, 349.23, 440.00, 523.25, 587.33, 523.25, 440.00, 392.00, 349.23, 329.63, 293.66, 329.63, 349.23, 440.00, 392.00, 349.23]
-      },
-      {
-        id: 'yt-04',
-        num: '04',
-        title: 'Sơn Thủy Trùng Mây × Yến Vô Hiết — VietZ Remix',
-        artist: 'VietZ × Cổ Phong Điện Tử • YouTube Viral Mix',
-        bpm: 132,
-        ytIds: ['MjE3Yxrv5NY', 'g19WtuuJvyQ', 'rd-u-SBtyqY', 'caxzbFkhTak'],
-        notes: [392.00, 440.00, 523.25, 587.33, 659.25, 587.33, 523.25, 440.00, 392.00, 329.63, 293.66, 329.63, 392.00, 440.00, 392.00, 329.63]
-      },
-      {
-        id: 'yt-05',
-        num: '05',
-        title: 'Tháp Rơi Tự Do (跳楼机) — MinhXT × MinhAK Remix',
-        artist: 'LBI Lợi Bỉ × MinhXT • YouTube TikTok Remix',
-        bpm: 130,
-        ytIds: ['8UvpvBvQ-wQ', 'x1l_2NA2_bY', 'yQ9JjBAAoAk', 'gd6YJdc6WdA'],
-        notes: [440.00, 523.25, 587.33, 659.25, 587.33, 523.25, 440.00, 392.00, 329.63, 392.00, 440.00, 523.25, 440.00, 392.00, 329.63, 293.66]
-      },
-      {
-        id: 'yt-06',
-        num: '06',
-        title: 'Nonstop Full Style Tino Vol.4 — Full VietMix Bay Phòng',
-        artist: 'DJ Style Tino • YouTube Nonstop Bay Phòng 2026',
-        bpm: 138,
-        ytIds: ['n3RdGznOUlo', 'iy0zX2nuP1g', 'bzHIlOGXIEg'],
-        notes: [261.63, 311.13, 392.00, 523.25, 466.16, 392.00, 311.13, 261.63, 293.66, 349.23, 440.00, 587.33, 523.25, 440.00, 349.23, 293.66]
-      },
-      {
-        id: 'yt-07',
-        num: '07',
-        title: 'Nơi Tình Yêu Kết Thúc — Style Tino Mix',
-        artist: 'Style Tino × VH • YouTube Vinahouse Bass Căng',
-        bpm: 135,
-        ytIds: ['1hNMiHbFVJ8', 'PWqZo4Qzc4o', 'wbeWoVdEceY'],
-        notes: [293.66, 329.63, 349.23, 440.00, 523.25, 440.00, 392.00, 349.23, 329.63, 293.66, 261.63, 293.66, 349.23, 392.00, 349.23, 293.66]
-      },
-      {
-        id: 'yt-08',
-        num: '08',
-        title: 'Mashup Sơn Thủy Trùng Mây × Thủy Chung Peak TikTok',
-        artist: 'YouTube Mashup TikTok Thịnh Hành 2026',
-        bpm: 134,
-        ytIds: ['i9cNZuFflWU', 'caxzbFkhTak', 'MjE3Yxrv5NY'],
-        notes: [329.63, 369.99, 392.00, 493.88, 440.00, 392.00, 369.99, 329.63, 293.66, 329.63, 369.99, 392.00, 369.99, 329.63, 293.66, 246.94]
-      }
+      { id:'yt-01', num:'01', title:'Thành Đô Remix — Tomrry × Style Tino (Hot TikTok)', artist:'Triệu Lôi × Tomrry × Style Tino', ytIds:['wbeWoVdEceY'] },
+      { id:'yt-02', num:'02', title:'Như Một Người Rưng', artist:'OSAD × Hà An Huy • Official M/V', ytIds:['hGu7BVQy5G0'] },
+      { id:'yt-03', num:'03', title:'3 Phải 6 Đừng', artist:'Quân A.P • Official M/V', ytIds:['INJuqE_34eQ'] },
+      { id:'yt-04', num:'04', title:'Chuyện Tình Tứ Cứ Từ Từ Tính', artist:'Trúc Nhân × MIN • Official Performance', ytIds:['hdG28jrzjmU'] },
+      { id:'yt-05', num:'05', title:'Vì Anh Quá Đẹp Trai', artist:'Trúc Nhân × Wren Evans • Official Performance', ytIds:['_DDdTphLxKI'] },
+      { id:'yt-06', num:'06', title:'Quá Đủ Rồi', artist:'COOLKID • Official Visualizer', ytIds:['ceGkpG_HJ6Y'] },
+      { id:'yt-07', num:'07', title:'Anh Nên Đi Khỏi Đây', artist:'HIEUTHUHAI • Official Music Video', ytIds:['OLaYISTt65E'] },
+      { id:'yt-08', num:'08', title:'Thế Nào Là Đúng?', artist:'Bảo Anh • Official M/V', ytIds:['kMlcXrUET8I'] }
     ];
+    let currentChannelIdx=0, currentMirrorIdx=0, activeVideoId=AUDIO_CHANNELS[0].ytIds[0];
+    let isAudioPlaying=false, ytIsActuallyStreaming=false, audioDrawerOpen=false, bassPulseEnabled=true;
+    let masterVolume=0.82, playbackSource='youtube', localObjectUrl=null;
+    let webAudioCtx=null, natureNodes={rain:null,waves:null};
+    const html5Audio=document.getElementById('html5AudioEngine');
+    html5Audio.volume=masterVolume;
+    let ytAudioBridge=null,ytBridgeReady=false,ytLoadRequested=false;
+    const $audio=id=>document.getElementById(id);
 
-    let currentChannelIdx = 0;
-    let currentMirrorIdx = 0;
-    let activeVideoId = AUDIO_CHANNELS[0].ytIds[0];
-    let isAudioPlaying = false;
-    let ytIsActuallyStreaming = false;
-    let audioDrawerOpen = false;
-    let bassPulseEnabled = true;
-    let engineMode = 'yt-hybrid'; // 'yt-hybrid' | 'yt-pure' | 'synth'
-    let masterVolume = 0.90;
-    let eqBands = { low: 6, mid: 1, high: 3 };
-
-    // Web Audio API DSP Engine + Nature Soundscape Nodes
-    let webAudioCtx = null;
-    let synthStepTimer = null;
-    let synthStepIdx = 0;
-    let natureNodes = { rain: null, waves: null };
-
-    const html5Audio = document.getElementById('html5AudioEngine');
-    html5Audio.volume = masterVolume;
-
-    let ytAudioBridge = null;
-    let ytBridgeReady = false;
-
-    (function loadOfficialYouTubeApi() {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    })();
-
-    window.onYouTubeIframeAPIReady = function() {
-      ytAudioBridge = new YT.Player('ytHiddenMount', {
-        height: '1',
-        width: '1',
-        videoId: activeVideoId,
-        playerVars: {
-          autoplay: 0,
-          controls: 0,
-          rel: 0,
-          playsinline: 1,
-          enablejsapi: 1
-        },
-        events: {
-          onReady: () => {
-            ytBridgeReady = true;
-            ytAudioBridge.setVolume(Math.round(masterVolume * 100));
-            fetchYouTubeNoEmbedMetadata(activeVideoId);
-          },
-          onStateChange: (e) => {
-            if (e.data === YT.PlayerState.PLAYING) {
-              ytIsActuallyStreaming = true;
-              isAudioPlaying = true;
-              document.getElementById('audioEngineBadge').textContent = '● YOUTUBE API STREAMING LIVE';
-              document.getElementById('ytStreamStateText').textContent = '● YouTube Audio Active';
-              try { html5Audio.pause(); } catch (err) {}
-              if (engineMode === 'yt-pure') stopProceduralSynth();
-              updateAudioUi();
-            } else if (e.data === YT.PlayerState.ENDED) {
-              nextAudioTrack();
-            } else if (e.data === YT.PlayerState.BUFFERING) {
-              document.getElementById('ytStreamStateText').textContent = '⏳ Buffering YouTube...';
-            }
-          },
-          onError: () => {
-            ytIsActuallyStreaming = false;
-            const ch = AUDIO_CHANNELS[currentChannelIdx];
-            if (ch && currentMirrorIdx + 1 < ch.ytIds.length) {
-              currentMirrorIdx++;
-              activeVideoId = ch.ytIds[currentMirrorIdx];
-              updateYtArtworkAndBadge(activeVideoId);
-              try {
-                ytAudioBridge.loadVideoById(activeVideoId);
-                return;
-              } catch (err) {}
-            }
-            fallbackToPipedOrSynth(ch);
-          }
-        }
-      });
-    };
-
-    async function fetchYouTubeNoEmbedMetadata(videoId) {
-      updateYtArtworkAndBadge(videoId);
-      try {
-        const r = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`);
-        if (r.ok) {
-          const d = await r.json();
-          if (d.title) {
-            document.getElementById('drawerNowPlayingSub').textContent = `YouTube: ${d.author_name || 'Official Mix'} • ${d.title.slice(0, 42)}`;
-          }
-        }
-      } catch (e) {}
+    function musicState(label, isError=false){
+      const hint=$audio('ytErrorHint');
+      if(hint) { hint.textContent=label; hint.classList.toggle('t-accent',isError); }
+      const badge=$audio('audioEngineBadge');
+      if(badge) badge.textContent=isError?'● KHÔNG PHÁT ĐƯỢC':'● YOUTUBE CHÍNH THỨC';
+      const st=$audio('ytStreamStateText');
+      if(st) st.textContent=isError?'Không khả dụng':label;
     }
-
-    function updateYtArtworkAndBadge(videoId) {
-      const art = document.getElementById('ytArtworkImg');
-      if (art) {
-        art.style.display = 'block';
-        art.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-      }
-      const badge = document.getElementById('audioYtIdBadge');
-      if (badge) badge.textContent = `YT: ${videoId}`;
+    function updateYtArtworkAndBadge(id){
+      if (!/^[\w-]{11}$/.test(id)) return;
+      $audio('ytArtworkImg').src=`https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+      $audio('audioYtIdBadge').textContent=`YT: ${id}`;
+      $audio('youtubeOpenLink').href=`https://www.youtube.com/watch?v=${id}`;
+      const poster=$audio('ytPosterLink');if(poster)poster.href=$audio('youtubeOpenLink').href;
     }
-
-    function formatTimeSec(sec) {
-      if (!sec || isNaN(sec) || sec < 0) return '00:00';
-      const m = Math.floor(sec / 60);
-      const s = Math.floor(sec % 60);
-      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    function openAudioDrawer(){
+      audioDrawerOpen=true;
+      $audio('hifiAudioDrawer').classList.remove('hidden');
+      $audio('hifiAudioDrawer').setAttribute('aria-hidden','false');
+      updateYtArtworkAndBadge(activeVideoId);
     }
-
-    setInterval(() => {
-      if (!isAudioPlaying) return;
-      if (ytBridgeReady && ytIsActuallyStreaming && ytAudioBridge && ytAudioBridge.getCurrentTime) {
-        try {
-          const cur = ytAudioBridge.getCurrentTime() || 0;
-          const dur = ytAudioBridge.getDuration() || 0;
-          document.getElementById('ytTimeCurrent').textContent = formatTimeSec(cur);
-          if (dur > 0) {
-            document.getElementById('ytTimeDuration').textContent = formatTimeSec(dur);
-            document.getElementById('ytProgressSlider').value = Math.min(100, Math.round((cur / dur) * 100));
-          }
-        } catch (e) {}
-      } else if (!html5Audio.paused && html5Audio.duration) {
-        document.getElementById('ytTimeCurrent').textContent = formatTimeSec(html5Audio.currentTime);
-        document.getElementById('ytTimeDuration').textContent = formatTimeSec(html5Audio.duration);
-        document.getElementById('ytProgressSlider').value = Math.min(100, Math.round((html5Audio.currentTime / html5Audio.duration) * 100));
-      }
-    }, 500);
-
-    function seekYouTubeAudio(pct) {
-      const val = parseFloat(pct);
-      if (ytBridgeReady && ytIsActuallyStreaming && ytAudioBridge && ytAudioBridge.getDuration) {
-        const dur = ytAudioBridge.getDuration();
-        if (dur > 0) ytAudioBridge.seekTo((val / 100) * dur, true);
-      } else if (html5Audio.duration) {
-        html5Audio.currentTime = (val / 100) * html5Audio.duration;
-      }
+    function toggleAudioDrawer(){
+      audioDrawerOpen ? (audioDrawerOpen=false,$audio('hifiAudioDrawer').classList.add('hidden'),$audio('hifiAudioDrawer').setAttribute('aria-hidden','true')) : openAudioDrawer();
     }
-
-    function updateEqBand(band, val) {
-      const v = parseInt(val, 10);
-      eqBands[band] = v;
-      const sign = v > 0 ? '+' : '';
-      if (band === 'low') document.getElementById('eqLowVal').textContent = `${sign}${v}dB`;
-      if (band === 'mid') document.getElementById('eqMidVal').textContent = `${sign}${v}dB`;
-      if (band === 'high') document.getElementById('eqHighVal').textContent = `${sign}${v}dB`;
-    }
-
-    // Real-Time Ambient Nature Soundscape Mixer (Rain / Waves / 432Hz Zen Bell)
-    function ensureWebAudioContext() {
-      const AC = window.AudioContext || window.webkitAudioContext;
-      if (!webAudioCtx) webAudioCtx = new AC();
-      if (webAudioCtx.state === 'suspended') webAudioCtx.resume();
-    }
-
-    function toggleNatureSound(type) {
-      ensureWebAudioContext();
-      const btn = document.getElementById('ambBtn-' + type);
-      if (natureNodes[type]) {
-        try { natureNodes[type].stop(); } catch (e) {}
-        natureNodes[type] = null;
-        if (btn) btn.className = 'px-2 py-0.5 btn-outline';
-        notify(`Đã tắt âm thanh thiên nhiên: ${type === 'rain' ? 'Mưa đêm' : 'Sóng hồ'}`);
-        return;
-      }
-
-      const bufSize = webAudioCtx.sampleRate * 2;
-      const buffer = webAudioCtx.createBuffer(1, bufSize, webAudioCtx.sampleRate);
-      const data = buffer.getChannelData(0);
-      for (let i = 0; i < bufSize; i++) {
-        data[i] = (Math.random() * 2 - 1) * 0.15;
-      }
-      const noise = webAudioCtx.createBufferSource();
-      noise.buffer = buffer;
-      noise.loop = true;
-
-      const filter = webAudioCtx.createBiquadFilter();
-      filter.type = type === 'rain' ? 'bandpass' : 'lowpass';
-      filter.frequency.value = type === 'rain' ? 1100 : 280;
-
-      const gain = webAudioCtx.createGain();
-      gain.gain.value = type === 'rain' ? 0.08 : 0.12;
-
-      noise.connect(filter);
-      filter.connect(gain);
-      gain.connect(webAudioCtx.destination);
-      noise.start();
-      natureNodes[type] = noise;
-      if (btn) btn.className = 'px-2 py-0.5 btn-solid font-semibold';
-      notify(`Đang phát âm thanh thiên nhiên: ${type === 'rain' ? '🌧 Tiếng mưa đêm' : '🌊 Sóng nước nhẹ'}`);
-    }
-
-    function triggerZenChime432() {
-      ensureWebAudioContext();
-      const now = webAudioCtx.currentTime;
-      [432, 648, 864].forEach((freq, idx) => {
-        const osc = webAudioCtx.createOscillator();
-        const gain = webAudioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now + idx * 0.08);
-        gain.gain.setValueAtTime(0.14 / (idx + 1), now + idx * 0.08);
-        gain.gain.exponentialRampToValueAtTime(0.0005, now + 2.6 + idx * 0.2);
-        osc.connect(gain);
-        gain.connect(webAudioCtx.destination);
-        osc.start(now + idx * 0.08);
-        osc.stop(now + 2.8 + idx * 0.2);
-      });
-      notify('🔔 Đã ngân tiếng Chuông Thiền 432Hz');
-    }
-
-    async function tryResolveDirectYtAudioStream(ytIds) {
-      const apis = [
-        'https://pipedapi.kavin.rocks/streams/',
-        'https://api.piped.private.coffee/streams/'
-      ];
-      for (const vid of ytIds) {
-        for (const base of apis) {
-          try {
-            const ctrl = new AbortController();
-            const timer = setTimeout(() => ctrl.abort(), 2400);
-            const r = await fetch(base + vid, { signal: ctrl.signal });
-            clearTimeout(timer);
-            if (r.ok) {
-              const d = await r.json();
-              const stream = (d.audioStreams || []).find(s => s.url && (s.mimeType || '').includes('audio'));
-              if (stream && stream.url) return stream.url;
-            }
-          } catch (e) {}
-        }
-      }
-      return null;
-    }
-
-    async function fallbackToPipedOrSynth(channel) {
-      if (!isAudioPlaying) return;
-      startProceduralSynth(channel);
-      if (channel?.ytIds?.length) {
-        const directUrl = await tryResolveDirectYtAudioStream(channel.ytIds);
-        if (directUrl && isAudioPlaying && !ytIsActuallyStreaming) {
-          html5Audio.src = directUrl;
-          html5Audio.volume = masterVolume;
-          html5Audio.play().then(() => {
-            document.getElementById('audioEngineBadge').textContent = '● YOUTUBE DIRECT AUDIO STREAM';
-            if (engineMode === 'yt-pure') stopProceduralSynth();
-          }).catch(() => {});
-        }
-      }
-    }
-
-    function playKickDrum(time, punch = 1.0) {
-      if (!webAudioCtx) return;
-      const osc = webAudioCtx.createOscillator();
-      const gain = webAudioCtx.createGain();
-      const lowBoost = Math.max(0.4, 1 + (eqBands.low / 10));
-      const scale = ytIsActuallyStreaming ? (eqBands.low > 2 ? 0.14 : 0.0) : 0.36;
-      if (scale <= 0.001) return;
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(135, time);
-      osc.frequency.exponentialRampToValueAtTime(36, time + 0.15);
-
-      gain.gain.setValueAtTime(Math.min(0.65, scale * masterVolume * punch * lowBoost), time);
-      gain.gain.exponentialRampToValueAtTime(0.001, time + 0.24);
-
-      osc.connect(gain);
-      gain.connect(webAudioCtx.destination);
-      osc.start(time);
-      osc.stop(time + 0.25);
-    }
-
-    function playPluckLead(freq, time, dur = 0.25) {
-      if (!webAudioCtx || ytIsActuallyStreaming) return;
-      const osc = webAudioCtx.createOscillator();
-      const gain = webAudioCtx.createGain();
-      const midBoost = Math.max(0.5, 1 + (eqBands.mid / 12));
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(freq, time);
-      gain.gain.setValueAtTime(0.001, time);
-      gain.gain.linearRampToValueAtTime(0.14 * masterVolume * midBoost, time + 0.012);
-      gain.gain.exponentialRampToValueAtTime(0.0008, time + dur);
-      osc.connect(gain);
-      gain.connect(webAudioCtx.destination);
-      osc.start(time);
-      osc.stop(time + dur + 0.02);
-    }
-
-    function stopProceduralSynth() {
-      if (synthStepTimer) {
-        clearInterval(synthStepTimer);
-        synthStepTimer = null;
-      }
-    }
-
-    function stopAllAudioEngines() {
-      stopProceduralSynth();
-      ytIsActuallyStreaming = false;
-      try { html5Audio.pause(); } catch (e) {}
-      try {
-        if (ytBridgeReady && ytAudioBridge && ytAudioBridge.pauseVideo) {
-          ytAudioBridge.pauseVideo();
-        }
-      } catch (e) {}
-    }
-
-    function startProceduralSynth(channel) {
-      stopProceduralSynth();
-      ensureWebAudioContext();
-      const stepMs = Math.round((60 / (channel.bpm || 135) / 2) * 1000);
-      synthStepIdx = 0;
-
-      const runStep = () => {
-        if (!isAudioPlaying || !webAudioCtx) return;
-        const now = webAudioCtx.currentTime;
-        const step = synthStepIdx % 16;
-        const notes = channel.notes || AUDIO_CHANNELS[0].notes;
-        const noteFreq = notes[step % notes.length];
-
-        if (step % 2 === 0) playKickDrum(now, 1.05);
-        playPluckLead(noteFreq, now, 0.24);
-        synthStepIdx++;
-      };
-
-      runStep();
-      synthStepTimer = setInterval(runStep, stepMs);
-    }
-
-    function startChannelPlayback(idx, mirrorIdx = 0) {
-      currentChannelIdx = (idx + AUDIO_CHANNELS.length) % AUDIO_CHANNELS.length;
-      currentMirrorIdx = mirrorIdx;
-      const ch = AUDIO_CHANNELS[currentChannelIdx];
-      activeVideoId = ch.ytIds[currentMirrorIdx % ch.ytIds.length];
-
-      stopAllAudioEngines();
-      isAudioPlaying = true;
-
-      document.getElementById('drawerNowPlayingTitle').textContent = `${ch.num}. ${ch.title}`;
-      document.getElementById('drawerNowPlayingSub').textContent = ch.artist;
-      const inlineTag = document.getElementById('inlineNowPlayingTag');
-      if (inlineTag) inlineTag.textContent = `▶ YouTube: ${ch.title}`;
-
-      fetchYouTubeNoEmbedMetadata(activeVideoId);
-
-      // Instant 0.01s hybrid start while YouTube API buffers
-      if (engineMode !== 'yt-pure') {
-        startProceduralSynth(ch);
-      }
-
-      if (engineMode !== 'synth' && ytBridgeReady && ytAudioBridge && ytAudioBridge.loadVideoById) {
-        try {
-          document.getElementById('audioEngineBadge').textContent = '● CONNECTING YOUTUBE API...';
-          ytAudioBridge.loadVideoById(activeVideoId);
-          ytAudioBridge.setVolume(Math.round(masterVolume * 100));
-        } catch (e) {
-          fallbackToPipedOrSynth(ch);
-        }
-      } else if (engineMode === 'synth') {
-        document.getElementById('audioEngineBadge').textContent = '● STUDIO SYNTH REMIX LIVE';
-        startProceduralSynth(ch);
-      } else {
-        fallbackToPipedOrSynth(ch);
-      }
-
-      updateAudioUi();
-    }
-
-    function switchAltYoutubeMirror() {
-      const ch = AUDIO_CHANNELS[currentChannelIdx];
-      const nextMirror = (currentMirrorIdx + 1) % ch.ytIds.length;
-      startChannelPlayback(currentChannelIdx, nextMirror);
-      notify(`Đã chuyển sang link YouTube dự phòng #${nextMirror + 1} (${activeVideoId})`);
-    }
-
-    function toggleMasterAudio() {
-      if (isAudioPlaying) {
-        isAudioPlaying = false;
-        stopAllAudioEngines();
-        updateAudioUi();
-        notify('Đã tạm dừng phát nhạc YouTube');
-      } else {
-        startChannelPlayback(currentChannelIdx, currentMirrorIdx);
-        notify('▶ Đang phát YouTube: ' + AUDIO_CHANNELS[currentChannelIdx].title);
-      }
-    }
-
-    function prevAudioTrack() {
-      startChannelPlayback(currentChannelIdx - 1, 0);
-      notify('⏮ ' + AUDIO_CHANNELS[currentChannelIdx].title);
-    }
-
-    function nextAudioTrack() {
-      startChannelPlayback(currentChannelIdx + 1, 0);
-      notify('⏭ ' + AUDIO_CHANNELS[currentChannelIdx].title);
-    }
-
-    function cycleAudioEngineMode() {
-      const modes = ['yt-hybrid', 'yt-pure', 'synth'];
-      const labels = { 'yt-hybrid': '▶ YT API+', 'yt-pure': '🎧 Pure YT', 'synth': '🎹 Synth' };
-      engineMode = modes[(modes.indexOf(engineMode) + 1) % modes.length];
-      document.getElementById('engineModeBtn').textContent = labels[engineMode];
-      if (isAudioPlaying) startChannelPlayback(currentChannelIdx, currentMirrorIdx);
-      notify('Chế độ phát: ' + labels[engineMode]);
-    }
-
-    function setMasterVolume(val) {
-      masterVolume = Math.max(0, Math.min(1, parseInt(val, 10) / 100));
-      html5Audio.volume = masterVolume;
-      if (ytBridgeReady && ytAudioBridge && ytAudioBridge.setVolume) {
-        ytAudioBridge.setVolume(parseInt(val, 10));
-      }
-    }
-
-    function handleLocalAudioUpload(event) {
-      const file = event.target.files?.[0];
-      if (!file) return;
-      stopAllAudioEngines();
-      const url = URL.createObjectURL(file);
-      html5Audio.src = url;
-      html5Audio.volume = masterVolume;
-      isAudioPlaying = true;
-      html5Audio.play();
-      document.getElementById('audioEngineBadge').textContent = '● LOCAL MP3/FLAC HI-FI';
-      document.getElementById('drawerNowPlayingTitle').textContent = file.name.replace(/\.[^.]+$/, '');
-      document.getElementById('drawerNowPlayingSub').textContent = 'Local High-Resolution Audio File';
-      updateAudioUi();
-      notify('Đang phát file nhạc từ máy: ' + file.name);
-    }
-
-    function playCustomYouTubeVideoId(videoId, customTitle = '') {
-      stopAllAudioEngines();
-      activeVideoId = videoId;
-      isAudioPlaying = true;
-
-      document.getElementById('drawerNowPlayingTitle').textContent = customTitle || `YouTube Track (${videoId})`;
-      fetchYouTubeNoEmbedMetadata(videoId);
-
-      if (engineMode !== 'yt-pure') {
-        startProceduralSynth(AUDIO_CHANNELS[currentChannelIdx]);
-      }
-
-      if (ytBridgeReady && ytAudioBridge && ytAudioBridge.loadVideoById) {
-        ytAudioBridge.loadVideoById(videoId);
-        ytAudioBridge.setVolume(Math.round(masterVolume * 100));
-      }
-      tryResolveDirectYtAudioStream([videoId]).then(directUrl => {
-        if (directUrl && isAudioPlaying && !ytIsActuallyStreaming) {
-          html5Audio.src = directUrl;
-          html5Audio.volume = masterVolume;
-          html5Audio.play().catch(() => {});
-        }
-      });
-
-      updateAudioUi();
-      notify('▶ Đang phát YouTube: ' + (customTitle || videoId));
-    }
-
-    async function searchOrPlayYouTube() {
-      const raw = document.getElementById('customStreamInput').value.trim();
-      if (!raw) return;
-      const resultsBox = document.getElementById('ytSearchResultsBox');
-
-      const vidMatch = raw.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/|live\/))([a-zA-Z0-9_-]{11})/);
-      const vid = vidMatch ? vidMatch[1] : (/^[a-zA-Z0-9_-]{11}$/.test(raw) ? raw : null);
-      if (vid) {
-        resultsBox.classList.add('hidden');
-        playCustomYouTubeVideoId(vid);
-        return;
-      }
-
-      const foundIdx = AUDIO_CHANNELS.findIndex(c =>
-        c.title.toLowerCase().includes(raw.toLowerCase()) ||
-        c.artist.toLowerCase().includes(raw.toLowerCase())
-      );
-      if (foundIdx !== -1) {
-        resultsBox.classList.add('hidden');
-        startChannelPlayback(foundIdx, 0);
-        notify('▶ Đang phát: ' + AUDIO_CHANNELS[foundIdx].title);
-        return;
-      }
-
-      resultsBox.classList.remove('hidden');
-      resultsBox.innerHTML = `<div class="p-1 text-amber-300">🔍 Đang tìm "${raw}" trên YouTube API...</div>`;
-
-      const searchApis = [
-        `https://pipedapi.kavin.rocks/search?q=${encodeURIComponent(raw)}&filter=music_songs`,
-        `https://api.piped.private.coffee/search?q=${encodeURIComponent(raw)}&filter=videos`
-      ];
-
-      for (const url of searchApis) {
-        try {
-          const r = await fetch(url);
-          if (r.ok) {
-            const d = await r.json();
-            const items = (d.items || []).filter(x => x.url && x.url.includes('watch?v=')).slice(0, 5);
-            if (items.length > 0) {
-              resultsBox.innerHTML = items.map(item => {
-                const id = item.url.split('watch?v=')[1]?.slice(0, 11);
-                const safeTitle = (item.title || 'YouTube Track').replace(/'/g, '');
-                return `
-                  <button onclick="playCustomYouTubeVideoId('${id}', '${safeTitle}')" class="w-full p-1.5 text-left hover:bg-amber-500/20 flex items-center justify-between gap-2 border-b hairline">
-                    <span class="truncate t-1">▶ ${item.title}</span>
-                    <span class="text-[9px] t-accent shrink-0">${item.uploaderName || 'YT'}</span>
-                  </button>
-                `;
-              }).join('');
-              const firstId = items[0].url.split('watch?v=')[1]?.slice(0, 11);
-              if (firstId) playCustomYouTubeVideoId(firstId, items[0].title);
-              return;
-            }
-          }
-        } catch (e) {}
-      }
-
-      if (ytBridgeReady && ytAudioBridge && ytAudioBridge.loadPlaylist) {
-        try {
-          ytAudioBridge.loadPlaylist({ listType: 'search', list: raw });
-          isAudioPlaying = true;
-          document.getElementById('drawerNowPlayingTitle').textContent = `YouTube Search: ${raw}`;
-          resultsBox.innerHTML = `<div class="p-1 text-emerald-300">● Đang phát kết quả tìm kiếm YouTube cho "${raw}"</div>`;
-          updateAudioUi();
-          return;
-        } catch (e) {}
-      }
-
-      resultsBox.innerHTML = `<div class="p-1 text-stone-300">Đã phát kênh mặc định cho "${raw}"</div>`;
-      startChannelPlayback(0, 0);
-    }
-
-    function renderAudioChannelGrids() {
-      const drawerGrid = document.getElementById('audioChannelGrid');
-      if (drawerGrid) {
-        drawerGrid.innerHTML = AUDIO_CHANNELS.map((c, i) => {
-          const active = i === currentChannelIdx && isAudioPlaying;
-          const thumbId = c.ytIds[0];
-          return `
-            <button onclick="startChannelPlayback(${i}, 0)" class="p-1.5 text-left border transition flex items-center justify-between gap-2 ${active ? 'border-amber-500 bg-amber-500/20 t-1 font-semibold' : 'hairline dev-cell t-2'}">
-              <div class="flex items-center gap-2 min-w-0 flex-1">
-                <img src="https://i.ytimg.com/vi/${thumbId}/default.jpg" alt="YT" class="w-8 h-6 object-cover border hairline shrink-0" />
-                <div class="min-w-0 flex-1">
-                  <div class="truncate t-1">${c.num}. ${c.title}</div>
-                  <div class="text-[9px] t-3 truncate">${c.artist}</div>
-                </div>
-              </div>
-              <span class="text-[9px] t-accent font-bold shrink-0">${active ? '⏸ YT LIVE' : '▶ YT'}</span>
-            </button>
-          `;
-        }).join('');
-      }
-
-      const inlineGrid = document.getElementById('inlineAudioGrid');
-      if (inlineGrid) {
-        inlineGrid.innerHTML = AUDIO_CHANNELS.map((c, i) => {
-          const active = i === currentChannelIdx && isAudioPlaying;
-          const thumbId = c.ytIds[0];
-          return `
-            <button onclick="startChannelPlayback(${i}, 0)" class="p-2 dev-cell text-left truncate hover:border-[var(--accent)] flex items-center justify-between gap-2 ${active ? 'ring-1 ring-[var(--accent)] font-semibold' : ''}">
-              <div class="flex items-center gap-2 min-w-0 flex-1">
-                <img src="https://i.ytimg.com/vi/${thumbId}/default.jpg" alt="YT" class="w-9 h-6 object-cover border hairline shrink-0" />
-                <div class="min-w-0 flex-1">
-                  <div class="truncate t-1">${c.num}. ${c.title}</div>
-                  <div class="text-[9px] t-3 truncate">${c.artist}</div>
-                </div>
-              </div>
-              <span class="text-[10px] t-accent font-bold shrink-0">${active ? '⏸' : '▶ YT'}</span>
-            </button>
-          `;
-        }).join('');
-      }
-    }
-
-    function updateAudioUi() {
-      const pill = document.getElementById('headerAudioPill');
-      const hPlay = document.getElementById('headerPlayBtn');
-      const dPlay = document.getElementById('drawerPlayBtn');
-      const vWrap = document.getElementById('drawerVinylWrap');
-
-      if (isAudioPlaying) {
-        pill.classList.add('audio-active');
-        vWrap.classList.add('audio-active');
-        hPlay.textContent = '⏸';
-        dPlay.textContent = '⏸ Dừng';
-      } else {
-        pill.classList.remove('audio-active');
-        vWrap.classList.remove('audio-active');
-        hPlay.textContent = '▶';
-        dPlay.textContent = '▶ Phát';
-      }
+    function updateAudioUi(){
+      const playing=isAudioPlaying;
+      $audio('headerAudioPill').classList.toggle('audio-active',playing);
+      $audio('drawerVinylWrap').classList.toggle('audio-active',playing);
+      $audio('headerPlayBtn').textContent=playing?'⏸':'▶';
+      $audio('drawerPlayBtn').textContent=playing?'⏸ Tạm dừng':'▶ Phát';
+      $audio('headerPlayBtn').setAttribute('aria-label',playing?'Tạm dừng nhạc':'Phát nhạc');
       renderAudioChannelGrids();
     }
-
-    function toggleAudioDrawer() {
-      audioDrawerOpen = !audioDrawerOpen;
-      document.getElementById('hifiAudioDrawer').classList.toggle('hidden', !audioDrawerOpen);
+    function selectMusicMetadata(ch){
+      $audio('drawerNowPlayingTitle').textContent=`${ch.num}. ${ch.title}`;
+      $audio('drawerNowPlayingSub').textContent=ch.artist;
+      const inline=$audio('inlineNowPlayingTag');
+      if(inline) inline.textContent=`▶ YouTube: ${ch.title}`;
+      updateYtArtworkAndBadge(activeVideoId);
+      $audio('ytTimeCurrent').textContent='00:00';
+      $audio('ytTimeDuration').textContent='00:00';
+      $audio('ytProgressSlider').value=0;
     }
-
-    function toggleBassPulse() {
-      bassPulseEnabled = !bassPulseEnabled;
-      document.getElementById('bassPulseBtn').textContent = bassPulseEnabled ? '⚡ Bass: ON' : '⚡ Bass: OFF';
-      notify(bassPulseEnabled ? 'Đã bật đồng bộ nhịp Bass tạo gợn sóng nước' : 'Đã tắt đồng bộ sóng nước');
+    function setYtPlaying(play){
+      isAudioPlaying=play;ytIsActuallyStreaming=play;
+      if(play) musicState('Đang phát video YouTube');
+      updateAudioUi();
     }
-
-    // 32-Band Audio Spectrum Visualizer + Dual Analog VU Meter Updater
-    const specCanvas = document.getElementById('spectrumCanvas');
-    const specCtx = specCanvas ? specCanvas.getContext('2d') : null;
-    let bassEnergy = 0;
-
-    function drawAudioSpectrum(time) {
-      if (!specCtx) return;
-      const w = specCanvas.width;
-      const h = specCanvas.height;
-      specCtx.clearRect(0, 0, w, h);
-
-      const bars = 32;
-      const barW = (w / bars) - 1.2;
-      let sumLow = 0;
-      let sumRight = 0;
-
-      for (let i = 0; i < bars; i++) {
-        let amp = 0.08;
-        if (isAudioPlaying) {
-          const wave1 = Math.sin(time * 10.5 + i * 0.42) * 0.42 + 0.48;
-          const wave2 = Math.cos(time * 15.2 - i * 0.28) * 0.35 + 0.35;
-          const kick = (i < 8) ? Math.pow(Math.max(0, Math.sin(time * 8.2)), 3) * (1 + eqBands.low * 0.06) : 0;
-          amp = Math.min(1, (wave1 * 0.46 + wave2 * 0.34 + kick * 0.45));
-          if (i < 8) sumLow += amp;
-          if (i >= 8 && i < 20) sumRight += amp;
+    // A visible embedded player is required by YouTube. On file:// embeds may
+    // fail due to referrer restrictions; production deployment should use HTTPS.
+    function initYouTubePlayer(){
+      if(!window.YT?.Player || ytAudioBridge)return;
+      ytAudioBridge=new YT.Player('ytVisibleMount',{
+        height:'206',width:'100%',videoId:activeVideoId,
+        playerVars:{autoplay:0,controls:1,playsinline:1,rel:0,enablejsapi:1,origin:location.protocol.startsWith('http')?location.origin:undefined},
+        events:{
+          onReady:()=>{
+            ytBridgeReady=true;
+            ytAudioBridge.setVolume(Math.round(masterVolume*100));
+            musicState('Sẵn sàng • Nhấn ▶ trong trình phát');
+            if(ytLoadRequested) {
+              ytLoadRequested=false;
+              // Loading after asynchronous script may require another user tap.
+              ytAudioBridge.cueVideoById(activeVideoId);
+              musicState('Nhấn ▶ trên video để bắt đầu');
+            }
+          },
+          onStateChange:e=>{
+            if(e.data===YT.PlayerState.PLAYING){playbackSource='youtube';html5Audio.pause();setYtPlaying(true);}
+            else if(e.data===YT.PlayerState.ENDED){setYtPlaying(false);nextAudioTrack();}
+            else if(e.data===YT.PlayerState.PAUSED){setYtPlaying(false);}
+            else if(e.data===YT.PlayerState.BUFFERING){musicState('Đang tải video...');}
+          },
+          onError:e=>{
+            setYtPlaying(false);
+            const code=e?.data??'unknown';
+            musicState(`Video bị chặn hoặc không hỗ trợ nhúng (${code}). Chọn “Xem YouTube”.`,true);
+          }
         }
-        const bh = Math.max(2, amp * (h - 2));
-        const x = i * (barW + 1.2);
-        const y = h - bh;
-
-        specCtx.fillStyle = i < 8 ? '#ef4444' : (i < 20 ? '#f59e0b' : '#10b981');
-        specCtx.fillRect(x, y, barW, bh);
+      });
+    }
+    window.onYouTubeIframeAPIReady=initYouTubePlayer;
+    (function loadOfficialYouTubeApi(){
+      const script=document.createElement('script');script.src='https://www.youtube.com/iframe_api';
+      script.async=true;script.onerror=()=>musicState('Không tải được YouTube API; mở liên kết ngoài.',true);
+      document.head.appendChild(script);
+    })();
+    function stopAllAudioEngines(){
+      html5Audio.pause();
+      if(ytBridgeReady&&ytAudioBridge?.pauseVideo)try{ytAudioBridge.pauseVideo();}catch(e){}
+      isAudioPlaying=false;ytIsActuallyStreaming=false;
+    }
+    function startChannelPlayback(idx,mirrorIdx=0){
+      currentChannelIdx=(idx+AUDIO_CHANNELS.length)%AUDIO_CHANNELS.length;
+      currentMirrorIdx=mirrorIdx;
+      const ch=AUDIO_CHANNELS[currentChannelIdx];
+      activeVideoId=ch.ytIds[Math.min(mirrorIdx,ch.ytIds.length-1)];
+      stopAllAudioEngines();playbackSource='youtube';openAudioDrawer();selectMusicMetadata(ch);
+      if(ytBridgeReady&&ytAudioBridge?.loadVideoById){
+        musicState('Đang tải video...');
+        try{ytAudioBridge.loadVideoById(activeVideoId);ytAudioBridge.setVolume(Math.round(masterVolume*100));}
+        catch(e){musicState('Hãy nhấn ▶ trong trình phát hoặc mở YouTube.',true);}
+      }else{
+        ytLoadRequested=true;
+        musicState('Đang khởi tạo YouTube; sau đó nhấn ▶ trong video.');
       }
-      bassEnergy = sumLow / 8;
-
-      const vuL = document.getElementById('vuBarL');
-      const vuR = document.getElementById('vuBarR');
-      const vuDb = document.getElementById('vuDbText');
-      if (vuL && vuR) {
-        const pctL = isAudioPlaying ? Math.min(98, Math.round(bassEnergy * 95)) : 8;
-        const pctR = isAudioPlaying ? Math.min(96, Math.round((sumRight / 12) * 95)) : 6;
-        vuL.style.width = pctL + '%';
-        vuR.style.width = pctR + '%';
-        if (vuDb) vuDb.textContent = isAudioPlaying ? (pctL > 82 ? '+2dB' : '-1dB') : '-∞';
+      updateAudioUi();
+    }
+    function toggleMasterAudio(){
+      if(playbackSource==='local'&&html5Audio.src){
+        if(!html5Audio.paused){html5Audio.pause();isAudioPlaying=false;}
+        else{html5Audio.play().catch(()=>notify('Trình duyệt đã chặn âm thanh tự động.'));isAudioPlaying=true;}
+        updateAudioUi();return;
+      }
+      if(isAudioPlaying){
+        try{ytAudioBridge?.pauseVideo();}catch(e){}
+        setYtPlaying(false);
+      }else{
+        openAudioDrawer();
+        if(ytBridgeReady&&ytAudioBridge){
+          const id=ytAudioBridge.getVideoData?.()?.video_id;
+          if(id===activeVideoId)ytAudioBridge.playVideo();
+          else ytAudioBridge.loadVideoById(activeVideoId);
+          musicState('Đang kết nối...');
+        }else{ytLoadRequested=true;musicState('Đang tải YouTube; hãy nhấn ▶ trong video.');}
       }
     }
+    function prevAudioTrack(){startChannelPlayback(currentChannelIdx-1);}
+    function nextAudioTrack(){startChannelPlayback(currentChannelIdx+1);}
+    function switchAltYoutubeMirror(){
+      const ch=AUDIO_CHANNELS[currentChannelIdx];
+      if(ch.ytIds.length>1)startChannelPlayback(currentChannelIdx,(currentMirrorIdx+1)%ch.ytIds.length);
+      else{window.open($audio('youtubeOpenLink').href,'_blank','noopener,noreferrer');notify('Đã mở video trên YouTube chính thức.');}
+    }
+    function cycleAudioEngineMode(){
+      openAudioDrawer();
+      notify('YouTube dùng trình phát chính thức. Muốn phát nhạc từ máy, chọn 📂 MP3.');
+    }
+    function setMasterVolume(val){
+      masterVolume=Math.min(1,Math.max(0,Number(val)/100||0));
+      html5Audio.volume=masterVolume;
+      if(ytBridgeReady)try{ytAudioBridge.setVolume(Math.round(masterVolume*100));}catch(e){}
+    }
+    function handleLocalAudioUpload(event){
+      const file=event.target.files?.[0];
+      if(!file)return;
+      if(!file.type.startsWith('audio/')){notify('Vui lòng chọn tệp âm thanh.');return;}
+      stopAllAudioEngines();
+      if(localObjectUrl)URL.revokeObjectURL(localObjectUrl);
+      localObjectUrl=URL.createObjectURL(file);
+      html5Audio.src=localObjectUrl;html5Audio.volume=masterVolume;
+      playbackSource='local';openAudioDrawer();
+      $audio('drawerNowPlayingTitle').textContent=file.name.replace(/\.[^.]+$/,'');
+      $audio('drawerNowPlayingSub').textContent='Local audio • Không tải lên máy chủ';
+      $audio('audioEngineBadge').textContent='● LOCAL AUDIO';
+      html5Audio.play().catch(()=>notify('Hãy nhấn ▶ để phát file.'));
+    }
+    html5Audio.addEventListener('play',()=>{playbackSource='local';isAudioPlaying=true;updateAudioUi();});
+    html5Audio.addEventListener('pause',()=>{if(playbackSource==='local'){isAudioPlaying=false;updateAudioUi();}});
+    html5Audio.addEventListener('ended',()=>{isAudioPlaying=false;updateAudioUi();});
+    function formatTimeSec(sec){
+      if(!Number.isFinite(sec)||sec<0)return '00:00';
+      return `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(Math.floor(sec%60)).padStart(2,'0')}`;
+    }
+    setInterval(()=>{
+      if(document.hidden || !isAudioPlaying)return;
+      try{
+        const sourceIsLocal=playbackSource==='local';
+        const t=sourceIsLocal?html5Audio.currentTime:ytAudioBridge?.getCurrentTime?.();
+        const duration=sourceIsLocal?html5Audio.duration:ytAudioBridge?.getDuration?.();
+        $audio('ytTimeCurrent').textContent=formatTimeSec(t);
+        if(Number.isFinite(duration)&&duration>0){
+          $audio('ytTimeDuration').textContent=formatTimeSec(duration);
+          $audio('ytProgressSlider').value=Math.min(100,Math.round((t/duration)*100));
+        }
+      }catch(e){}
+    },700);
+    function seekYouTubeAudio(pct){
+      const p=Math.min(100,Math.max(0,Number(pct)))/100;
+      if(playbackSource==='local'&&Number.isFinite(html5Audio.duration))html5Audio.currentTime=p*html5Audio.duration;
+      else if(ytBridgeReady){const duration=ytAudioBridge.getDuration?.();if(duration>0)ytAudioBridge.seekTo(p*duration,true);}
+    }
+    function playCustomYouTubeVideoId(id,title=''){
+      if(!/^[\w-]{11}$/.test(id))return notify('Video ID không hợp lệ.');
+      stopAllAudioEngines();activeVideoId=id;playbackSource='youtube';openAudioDrawer();
+      $audio('drawerNowPlayingTitle').textContent=title||'Video YouTube tùy chọn';
+      $audio('drawerNowPlayingSub').textContent='YouTube • User-selected';
+      updateYtArtworkAndBadge(id);
+      if(ytBridgeReady)ytAudioBridge.loadVideoById(id);
+      else{ytLoadRequested=true;musicState('Chờ YouTube khởi tạo, sau đó nhấn ▶.');}
+      updateAudioUi();
+    }
+    function searchOrPlayYouTube(){
+      const raw=$audio('customStreamInput').value.trim();if(!raw)return;
+      const results=$audio('ytSearchResultsBox');
+      let vid=null;
+      try{
+        const u=new URL(raw);
+        if(['youtube.com','www.youtube.com','m.youtube.com','music.youtube.com','youtu.be','www.youtu.be'].includes(u.hostname)){
+          vid=u.hostname.endsWith('youtu.be')?u.pathname.slice(1).split('/')[0]:(u.searchParams.get('v')||u.pathname.match(/\/(?:shorts|embed|live)\/([\w-]{11})/)?.[1]);
+        }
+      }catch(e){}
+      if(!vid&&/^[\w-]{11}$/.test(raw))vid=raw;
+      if(vid&&/^[\w-]{11}$/.test(vid)){results.classList.add('hidden');playCustomYouTubeVideoId(vid);return;}
+      const matches=AUDIO_CHANNELS.map((c,i)=>({...c,i})).filter(c=>(c.title+' '+c.artist).toLocaleLowerCase('vi').includes(raw.toLocaleLowerCase('vi')));
+      results.replaceChildren();results.classList.remove('hidden');
+      if(matches.length){
+        matches.forEach(c=>{
+          const btn=document.createElement('button');btn.type='button';btn.className='block w-full p-2 dev-cell text-left t-1';
+          btn.textContent=`▶ ${c.num}. ${c.title} — ${c.artist}`;
+          btn.addEventListener('click',()=>{startChannelPlayback(c.i);results.classList.add('hidden');});
+          results.appendChild(btn);
+        });
+      }else{
+        const p=document.createElement('p');p.textContent='Không có trong playlist. Bạn có thể tìm bản chính thức trên YouTube:';p.className='p-1 t-2';
+        const a=document.createElement('a');a.href='https://www.youtube.com/results?search_query='+encodeURIComponent(raw);
+        a.target='_blank';a.rel='noopener noreferrer';a.className='btn-outline block p-2 text-center';
+        a.textContent=`Tìm “${raw.slice(0,70)}” trên YouTube ↗`;
+        results.append(p,a);
+      }
+    }
+    function renderAudioChannelGrids(){
+      const drawer=$audio('audioChannelGrid');
+      if(!drawer)return;
+      drawer.replaceChildren();
+      AUDIO_CHANNELS.forEach((c,i)=>{
+        const active=i===currentChannelIdx;
+        const b=document.createElement('button');b.type='button';
+        b.className=`p-2 text-left border flex items-center justify-between gap-2 ${active?'border-amber-500/70 bg-amber-500/10':'hairline dev-cell'}`;
+        b.setAttribute('aria-label',`Phát bài ${c.num}: ${c.title}`);
+        b.innerHTML=`<span class="flex items-center gap-2 min-w-0 flex-1"><img loading="lazy" onerror="this.style.visibility='hidden'" src="https://i.ytimg.com/vi/${c.ytIds[0]}/mqdefault.jpg" alt="" class="shrink-0" /><span class="min-w-0 flex-1"><span class="block truncate t-1 font-semibold">${c.num}. ${c.title}</span><span class="block text-[10px] t-3 truncate">${c.artist}</span></span></span><span class="t-accent font-bold">${active&&isAudioPlaying?'⏸':'▶'}</span>`;
+        b.addEventListener('click',()=>startChannelPlayback(i));
+        drawer.appendChild(b);
+      });
+    }
+    function ensureWebAudioContext(){
+      const AC=window.AudioContext||window.webkitAudioContext;
+      if(!AC){notify('Thiết bị chưa hỗ trợ Web Audio.');return false;}
+      if(!webAudioCtx)webAudioCtx=new AC();
+      if(webAudioCtx.state==='suspended')webAudioCtx.resume().catch(()=>{});
+      return true;
+    }
+    function toggleNatureSound(type){
+      if(!ensureWebAudioContext())return;
+      const btn=$audio('ambBtn-'+type);
+      if(natureNodes[type]){
+        try{natureNodes[type].stop();natureNodes[type].disconnect();}catch(e){}
+        natureNodes[type]=null;btn?.classList.remove('btn-solid');btn?.classList.add('btn-outline');return;
+      }
+      const size=Math.round(webAudioCtx.sampleRate*2),buffer=webAudioCtx.createBuffer(1,size,webAudioCtx.sampleRate),data=buffer.getChannelData(0);
+      for(let i=0;i<size;i++)data[i]=(Math.random()*2-1)*.15;
+      const noise=webAudioCtx.createBufferSource();noise.buffer=buffer;noise.loop=true;
+      const filter=webAudioCtx.createBiquadFilter();filter.type=type==='rain'?'bandpass':'lowpass';filter.frequency.value=type==='rain'?1100:280;
+      const gain=webAudioCtx.createGain();gain.gain.value=type==='rain'?.08:.12;
+      noise.connect(filter);filter.connect(gain);gain.connect(webAudioCtx.destination);noise.start();natureNodes[type]=noise;
+      btn?.classList.remove('btn-outline');btn?.classList.add('btn-solid');
+    }
+    function triggerZenChime432(){
+      if(!ensureWebAudioContext())return;
+      const now=webAudioCtx.currentTime;
+      [432,648,864].forEach((freq,i)=>{
+        const osc=webAudioCtx.createOscillator(),gain=webAudioCtx.createGain(),start=now+i*.08;
+        osc.type='sine';osc.frequency.setValueAtTime(freq,start);
+        gain.gain.setValueAtTime(.12/(i+1),start);
+        gain.gain.exponentialRampToValueAtTime(.0005,start+2.6);
+        osc.connect(gain);gain.connect(webAudioCtx.destination);osc.start(start);osc.stop(start+2.8);
+      });
+    }
+    let bassEnergy=0;
+    function drawAudioSpectrum(time){
+      const canvas=$audio('spectrumCanvas');if(!canvas)return;
+      const g=canvas.getContext('2d');if(!g)return;
+      const w=canvas.width,h=canvas.height;
+      g.clearRect(0,0,w,h);
+      for(let i=0;i<20;i++){
+        const height=isAudioPlaying?2+(Math.sin(time*5+i*1.11)+1)*h*.36:2;
+        g.fillStyle=i<7?'#e7a665':i<14?'#86b7aa':'#d6cdbc';
+        g.fillRect(i*w/20,h-height,w/20-1.5,height);
+      }
+      bassEnergy=isAudioPlaying?.33:0;
+    }
+    function toggleBassPulse(){bassPulseEnabled=!bassPulseEnabled;notify(`Hiệu ứng bass: ${bassPulseEnabled?'bật':'tắt'}`);}
 
     // =========================================================================
     // 4. REAL-TIME CELESTIAL SUN/MOON ARC, WEATHER & BASS RIPPLE CANVAS
@@ -2438,12 +3418,12 @@
         statusText.textContent = '⚠ WAN1 CUT → WAN2 ACTIVE (185ms)';
         statusText.setAttribute('fill', '#D97706');
         btn.textContent = '↻ Khôi phục đường truyền WAN 1';
-        note.innerHTML = `<strong class="t-accent">[SD-WAN SLA FAILOVER &lt;200ms]:</strong> Phát hiện đứt kết nối <strong>WAN 1</strong>. Cụm HA tự động chuyển toàn bộ phiên sang <strong>WAN 2 Backup</strong> trong <strong>185ms</strong>; hầm IPsec IKEv2 và cuộc gọi thoại SIP/RTP không rớt gói tin nào.`;
+        note.innerHTML = `<strong class="t-accent">[MÔ PHỎNG CHUYỂN TUYẾN WAN]:</strong> Phát hiện đứt kết nối <strong>WAN 1</strong>. Cụm HA tự động chuyển toàn bộ phiên sang <strong>WAN 2 Backup</strong> trong mô hình minh họa. Thời gian khôi phục và trạng thái phiên thực tế phải được đo trên thiết bị.`;
         notify('Đã kích hoạt mô phỏng chuyển mạch dự phòng SD-WAN (<200ms)!');
       } else {
         statusText.textContent = '● WAN1 + WAN2 Active';
         statusText.setAttribute('fill', 'var(--emerald)');
-        btn.textContent = '⚡ Mô phỏng Đứt WAN 1 (Test SD-WAN SLA)';
+        btn.textContent = '⚡ Mô phỏng chuyển tuyến WAN';
         inspectTier(0);
         notify('Đường truyền WAN 1 đã khôi phục trạng thái cân bằng tải');
       }
@@ -2465,16 +3445,17 @@
     // =========================================================================
     // 7. 20 LIVE PUBLIC APIS TELEMETRY ENGINE + INTERACTIVE NOC CLI SHELL
     // =========================================================================
-    let rttHistory = [18, 16, 19, 15, 17, 16, 14, 15];
-    let lastClientIp = '203.113.131.1';
-    let lastClientAsn = 'AS7552';
-    let lastClientPrefix = '203.113.131.0/24';
+    let rttHistory = [];
+    let lastClientIp = '';
+    let lastClientAsn = '';
+    let lastClientPrefix = '';
 
     function drawRttSparkline() {
       const c = document.getElementById('rttSparkCanvas');
       if (!c) return;
       const g = c.getContext('2d');
       g.clearRect(0, 0, c.width, c.height);
+      if (!rttHistory.length) return;
       const max = Math.max(...rttHistory, 40);
       const min = Math.min(...rttHistory, 5);
       g.strokeStyle = '#52B793';
@@ -2488,206 +3469,244 @@
       g.stroke();
     }
 
-    async function fetchEnvironmentalApis() {
-      const { region } = getCurrentRegionObj();
-      try {
-        const [wRes, aRes, elRes] = await Promise.allSettled([
-          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${region.lat}&longitude=${region.lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,surface_pressure`),
-          fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${region.lat}&longitude=${region.lon}&current=european_aqi,pm2_5`),
-          fetch(`https://api.open-meteo.com/v1/elevation?latitude=${region.lat}&longitude=${region.lon}`)
-        ]);
-
-        let elevMeters = 45;
-        if (elRes.status === 'fulfilled' && elRes.value.ok) {
-          const ed = await elRes.value.json();
-          if (ed.elevation && ed.elevation[0] !== undefined) elevMeters = Math.round(ed.elevation[0]);
-        }
-        document.getElementById('regionGpsText').textContent = `GPS: ${region.lat.toFixed(2)}°N, ${region.lon.toFixed(2)}°E • Độ cao: ${elevMeters}m`;
-
-        if (wRes.status === 'fulfilled' && wRes.value.ok) {
-          const wd = await wRes.value.json();
-          if (wd.current) {
-            const t = `${wd.current.temperature_2m}°C`;
-            document.getElementById('navSceneTemp').textContent = t;
-            document.getElementById('cardRegionWeather').textContent = `${t} • ${elevMeters}m`;
-            document.getElementById('telEnvWeather').textContent = `${t} • Ẩm ${wd.current.relative_humidity_2m}% • ${wd.current.surface_pressure}hPa`;
-          }
-        }
-        if (aRes.status === 'fulfilled' && aRes.value.ok) {
-          const ad = await aRes.value.json();
-          if (ad.current) {
-            document.getElementById('telEnvAqi').textContent = `AQI: ${ad.current.european_aqi ?? 18} • Cao độ: ${elevMeters}m`;
-          }
-        }
-      } catch (e) {}
+    // Request helper: timeout + limited retries + cache. Never fill in fabricated data.
+    const API_CACHE=new Map();
+    let telemetryRunId=0, environmentRunId=0;
+    async function fetchPublicJson(url,{timeout=6500,retries=1,ttl=45000,headers={}}={}){
+      const cached=API_CACHE.get(url);
+      if(cached&&Date.now()-cached.when<ttl)return cached.value;
+      let lastError;
+      for(let attempt=0;attempt<=retries;attempt++){
+        const controller=new AbortController();
+        const timer=setTimeout(()=>controller.abort(),timeout);
+        try{
+          const res=await fetch(url,{signal:controller.signal,headers,cache:'no-store'});
+          if(!res.ok)throw Error(`HTTP ${res.status}`);
+          const data=await res.json();
+          API_CACHE.set(url,{when:Date.now(),value:data});
+          return data;
+        }catch(e){lastError=e;}
+        finally{clearTimeout(timer);}
+      }
+      throw lastError;
     }
-
-    async function run20ApiTelemetry(rawInput = '') {
-      const q = rawInput.trim();
-      const rawOut = document.getElementById('telRawConsole');
-      rawOut.textContent = 'Đang thực thi truy vấn bất đồng bộ tới 20 endpoints (BGP, RPKI, DoH, Elevation, Edge Trace)...';
-
-      const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-      const netSpec = conn ? `${conn.effectiveType || '4g'} (~${conn.downlink || 10}Mbps)` : `${navigator.hardwareConcurrency || 8} Threads`;
-
-      let cfTraceSummary = 'POP: SGN • TLSv1.3';
-      try {
-        const tr = await fetch('https://1.1.1.1/cdn-cgi/trace');
-        if (tr.ok) {
-          const txt = await tr.text();
-          const map = Object.fromEntries(txt.trim().split('\n').map(l => l.split('=')));
-          cfTraceSummary = `POP: ${map.colo || 'SGN'} • ${map.tls || 'TLSv1.3'} • ${map.http || 'http/2'}`;
-          document.getElementById('telEdgePop').textContent = cfTraceSummary;
-        }
-      } catch (e) {}
-
-      const measureRtt = async (url) => {
-        const t0 = performance.now();
-        try { await fetch(url, { mode: 'no-cors', cache: 'no-store' }); return Math.max(4, Math.round(performance.now() - t0)); }
-        catch (e) { return Math.round(15 + Math.random() * 6); }
-      };
-      const [rttCf, rttGg] = await Promise.all([
-        measureRtt('https://1.1.1.1/cdn-cgi/trace'),
-        measureRtt('https://dns.google/resolve?name=example.com&type=A')
+    const apiText=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val;};
+    const validIPv4=s=>{const p=s.split('.');return p.length===4&&p.every(v=>/^\d{1,3}$/.test(v)&&Number(v)<=255);};
+    const validAsn=s=>/^AS\d{1,10}$/i.test(s);
+    const validDomain=s=>s.length<254&&/^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/i.test(s);
+    const validIPv6=s=>s.includes(':')&&/^[0-9a-f:]+$/i.test(s)&&s.length<=39;
+    function diagnoseInput(raw){
+      const input=(raw||'').trim();
+      if(!input)return {type:'client',q:''};
+      if(validIPv4(input)||validIPv6(input))return {type:'ip',q:input};
+      if(validAsn(input))return {type:'asn',q:input.toUpperCase()};
+      if(validDomain(input))return {type:'domain',q:input.toLowerCase()};
+      return {type:'invalid',q:input};
+    }
+    async function fetchEnvironmentalApis(){
+      const requestId=++environmentRunId;
+      const {region}=getCurrentRegionObj();
+      const prefix=`latitude=${encodeURIComponent(region.lat)}&longitude=${encodeURIComponent(region.lon)}`;
+      const calls=await Promise.allSettled([
+        fetchPublicJson(`https://api.open-meteo.com/v1/forecast?${prefix}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,surface_pressure`,{ttl:900000}),
+        fetchPublicJson(`https://air-quality-api.open-meteo.com/v1/air-quality?${prefix}&current=european_aqi,pm2_5`,{ttl:900000}),
+        fetchPublicJson(`https://api.open-meteo.com/v1/elevation?${prefix}`,{ttl:86400000})
       ]);
-      rttHistory.push(rttCf);
-      if (rttHistory.length > 14) rttHistory.shift();
-      drawRttSparkline();
-      document.getElementById('telRttSummary').textContent = `RTT: ${rttCf}ms (CF) / ${rttGg}ms (GG)`;
-
-      const isDom = q.includes('.') && !/^\d+\.\d+\.\d+\.\d+$/.test(q);
-      const domName = isDom ? q : 'nguyenvu.click';
-
-      try {
-        const [cfDns, ggDns] = await Promise.all([
-          fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domName)}&type=A`, { headers: { accept: 'application/dns-json' } }).then(r => r.json()),
-          fetch(`https://dns.google/resolve?name=${encodeURIComponent(domName)}&type=A`).then(r => r.json())
-        ]);
-        const resolvedIp = cfDns.Answer?.[0]?.data || ggDns.Answer?.[0]?.data || '172.67.188.210';
-        document.getElementById('telDnsResolved').textContent = `${domName} → ${resolvedIp}`;
-      } catch (e) {}
-
-      try {
-        const geoUrl = q && !isDom && !q.toUpperCase().startsWith('AS')
-          ? `https://get.geojs.io/v1/ip/geo/${encodeURIComponent(q)}.json`
-          : 'https://get.geojs.io/v1/ip/geo.json';
-        const gd = await fetch(geoUrl).then(r => r.json());
-        const ip = gd.ip || q || 'Online';
-        const org = (gd.organization_name || gd.organization || 'Vietnam ISP').replace(/^AS\d+\s+/i, '');
-        const asnMatch = (gd.organization || '').match(/^AS\d+/i);
-        const asn = q.toUpperCase().startsWith('AS') ? q.toUpperCase() : (asnMatch ? asnMatch[0] : (gd.asn ? 'AS' + gd.asn : 'AS7552'));
-
-        lastClientIp = ip;
-        lastClientAsn = asn;
-
-        document.getElementById('telWanIp').textContent = ip;
-        if (!q) {
-          document.getElementById('navWanIp').textContent = ip;
-          document.getElementById('navWanAsn').textContent = `${asn} (${org.slice(0, 18)})`;
-        }
-
-        const [netInfo, neighInfo] = await Promise.allSettled([
-          fetch(`https://stat.ripe.net/data/network-info/data.json?resource=${encodeURIComponent(ip)}`).then(r => r.json()),
-          fetch(`https://stat.ripe.net/data/asn-neighbours/data.json?resource=${encodeURIComponent(asn)}`).then(r => r.json())
-        ]);
-
-        const prefix = (netInfo.status === 'fulfilled' && netInfo.value?.data?.prefix) ? netInfo.value.data.prefix : `${ip}/24`;
-        lastClientPrefix = prefix;
-        const peerCount = (neighInfo.status === 'fulfilled' && neighInfo.value?.data?.neighbours)
-          ? `${neighInfo.value.data.neighbours.length} BGP Peers`
-          : 'Active BGP Routing';
-
-        try {
-          const rpkiRes = await fetch(`https://stat.ripe.net/data/rpki-validation/data.json?resource=${encodeURIComponent(asn)}&prefix=${encodeURIComponent(prefix)}`).then(r => r.json());
-          const state = rpkiRes?.data?.status || 'valid';
-          document.getElementById('telRpkiState').textContent = `RPKI ROA: ${state.toUpperCase()}`;
-        } catch (e) {}
-
-        document.getElementById('telBgpPrefix').textContent = `${prefix} (${asn})`;
-        document.getElementById('telAsnPeers').textContent = `${asn} • ${peerCount}`;
-        document.getElementById('telOrgName').textContent = org;
-
-        const { region } = getCurrentRegionObj();
-        rawOut.textContent =
-`[BGP/WAN] IP: ${ip} | ASN: ${asn} (${org}) | Prefix: ${prefix} | Peers: ${peerCount}
-[ATLAS]   Region: ${region.title} (${region.lat}°N, ${region.lon}°E) | ${cfTraceSummary} | RTT: ${rttCf}ms | ${netSpec}`;
-      } catch (e) {
-        rawOut.textContent = 'Đã đồng bộ dữ liệu dự phòng cho 20 API.';
-      }
+      if(requestId!==environmentRunId)return;
+      const [w,a,e]=calls;
+      const elev=e.status==='fulfilled'&&Number.isFinite(e.value.elevation?.[0])?Math.round(e.value.elevation[0]):null;
+      apiText('regionGpsText',`GPS: ${region.lat.toFixed(2)}°N, ${region.lon.toFixed(2)}°E${elev===null?'':` • ${elev}m`}`);
+      const weather=w.status==='fulfilled'?w.value.current:null;
+      const t=Number.isFinite(weather?.temperature_2m)?`${weather.temperature_2m}°C`:'—';
+      apiText('navSceneTemp',t);
+      apiText('cardRegionWeather',`${t}${elev===null?'':` • ${elev}m`}`);
+      apiText('telEnvWeather',weather?`${t} • Ẩm ${weather.relative_humidity_2m??'—'}% • ${weather.surface_pressure??'—'}hPa`:'Dịch vụ thời tiết chưa phản hồi');
+      const aqi=a.status==='fulfilled'?a.value.current?.european_aqi:null;
+      apiText('telEnvAqi',`European AQI: ${Number.isFinite(aqi)?aqi:'—'} • Cao độ: ${elev===null?'—':`${elev}m`}`);
     }
-
-    // Interactive NOC CLI Shell supporting myip, bgp, rpki, peers, dig, rdap, ptr, failover
-    async function execNocCliCommand(rawCmd) {
-      const cmd = (rawCmd || '').trim();
-      if (!cmd) return;
-      const out = document.getElementById('telRawConsole');
-      const parts = cmd.split(/\s+/);
-      const op = parts[0].toLowerCase();
-      const arg = parts[1] || '';
-
-      document.getElementById('cliShellInput').value = '';
-
-      if (op === 'myip') {
-        await run20ApiTelemetry('');
-      } else if (op === 'bgp') {
-        await run20ApiTelemetry(arg || lastClientIp);
-      } else if (op === 'rpki') {
-        out.textContent = `[RIPE NCC RPKI VALIDATOR] Checking ROA for ${lastClientPrefix} (${lastClientAsn})...`;
-        try {
-          const r = await fetch(`https://stat.ripe.net/data/rpki-validation/data.json?resource=${encodeURIComponent(lastClientAsn)}&prefix=${encodeURIComponent(lastClientPrefix)}`).then(x => x.json());
-          out.textContent = `[RPKI ROA RESULT] Prefix: ${lastClientPrefix} | Origin: ${lastClientAsn} | Validation State: ${(r?.data?.status || 'VALID').toUpperCase()}`;
-        } catch (e) {
-          out.textContent = `[RPKI ROA RESULT] Prefix: ${lastClientPrefix} | Origin: ${lastClientAsn} | State: VALIDATED`;
-        }
-      } else if (op === 'peers') {
-        const targetAsn = (arg || lastClientAsn).toUpperCase();
-        out.textContent = `[RIPEstat ASN NEIGHBOURS] Querying BGP peers for ${targetAsn}...`;
-        try {
-          const r = await fetch(`https://stat.ripe.net/data/asn-neighbours/data.json?resource=${encodeURIComponent(targetAsn)}`).then(x => x.json());
-          const counts = r?.data?.neighbour_counts || {};
-          out.textContent = `[ASN NEIGHBOURS] ${targetAsn} -> Left/Upstream: ${counts.left || 14} | Right/Downstream: ${counts.right || 82} | Total Peers: ${(r?.data?.neighbours || []).length}`;
-        } catch (e) {
-          out.textContent = `[ASN NEIGHBOURS] ${targetAsn} -> Active Upstream & IXP Peering Established`;
-        }
-      } else if (op === 'dig') {
-        const dom = arg || 'nguyenvu.click';
-        out.textContent = `[CLOUDFLARE 1.1.1.1 DoH] Resolving ${dom}...`;
-        try {
-          const r = await fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(dom)}&type=A`, { headers: { accept: 'application/dns-json' } }).then(x => x.json());
-          const ans = (r.Answer || []).map(a => `${a.name} TTL=${a.TTL} IN A ${a.data}`).join(' | ') || 'No A record';
-          out.textContent = `; <<>> DiG DoH 1.1.1.1 <<>> ${dom}\n${ans}`;
-        } catch (e) {}
-      } else if (op === 'rdap') {
-        const dom = arg || 'nguyenvu.click';
-        out.textContent = `[RDAP REGISTRY] Querying official domain registration for ${dom}...`;
-        try {
-          const r = await fetch(`https://rdap.org/domain/${encodeURIComponent(dom)}`).then(x => x.json());
-          out.textContent = `[RDAP] Domain: ${r.ldhName || dom} | Status: ${(r.status || ['active']).join(', ')}`;
-        } catch (e) {
-          out.textContent = `[RDAP] Domain: ${dom} | Status: clientTransferProhibited (Active)`;
-        }
-      } else if (op === 'ptr') {
-        const ip = arg || lastClientIp;
-        const rev = ip.split('.').reverse().join('.') + '.in-addr.arpa';
-        out.textContent = `[REVERSE DNS PTR] Querying ${rev}...`;
-        try {
-          const r = await fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(rev)}&type=PTR`, { headers: { accept: 'application/dns-json' } }).then(x => x.json());
-          out.textContent = `[rDNS PTR] ${ip} -> ${r.Answer?.[0]?.data || 'static-wan.vn-isp.net.'}`;
-        } catch (e) {}
-      } else if (op === 'failover') {
-        switchTab('blueprint');
-        simulateWanFailover();
-      } else {
-        out.textContent = `vu@noc-hcm:~# ${cmd}\nLệnh hỗ trợ: myip | bgp <ip> | rpki | peers <ASN> | dig <domain> | rdap <domain> | ptr <ip> | failover`;
+    // This measures HTTP elapsed time, NOT actual ICMP RTT or SLA.
+    async function measureHttpMs(url){
+      const started=performance.now();
+      const controller=new AbortController();
+      const timer=setTimeout(()=>controller.abort(),5500);
+      try{
+        await fetch(url,{mode:'no-cors',cache:'no-store',signal:controller.signal});
+        return Math.max(1,Math.round(performance.now()-started));
+      }catch(e){return null;}
+      finally{clearTimeout(timer);}
+    }
+    function setApiSummary(ok,total){
+      const status=document.getElementById('apiStatusText');
+      if(status)status.innerHTML=`<span class="status-dot ${ok?'ok':'bad'}"></span> ${ok}/${total} nhóm dữ liệu có phản hồi`;
+      apiText('navApiStatus',`DATA ${ok}/${total}`);
+    }
+    async function run20ApiTelemetry(rawInput=''){
+      const runId=++telemetryRunId;
+      const {type,q}=diagnoseInput(rawInput);
+      const output=document.getElementById('telRawConsole');
+      if(type==='invalid'){
+        output.textContent='Định dạng không hợp lệ. Hỗ trợ IPv4, IPv6, ASN (AS7552) hoặc tên miền (example.com).';return;
       }
+      output.textContent='Đang truy vấn nguồn công khai (Cloudflare/Google DNS, RIPEstat, GeoJS)...';
+      apiText('telWanIp','Đang kiểm tra...');apiText('telBgpPrefix','...');
+      apiText('telAsnPeers','...');apiText('telRpkiState','RPKI: chưa có kết quả');
+      apiText('telDnsResolved','DNS: đang phân giải');
+      apiText('telRttSummary','HTTP: đang đo');
+      let ok=0,total=type==='asn'?3:5;
+      const rows=[];
+      const put=(title,value)=>rows.push(`[${title}] ${value}`);
+
+      // Resolve the requested domain independently of client WAN discovery.
+      const domain=type==='domain'?q:'nguyenvu.click';
+      const dnsUrl1=`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=A`;
+      const dnsUrl2=`https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=A`;
+      const rtt=Promise.allSettled([
+        measureHttpMs('https://dns.google/resolve?name=example.com&type=A'),
+        measureHttpMs('https://cloudflare-dns.com/dns-query?name=example.com&type=A')
+      ]);
+      const dns=Promise.allSettled([
+        fetchPublicJson(dnsUrl1,{headers:{accept:'application/dns-json'}}),
+        fetchPublicJson(dnsUrl2)
+      ]);
+      // Client IP is only shown when actually returned by a public IP provider.
+      const geo=type==='ip'||type==='client'
+        ? fetchPublicJson(type==='ip'?`https://get.geojs.io/v1/ip/geo/${encodeURIComponent(q)}.json`:'https://get.geojs.io/v1/ip/geo.json',{retries:1})
+        : Promise.resolve(null);
+      let [dnsResults,timingResults,geoResult]=await Promise.all([
+        dns,rtt,geo.then(value=>({ok:true,value}),error=>({ok:false,error}))
+      ]);
+      if(runId!==telemetryRunId)return;
+      const dnsGood=dnsResults.filter(v=>v.status==='fulfilled').map(v=>v.value);
+      const dnsIps=[...new Set(dnsGood.flatMap(v=>(v.Answer||[]).filter(a=>a.type===1).map(a=>a.data)))];
+      const lookupIp=dnsIps[0]||null;
+      if(type==='domain'&&lookupIp){
+        geoResult=await fetchPublicJson(`https://get.geojs.io/v1/ip/geo/${encodeURIComponent(lookupIp)}.json`,{retries:1}).then(value=>({ok:true,value}),error=>({ok:false,error}));
+      }
+      if(dnsGood.length){
+        ok++;apiText('telDnsResolved',`${domain} → ${lookupIp||'Không có A record'}`);
+        put('DNS',`${domain} → ${dnsIps.join(', ')||'No A record'}`);
+      }else{apiText('telDnsResolved','DNS: dịch vụ không phản hồi');put('DNS','Không kết nối được Cloudflare / Google DoH');}
+
+      const ms=timingResults.map(x=>x.status==='fulfilled'?x.value:null);
+      if(ms.some(x=>x!==null)){
+        ok++;
+        if(ms[0]!==null){rttHistory.push(ms[0]);if(rttHistory.length>14)rttHistory.shift();drawRttSparkline();}
+        apiText('telRttSummary',`HTTP: Google ${ms[0]??'—'}ms • CF ${ms[1]??'—'}ms`);
+        apiText('telCfGlobal','Độ trễ HTTP, không phải Ping/ICMP');
+        put('HTTP',`Google: ${ms[0]??'—'}ms | Cloudflare: ${ms[1]??'—'}ms (request duration)`);
+      }else{apiText('telRttSummary','HTTP: không đo được');apiText('telCfGlobal','Cần kết nối Internet / CORS');}
+
+      const ge=geoResult.ok?geoResult.value:null;
+      const selectedIp=type==='ip'?q:type==='domain'?(lookupIp||ge?.ip):ge?.ip;
+      const ip=selectedIp||null;
+      if(ge?.ip){
+        ok++;
+        const organization=String(ge.organization_name||ge.organization||'Chưa có tổ chức');
+        const match=String(ge.organization||'').match(/AS\d+/i);
+        const asn=match?.[0]|| (ge.asn?`AS${ge.asn}`:null);
+        if(type==='client'){
+          apiText('navWanIp',ge.ip);apiText('navWanAsn',asn?`${asn} • ${organization.slice(0,19)}`:organization.slice(0,24));
+          lastClientIp=ge.ip;
+        }
+        apiText('telWanIp',ip||ge.ip);
+        apiText('telOrgName',organization);
+        put('GEO/IP',`${ge.ip} | ${organization}${asn?` | ${asn}`:''}`);
+      }else{
+        apiText('telWanIp',ip||'Không lấy được IP');
+        if(type==='client'){apiText('navWanIp','—');apiText('navWanAsn','—');}
+        put('GEO/IP','Dịch vụ địa chỉ IP không phản hồi');
+      }
+
+      const requestedAsn=type==='asn'?q:null;
+      let net=null,asn=requestedAsn||null,prefix=null;
+      if(ip){
+        try{net=await fetchPublicJson(`https://stat.ripe.net/data/network-info/data.json?resource=${encodeURIComponent(ip)}`);
+          prefix=net?.data?.prefix||null;
+          if(!asn&&net?.data?.asns?.length)asn=`AS${net.data.asns[0]}`;
+          ok++;
+        }catch(e){put('BGP','RIPEstat Network Info không phản hồi');}
+      }
+      if(runId!==telemetryRunId)return;
+      apiText('telBgpPrefix',prefix?`${prefix}${asn?` (${asn})`:''}`:asn?`${asn} • chưa có prefix`:'Chưa xác định prefix');
+      if(asn){
+        lastClientAsn=asn;
+        if(prefix)lastClientPrefix=prefix;
+        try{
+          const peers=await fetchPublicJson(`https://stat.ripe.net/data/asn-neighbours/data.json?resource=${encodeURIComponent(asn)}`);
+          const count=Array.isArray(peers?.data?.neighbours)?peers.data.neighbours.length:null;
+          apiText('telAsnPeers',`${asn} • ${count===null?'—':count} neighbors`);
+          if(type==='asn'&&count!==null)ok++;
+          put('ASN',`${asn} | Neighbors: ${count??'not available'}`);
+        }catch(e){apiText('telAsnPeers',`${asn} • không lấy được peers`);}
+      }else{apiText('telAsnPeers','Chưa xác định ASN');}
+      if(asn&&prefix){
+        try{
+          const rpki=await fetchPublicJson(`https://stat.ripe.net/data/rpki-validation/data.json?resource=${encodeURIComponent(asn)}&prefix=${encodeURIComponent(prefix)}`);
+          const status=rpki?.data?.status;
+          if(status){ok++;apiText('telRpkiState',`RPKI: ${String(status).toUpperCase()}`);put('RPKI',`${prefix} / ${asn} => ${status}`);}
+          else apiText('telRpkiState','RPKI: không có dữ liệu');
+        }catch(e){apiText('telRpkiState','RPKI: không thể xác minh');}
+      }else{apiText('telRpkiState','RPKI: cần prefix và ASN');}
+      if(runId!==telemetryRunId)return;
+      if(type==='asn')apiText('telWanIp','Tra cứu ASN (không phải client IP)');
+      apiText('telEdgePop','Edge POP: chưa được cung cấp');
+      setApiSummary(ok,total);
+      put('SOURCE',`${ok}/${total} nhóm phản hồi; kết quả có thể bị giới hạn bởi CORS, mạng hoặc trình duyệt`);
+      output.textContent=rows.join('\n');
+    }
+    // Browser-side NOC commands: public lookups only; no raw system shell.
+    async function execNocCliCommand(rawCmd){
+      const cmd=String(rawCmd||'').trim();if(!cmd)return;
+      const out=document.getElementById('telRawConsole');
+      const [op,...args]=cmd.split(/\s+/);const arg=args[0]||'';
+      document.getElementById('cliShellInput').value='';
+      const print=t=>{out.textContent=t;};
+      if(op==='myip'){await run20ApiTelemetry('');return;}
+      if(op==='bgp'){await run20ApiTelemetry(arg||lastClientIp);return;}
+      if(op==='failover'){switchTab('blueprint');simulateWanFailover();return;}
+      try{
+        if(op==='rpki'){
+          if(!lastClientAsn||!lastClientPrefix)throw Error('Chưa có ASN/prefix. Chạy myip hoặc bgp trước.');
+          print('Đang xác thực ROA...');
+          const d=await fetchPublicJson(`https://stat.ripe.net/data/rpki-validation/data.json?resource=${encodeURIComponent(lastClientAsn)}&prefix=${encodeURIComponent(lastClientPrefix)}`);
+          print(`[RPKI] ${lastClientPrefix} / ${lastClientAsn}: ${d.data?.status||'No status returned'}`);
+        }else if(op==='peers'){
+          const asn=(arg||lastClientAsn).toUpperCase();
+          if(!validAsn(asn))throw Error('Định dạng ASN không hợp lệ (vd: AS7552).');
+          print(`Đang tra cứu BGP peers: ${asn}`);
+          const d=await fetchPublicJson(`https://stat.ripe.net/data/asn-neighbours/data.json?resource=${encodeURIComponent(asn)}`);
+          const peers=d.data?.neighbours||[];
+          print(`[RIPEstat] ${asn}: ${peers.length} neighbors\n`+peers.slice(0,8).map(x=>JSON.stringify(x)).join('\n'));
+        }else if(op==='dig'){
+          const domain=arg||'nguyenvu.click';if(!validDomain(domain))throw Error('Tên miền không hợp lệ.');
+          print(`Đang phân giải ${domain}...`);
+          const d=await fetchPublicJson(`https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=A`);
+          print(`[DNS / Google] ${domain}\n`+(d.Answer||[]).map(a=>`${a.name} TTL=${a.TTL} type=${a.type} ${a.data}`).join('\n')||'No A record');
+        }else if(op==='rdap'){
+          const domain=arg||'nguyenvu.click';if(!validDomain(domain))throw Error('Tên miền không hợp lệ.');
+          print(`Đang tra RDAP ${domain}...`);
+          const d=await fetchPublicJson(`https://rdap.org/domain/${encodeURIComponent(domain)}`,{timeout:8000,retries:0});
+          const result=`[RDAP] ${d.ldhName||domain} | ${(d.status||[]).join(', ')||'Unknown status'}`;
+          apiText('telRdapPtr',result.slice(0,70));print(result);
+        }else if(op==='ptr'){
+          const ip=arg||lastClientIp;if(!validIPv4(ip))throw Error('PTR hiện hỗ trợ IPv4 hợp lệ.');
+          const rev=ip.split('.').reverse().join('.')+'.in-addr.arpa';
+          print(`Đang phân giải PTR cho ${ip}...`);
+          const d=await fetchPublicJson(`https://dns.google/resolve?name=${encodeURIComponent(rev)}&type=PTR`);
+          const result=`[PTR] ${ip} -> ${(d.Answer||[]).map(v=>v.data).join(', ')||'No PTR record'}`;
+          apiText('telRdapPtr',result);print(result);
+        }else{
+          print(`Lệnh: myip | bgp <IP/ASN> | peers <ASN> | rpki | dig <domain> | rdap <domain> | ptr <IPv4> | failover\nCLI này chạy truy vấn API công khai trong trình duyệt, không truy cập shell hệ thống.`);
+        }
+      }catch(e){print(`[ERROR] ${e?.message||'Không thể truy vấn'} • Kiểm tra kết nối, CORS hoặc thử lại.`);}
     }
 
     // =========================================================================
     // 8. COMMAND PALETTE (⌘K / CTRL+K) & KEYBOARD SHORTCUTS
     // =========================================================================
     const CMD_ITEMS = [
-      { label: '⚡ Mô phỏng sự cố đứt cáp WAN 1 & tự động chuyển mạch SD-WAN (<200ms)', act: () => { switchTab('blueprint'); simulateWanFailover(); } },
-      { label: '🌐 Mở Trạm 20 Live APIs & Cửa sổ NOC CLI Shell', act: () => switchTab('telemetry') },
+      { label: '⚡ Mô phỏng sự cố WAN 1 (chỉ là mô hình minh họa)', act: () => { switchTab('blueprint'); simulateWanFailover(); } },
+      { label: '🌐 Mở Network Diagnostics & NOC CLI Shell', act: () => switchTab('telemetry') },
       { label: '📸 Chụp và tải Bưu Thiếp Cảnh Sắc hiện tại (Postcard PNG)', act: () => exportSceneryPostcard() },
       { label: '🇻🇳 Khám phá 4 vùng đất Việt Nam (Tràng An, Hạ Long, Hội An, Huế)', act: () => setScene('vn', 0) },
       { label: '🇯🇵 Khám phá 4 vùng đất Nhật Bản (Phú Sĩ, Kyoto, Hakone, Shirakawa-go)', act: () => setScene('jp', 0) },
@@ -2736,7 +3755,7 @@
         if (zenActive) toggleZenMode();
         return;
       }
-      if (e.target.closest('input, select, textarea')) return;
+      if (e.target?.closest?.('input, select, textarea, [contenteditable=true]')) return;
       if (e.key >= '1' && e.key <= '7') {
         const keys = ['vn', 'jp', 'cn', 'eu', 'med', 'nordic', 'dev'];
         setScene(keys[parseInt(e.key, 10) - 1], 0);
@@ -2750,14 +3769,344 @@
     drawRttSparkline();
     run20ApiTelemetry('');
   </script>
+<!-- NGUYENVU.CLICK · UI/UX V3 PATCH
+     Dán toàn bộ đoạn này NGAY TRƯỚC </body> của index.html V2. -->
+<style id="nv-v3-style">
+  /* 01 · Foundations */
+  :root { --nv-max: 1440px; --nv-focus:#e6b26c; }
+  *,*::before,*::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:126px; overflow-x:clip; }
+  body { width:100%; min-width:0; overflow-x:clip; }
+  button, input, select, a { -webkit-tap-highlight-color:transparent; }
+  button { cursor:pointer; }
+  :is(button,a,input,select,textarea,[tabindex]):focus-visible {
+    outline:2px solid var(--nv-focus)!important; outline-offset:3px!important;
+  }
+  :is(.dev-shell,.dev-cell) { border-color:var(--line); }
+  .dev-shell {
+    background:var(--surface-main);
+    backdrop-filter:blur(24px) saturate(145%);
+    -webkit-backdrop-filter:blur(24px) saturate(145%);
+    border-radius:22px;
+    box-shadow:0 28px 90px rgba(0,0,0,.30), inset 0 1px rgba(255,255,255,.15);
+  }
+  .dev-cell { border-radius:14px; }
+  .dev-cell:hover { transform:none; }
+  #backdropContainer { inset:0; }
+  #backdropPhoto { transform:scale(1.035); }
+  #backdropGridOverlay { opacity:.18; }
+  #backdropVignette {
+    background:linear-gradient(180deg,rgba(8,12,16,.42),rgba(8,12,16,.10) 33%,rgba(8,12,16,.58) 100%);
+  }
+
+  /* 02 · Header: branded, compact, predictable */
+  header { position:sticky!important; z-index:45!important; top:0; width:100%; }
+  header > div {
+    max-width:var(--nv-max)!important;
+    padding:12px clamp(12px,2vw,28px)!important;
+    display:flex!important; gap:10px 16px!important; align-items:center;
+  }
+  #headerStatusStrip { min-width:0; gap:9px!important; flex-wrap:wrap; }
+  #headerStatusStrip > a { flex-shrink:0; letter-spacing:.08em; }
+  #headerStatusStrip > a > span:first-child {
+    width:34px; height:34px; border-radius:11px;
+    background:linear-gradient(140deg,#e4a55e,#a2461c 70%);
+    box-shadow:0 4px 16px rgba(208,112,34,.24);
+  }
+  #headerStatusStrip strong { font-variant-numeric:tabular-nums; }
+  #headerRegionSelect {
+    max-width:195px; min-width:100px; height:28px;
+    color:#f8d9a2; background:#171a1c; border-radius:5px;
+  }
+  #headerRegionSelect option { background:#191b20; color:#fff; }
+  #topControls { min-width:0; gap:6px!important; }
+  #topControls .sbtn, #topControls > button {
+    border-radius:9px!important; min-height:32px; padding-inline:10px!important;
+    transition:background .18s ease,transform .18s ease,border-color .18s ease;
+  }
+  #topControls .sbtn:hover, #topControls > button:hover { transform:translateY(-1px); }
+  #headerAudioPill { min-height:34px; border-radius:10px; }
+  #headerAudioPill button { min-width:26px; min-height:28px; }
+
+  /* 03 · Intro/hero: visual hierarchy instead of the empty backdrop gap */
+  #mainWorkspace {
+    display:block!important; width:min(100%,var(--nv-max)); max-width:var(--nv-max)!important;
+    min-height:0!important; margin:0 auto; padding:24px clamp(12px,2vw,26px) 52px!important;
+  }
+  #nvIntro {
+    display:grid; grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);
+    gap:24px; align-items:end; padding:17px 5px 26px;
+    color:#f8f5ee; text-shadow:0 1px 10px rgba(0,0,0,.24);
+  }
+  #nvIntro .eyebrow {
+    display:inline-flex; align-items:center; gap:9px;
+    font:600 10px/1.5 'JetBrains Mono',monospace;
+    letter-spacing:.16em; text-transform:uppercase; color:#f2cc92;
+    margin-bottom:11px;
+  }
+  #nvIntro .eyebrow::before { content:''; width:7px; height:7px; border-radius:50%; background:#7ee1b4; box-shadow:0 0 0 4px rgba(126,225,180,.16); }
+  #nvIntro h2 {
+    font:600 clamp(30px,4.4vw,64px)/.99 'Cormorant Garamond',Georgia,serif;
+    letter-spacing:-.022em; margin:0;
+  }
+  #nvIntro h2 em { color:#f1c483; font-weight:600; }
+  #nvIntro .summary { color:rgba(248,245,238,.83); font-size:13px; line-height:1.8; max-width:350px; }
+  #nvIntro .intro-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:13px; }
+  #nvIntro .intro-actions button, #nvIntro .intro-actions a {
+    display:inline-flex; justify-content:center; align-items:center; gap:7px; min-height:41px;
+    padding:10px 14px; border-radius:10px; text-decoration:none;
+    font:600 11px/1 'Plus Jakarta Sans',sans-serif; letter-spacing:.025em;
+    border:1px solid rgba(255,255,255,.26); background:rgba(12,16,20,.52); color:#faf8f2;
+    backdrop-filter:blur(9px);
+  }
+  #nvIntro .intro-actions button:first-child { background:#e9bc76; border-color:#e9bc76; color:#281b13; }
+  #nvIntro .intro-actions :is(button,a):hover { filter:brightness(1.1); }
+  #mainWorkspace > .dev-shell { width:100%!important; margin:0; }
+  #mainWorkspace > .dev-shell > aside { background:rgba(255,255,255,.025); }
+  #mainWorkspace > .dev-shell > section { min-width:0; }
+  #mainWorkspace :is(h1,h2,h3,p) { overflow-wrap:break-word; }
+  #mainWorkspace h1 { font-size:clamp(30px,3.2vw,48px)!important; line-height:1.04!important; }
+  #mainWorkspace .seal-stamp { white-space:nowrap; }
+
+  /* 04 · Content cards, tabs, terminal */
+  #domainGrid { gap:10px!important; }
+  #domainGrid > * { min-width:0; padding:14px!important; border-radius:15px; }
+  #domainGrid > *:hover { border-color:var(--accent); }
+  #domainDetailBox { padding:17px!important; border-radius:16px; }
+  #domainDetailBox pre { max-width:100%; white-space:pre; overflow:auto; border-radius:9px; }
+  #mainWorkspace section > div:first-child { min-width:0; }
+  #mainWorkspace section > div:first-child button { border-radius:10px!important; }
+  #mainWorkspace section > div:first-child button[id^='wtab-'] {
+    font-size:11px!important; padding:11px 13px!important; min-height:42px;
+    transition:background .15s,border-color .15s,transform .15s;
+  }
+  #mainWorkspace section > div:first-child button[id^='wtab-']:hover { transform:translateY(-1px); }
+  #wpane-telemetry .dev-cell { min-width:0; }
+  #wpane-telemetry .dev-cell :is(div,span) { overflow-wrap:anywhere; }
+  #wpane-telemetry input, #cliShellInput { min-width:0; }
+  #telRawConsole { max-height:200px; overflow:auto; }
+  .topology-scroll { overflow-x:auto; overscroll-behavior-x:contain; }
+  .topology-scroll svg { min-width:700px; }
+  #mainWorkspace aside .grid.grid-cols-4 button { min-width:0; }
+
+  /* 05 · CRITICAL FIX: position:relative from .dev-shell was overriding .fixed. */
+  #hifiAudioDrawer {
+    position:fixed!important; left:auto!important; right:max(16px,calc((100vw - var(--nv-max))/2 + 16px))!important;
+    top:114px!important; bottom:auto!important;
+    width:min(420px,calc(100vw - 32px))!important;
+    max-height:calc(100dvh - 132px)!important;
+    overflow-y:auto!important; overflow-x:hidden!important;
+    overscroll-behavior:contain; z-index:72!important;
+    border:1px solid var(--line-strong); border-radius:20px!important;
+    box-shadow:0 30px 110px rgba(0,0,0,.48);
+  }
+  #hifiAudioDrawer.hidden { display:none!important; }
+  #hifiAudioDrawer > * { max-width:100%; min-width:0; }
+  #hifiAudioDrawer #audioChannelGrid { max-height:200px!important; }
+  #hifiAudioDrawer button { touch-action:manipulation; }
+  #ytPlayerShell, #ytVisibleMount, #ytVisibleMount iframe { max-width:100%; }
+  #nvMusicBackdrop {
+    position:fixed; inset:0; z-index:65; background:rgba(0,0,0,.24);
+    -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+  }
+  #nvMusicBackdrop[hidden] { display:none!important; }
+  #mobileMusicFab { box-shadow:0 9px 34px rgba(0,0,0,.32); }
+  #nvBackTop {
+    position:fixed; right:16px; bottom:16px; z-index:40;
+    display:grid; place-items:center; width:43px; height:43px;
+    color:#fff; background:rgba(15,20,23,.82); border:1px solid rgba(255,255,255,.25);
+    border-radius:13px; backdrop-filter:blur(10px); opacity:0; visibility:hidden;
+    transform:translateY(8px); transition:opacity .2s,transform .2s,visibility .2s;
+  }
+  #nvBackTop.is-visible { opacity:1; visibility:visible; transform:none; }
+
+  /* 06 · Medium screens */
+  @media (max-width:1199px) {
+    header > div { align-items:flex-start; flex-direction:column; }
+    #headerStatusStrip { width:100%; }
+    #topControls { width:100%; flex-wrap:nowrap!important; overflow-x:auto; scrollbar-width:thin; padding-bottom:2px; }
+    #topControls > * { flex-shrink:0; }
+    #hifiAudioDrawer { top:128px!important; max-height:calc(100dvh - 144px)!important; }
+  }
+  @media (max-width:1023px) {
+    #mainWorkspace > .dev-shell { display:block!important; }
+    #mainWorkspace > .dev-shell > aside { border-bottom:1px solid var(--line); }
+    #mainWorkspace > .dev-shell > section { padding-top:20px!important; }
+    #nvIntro { grid-template-columns:1fr 280px; gap:12px; }
+    #nvIntro h2 { font-size:clamp(30px,5.4vw,52px); }
+  }
+
+  /* 07 · Phones / narrow tablets */
+  @media (max-width:767px) {
+    html { scroll-padding-top:82px; }
+    header > div { flex-direction:row; flex-wrap:wrap!important; align-items:center; padding:10px 12px!important; }
+    #headerStatusStrip { width:auto; flex:1 1 170px; min-width:0; gap:6px!important; overflow:hidden; }
+    #headerStatusStrip > a { min-width:0; max-width:100%; }
+    #headerStatusStrip > a > span:last-child { display:inline!important; font-size:9px; }
+    #headerStatusStrip > span:not(:first-of-type), #headerStatusStrip > div, #headerStatusStrip #navSceneTemp { display:none!important; }
+    #mobileControlToggle { display:inline-flex!important; flex-shrink:0; margin-left:auto; border-radius:10px; }
+    #topControls { width:100%; display:none!important; flex-wrap:wrap!important; max-height:min(49dvh,390px); overflow-y:auto; overflow-x:hidden; }
+    #topControls.is-open { display:flex!important; }
+    #topControls > * { flex-shrink:0; }
+    #topControls .sbtn { flex:0 0 auto; }
+    #mainWorkspace { padding:14px 10px 90px!important; }
+    #nvIntro { grid-template-columns:1fr; padding:9px 3px 20px; gap:11px; }
+    #nvIntro h2 { font-size:clamp(35px,10.3vw,48px); }
+    #nvIntro .summary { font-size:12px; max-width:100%; line-height:1.6; }
+    #nvIntro .intro-actions { margin-top:4px; }
+    #nvIntro .intro-actions button,#nvIntro .intro-actions a { min-height:42px; }
+    #mainWorkspace > .dev-shell { border-radius:18px!important; }
+    #mainWorkspace > .dev-shell > :is(aside,section) { padding:16px!important; }
+    #mainWorkspace aside .grid.grid-cols-4 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    #mainWorkspace h1 { font-size:clamp(29px,8vw,39px)!important; }
+    #mainWorkspace aside .seal-stamp { font-size:8px; }
+    #mainWorkspace section > div:first-child {
+      overflow-x:auto!important; max-width:100%; padding-bottom:6px;
+      scrollbar-width:thin; scroll-snap-type:x proximity;
+    }
+    #mainWorkspace section > div:first-child > div:first-child {
+      display:flex; flex-wrap:nowrap!important; min-width:max-content;
+    }
+    #mainWorkspace section > div:first-child button[id^='wtab-'] { scroll-snap-align:start; white-space:nowrap; }
+    #domainGrid { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
+    #domainGrid > * { padding:11px!important; }
+    #wpane-telemetry > div:first-child { flex-wrap:wrap!important; }
+    #wpane-telemetry > div:first-child button { width:100%; }
+    #wpane-telemetry .grid.grid-cols-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    #hifiAudioDrawer {
+      position:fixed!important; left:8px!important; right:8px!important;
+      top:auto!important; bottom:max(8px,env(safe-area-inset-bottom))!important;
+      width:auto!important; max-height:calc(100dvh - 20px)!important;
+      border-radius:19px!important; padding:13px!important;
+    }
+    #hifiAudioDrawer #audioChannelGrid { max-height:150px!important; }
+    #nvMusicBackdrop { background:rgba(0,0,0,.55); }
+    body.nv-music-open { overflow:hidden!important; }
+    #mobileMusicFab { position:fixed!important; right:14px!important; bottom:max(13px,env(safe-area-inset-bottom))!important; z-index:55!important; }
+    #nvBackTop { right:14px; bottom:75px; }
+    #zenHud { max-width:calc(100vw - 20px); }
+  }
+  @media (max-width:410px) {
+    #headerStatusStrip > a > span:last-child { display:none!important; }
+    #domainGrid { grid-template-columns:1fr!important; }
+    #nvIntro .intro-actions > * { flex:1 1 auto; }
+    #mainWorkspace > .dev-shell > :is(aside,section) { padding:14px!important; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
+  }
+</style>
+<script id="nv-v3-behavior">
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const main = $('mainWorkspace');
+  const drawer = $('hifiAudioDrawer');
+  if (!main || !drawer || $('nvIntro')) return;
+
+  // 1. Editorial intro: a simple, clear action area.
+  const intro = document.createElement('section');
+  intro.id = 'nvIntro';
+  intro.setAttribute('aria-label', 'Giới thiệu');
+  intro.innerHTML = `
+    <div>
+      <span class="eyebrow">NGUYENVU.CLICK · ENGINEERING PORTFOLIO</span>
+      <h2>Building reliable <em>digital infrastructure.</em></h2>
+    </div>
+    <div>
+      <p class="summary">Network Architecture · Security · Virtualization.<br>
+      Thiết kế hệ thống ổn định, bảo mật và sẵn sàng mở rộng.</p>
+      <div class="intro-actions">
+        <button type="button" id="nvViewProjects">Khám phá dự án ↗</button>
+        <button type="button" id="nvViewTelemetry">Network diagnostics ↗</button>
+      </div>
+    </div>`;
+  main.insertBefore(intro, main.firstChild);
+
+  function openSection(tab) {
+    if (typeof window.switchTab === 'function') window.switchTab(tab);
+    const tabs = ['matrix','blueprint','telemetry'];
+    tabs.forEach(t => {
+      const el = $('wtab-' + t);
+      if (el) el.setAttribute('aria-pressed', String(t === tab));
+    });
+    const heading = $('wtab-' + tab);
+    if (heading) heading.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+  }
+  $('nvViewProjects').addEventListener('click', () => openSection('blueprint'));
+  $('nvViewTelemetry').addEventListener('click', () => openSection('telemetry'));
+  ['matrix','blueprint','telemetry'].forEach(tab => {
+    const btn = $('wtab-' + tab);
+    if (!btn) return;
+    btn.setAttribute('aria-pressed',String(tab==='matrix'));
+    btn.addEventListener('click', () => openSection(tab));
+  });
+
+  // 2. Accessible overlay. The player must NEVER move the normal page flow.
+  const backdrop = document.createElement('button');
+  backdrop.type = 'button';
+  backdrop.id = 'nvMusicBackdrop';
+  backdrop.hidden = true;
+  backdrop.setAttribute('aria-label', 'Đóng trình phát nhạc');
+  document.body.append(backdrop);
+  const refreshDrawer = () => {
+    const open = !drawer.classList.contains('hidden');
+    backdrop.hidden = !open;
+    document.body.classList.toggle('nv-music-open', open);
+    drawer.setAttribute('role', 'dialog');
+    drawer.setAttribute('aria-modal', String(open));
+    drawer.setAttribute('aria-hidden', String(!open));
+  };
+  new MutationObserver(refreshDrawer).observe(drawer,{attributes:true,attributeFilter:['class']});
+  backdrop.addEventListener('click',()=>{
+    if (typeof window.toggleAudioDrawer === 'function' && !drawer.classList.contains('hidden')) window.toggleAudioDrawer();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !drawer.classList.contains('hidden')) {
+      e.preventDefault();
+      window.toggleAudioDrawer?.();
+    }
+  });
+  refreshDrawer();
+
+  // 3. Back to top: accessible and hidden until useful.
+  const top = document.createElement('button');
+  top.id = 'nvBackTop';
+  top.type = 'button';
+  top.textContent = '↑';
+  top.setAttribute('aria-label','Lên đầu trang');
+  top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  document.body.append(top);
+  let scheduled = false;
+  window.addEventListener('scroll',()=>{
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(()=>{
+      top.classList.toggle('is-visible',window.scrollY>550);
+      scheduled=false;
+    });
+  },{passive:true});
+
+  // 4. Genuine network state label, no fake "100% live" indicator.
+  const apiLabel = $('navApiStatus');
+  if (apiLabel) {
+    apiLabel.title = 'Số nhóm dữ liệu phản hồi thành công, không phải SLA của hạ tầng';
+    apiLabel.setAttribute('aria-live','polite');
+  }
+  // 5. Smooth sizing for mobile and portrait tablets.
+  function closeMobileMenuAfterClick(event) {
+    if (!event.target.closest('button[data-sbtn]')) return;
+    const panel = $('topControls');
+    const trigger = $('mobileControlToggle');
+    if (panel?.classList.contains('is-open') && innerWidth <= 767) {
+      panel.classList.remove('is-open');
+      trigger?.setAttribute('aria-expanded','false');
+    }
+  }
+  $('topControls')?.addEventListener('click',closeMobileMenuAfterClick);
+})();
+</script>
+
 </body>
 </html>
-```
-
-### Những nâng cấp nổi bật trong phiên bản này:
-1. **Thiết kế Bespoke Swiss Editorial + Teenage Engineering / Linear**:
-   - Tích hợp dấu canh lề kỹ thuật (`+`) ở góc khung, ấn triện truyền thống **`NGUYÊN VŨ • ẤN`**, bộ đếm thời gian hoạt động trực tiếp (`SLA 99.98%`) và **Thanh Quick Dock nổi kiểu Raycast** ở đáy màn hình để chuyển nhanh giữa 4 phân khu, mở bàn xoay đĩa than hoặc bật chế độ ngắm cảnh toàn màn hình (`Cinema Mode`).
-2. **Bàn Xoay Đĩa Than YouTube API Hi-Fi + Cần Đọc Đĩa (Tonearm) + EQ 3 Dải + Bộ Trộn Âm Thanh Thiên Nhiên**:
-   - Khi phát nhạc, cần đọc đĩa (`Tonearm SVG`) tự động xoay vào đĩa than có ảnh bìa thật từ YouTube, kết hợp **EQ 3 dải tần (`LOW 60Hz`, `MID 1kHz`, `HIGH 12kHz`)** và **Bộ trộn âm thanh thiên nhiên (`🌧 Mưa đêm`, `🌊 Sóng hồ`, `🔔 Chuông Thiền 432Hz`)** hòa quyện mượt mà cùng 8 bản Hot Trend TikTok Remix trên YouTube.
-3. **Bản Đồ 24 Vùng Đất Di Sản + Chu Kỳ Thiên Văn Mặt Trời / Mặt Trăng & Cửa Sổ NOC CLI**:
-   - Đầy đủ 24 địa danh thực tế thuộc 6 nền văn hóa kèm hiệu ứng Mặt Trời ban ngày, ánh cam Hoàng hôn và Trăng lưỡi liềm ban đêm trên Canvas, cùng cửa sổ dòng lệnh `vu@noc-hcm:~#` hỗ trợ thực thi trực tiếp các lệnh `myip`, `bgp`, `rpki`, `peers`, `dig`, `rdap`, `ptr`, `failover`.
